@@ -143,9 +143,14 @@
                     </div>
                 </div>
                 <!-- end .error-panel -->
+
+                <div style="text-align: right; margin-top: 30px; margin-right: 30px;">
+                  Have a question or need form help? <a>Chat Now</a>
+                </div>
+
   <div id="select_product" class="cr-primary-container">
-    <h2>What happened?</h2>
-    <p class="page-intro page-intro-small what-happened">Describe what happened, and we’ll forward your description directly to the companies involve what this complaint is about. Include details, such as dates and where transactions happened. Do not include personal information, such as names, addresses and account numbers – we’ll ask for that later.</p>
+    <h2>What's your complaint?</h2>
+    <p class="page-intro page-intro-small what-happened">Describe what happened, and we’ll forward your comments directly to the company(s). Provide facts in the order they happened using simple language. Be specific when describing dates, amounts, and actions that were taken. If you have documents or images that help back up your complaint, you can attach those at the end of the form. Do not include your personal information, such as your name, address, account numbers, etc. We ask for some of that information later, to help route your complaint.</p>
 
 
 
@@ -226,6 +231,32 @@
         </div>
 			</div>
     </fieldset>
+
+
+    <h3 id="attachments-header">Attach documents</h3>
+    <p id="attachments-intro">Include copies or photos of documents related to your issue, such as contracts, letters, and receipts, and we will forward all materials to the company for review.</p>
+    <fieldset id="attachment-fieldset" class="cr-fieldset">
+
+      <div id="attachment-drag-drop-area" class="drag-drop">
+
+            <div id="upload-section" class="span3 cr-label cr-question-left cr-question-with-checkbox span9 cr-answer upload-file">
+          <p id="attachment-drag-instructions">&nbsp;&nbsp;Drop files here to attach them</p>
+          <label id="upload-button" for="upload-file">
+          <button class="btn" type="button">Select files to upload</button>
+          </label>
+          <input type="file" id="upload-file" name="upload-file">
+            </div>
+
+      </div>
+      <p id="attachment-size-info">We accept all file formats except executable files (.exe), up to 100mb per file</p>
+    </fieldset>
+
+    <div id="attachment-alert">
+        <div id="attachment-alert-icon" class='icon-exc left-obj'></div>
+        <p>Important note: <br/>You will <strong>not</strong> be able to attach documents after you submit this complaint.<br/>If you need more time, select “Save and continue later” below.</p>
+    </div>
+
+
 </div>
 
 
