@@ -36,10 +36,21 @@ gulp.task( 'copy:vendorjs', function() {
     } ) );
 } );
 
+gulp.task( 'copy:oldFiles', function() {
+  return gulp.src( config.oldFiles.src )
+    .pipe( $.changed( config.oldFiles.dest ) )
+    .on( 'error', handleErrors )
+    .pipe( gulp.dest( config.oldFiles.dest ) )
+    .pipe( browserSync.reload( {
+      stream: true
+    } ) );
+} );
+
 gulp.task( 'copy',
   [
     'copy:files',
     'copy:icons',
-    'copy:vendorjs'
+    'copy:vendorjs',
+    'copy:oldFiles'
   ]
 );

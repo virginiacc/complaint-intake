@@ -1,0 +1,3340 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+
+<title>Submit a complaint | Select an issue</title>
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="form/css/normalize.css">
+<link rel="stylesheet" href="form/css/grid.css">
+<link rel="stylesheet" href="form/css/fonts.css">
+<link rel="stylesheet" href="form/css/new-core.css">
+<link rel="stylesheet" href="form/css/complain.css">
+<link rel="stylesheet" href="form/css/typeahead.css">
+<!-- <link rel="stylesheet" href="form/css/responsive.css"> -->
+
+<!-- Custom modernizr for touch detection only, see the .js file for the build link -->
+<script src="form/js/vendor/modernizr.custom.js"></script>
+<script src="form/js/vendor/bootstrap-modal.js"></script>
+
+<!--
+    Old IE polyfills for:
+    - HTML5 tags
+    - Media queries (so we can style mobile first)
+-->
+<!--[if lt IE 9]>
+<script src="form/js/vendor/html5shim.js"></script>
+<script src="form/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="prodselect cruxform select-issue-page">
+
+<div class="wrapper-banner" style="font-size: 16px;">
+    <div class="wrapper-container">
+        <small class="split">
+            <span class="official-website">An official website of the United States Government</span>
+        </small>
+    </div>
+</div><!-- .wrapper-banner -->
+
+<header class="wrapper-header">
+
+    <div class="wrapper-container">
+
+        <div class="brand">
+
+            <h1> Submit a complaint</h1>
+
+            <a class="brand-logo" href="https://consumerfinance.gov"><img src="form/img/logo-cfpb-retina.png" alt="Consumer Financial Protection Bureau"></a>
+
+        </div><!-- .brand -->
+
+    </div><!-- .wrapper-container -->
+
+</header><!-- .wrapper-header -->
+
+<noscript>
+    For full functionality of this application, it is necessary to enable JavaScript.
+    Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+    instructions how to enable JavaScript in your web browser</a>.
+</noscript>
+
+
+<div class="wrapper-body page-step-1">
+
+<!-- ANNOTATIONS SIDEBAR -->
+
+				<div id="annotations-sidebar">
+				<p id="annotations-opener"><a href="#">Open annotations</a></p>
+
+				<p id="annotations-toggle" class="opened"><a href="#">Toggle annotations</a></p>
+
+					<ul id="annotations-list">
+						<li class="annotation-format">
+							<h3 class="anno-title">Title of annotation</h3>
+<!-- 							<h6 class="anno-date">Date added</h6> -->
+							<p class="anno-link-text"><a class="anno-link" href="#">Link to element</a></p>
+							<div class="anno-comment">Placeholder text</div>
+						</li>
+					</ul>
+
+				</div>
+
+<!-- END OF ANNOTATIONS SIDEBAR -->
+
+
+    <div class="wrapper-container">
+
+<!-- =============
+     BEGIN CONTENT
+     ============= -->
+
+        <section class="content row cr-content">
+
+            <!-- nav on the left side of the page -->
+            <nav class="span4 cr-steps secondary">
+                <!-- uses bootstrap's affix plugin -->
+                <div id="sticky-nav">
+                    <ul>
+
+
+                        	<li class="incomplete"><a href="select-product.html">1</span></a></li>
+
+                            <li class="active incomplete"><a href="select-issue.html">2</a></li>
+
+							<li class="incomplete"><a href="what-happened.html">3</a></li>
+
+                            <li class="incomplete"><a href="company-information.html">4</span></a></li>
+
+                            <li class="incomplete"><a href="your-information.html">5</a></li>
+
+                            <li class="incomplete"><a href="review-and-submit.html">6</a></li>
+
+                    </ul>
+
+<!--                     <a href="#" id="chat-now">Form trouble? Chat now.</a> -->
+
+                </div>
+                <!-- /#sticky-nav -->
+
+            </nav>
+            <!-- /nav on the left side of the page -->
+
+            <div class="span8 cr-primary">
+                <!-- .error-panel -->
+                <div class="guide-panel error-panel" style="display:none;">
+                    <div class='icon-x left-obj'></div>
+                    <div class="panel-content">
+                        This page could not be submitted because the following questions are incomplete or have errors:
+                        <ul id='error-list'>
+                            <li><a href="#cr-describe-issue">Which of these best describes your issue?</a></li>
+                            <li><a href="#cr-what-happened">Describe what happened so we can understand the issue...</a></li>
+                            <li><a href="#cr-what-do-you-think">What do you think would be a fair resolution to your issue?</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end .error-panel -->
+
+                <div style="text-align: right; margin-top: 30px; margin-right: 30px;">
+                  Have a question or need for help? <a>Chat Now</a>
+                </div>
+
+  <div id="select_issue" class="cr-primary-container">
+    <h2>What type of issue is your complaint about?</h2>
+    <p class="page-intro select-issue">Most of the <strong><span id="product-name-in-subhead">product name</span></strong> complaints we receive are about these types of issues.</p>
+    <p class="page-intro2 extra-bottom">Select the issue that best describes your complaint, and on the next page we'll ask you to describe the issue in your own words. </p>
+
+
+
+<!-- This is hidden with CSS as it's redundant from the header of the page -->
+        <label for="cr-describe-issue" class="last label_same_as_header">
+           Which of these best describes your issue?
+            <div class='is-required'>Answer Required</div>
+        </label>
+
+<!--
+////////////
+START ALL OF THE ISSUE LISTS
+//////////
+-->
+
+<div id="issue_options_mortgage" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+            <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue mortgage_application_process" id="mortgage_application_process" />
+                Problems with the mortgage application process
+                <br /><small></small>
+            </label>
+
+            <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue mortgage_closing_process" id="mortgage_closing_process" />
+                Problems with the mortgage closing process
+                <br /><small></small>
+            </label>
+
+
+            <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue mortgage_servicer_making_payments" id="mortgage_servicer_making_payments" />
+                Problems with the mortgage servicer when you are making payments
+                <br /><small></small>
+            </label>
+
+
+            <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue mortgage_servicer_unable_pay" id="mortgage_servicer_unable_pay" />
+                Problems with the mortgage servicer when you are unable to pay
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+<div id="issue_options_student_loan" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue student_loan_getting_a_loan" id="student_loan_getting_a_loan" />
+                Getting a loan
+                <br /><small>Denial, confusing advertising or marketing, sales tactics or pressure, financial aid services, recruiting, fraudulent loan</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue student_loan_cannot_repay_loan" id="student_loan_cannot_repay_loan" />
+                Can't repay my loan
+                <br /><small>Deferment, forbearance, default, bankruptcy, payment plan, refinancing, Income-Based Repayment (IBR), Pay As You Earn (PAYE), Revised Pay As You Earn (REPAYE)</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue student_loan_dealing_with_lender_or_servicer" id="student_loan_dealing_with_lender_or_servicer" />
+                Dealing with my lender or servicer
+                <br /><small>Making payments, getting information about my loan, managing my account</small>
+            </label>
+
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+<div id="issue_options_vehicle_loan" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_shopping" id="vehicle_loan_shopping" />
+                Problems shopping for a loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_getting_the_loan" id="vehicle_loan_getting_the_loan" />
+                Problems getting the loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_problems_making_payments" id="vehicle_loan_problems_making_payments" />
+                Problems managing the loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_unable_to_pay" id="vehicle_loan_unable_to_pay" />
+                Problems when you are unable to pay
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_end_of_loan" id="vehicle_loan_end_of_loan" />
+                Problems with the end of the loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+<div id="issue_options_vehicle_lease" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_shopping" id="vehicle_lease_shopping" />
+                Problems shopping for a lease
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_getting_the_loan" id="vehicle_lease_getting_the_lease" />
+                Problems getting the lease
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_problems_making_payments" id="vehicle_lease_problems_making_payments" />
+                Problems managing the lease
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_loan_unable_to_pay" id="vehicle_lease_unable_to_pay" />
+                Problems when you are unable to pay
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue vehicle_lease_end_of_lease" id="vehicle_lease_end_of_lease" />
+                Problems with the end of the lease
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+<div id="issue_options_payday_loan" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue payday_unexpected_fees_or_interest" id="payday_unexpected_fees_or_interest" />
+                Charged fees or interest I didn't expect
+                <br /><small></small>
+          </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue payday_cannot_stop_charging_bank_account" id="payday_cannot_stop_charging_bank_account" />
+                Can't stop lender from charging my bank account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue payday_received_loan_not_applied_for" id="payday_received_loan_not_applied_for" />
+                Received a loan I didn't apply for
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue payday_applied_but_did_not_receive" id="payday_applied_but_did_not_receive" />
+                Applied for a loan, but didn't receive money
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue payday_lender_charged_bank_wrong" id="payday_lender_charged_bank_wrong" />
+                Lender charged my bank account on wrong day or for wrong amount
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue payday_lender_did_not_credit_payment" id="payday_lender_did_not_credit_payment" />
+                Lender didn't credit payment to my account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue payday_cannot_contact_lender" id="payday_cannot_contact_lender" />
+                Can't contact lender
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+<div id="issue_options_pawn_loan" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_unexpected_fees_or_interest" id="pawn_loan_unexpected_fees_or_interest" />
+                Charged fees or interest I didn't expect
+                <br /><small></small>
+          </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_cannot_stop_charging_bank_account" id="pawn_loan_cannot_stop_charging_bank_account" />
+                Can't stop lender from charging my bank account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_received_loan_not_applied_for" id="pawn_loan_received_loan_not_applied_for" />
+                Received a loan I didn't apply for
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_applied_but_did_not_receive" id="pawn_loan_applied_but_did_not_receive" />
+                Applied for a loan, but didn't receive money
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_lender_charged_bank_wrong" id="pawn_loan_lender_charged_bank_wrong" />
+                Lender charged my bank account on wrong day or for wrong amount
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_lender_did_not_credit_payment" id="pawn_loan_lender_did_not_credit_payment" />
+                Lender didn't credit payment to my account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_cannot_contact_lender" id="pawn_loan_cannot_contact_lender" />
+                Can't contact lender
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_lender_did_not_credit_payment" id="pawn_loan_lender_sold_the_property" />
+                Lender sold the property
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue pawn_loan_cannot_contact_lender" id="pawn_loan_lender_damaged_or_destroyed_property" />
+                Lender damaged or destroyed property
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="issue_options_title_loan" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_unexpected_fees_or_interest" id="title_loan_unexpected_fees_or_interest" />
+                Charged fees or interest I didn't expect
+                <br /><small></small>
+          </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_cannot_stop_charging_bank_account" id="title_loan_cannot_stop_charging_bank_account" />
+                Can't stop lender from charging my bank account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_received_loan_not_applied_for" id="title_loan_received_loan_not_applied_for" />
+                Received a loan I didn't apply for
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_applied_but_did_not_receive" id="title_loan_applied_but_did_not_receive" />
+                Applied for a loan, but didn't receive money
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_lender_charged_bank_wrong" id="title_loan_lender_charged_bank_wrong" />
+                Lender charged my bank account on wrong day or for wrong amount
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_lender_did_not_credit_payment" id="title_loan_lender_did_not_credit_payment" />
+                Lender didn't credit payment to my account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_cannot_contact_lender" id="title_loan_cannot_contact_lender" />
+                Can't contact lender
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_lender_did_not_credit_payment" id="title_loan_lender_sold_or_repossessed_vehicle" />
+                Lender repossessed or sold the vehicle
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue title_loan_cannot_contact_lender" id="title_loan_lender_damaged_or_destroyed_vehicle" />
+                Lender damaged or destroyed the vehicle
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="issue_options_installment_loan" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue installment_loan_shopping" id="installment_loan_shopping" />
+                Problems shopping for a loan or lease
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue installment_loan_getting_the_loan" id="installment_loan_getting_the_loan" />
+                Problems getting the loan or lease
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue installment_loan_problems_making_payments" id="installment_loan_problems_making_payments" />
+                Problems when making payments
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue installment_loan_unable_to_pay" id="installment_loan_unable_to_pay" />
+                Problems when you are unable to pay
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue installment_loan_end_of_loan" id="installment_loan_end_of_loan" />
+                Problems with the end of the loan or lease
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+<div id="issue_options_personal_line_of_credit" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue line_of_credit_shopping" id="line_of_credit_shopping" />
+                Problems shopping for a line of credit
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue line_of_credit_getting_the_loan" id="line_of_credit_getting_the_loan" />
+                Problems getting the line of credit
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue line_of_credit_problems_making_payments" id="line_of_credit_problems_making_payments" />
+                Problems when making payments
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue line_of_credit_unable_to_pay" id="line_of_credit_unable_to_pay" />
+                Problems when you are unable to pay
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue line_of_credit_end_of_loan" id="line_of_credit_end_of_loan" />
+                Problems with the end of the line of credit
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+<div id="issue_options_checking_account" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue checking_account_opening_account" id="checking_account_opening_account" />
+                Opening an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue checking_account_managing_account" id="checking_account_managing_account" />
+                Managing an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue checking_account_closing_account" id="checking_account_closing_account" />
+                Closing an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue checking_account_funds_low" id="checking_account_funds_low" />
+                Problems caused by my funds being low
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+<div id="issue_options_savings_account" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue savings_account_opening_account" id="savings_account_opening_account" />
+                Opening an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue savings_account_managing_account" id="savings_account_managing_account" />
+                Managing an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue savings_account_closing_account" id="savings_account_closing_account" />
+                Closing an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue savings_account_funds_low" id="savings_account_funds_low" />
+                Problems caused by my funds being low
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+<div id="issue_options_certificate_of_deposit" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue certificate_of_deposit_opening_account" id="certificate_of_deposit_opening_account" />
+                Opening an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue certificate_of_deposit_managing_account" id="certificate_of_deposit_managing_account" />
+                Managing an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue certificate_of_deposit_closing_account" id="certificate_of_deposit_closing_account" />
+                Closing an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="issue_options_credit_card" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_card_getting_a_card" id="credit_card_getting_a_card" />
+                Problems with getting a credit card
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_card_advertising_promotions" id="credit_card_advertising_promotions" />
+                Problems with advertised terms, rewards, or offers
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_card_problems_with_terms" id="credit_card_problems_with_terms" />
+                Problems with the terms of my account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_card_disagree_with_fees" id="credit_card_disagree_with_fees" />
+                Disagree with the fees charged
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_card_billing_disputes" id="credit_card_billing_disputes" />
+                Problems while making payments
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_card_repayment_assistance" id="credit_card_repayment_assistance" />
+                Problems when unable to pay
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_card_closing_card" id="credit_card_closing_card" />
+                Closing my credit card
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block debt-collection-issue">
+                <input name="radio_" type="radio" class="radio_input issue debt_collection" id="debt_collection" />
+                Problems with a debt collector
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="issue_options_prepaid_card" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue prepaid_card_managing_opening_closing" id="prepaid_card_managing_opening_closing" />
+                Managing, opening or closing your account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue prepaid_card_fees" id="prepaid_card_fees" />
+                Fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue prepaid_card_transactions" id="prepaid_card_transactions" />
+                Unauthorized transactions or other transaction issues
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue prepaid_card_advertising_marketing" id="prepaid_card_advertising_marketing" />
+                Advertising, marketing or disclosures
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue prepaid_card_adding_money" id="prepaid_card_adding_money" />
+                Adding money
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue prepaid_card_overdraft_savings_rewards" id="prepaid_card_overdraft_savings_rewards" />
+                Overdraft, savings or rewards features
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue prepaid_card_fraud_scam" id="prepaid_card_fraud_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="issue_options_credit_reporting" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_incorrect_information" id="credit_reporting_incorrect_information" />
+                Incorrect information on my credit report
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_company_investigation" id="credit_reporting_company_investigation" />
+                Company's investigation
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_improper_use" id="credit_reporting_improper_use" />
+                Improper use of my credit report
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_unable_to_get_report_or_score" id="credit_reporting_unable_to_get_report_or_score" />
+                Unable to get my credit report or credit score
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_credit_monitoring_identity_protection" id="credit_reporting_credit_monitoring_identity_protection" />
+                Credit monitoring, identity protection & other services
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+<div id="issue_options_debt_collection" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_communication_tactics" />
+                Communication tactics
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_continued_attempts_not_owe" />
+                Continued attempts to collect debt I do not owe
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_verification_of_debt" />
+                Disclosure verification of debt
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_false_statements" />
+                False statements or representation
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_improper_contact_or_sharing" />
+                Improper contact or sharing of information
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_legal_action" />
+                Taking or threatening to take legal action
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block credit-reporting-issue">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting" id="credit_reporting" />
+                Problems with my credit report or score
+                <br /><small></small>
+            </label>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="issue_options_money_transfer" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_transfer_not_available_when_promised" id="money_transfer_not_available_when_promised" />
+                Money was not available when promised
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_transfer_wrong_amount" id="money_transfer_wrong_amount" />
+                Wrong amount charged or received
+                <br /><small>Transfer amounts, fees, exchange rates, taxes, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_transfer_incorrect_missing_disclosures" id="money_transfer_incorrect_missing_disclosures" />
+                Incorrect/missing disclosures or info
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_transfer_other_transaction_issues" id="money_transfer_other_transaction_issues" />
+                Other transaction issues
+                <br /><small>Unauthorized transaction, cancellation, refund, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_transfer_other_service_issues" id="money_transfer_other_service_issues" />
+                Other service issues
+                <br /><small>Advertising or marketing, pricing, privacy, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_transfer_fraud_or_scam" id="money_transfer_fraud_or_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="issue_options_virtual_currency" class="select-product-or-issue issuelist-grid all-topissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue virtual_currency_not_available_when_promised" id="virtual_currency_not_available_when_promised" />
+                Money was not available when promised
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue virtual_currency_wrong_amount" id="virtual_currency_wrong_amount" />
+                Wrong amount charged or received
+                <br /><small>Transfer amounts, fees, exchange rates, taxes, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue virtual_currency_incorrect_missing_disclosures" id="virtual_currency_incorrect_missing_disclosures" />
+                Incorrect/missing disclosures or info
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue virtual_currency_other_transaction_issues" id="virtual_currency_other_transaction_issues" />
+                Other transaction issues
+                <br /><small>Unauthorized transaction, cancellation, refund, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue virtual_currency_other_service_issues" id="virtual_currency_other_service_issues" />
+                Other service issues
+                <br /><small>Advertising or marketing, pricing, privacy, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue virtual_currency_fraud_or_scam" id="virtual_currency_fraud_or_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="issue_options_check_cashing" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue check_cashing_advertising_and_marketing" id="check_cashing_advertising_and_marketing" />
+                Advertising and marketing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue check_cashing_customer_service" id="check_cashing_customer_service" />
+                Customer service / Customer relations
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue check_cashing_disclosures" id="check_cashing_disclosures" />
+                Disclosures
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue check_cashing_excessive_fees" id="check_cashing_excessive_fees" />
+                Excessive fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue check_cashing_unexpected_other_fees" id="check_cashing_unexpected_other_fees" />
+                Unexpected / Other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue check_cashing_fraud_or_scam" id="check_cashing_fraud_or_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="issue_options_fx_exchange" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue fx_exchange_advertising_and_marketing" id="fx_exchange_advertising_and_marketing" />
+                Advertising and marketing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue fx_exchange_customer_service" id="fx_exchange_customer_service" />
+                Customer service / Customer relations
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue fx_exchange_disclosures" id="fx_exchange_disclosures" />
+                Disclosures
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue fx_exchange_excessive_fees" id="fx_exchange_excessive_fees" />
+                Excessive fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue fx_exchange_unexpected_other_fees" id="fx_exchange_unexpected_other_fees" />
+                Unexpected / Other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue fx_exchange_exchange_rates" id="fx_exchange_exchange_rate" />
+                Incorrect exchange rate
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="issue_options_credit_repair" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_repair_advertising_and_marketing" id="credit_repair_advertising_and_marketing" />
+                Advertising and marketing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_repair_customer_service" id="credit_repair_customer_service" />
+                Customer service / Customer relations
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_repair_disclosures" id="credit_repair_disclosures" />
+                Disclosures
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_repair_excessive_fees" id="credit_repair_excessive_fees" />
+                Excessive fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_repair_unexpected_other_fees" id="credit_repair_unexpected_other_fees" />
+                Unexpected / Other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_repair_fraud_or_scam" id="credit_repair_fraud_or_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="issue_options_money_order" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_order_advertising_and_marketing" id="money_order_advertising_and_marketing" />
+                Advertising and marketing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_order_customer_service" id="money_order_customer_service" />
+                Customer service / Customer relations
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_order_disclosures" id="money_order_disclosures" />
+                Disclosures
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_order_excessive_fees" id="money_order_excessive_fees" />
+                Excessive fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_order_unexpected_other_fees" id="money_order_unexpected_other_fees" />
+                Unexpected / Other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_order_fraud_or_scam" id="money_order_fraud_or_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue money_order_lost_or_stolen" id="money_order_lost_or_stolen" />
+                Lost or stolen money order
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="issue_options_refund_anticipation" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue refund_anticipation_advertising_and_marketing" id="refund_anticipation_advertising_and_marketing" />
+                Advertising and marketing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue refund_anticipation_customer_service" id="refund_anticipation_customer_service" />
+                Customer service / Customer relations
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue refund_anticipation_disclosures" id="refund_anticipation_disclosures" />
+                Disclosures
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue refund_anticipation_excessive_fees" id="refund_anticipation_excessive_fees" />
+                Excessive fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue refund_anticipation_unexpected_other_fees" id="refund_anticipation_unexpected_other_fees" />
+                Unexpected / Other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue refund_anticipation_fraud_or_scam" id="refund_anticipation_fraud_or_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue refund_anticipation_lost_or_stolen" id="refund_anticipation_lost_or_stolen" />
+                Lost or stolen refund anticipation payment
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="issue_options_traveler_cashier_check" class="select-product-or-issue issuelist-grid all-topissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue traveler_cashier_check_advertising_and_marketing" id="traveler_cashier_check_advertising_and_marketing" />
+                Advertising and marketing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue traveler_cashier_check_customer_service" id="traveler_cashier_check_customer_service" />
+                Customer service / Customer relations
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue traveler_cashier_check_disclosures" id="traveler_cashier_check_disclosures" />
+                Disclosures
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue traveler_cashier_check_excessive_fees" id="traveler_cashier_check_excessive_fees" />
+                Excessive fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue traveler_cashier_check_unexpected_other_fees" id="traveler_cashier_check_unexpected_other_fees" />
+                Unexpected / Other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue traveler_cashier_check_fraud_or_scam" id="traveler_cashier_check_fraud_or_scam" />
+                Fraud or scam
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue traveler_cashier_check_lost_or_stolen" id="traveler_cashier_check_lost_or_stolen" />
+                Lost or stolen check
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!--
+////////////
+STOP ALL OF THE ISSUE LISTS
+//////////
+-->
+
+    </div>
+
+
+<!-- question -->
+<div id="select_subissue" class="select-product-or-issue issuelist-grid cr-primary-container">
+    <div class="span3 cr-label">
+
+
+
+
+        <h3 id="generic_subissue_intro" for="select_subissue" class="last product subissue_label label_same_as_header student_loan_dealing_with_lender_or_servicer student_loan_getting_a_loan_subissues student_loan_cannot_repay_loan_subissues student_loan_dealing_with_lender_or_servicer_subissues vehicle_loan_shopping_subissues vehicle_loan_getting_the_loan_subissues vehicle_loan_problems_making_payments_subissues vehicle_loan_unable_to_pay_subissues vehicle_loan_end_of_loan_subissues checking_account_opening_account_subissues checking_account_managing_account_subissues checking_account_closing_account_subissues savings_account_opening_account_subissues savings_account_managing_account_subissues savings_account_closing_account_subissues certificate_of_deposit_opening_account_subissues certificate_of_deposit_managing_account_subissues certificate_of_deposit_closing_account_subissues credit_card_getting_a_card_subissues credit_card_advertising_promotions_subissues credit_card_problems_with_terms_subissues credit_card_disagree_with_fees_subissues credit_card_billing_disputes_subissues credit_card_repayment_assistance_subissues credit_card_closing_card_subissues credit_reporting_incorrect_information_subissues credit_reporting_company_investigation_subissues credit_reporting_improper_use_subissues credit_reporting_unable_to_get_report_or_score_subissues credit_reporting_credit_monitoring_identity_protection_subissues debt_collection_communication_tactics_subissues debt_collection_continued_attempts_not_owe_subissues debt_collection_verification_of_debt_subissues debt_collection_false_statements_subissues debt_collection_improper_contact_or_sharing_subissues debt_collection_legal_action_subissues">
+
+            Select one:
+        </h3>
+
+        <h3 id="mortgage_servicer_paymentslabel" for="select_subissue" class="subissue_label label_same_as_header mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+            Have you missed any mortgage payments or are you in default on your mortgage?
+        </h3>
+
+        <h3 id="debt_collection_labelv" for="select_subissue" class="last product subissue_label product_debt debt_collection_subissues label_same_as_header">
+            Which of these is the primary problem?
+        </h3>
+
+        <h3 id="credit_reporting_label" for="select_subissue" class="last product subissue_label product_credit_reporting credit_reporting_subissues label_same_as_header">
+            Which of these is the primary problem?
+        </h3>
+
+
+
+    </div>
+
+
+<!--
+////////////
+START ALL OF THE SUB-ISSUE LISTS
+//////////
+-->
+
+
+
+
+
+
+<!--
+
+DEBT COLLECTION TOP LEVEL LIVES IN TWO PLACES OMG
+
+-->
+
+
+<div id="debt_collection_subissues" class="select-product-or-issue issuelist-grid debt-collection-zombie">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_communication_tactics" />
+                Communication tactics
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_continued_attempts_not_owe" />
+                Continued attempts to collect debt I do not owe
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_verification_of_debt" />
+                Disclosure verification of debt
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_false_statements" />
+                False statements or representation
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_improper_contact_or_sharing" />
+                Improper contact or sharing of information
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue " id="debt_collection_legal_action" />
+                Taking or threatening to take legal action
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+
+
+<!--
+
+END OF ZOMBIE DEBT COLLECTION TOPLEVEL
+
+-->
+
+
+
+
+
+
+
+<!--
+
+CREDIT REPORTING TOP LEVEL LIVES IN TWO PLACES OMG
+
+-->
+
+
+
+
+
+<div id="credit_reporting_subissues" class="select-product-or-issue issuelist-grid credit-reporting-zombie">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_incorrect_information" id="credit_reporting_incorrect_information" />
+                Incorrect information on my credit report
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_company_investigation" id="credit_reporting_company_investigation" />
+                Company's investigation
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_improper_use" id="credit_reporting_improper_use" />
+                Improper use of my credit report
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input issue credit_reporting_credit_monitoring_identity_protection" id="credit_reporting_credit_monitoring_identity_protection" />
+                Credit monitoring, identity protection & other services
+                <br /><small></small>
+            </label>
+</div>
+
+
+<div id="zombie_subissues_sublabel" for="select_subissue_zombie" class="last product ">
+        <h3>Select one:</h3>
+</div>
+
+
+<!--
+
+END OF ZOMBIE CREDIT REPORTING TOPLEVEL
+
+-->
+
+
+
+
+
+
+
+
+<div id="student_loan_getting_a_loan_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue student_loan_cannot_qualify" id="student_loan_cannot_qualify" />
+                Can't qualify for a loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue student_loan_qualify_better" id="student_loan_qualify_better" />
+                Qualify for a better loan than the one offered
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+<div id="student_loan_cannot_repay_loan_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Can't decrease my monthly payments
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Can't temporarily postpone making payments
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+				Can't get other flexible options for repaying my loan
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+<div id="student_loan_dealing_with_lender_or_servicer_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Trouble with how payments are being handled
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Don't agree with the fees charged
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Received bad information about my loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Need information about my loan balance or loan terms
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Keep getting calls about my loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+            Having problems with customer service
+                <br /><small></small>
+            </label>
+
+</div>
+
+<!-- Mortgage servicer subissues -->
+
+<div id="mortgage_servicer_making_payments_subissues" class="issuelist-grid all-subissues">
+  <label class="radio block">
+    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_yes" />
+    Yes
+    <br /><small>Check “yes” if your mortgage company believes you are in default or have missed payments even if you believe the company is in error.</small>
+  </label>
+  <label class="radio block">
+    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_no" />
+    No
+    <br /><small></small>
+  </label>
+</div>
+
+<div id="mortgage_servicer_unable_pay_subissues" class="issuelist-grid all-subissues">
+  <label class="radio block">
+    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_yes" />
+    Yes
+    <br /><small>Check “yes” if your mortgage company believes you are in default or have missed payments even if you believe the company is in error.</small>
+  </label>
+  <label class="radio block">
+    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_no" />
+    No
+    <br /><small></small>
+  </label>
+</div>
+
+<!--
+<div class="mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+  <div class="span3 cr-label">
+    <h3 id="mortgage_servicer_concerned_foreclosure_label" for="select_subissue" class="subissue_label label_same_as_header mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+        Are you concerned about losing your home to foreclosure?
+    </h3>
+  </div>
+</div>
+<div class="mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+  <label class="radio block">
+    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_losing_home" id="mortgage_servicer_losing_home_yes" />
+    Yes
+    <br /><small>Please note: submitting a complaint will not automatically delay or stop a foreclosure.</small>
+  </label>
+  <label class="radio block">
+    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_losing_home" id="mortgage_servicer_losing_home_no" />
+    No
+    <br /><small></small>
+  </label>
+</div>
+-->
+
+
+<div id="vehicle_loan_shopping_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Confusing or misleading advertising
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+               Issues with person offering you the loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Denied or discouraged from getting credit
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="vehicle_loan_getting_the_loan_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with the interest rate or loan or lease terms
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with additional products or services purchased with the loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Changes in promised terms after I drove off the lot
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with signing the paperwork
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fraudulent loans opened in my name
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="vehicle_loan_problems_making_payments_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Payments are not applied correctly
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with fees, interest rate or other loan or lease terms
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues related to the transfer of your loan to another company
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with additional products or services purchased with the loan
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="vehicle_loan_unable_to_pay_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Denial of request related to financial hardship
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Efforts by the lender to repossess or disable the vehicle
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues arising after you declared or threaten to declare bankruptcy
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Balance remaining after the vehicle is gone
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Attempts to collect on the debt
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="vehicle_loan_end_of_loan_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with paying off the loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues related to refinancing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Unable to receive car title or other issues after the loan is paid off
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues while selling or giving up the vehicle
+                <br /><small></small>
+            </label>
+
+
+</div>
+
+
+
+<div id="vehicle_lease_end_of_lease_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with paying off the loan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues related to refinancing
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Unable to receive car title or other issues after the loan is paid off
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues while selling or giving up the vehicle
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues when attempting to purchase vehicle
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Excess mileage, wear fees or other issues when returning vehicle
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Termination fees and other issues when ending the lease early
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues extending the lease
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="checking_account_opening_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Unable to open an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fraudulently opened account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Advertised or promotional terms not received
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Problem with disclosures
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+<div id="checking_account_managing_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Deposits and withdrawals
+                <br /><small>Availability or access to deposited funds, account freezes, transaction holds</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues making and receiving payments
+                <br /><small>Bill pay, bank offsets, garnishments, transaction holds</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Bank errors
+                <br /><small>Interest rate calculations, errors crediting account</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues using a debit or ATM card
+                <br /><small>ATM problems, disputed transaction</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues accessing account
+                <br /><small>Online or mobile access, receiving the periodic statement</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fee issues
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+<div id="checking_account_closing_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Forced account closure
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Closure requested but not completed
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fees charged
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Funds not received from closed account
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+<div id="checking_account_funds_low_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Overdrafts and overdraft fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Non-sufficient funds fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Late or other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Bounced checks or returned payments
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="savings_account_opening_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Unable to open an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fraudulently opened account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Advertised or promotional terms not received
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Problem with disclosures
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+<div id="savings_account_managing_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Deposits and withdrawals
+                <br /><small>Availability or access to deposited funds, account freezes, transaction holds</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues making and receiving payments
+                <br /><small>Bill pay, bank offsets, garnishments, transaction holds</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Bank errors
+                <br /><small>Interest rate calculations, errors crediting account</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues using a debit or ATM card
+                <br /><small>ATM problems, disputed transaction</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues accessing account
+                <br /><small>Online or mobile access, receiving the periodic statement</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fee issues
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+<div id="savings_account_closing_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Forced account closure
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Closure requested but not completed
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fees charged
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Funds not received from closed account
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+<div id="savings_account_funds_low_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Overdrafts and overdraft fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Non-sufficient funds fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Late or other fees
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Bounced checks or returned payments
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+<div id="certificate_of_deposit_opening_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Unable to open an account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fraudulently opened account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Advertised or promotional terms not received
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Problem with disclosures
+                <br /><small></small>
+            </label>
+
+
+</div>
+
+
+
+
+
+<div id="certificate_of_deposit_managing_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Deposits and withdrawals
+                <br /><small>Availability or access to deposited funds, account freezes, transaction holds</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Bank errors
+                <br /><small>Interest rate calculations, errors crediting account</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues accessing account
+                <br /><small>Online or mobile access, receiving the periodic statement</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with fees or penalties
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Renewal issues
+                <br /><small></small>
+            </label>
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Funds not handled or disbursed as instructed
+                <br /><small></small>
+            </label>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="certificate_of_deposit_closing_account_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Forced account closure
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Closure requested but not completed
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Fees charged
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Funds not received from closed account
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+<div id="credit_card_getting_a_card_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Application denied
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Processing delays
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Unsolicited or fraudulent cards in my name
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+<div id="credit_card_advertising_promotions_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Promotional interest rate
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Advertised terms not received
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Add-on products or services
+                <br /><small>Credit monitoring, disability insurance, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Rewards
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="credit_card_problems_with_terms_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Interest rate or APR changes
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Deferred interest
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Credit limit changed
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Cash advance issues
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Grace period issues
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Arbitration issues
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Convenience checks
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Balance transfer issues
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Privacy issues
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+<div id="credit_card_disagree_with_fees_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Late fee
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Overlimit fee
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Cash advance fee
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Foreign currency fee
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Annual fee
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Application fee
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Balance transfer fee
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="credit_card_billing_disputes_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Billing dispute issues
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Billing statement issues
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Misapplied payments
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Transaction issues
+                <br /><small>Incorrect amount charged, issues with purchased items, etc</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Unauthorized use of the card
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+
+
+<div id="credit_card_repayment_assistance_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Request for a lower interest rate
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Request for forbearance or workout plan
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Request for settlement
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Account sold or transferred to another company
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Bankruptcy
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+<div id="credit_card_closing_card_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Can't close my account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Company closed my account
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+<div id="credit_reporting_incorrect_information_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Information is not mine
+                <br /><small>Belongs to someone else, identity theft, fraud, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Incorrect account information
+                <br /><small>Loan balance, payment amount, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Incorrect status of my account
+                <br /><small>Account closed, delinquency, paid on time, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Incorrect personal information
+                <br /><small>Wrong date of birth, address, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Inaccurate public record
+                <br /><small>Bankruptcy, judgement, liens, criminal record, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Old information reappears or never goes away
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+
+
+
+<div id="credit_reporting_company_investigation_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Investigation took too long
+                <br /><small>More than 30 days, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Did not get proper notice of investigation status or results
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Investigation did not resolve the issue
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Problem with statement of dispute
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="credit_reporting_improper_use_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Report improperly shared by credit reporting company
+                <br /><small>Shared without my consent, used in non-credit decisions, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Received marketing offers after opting out
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Report provided to employer without my written authorization
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Inquiries on my report that I do not recognize
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="credit_reporting_unable_to_get_report_or_score_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues getting my free annual report
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues getting my report or credit score
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="credit_reporting_credit_monitoring_identity_protection_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues canceling or closing account
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Billing dispute
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Received unwanted marketing or advertising
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Account or product terms and changes
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Issues with fraud alerts or security freezes
+                <br /><small>Initial 90-day, extended, active duty, etc.</small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Service is unavailable
+                <br /><small></small>
+            </label>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="debt_collection_communication_tactics_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Frequent or repeated calls
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Called outside of 8am-9pm
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Used obscene, profane or other abusive language
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Threatened to take legal action
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Called after sent written cease of communication notice
+                <br /><small></small>
+            </label>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="debt_collection_continued_attempts_not_owe_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Debt was discharged in bankruptcy
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Debt resulted from identity theft
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Debt was paid
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Debt is not mine
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="debt_collection_verification_of_debt_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Did not receive notice of right to dispute
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Not enough information to verify debt
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Did not disclose communication was an attempt to collect a debt
+                <br /><small></small>
+            </label>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="debt_collection_false_statements_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Attempted to collect wrong amount
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Impersonated attorney, law enforcement or government official
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Indicated committing crime by not paying debt
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Indicated should not respond to lawsuit
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="debt_collection_improper_contact_or_sharing_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Contacted me after I asked not to
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Contacted my employer
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Contacted me instead of my attorney
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Talked to a third party about my debt
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="debt_collection_legal_action_subissues" class="select-product-or-issue issuelist-grid all-subissues">
+
+
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Threatened to arrest me or take me to jail if I do not pay
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Threatened to sue me on debt that is too old to be sued on
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Sued me without properly notifying me of lawsuit
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Sued me where I do not live or did not sign for the debt
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Attempted to or collected exempt funds
+                <br /><small></small>
+            </label>
+
+	      <label class="radio block">
+                <input name="radio_" type="radio" class="radio_input subissue " id="" />
+                Seized or attempted to seize property
+                <br /><small></small>
+            </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+////////////
+Stop all of the sub-issue lists
+//////////
+-->
+
+
+
+
+
+</div>
+	 <div id="resolution-options-header" class="cr-primary-container resolution-options">
+
+    <h3>Have you already attempted to resolve this issue with the company?</h3>
+	 </div>
+
+ <div id="resolution_options" class="cr-primary-container resolution-options">
+
+
+								<div id="resolution-options-list" class="select-product-or-issue">
+
+
+								<label class="radio block">
+                                    <input type="radio" name="resolution-attempt" value="option1" class="resolution-attempt" id="contacted-company">
+                                    Yes
+                                </label>
+
+								<label class="radio block">
+                                    <input type="radio" name="resolution-attempt" value="option1" class="resolution-attempt" id="contacted-cfpb">
+                                    No
+                                </label>
+								</div>
+
+    </div>
+
+
+
+
+
+<!--
+    /////////////////////
+    /////////////////////
+    /////////////////////
+    /////////////////////
+
+        REAL BOTTOM
+
+    /////////////////////
+    /////////////////////
+    /////////////////////
+    /////////////////////
+
+-->
+
+    </div>
+
+
+<script>
+
+
+if(!window.env){
+    setTimeout(function(){
+        // grab stuff from step 1
+        var subproductname = localStorage.getItem("subproduct_selected").replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');
+        var issuelist = localStorage.getItem("issue_list");
+        $('#product-name-in-subhead').text(subproductname);
+        $('.all-topissues').hide();
+        $('#issue_options_' + issuelist).slideDown(200);
+/*         $('#issue_options_' + issuelist).show();         */
+
+    },
+
+    1);
+}
+</script>
+
+
+
+
+
+
+
+
+<script>
+if(!window.env){
+    setTimeout(function(){
+
+		$('#select_issue .all-topissues .radio_input').click(function(e){
+            // save the topissue to local storage
+            var issueselected = $(this).attr('id');
+            localStorage.setItem('issue_selected', (issueselected));
+        });
+
+
+    }, 1);
+}
+</script>
+
+
+
+
+
+
+
+
+
+<!-- options below form -->
+<div class="row cr-continue">
+  <a id="continue-button" href="what-happened.html"><button class="btn btn-arrow" type="button">Continue</button></a>
+<!--   <a id="save-and-continue-later-link" href="#">Save and continue later</a>        -->
+</div>
+<!-- /options below form -->
+
+
+
+
+
+            </div>
+            <!-- /.primary -->
+
+        </section>
+        <!-- /.row -->
+
+<!-- =============
+     / END CONTENT
+     ============= -->
+
+    </div><!-- .wrapper-container -->
+
+</div><!-- .wrapper-body -->
+
+<footer class="wrapper-footer">
+    <div class="wrapper-container">
+        <nav>
+            <ul class="main-nav horizontal-separated">
+                <li><a id="privacy" href="#">Privacy act statement</a></li>
+                <li><a id="omb" href="#">OMB #3170-0011</a></li>
+            </ul>
+        </nav>
+
+        <div class="sub">
+            <p class="call-us">Have questions? Need help with this form? <span class="tel">(855) 411-2372</span></p>
+            <p class="official-tagline">An official website of the United States government</p>
+        </div>
+
+    </div><!-- .wrapper-container -->
+
+</footer><!-- .wrapper-footer -->
+
+<script src="form/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="form/js/vendor/bootstrap-typeahead.js"></script>
+<script src="form/js/vendor/bootstrap-affix.js"></script>
+<script src="form/data/companies.json"></script>
+<script src="form/js/main.js"></script>
+<script src="form/js/emulate.js"></script>
+<!-- <script src="form/js/responsive.js"></script> -->
+
+<style type="text/css">
+.brand h1 {
+    background: transparent url(form/img/money_@2_alt.png) scroll no-repeat left center;
+    background-size:46px;
+}
+</style>
+
+<script src="annotations.js"></script>
+
+</body>
+</html>
+
+
+
+
+<div id='_cur'>
+	<img src="/static/editcore/editor/img/cursor.png" />
+</div>
+
+<style type="text/css">
+#_cur{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100000;
+	width:10px;
+	height:10px;
+	margin-left: -8px;
+	margin-top: -8px;
+	left: -10px;
+	top:-10px;
+	background:transparent;
+	opacity:.9;
+	border-radius:100%;
+	border:4px solid rgba(255,255,255,.6);
+}
+
+#_cur.clk{
+	border:4px dotted black;
+	background: transparent;
+}
+</style>
+
+<script type="text/javascript">
+
+
+	var current_page_url = "/edit/project-20/get_zip";
+
+
+		var test_replay_page = false;
+
+
+</script>

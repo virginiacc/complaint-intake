@@ -67,7 +67,8 @@ module.exports = {
         loc.src + '/_*/**/*',
         loc.src + '/robots.txt',
         loc.src + '/favicon.ico',
-        '!' + loc.lib + '/**/*.html'
+        '!' + loc.lib + '/**/*.html',
+        '!' + loc.src + '/v0/**'
       ],
       dest: loc.dist
     },
@@ -81,6 +82,12 @@ module.exports = {
         loc.lib + '/html5shiv/dist/html5shiv-printshiv.min.js'
       ],
       dest: loc.dist + '/static/js/'
+    },
+    oldFiles: {
+      src: [
+        loc.src + '/v0/**'
+      ],
+      dest: loc.dist + '/v0/'
     }
   }
 };
