@@ -6,6 +6,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ### Added
 - Initial repository setup.
+- Capital Framework project infrastructure (including a gulp build)
 
 ### Deprecated
 - Nothing.
