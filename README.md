@@ -36,7 +36,7 @@ First, open a **server** tab in your terminal and run:
 python -m SimpleHTTPServer
 ```
 
-2. Open a **gulp** tab in your terminal and run:
+Open a **gulp** tab in your terminal and run:
 
 ```bash
 gulp watch
