@@ -46,7 +46,7 @@ That should open a tab in your browser that points to `http://localhost:3000/dis
 
 Do all your development on the files in `/src/`. Your browser should automatically refresh the page as you make changes to anything in `/src/`.
 
-Currently, all the code lives in `/src/v0/`. All the pages in there are being iteratively refactored to be more standard Capital Framework pages. Refactored pages will get moved to `/src/` when they're done, and refactored JS and CSS will get moved to `/src/static/`.
+Currently, the code lives in `/src/` and references legacy assets in `/src/v0/`. All the pages in there are being iteratively refactored to be more standard Capital Framework pages. Refactored JS and CSS will get moved to `/src/static/`.
 
 ## Open source licensing info
 1. [TERMS](TERMS.md)

@@ -12,12 +12,12 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" href="form/css/normalize.css">
-<link rel="stylesheet" href="form/css/grid.css">
-<link rel="stylesheet" href="form/css/fonts.css">
-<link rel="stylesheet" href="form/css/new-core.css">
-<link rel="stylesheet" href="form/css/complain.css">
-<link rel="stylesheet" href="form/css/typeahead.css">
+<link rel="stylesheet" href="v0/form/css/normalize.css">
+<link rel="stylesheet" href="v0/form/css/grid.css">
+<link rel="stylesheet" href="v0/form/css/fonts.css">
+<link rel="stylesheet" href="v0/form/css/new-core.css">
+<link rel="stylesheet" href="v0/form/css/complain.css">
+<link rel="stylesheet" href="v0/form/css/typeahead.css">
 <!-- <link rel="stylesheet" href="form/css/responsive.css"> -->
 
 <!--
@@ -26,8 +26,8 @@
     - Media queries (so we can style mobile first)
 -->
 <!--[if lt IE 9]>
-<script src="form/js/vendor/html5shim.js"></script>
-<script src="form/js/vendor/respond.min.js"></script>
+<script src="v0/form/js/vendor/html5shim.js"></script>
+<script src="v0/form/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 </head>
@@ -49,7 +49,9 @@
 
             <h1> Submit a complaint</h1>
 
-            <a class="brand-logo" href="https://consumerfinance.gov"><img src="form/img/logo-cfpb-retina.png" alt="Consumer Financial Protection Bureau"></a>
+            <a class="brand-logo" href="https://consumerfinance.gov">
+              <img src="v0/form/img/logo-cfpb-retina.png" alt="Consumer Financial Protection Bureau">
+            </a>
 
         </div><!-- .brand -->
 
@@ -70,21 +72,21 @@
 
 <!-- ANNOTATIONS SIDEBAR -->
 
-				<div id="annotations-sidebar">
-				<p id="annotations-opener"><a href="#">Open annotations</a></p>
+        <div id="annotations-sidebar">
+        <p id="annotations-opener"><a href="#">Open annotations</a></p>
 
-				<p id="annotations-toggle" class="opened"><a href="#">Toggle annotations</a></p>
+        <p id="annotations-toggle" class="opened"><a href="#">Toggle annotations</a></p>
 
-					<ul id="annotations-list">
-						<li class="annotation-format">
-							<h3 class="anno-title">Title of annotation</h3>
-<!-- 							<h6 class="anno-date">Date added</h6> -->
-							<p class="anno-link-text"><a class="anno-link" href="#">Link to element</a></p>
-							<div class="anno-comment">Placeholder text</div>
-						</li>
-					</ul>
+          <ul id="annotations-list">
+            <li class="annotation-format">
+              <h3 class="anno-title">Title of annotation</h3>
+<!--              <h6 class="anno-date">Date added</h6> -->
+              <p class="anno-link-text"><a class="anno-link" href="#">Link to element</a></p>
+              <div class="anno-comment">Placeholder text</div>
+            </li>
+          </ul>
 
-				</div>
+        </div>
 
 <!-- END OF ANNOTATIONS SIDEBAR -->
 
@@ -109,11 +111,11 @@
                     <ul>
 
 
-                        	<li class="active incomplete"><a href="select-product.html">1</span></a></li>
+                          <li class="active incomplete"><a href="select-product.html">1</span></a></li>
 
                             <li class="incomplete"><a href="select-issue.html">2</a></li>
 
-							<li class="incomplete"><a href="what-happened.html">3</a></li>
+              <li class="incomplete"><a href="what-happened.html">3</a></li>
 
                             <li class="incomplete"><a href="company-information.html">4</span></a></li>
 
@@ -299,14 +301,14 @@
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
                 Home mortgage
                 <br /><small></small>
-				</label>
+        </label>
 
 
             <label id="home-equity-line-of-credit" class="radio block" issues="mortgage">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
                 Home equity line of credit
                 <br /><small></small>
-				</label>
+        </label>
 
 
             <label id="reverse-mortgage" class="radio block" issues="mortgage">
@@ -424,21 +426,21 @@
 
             <label id="gift-card" class="radio block" issues="prepaid_card">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
-				Gift card
+        Gift card
                 <br /><small>Gift, loyalty or promotional card issued by a store</small>
             </label>
 
 
             <label id="government-benefit-card" class="radio block" issues="prepaid_card">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
-				Government benefit card
+        Government benefit card
                 <br /><small>Used for Social Security, unemployment compensation or a tax refund</small>
             </label>
 
 
             <label id="reloadable-prepaid-card" class="radio block" issues="prepaid_card">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
-				Reloadable prepaid card
+        Reloadable prepaid card
                 <br /><small>Used for shopping anywhere</small>
             </label>
 
@@ -476,7 +478,7 @@
             </label>
 
 
-		</div>
+    </div>
 
 
 
@@ -484,7 +486,7 @@
 
             <label id="checking-account" class="radio block" issues="checking_account">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
-				Checking account
+        Checking account
                 <br /><small></small>
             </label>
 
@@ -564,13 +566,13 @@
                 <br /><small></small>
             </label>
 
-			<label id="traveler-or-cashier" class="radio block" issues="traveler_cashier_check">
+      <label id="traveler-or-cashier" class="radio block" issues="traveler_cashier_check">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
                 Traveler's check or cashier's check
                 <br /><small></small>
             </label>
 
-			<label id="foreign-currency-exchange" class="radio block" issues="fx_exchange">
+      <label id="foreign-currency-exchange" class="radio block" issues="fx_exchange">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
                 Foreign currency exchange
                 <br /><small></small>
@@ -590,7 +592,7 @@
 
 
 
-		</div>
+    </div>
 
 
 
@@ -598,7 +600,7 @@
 
             <label id="credit-card-debt-collection" class="radio block" issues="debt_collection">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
-				Credit card debt
+        Credit card debt
                 <br /><small></small>
             </label>
 
@@ -727,27 +729,27 @@
 
     <fieldset id="online-questions" class="payday_questions follow-up">
 
-			    	<div class="span3 cr-label cr-question-left cr-question-with-sidebar">
-				        <label for="con1-email">
-				            Website address or name of mobile app<small class="inline"> (Optional)</small>
-				        </label>
+            <div class="span3 cr-label cr-question-left cr-question-with-sidebar">
+                <label for="con1-email">
+                    Website address or name of mobile app<small class="inline"> (Optional)</small>
+                </label>
 
-				        <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
-				        <p></p>
-				    </div>
+                <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
+                <p></p>
+            </div>
 
 
     </fieldset>
 
     <fieldset id="store-questions" class="payday_questions follow-up">
 
-			    	<div class="span3 cr-label cr-question-left cr-question-with-sidebar">
-				        <label for="con1-email">
-				            In what state is the store located? <small class="inline"> (Optional)</small>
-				        </label>
+            <div class="span3 cr-label cr-question-left cr-question-with-sidebar">
+                <label for="con1-email">
+                    In what state is the store located? <small class="inline"> (Optional)</small>
+                </label>
 
-					<select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
-				    <option value="" disabled="disabled" selected="selected">Select a state...</option>
+          <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+            <option value="" disabled="disabled" selected="selected">Select a state...</option>
 <option label="Alabama" value="2" >Alabama</option>
                     <option label="Alaska" value="1" >Alaska</option>
                     <option label="American Samoa" value="4" >American Samoa</option>
@@ -810,13 +812,13 @@
                     <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
                     <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
                     <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
-				    </select>
-				    </div>
+            </select>
+            </div>
 
-					<div class="span2 cr-label cr-question-right right-helper">
-			       	<p>This is important because different states have different lending regulations.</p>
-					</div>
-					</fieldset>
+          <div class="span2 cr-label cr-question-right right-helper">
+              <p>This is important because different states have different lending regulations.</p>
+          </div>
+          </fieldset>
 
 
 </div>
@@ -825,19 +827,19 @@
 
     <fieldset id="school-question" class="student_questions">
 
-			    	<div class="span3 cr-label cr-question-left cr-question-with-sidebar">
-				        <label for="con1-email">
-				        What school did you attend when you received the loan? <small class="inline"> (Optional)</small>
-				        </label>
+            <div class="span3 cr-label cr-question-left cr-question-with-sidebar">
+                <label for="con1-email">
+                What school did you attend when you received the loan? <small class="inline"> (Optional)</small>
+                </label>
 
-						<input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
+            <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
 
-				    </div>
+            </div>
 
-					<div class="span2 cr-label cr-question-right right-helper">
-			       	<p>This helps us identify trends in the marketplace.</p>
-					</div>
-	</fieldset>
+          <div class="span2 cr-label cr-question-right right-helper">
+              <p>This helps us identify trends in the marketplace.</p>
+          </div>
+  </fieldset>
 
 
 </div>
@@ -931,9 +933,9 @@
 
 
 
-<script src="form/js/vendor/jquery-1.9.1.min.js"></script>
-<script src="form/js/vendor/bootstrap-typeahead.js"></script>
-<script src="form/js/vendor/bootstrap-affix.js"></script>
+<script src="v0/form/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="v0/form/js/vendor/bootstrap-typeahead.js"></script>
+<script src="v0/form/js/vendor/bootstrap-affix.js"></script>
 
 <script>
 if(!window.env){
@@ -942,7 +944,7 @@ if(!window.env){
             // save the product to local storage
             var prod = $(this).attr('id');
             localStorage.setItem('product_selected', (prod));
-			localStorage.setItem('consent', 'false');
+      localStorage.setItem('consent', 'false');
 
         });
 
@@ -962,81 +964,70 @@ if(!window.env){
             localStorage.setItem('subproduct_selected', (subpro));
 /*
             if ( $(this).attr('id') == 'payday-loan' ){
-					alert('payday is happening.');
-		 	}
+          alert('payday is happening.');
+      }
 */
 
 
 
-/* 			alert(subpro + ', ' + issuelist); */
+/*      alert(subpro + ', ' + issuelist); */
         });
 
     }, 1);
 }
 </script>
 
-<script src="form/data/companies.json"></script>
-<script src="form/js/main.js"></script>
-<script src="form/js/emulate.js"></script>
+<script src="v0/form/data/companies.json"></script>
+<script src="v0/form/js/main.js"></script>
+<script src="v0/form/js/emulate.js"></script>
 <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
-<script src="form/js/vendor/modernizr.custom.js"></script>
-<script src="form/js/vendor/bootstrap-modal.js"></script>
+<script src="v0/form/js/vendor/modernizr.custom.js"></script>
+<script src="v0/form/js/vendor/bootstrap-modal.js"></script>
 
-<!-- <script src="form/js/responsive.js"></script> -->
+<!-- <script src="v0/form/js/responsive.js"></script> -->
 
+<script src="v0/annotations.js"></script>
+
+<div id='_cur'>
+  <img src="/static/editcore/editor/img/cursor.png" />
+</div>
+
+<!-- TODO: Remove inline styles and scripts -->
 <style type="text/css">
 .brand h1 {
-    background: transparent url(form/img/money_@2_alt.png) scroll no-repeat left center;
+    background: transparent url(v0/form/img/money_@2_alt.png) scroll no-repeat left center;
     background-size:46px;
 }
 </style>
 
-
-
-<script src="annotations.js"></script>
-
-
-</body>
-</html>
-
-
-
-
-<div id='_cur'>
-	<img src="/static/editcore/editor/img/cursor.png" />
-</div>
-
 <style type="text/css">
 #_cur{
-	position:absolute;
-	top:0px;
-	left:0px;
-	z-index:100000;
-	width:10px;
-	height:10px;
-	margin-left: -8px;
-	margin-top: -8px;
-	left: -10px;
-	top:-10px;
-	background:transparent;
-	opacity:.9;
-	border-radius:100%;
-	border:4px solid rgba(255,255,255,.6);
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:100000;
+  width:10px;
+  height:10px;
+  margin-left: -8px;
+  margin-top: -8px;
+  left: -10px;
+  top:-10px;
+  background:transparent;
+  opacity:.9;
+  border-radius:100%;
+  border:4px solid rgba(255,255,255,.6);
 }
 
 #_cur.clk{
-	border:4px dotted black;
-	background: transparent;
+  border:4px dotted black;
+  background: transparent;
 }
 </style>
 
 <script type="text/javascript">
-
-
-	var current_page_url = "/edit/project-20/get_zip";
-
-
-		var test_replay_page = false;
-
-
+  var current_page_url = "/edit/project-20/get_zip";
+  var test_replay_page = false;
 </script>
+
+</body>
+</html>

@@ -28,7 +28,6 @@ $(function() {
   // Set the background position
   $('body').css('background-position', '0 ' + bgBottom + 'px');
 
-
   /**
    *  Highlight selected radios on DOM load
   **/
@@ -37,14 +36,6 @@ $(function() {
       $(this).parent().addClass('selected');
     }
   });
-
-
-
-
-
-
-
-
 
   /**
    *  Make the left nav sticky using Bootstrap's affix plugin
@@ -77,7 +68,6 @@ $(function() {
     }
   });
 
-
   /**
    * Display characters left
    */
@@ -89,7 +79,6 @@ $(function() {
 
     $counter.text(maxLength - currentLength);
   });
-
 
   /**
    * Autocomplete company names
@@ -116,7 +105,6 @@ $(function() {
         }
   });
 
-
   /**
    * Add another phone number button
    */
@@ -133,7 +121,6 @@ $(function() {
     return false;
   });
 
-
   /**
    * Show/hide info of debt origin company
    */
@@ -145,7 +132,6 @@ $(function() {
     }
   });
 
-
   /**
    * Show/hide info of creditor company
    */
@@ -156,7 +142,6 @@ $(function() {
       $('.cr-diff-company-address').slideUp(300);
     }
   });
-
 
   /**
    * Hide creditor company info when "I do not know the company name"
@@ -174,7 +159,6 @@ $(function() {
     }
   });
 
-
   /**
    * Hide company info when "I do not know the debt collection company name"
    * is checked
@@ -191,7 +175,6 @@ $(function() {
     }
   });
 
-
   /**
    * Show/hide info of debt origin company
    */
@@ -202,7 +185,6 @@ $(function() {
       $('.cr-diff-company-info').slideUp(300);
     }
   });
-
 
   /**
    * Show/hide military status
@@ -219,7 +201,6 @@ $(function() {
       $('.cr-servicemember-info, .cr-military-status').slideUp(300);
     }
   });
-
 
   /**
    * Show/hide follow-up info when certain radio buttons are selected
@@ -239,7 +220,6 @@ $(function() {
     }
   });
 
-
   /**
    * Jump to next page when clicking continue button
    */
@@ -249,7 +229,6 @@ $(function() {
       document.location.href = 'step-' + next + '.html';
     }
   });
-
 
   /**
    * Some super ugly faux form validation on the page 1 questions to
@@ -318,11 +297,9 @@ $(function() {
     }
   });
 
-
   /**
      * START EXCITING BENCODE
      */
-
 
   /**
      * Show/hide products
@@ -388,12 +365,6 @@ $('#mortgage_servicer_questions').hide();
       }
     });
 
-
-
-
-
-
-
      $('.product-specific-questions .radio_input_subpro').on('change', function(){
 
       if ( $('.radio_input_subpro').is(':checked') ) {
@@ -415,7 +386,6 @@ $('#mortgage_servicer_questions').hide();
 
 
 /* $('.select-issue-page .select-product-or-issue').hide(); */
-
 
 $('.all-subissues').hide();
 $('.debt-collection-zombie').hide();
@@ -478,10 +448,6 @@ $('.resolution-options').hide();
       $(this).closest('label').toggleClass('active');
   });
 
-
-
-
-
 /*
 ///
 show / hide issues
@@ -495,11 +461,7 @@ autofocus what happened
 
 */
 
-
 $('body.whathappened #what-happened').focus();
-
-
-
 
 /*
 
@@ -513,26 +475,6 @@ IDENTIFY COMPANIES PAGE
 /////////////
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 
@@ -576,13 +518,6 @@ $('#forward-company3').hide()
       }
     });
 
-
-
-
-
-
-
-
 /*
 
 Show/hide product identification options
@@ -590,12 +525,9 @@ Show/hide product identification options
 */
 
 
-
 $('fieldset.identify-options').hide();
 
 $('.company_verification_fieldset').hide();
-
-
 
     $('.identify-account').on('change', function(){
 
@@ -607,9 +539,6 @@ $('.company_verification_fieldset').hide();
         $('#fieldset_repository fieldset.' + identifytype).clone().appendTo($(this).closest('fieldset')).slideDown().addClass('active-' + companytype);
       }
     });
-
-
-
 
 /*
 
@@ -633,7 +562,6 @@ $('fieldset.additional-company').hide();
         $('fieldset.additional-company').slideUp(400);
       }
     });
-
 
 /*
 
@@ -702,11 +630,7 @@ $('fieldset.point-of-contact').hide();
       }
     });
 
-
-
-
 // -------------------------------
-
 
     $('#debt-obtained input').on('change', function(){
       if ( $('.cr-debt-inperson').is(':checked') ) {
@@ -737,9 +661,6 @@ $('fieldset.point-of-contact').hide();
         }
     });
 
-
-
-
 /* SLIDE DOWN ALTERNATIVE IDENTIFICATION METHODS */
 
     $('.identify-user').on('change', function(){
@@ -768,8 +689,6 @@ $('fieldset.point-of-contact').hide();
 		}
       }
     });
-
-
 
 /* ADDITIONAL INFO FOR TYPE OF POINT OF CONTACT */
 //point-of-contact-identity
@@ -825,12 +744,7 @@ $('#poc-disclosure').hide();
 			default:
 	            $('#cr-poc-other-who-label').text('Organization name');
         }
-
-
     });
-
-
-
 
     $('#cr-add-consumer-full').change(function(){
         if($('#cr-add-consumer-full').is(':checked')){
@@ -845,7 +759,6 @@ $('#poc-disclosure').hide();
         $('.additional-consumer-email').addClass('cr-question-last');
         }
     });
-
 
     $('#cr-add-poc-full').change(function(){
         if($('#cr-add-poc-full').is(':checked')){
@@ -862,8 +775,6 @@ $('#poc-disclosure').hide();
 
         }
     });
-
-
 
   $('.DAMN').on('click', function(){
   		alert('clicked!');
@@ -883,12 +794,6 @@ $('#poc-disclosure').hide();
   		$('.wrapper-container').addClass('annoslide');
   });
 
-
-
-
-
-
-
 $('.cr-military-status').slideUp();
 
 
@@ -902,10 +807,6 @@ $('.cr-military-status').slideUp();
     if($('h1').width() > 500)
       $('h1').css('font-size', '1.5em');
 });
-
-
-
-
 
   /**
    * modal functions
@@ -977,14 +878,12 @@ $('.cr-military-status').slideUp();
 
   });
 
-
   $('#save-and-continue-review-page').on('click', function(){
     $('<div class="cr-modal"><div class="cr-modal-bg">&nbsp;</div><div class="cr-modal-offset"><div class="cr-modal-content"><div class="cr-modal-inner"><h2>Complaint saved!</h2> <p class="your-id-number">Your complaint draft ID is <strong>141030-43002</strong></p> <p>We have sent an email to <strong>p.robinson@gmail.com</strong> that includes this complaint draft ID and a link to log in to your account and finish submitting your complaint.</p> <p>You can also complete this complaint over the phone by calling us at (855) 411-2372 and providing this draft ID number along with your email address and phone number.</p> <p>Make sure to come back soon! Your link will expire on November 10th, 2014. After that date, your information will be securely removed from our servers.</p> <a href="#" class="cr-modal-close">Close</a></div></div></div></div>').appendTo('body');
     $(".cr-modal").animate({
       opacity: 1
     }, 600 );
   });
-
 
   $('body').on('click', '.cr-modal-close', function(){
     $(".cr-modal").animate({
@@ -1000,7 +899,5 @@ $('.cr-military-status').slideUp();
       $('.cr-modal').remove();
     });
   });
-
-
 
   // show/hide save options

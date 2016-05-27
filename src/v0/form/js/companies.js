@@ -1,7 +1,7 @@
 $(function(){
   var companies = [
-	{ autocom: 'true', value: 'Amex', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
-	{ autocom: 'true', value: 'Bank of America', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
+    { autocom: 'true', value: 'Amex', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
+    { autocom: 'true', value: 'Bank of America', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
     { autocom: 'true', value: 'Capital One', data: '', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
     { autocom: 'true', value: 'JPMorgan Chase', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
     { autocom: 'true', value: 'Citibank', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
@@ -1516,18 +1516,18 @@ $(function(){
     { autocom: 'true', value: 'Home Depot', data: '', message: '<p class="company-match-info affiliate-identified"><br/>Credit cards for <strong>Home Depot</strong> are handled by <strong>Citi Bank</strong>, so your complaint will be sent to Citi Bank. <a href="#">Learn more</a></p>' },
     { autocom: 'true', value: 'Experian', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
     { autocom: 'true', value: 'Equifax', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
-    { autocom: 'true', value: 'Transunion', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },    
-    { autocom: 'true', value: 'Equifax, Experian, and Transunion (all 3 major bureaus)', data: '', message: '<p class="company-match-info all-3-bureaus-message"><br/>Your complaint will be sent to Equifax, Experian, and Transunion. <a href="#">Learn more</a></p>' },    
+    { autocom: 'true', value: 'Transunion', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
+    { autocom: 'true', value: 'Equifax, Experian, and Transunion (all 3 major bureaus)', data: '', message: '<p class="company-match-info all-3-bureaus-message"><br/>Your complaint will be sent to Equifax, Experian, and Transunion. <a href="#">Learn more</a></p>' },
 
-	];
-	
-/* 	hide this by default */
+    ];
+
+/*  hide this by default */
   $("#company1-not-boarded").hide();
   $("#company2-not-boarded").hide();
   $("#company3-not-boarded").hide();
 
 
-  
+
   // setup autocomplete function pulling from companies[] array
   $('#company1-name').autocomplete({
     lookup: companies,
@@ -1535,46 +1535,46 @@ $(function(){
     minChars:2,
 /*     formatResult: function (suggestion, currentValue), */
     onSelect: function (suggestion) {
-	  $('.company_verification_fieldset').hide();
+      $('.company_verification_fieldset').hide();
 
       var companymessage = suggestion.message;
-	  var optionsID = suggestion.data;
-	  var automatched1 = 'matched';	  
-	  $('#company-type-1 .company-match-info').remove();
-	  
-	  $('#' + optionsID).appendTo('#company-name-fieldset-1').show().slideDown();
+      var optionsID = suggestion.data;
+      var automatched1 = 'matched';
+      $('#company-type-1 .company-match-info').remove();
+
+      $('#' + optionsID).appendTo('#company-name-fieldset-1').show().slideDown();
       $('#forward-company1').html(companymessage);
       if (automatched1 == 'matched'){
-	      $("#company1-not-boarded").hide();
+          $("#company1-not-boarded").hide();
       }
-      
+
     }
   });
 
 
-	$('#company1-name').change(function() {
-		// If the company entered is not in the array, ask for more info      	
-		var companyentered = $(this).val();
-		$("#company1-not-boarded").hide();
-      	$.each( companies, function( index, element ) {
-		  	$('#company1-not-boarded').removeClass('company-matched');
-		  	
-		  	
-		  	var val = element.value;
-		  	if ( val == companyentered ) {
-		  		$('#company1-not-boarded').addClass('company-matched');
-		  	} 
-		 });
-  		$("#company1-not-boarded").show().slideDown(); 
-		$("#company1-not-boarded.company-matched").hide();		  
-  		// show product options based on product type (see function in main.js)
-  		$('#company-type-1 .identify-product-options').slideDown();
-	});
-	
-	$('#company1-name').focusout(function() {
-  		$('#company-type-1 .identify-product-options').slideDown();
-	});
-		
+    $('#company1-name').change(function() {
+        // If the company entered is not in the array, ask for more info
+        var companyentered = $(this).val();
+        $("#company1-not-boarded").hide();
+        $.each( companies, function( index, element ) {
+            $('#company1-not-boarded').removeClass('company-matched');
+
+
+            var val = element.value;
+            if ( val == companyentered ) {
+                $('#company1-not-boarded').addClass('company-matched');
+            }
+         });
+        $("#company1-not-boarded").show().slideDown();
+        $("#company1-not-boarded.company-matched").hide();
+        // show product options based on product type (see function in main.js)
+        $('#company-type-1 .identify-product-options').slideDown();
+    });
+
+    $('#company1-name').focusout(function() {
+        $('#company-type-1 .identify-product-options').slideDown();
+    });
+
 
   // setup autocomplete function pulling from companies[] array
   $('#company2-name').autocomplete({
@@ -1582,38 +1582,38 @@ $(function(){
     minChars:2,
     onSelect: function (suggestion) {
       var companymessage = suggestion.message;
-	  var optionsID = suggestion.data;
-	  var automatched2 = 'matched';	  
-	  $('#' + optionsID).appendTo('#company-name-fieldset-2').show().slideDown();
+      var optionsID = suggestion.data;
+      var automatched2 = 'matched';
+      $('#' + optionsID).appendTo('#company-name-fieldset-2').show().slideDown();
       $('#forward-company2').html(companymessage);
       if (automatched2 == 'matched'){
-	      $("#company2-not-boarded").hide();
-      }      
+          $("#company2-not-boarded").hide();
+      }
     }
   });
 
-	$('#company2-name').change(function() {
-		// If the company entered is not in the array, ask for more info      	
-		var companyentered = $(this).val();
-		$("#company1-not-boarded").hide();
+    $('#company2-name').change(function() {
+        // If the company entered is not in the array, ask for more info
+        var companyentered = $(this).val();
+        $("#company1-not-boarded").hide();
 
-      	$.each( companies, function( index, element ) {
-		  	$('#company2-not-boarded').removeClass('company-matched');
-		  	var val = element.value;
-		  	if ( val == companyentered ) {
-		  		$('#company2-not-boarded').addClass('company-matched');
-		  	} 
-		 });
-  		$("#company2-not-boarded").show().slideDown(); 
-		$("#company2-not-boarded.company-matched").hide();		  
-  		// show product options based on product type (see function in main.js)
-  		$('#company-type-2 .identify-product-options').slideDown();
-	});
+        $.each( companies, function( index, element ) {
+            $('#company2-not-boarded').removeClass('company-matched');
+            var val = element.value;
+            if ( val == companyentered ) {
+                $('#company2-not-boarded').addClass('company-matched');
+            }
+         });
+        $("#company2-not-boarded").show().slideDown();
+        $("#company2-not-boarded.company-matched").hide();
+        // show product options based on product type (see function in main.js)
+        $('#company-type-2 .identify-product-options').slideDown();
+    });
 
-	$('#company2-name').focusout(function() {
-  		$('#company-type-2 .identify-product-options').slideDown();
-	});
-	
+    $('#company2-name').focusout(function() {
+        $('#company-type-2 .identify-product-options').slideDown();
+    });
+
 
   // setup autocomplete function pulling from companies[] array
   $('#company3-name').autocomplete({
@@ -1621,57 +1621,42 @@ $(function(){
     minChars:3,
     onSelect: function (suggestion) {
       var companymessage = suggestion.message;
-	  var optionsID = suggestion.data;
-	  var automatched3 = 'matched';	  
-	  $('#' + optionsID).appendTo('#company-name-fieldset-3').show().slideDown();
+      var optionsID = suggestion.data;
+      var automatched3 = 'matched';
+      $('#' + optionsID).appendTo('#company-name-fieldset-3').show().slideDown();
       $('#forward-company3').html(companymessage);
       if (automatched3 == 'matched'){
-	      $("#company3-not-boarded").hide();
+          $("#company3-not-boarded").hide();
       }
     }
   });
 
-	$('#company3-name').change(function() {
-		// If the company entered is not in the array, ask for more info      	
-		var companyentered = $(this).val();
-		$("#company1-not-boarded").hide();
+    $('#company3-name').change(function() {
+        // If the company entered is not in the array, ask for more info
+        var companyentered = $(this).val();
+        $("#company1-not-boarded").hide();
 
-      	$.each( companies, function( index, element ) {
-		  	$('#company3-not-boarded').removeClass('company-matched');
-		  	var val = element.value;
-		  	if ( val == companyentered ) {
-		  		$('#company3-not-boarded').addClass('company-matched');
-		  	} 
-		 });
-  		$("#company3-not-boarded").show().slideDown(); 
-		$("#company3-not-boarded.company-matched").hide();		  
-  		// show product options based on product type (see function in main.js)
-  		$('#company-type-3 .identify-product-options').slideDown();
-	});
-	
-	$('#company3-name').focusout(function() {
-  		$('#company-type-3 .identify-product-options').slideDown();
-	});		  
+        $.each( companies, function( index, element ) {
+            $('#company3-not-boarded').removeClass('company-matched');
+            var val = element.value;
+            if ( val == companyentered ) {
+                $('#company3-not-boarded').addClass('company-matched');
+            }
+         });
+        $("#company3-not-boarded").show().slideDown();
+        $("#company3-not-boarded.company-matched").hide();
+        // show product options based on product type (see function in main.js)
+        $('#company-type-3 .identify-product-options').slideDown();
+    });
+
+    $('#company3-name').focusout(function() {
+        $('#company-type-3 .identify-product-options').slideDown();
+    });
 /*
-	  
+
   if (optionsID !== 'undefined'){
-		alert('variable exists!');
+        alert('variable exists!');
    });
-		  
+
 */
-
-  
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
