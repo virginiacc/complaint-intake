@@ -11,6 +11,10 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
   (temporarily; the old code will be phased out as it is
   iteratively replaced with new code).
 - Installation and usage instructions to the readme.
+- Capital Framework project infrastructure (including a gulp build)
+- Old prototype files into new Capital Framework structure (temporarily; the old code will be phased out as it is iteratively replaced with new code)
+- Installation and usage instructions to the readme
+- Follow-up questions for complaints where the issue is "Problems with the mortgage servicer when you are making payments" or "Problems with the mortgage servicer when you are unable to pay"
 
 ### Changed
 - Moved /source-art/ folder to project root so it doesn't get copied to /dist/.
