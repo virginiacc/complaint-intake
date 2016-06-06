@@ -1,5 +1,3 @@
-
-
 function err($elm){
 	var $root = $elm.closest('.cr-question');
 	$elm.addClass('failure');
@@ -29,7 +27,6 @@ $(function(){
 		}
 	})
 })
-
 
 function validate(){
 	var errors = [];

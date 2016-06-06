@@ -10,11 +10,18 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Old prototype files into new Capital Framework structure (temporarily; the old code will be phased out as it is iteratively replaced with new code)
 - Installation and usage instructions to the readme
 
+### Changed
+- Moved /source-art/ folder to project root so it doesn't get copied to /dist/.
+- Updated gulp to 3.9.1.
+- Updated eslint to 2.0.0.
+- Normalized gulp variable and task naming.
+- Moved form markup to `/src/`.
+
 ### Deprecated
 - Nothing.
 
 ### Removed
-- Nothing.
+- Google Analytics references since GTM is used.
 
 ### Fixed
 - Nothing.

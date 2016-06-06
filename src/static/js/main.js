@@ -1,6 +1,7 @@
 'use strict';
 
 // The following line imports jQuery into your project. If you don't need jQuery, delete it.
+console.log( global );
 global.$ = require( 'jquery' );
 
 // If you'd like to include cf-expandables (or any other node module in your project),

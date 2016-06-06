@@ -8,10 +8,10 @@
 var gulp = require( 'gulp' );
 var config = require( '../config' );
 
-gulp.task( 'watch', [ 'browserSync' ], function() {
+gulp.task( 'watch', [ 'browsersync' ], function() {
   gulp.watch( config.scripts.src, [ 'scripts' ] );
   gulp.watch( config.styles.cwd + '/**/*.less', [ 'styles' ] );
   gulp.watch( config.images.src, [ 'images' ] );
   gulp.watch( config.copy.files.src, [ 'copy:files' ] );
-  gulp.watch( config.copy.oldFiles.src, [ 'copy:oldFiles' ] );
+  gulp.watch( config.copy.oldFiles.src, [ 'copy:oldfiles' ] );
 } );

@@ -76,9 +76,8 @@ module.exports = {
       src:  loc.lib + '/cf-icons/src/fonts/*',
       dest: loc.dist + '/static/fonts/'
     },
-    vendorjs: {
+    vendorJs: {
       src: [
-        loc.lib + '/box-sizing-polyfill/boxsizing.htc',
         loc.lib + '/html5shiv/dist/html5shiv-printshiv.min.js'
       ],
       dest: loc.dist + '/static/js/'

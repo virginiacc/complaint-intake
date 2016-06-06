@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class=""><!--<![endif]--><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# "><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" class="">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!--
     ===========
@@ -46,8 +48,8 @@
 -->
 
 <!--[if lt IE 9]>      <link rel="stylesheet" href="/static/css/main.ie.min.css"> <![endif]-->
-<!--[if gt IE 8]><!--> <link rel="stylesheet" href="Home_files/main.min.css"> <!--<![endif]-->
-<link rel="stylesheet" href="Home_files/CRUX_extra.css">
+<!--[if gt IE 8]><!--> <link rel="stylesheet" href="v0/Home_files/main.min.css"> <!--<![endif]-->
+<link rel="stylesheet" href="v0/Home_files/CRUX_extra.css">
 <!--
     ============
     HEAD SCRIPTS
@@ -62,7 +64,8 @@
     <script src="/static/vendor/html5shiv/html5shiv-printshiv.min.js"></script>
 <![endif]-->
 
-    <script async="" src="./Home_files/gtm.js"></script><script src="./Home_files/ga.js"></script><script>
+    <script src="v0/Home_files/gtm.js" async></script>
+    <script>
         // Confirm availability of JS and remove no-js class from html
         var docElement = document.documentElement;
         docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
@@ -76,17 +79,7 @@
     =========
     Analytics
     =========
-    We are double tagging with classic analytics and tag manager so that we can
-    test any differences between the two.
 -->
-
-    <!-- CLASSIC ANALYTICS -->
-    <script>
-        var _gaq=[['_setAccount','UA-20466645-3'],['_setDomainName', '.consumerfinance.gov'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
 
     <!-- GOOGLE TAG MANAGER -->
     <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSMF3R"
@@ -103,7 +96,6 @@
     Begin page source
     =================
 -->
-
 
 <div class="sliding-nav">
   <div class="sliding-nav_nav">
@@ -129,10 +121,10 @@
             <li class="list_item list-expanding_list-item">
                 <a class="list_link list-expanding_trigger" href="http://www.consumerfinance.gov/the-bureau/" role="button" aria-pressed="false" tabindex="0">About</a>
             </li>
-        </ul><!-- END .primary-nav_top-level-list -->
-    </nav><!-- END .primary-nav -->
+        </ul>
+    </nav>
 
-</div><!-- END .sliding-nav_nav -->
+</div>
 
 <div class="sliding-nav_page">
 
@@ -144,7 +136,7 @@
         </button>
 
         <a href="http://www.consumerfinance.gov/">
-            <img class="header_logo u-js-only" src="./Home_files/logo_sm-exec.png" onerror="this.onerror=null;this.src=&#39;/static/img/logo_sm-exec.png&#39;;" alt="Consumer Financial Protection Bureau" width="237" height="50">
+            <img class="header_logo u-js-only" src="v0/Home_files/logo_sm-exec.png" onerror="this.onerror=null;this.src=&#39;/static/img/logo_sm-exec.png&#39;;" alt="Consumer Financial Protection Bureau" width="237" height="50">
             <noscript>
                 &lt;img class="header_logo logo__no-js"
                      src="/static/img/logo_sm-exec.png"
@@ -161,16 +153,7 @@
 
     </header>
 
-
     <!-- PRIMARY CONTENT -->
-
-
-
-
-
-
-
-
 
     <main class="content content__2-1 content__bleedbar" id="main" role="main">
 
@@ -179,21 +162,19 @@
 
         <div class="wrapper">
             <section class="content_intro">
-                <img id="complaint-hero-image" src="form/img/EHAS_hero_landing_page.png"/>
+                <img id="complaint-hero-image" src="v0/form/img/EHAS_hero_landing_page.png"/>
 
                 <h1 class="superheader">Have an issue with a financial product
                    or service?</h1>
                 <h2>Submit a complaint directly to the companies involved using
                    the CFPB’s complaint form.</h2>
 
-				<div id="intro-actions">
-                	<a id="start-button" href="welcome.html"><button class="js-type-and-filter_button btn btn__super">Start a new complaint</button></a>
+                <div id="intro-actions">
+                    <a id="start-button" href="welcome.html"><button class="js-type-and-filter_button btn btn__super">Start a new complaint</button></a>
 
-					<p id="tys-text" class="short-desc">If you don't want a response from the company or your financial issue has already passed and you want the CFPB to know, you can <a href="https://help.consumerfinance.gov/app/tellyourstory">tell your story</a>.</p>
+                    <p id="tys-text" class="short-desc">If you don't want a response from the company or your financial issue has already passed and you want the CFPB to know, you can <a href="https://help.consumerfinance.gov/app/tellyourstory">tell your story</a>.</p>
 
-				</div>
-
-
+                </div>
 
             </section>
         </div>
@@ -203,105 +184,107 @@
         <div class="wrapper content_wrapper">
             <div class="content_main">
                 <section>
-<div class="type-and-filter">
+                    <div class="type-and-filter">
 
-  <div class="u-js-only complaint-info-section">
-      <p class="h2">
-          Why should I submit a complaint?
-      </p>
-      <p class="short-desc">If you have a specific issue with a financial product or service and haven’t been able to resolve it with the company, we may be able to help. When you submit a complaint using our form, we help to get you a response from the company, generally within 15 days.</p>
-      <p class="short-desc">IEvery complaint also provides us with valuable insight, helping identify inappropriate practices and allowing us to stop them before they become major issues. The results are better outcomes for you, and a better financial marketplace for everyone.</p>
-  </div>
+                      <div class="u-js-only complaint-info-section">
+                          <p class="h2">
+                              Why should I submit a complaint?
+                          </p>
+                          <p class="short-desc">If you have a specific issue with a financial product or service and haven’t been able to resolve it with the company, we may be able to help. When you submit a complaint using our form, we help to get you a response from the company, generally within 15 days.</p>
+                          <p class="short-desc">IEvery complaint also provides us with valuable insight, helping identify inappropriate practices and allowing us to stop them before they become major issues. The results are better outcomes for you, and a better financial marketplace for everyone.</p>
+                      </div>
 
-    <div class="u-js-only complaint-info-section">
-        <p class="h2">
-            What happens after I submit a complaint?
-        </p>
-        <p class="short-desc">If the company has signed up to respond to complaints, they will receive your complaint immediately and should respond to you and the CFPB within 15 days. If we need more information to get your complaint to the right place, we’ll reach out to you.</p>
-        <p class="short-desc">Companies are expected to close all but the most complicated complaints within 60 days. You'll get a chance to review and rate the companies' response.</p>
-        <a class="jump-link" href="http://www.consumerfinance.gov/complaint/process/">
-            Learn more about the complaint process
-        </a>
-    </div>
+                        <div class="u-js-only complaint-info-section">
+                            <p class="h2">
+                                What happens after I submit a complaint?
+                            </p>
+                            <p class="short-desc">If the company has signed up to respond to complaints, they will receive your complaint immediately and should respond to you and the CFPB within 15 days. If we need more information to get your complaint to the right place, we’ll reach out to you.</p>
+                            <p class="short-desc">Companies are expected to close all but the most complicated complaints within 60 days. You'll get a chance to review and rate the companies' response.</p>
+                            <a class="jump-link" href="http://www.consumerfinance.gov/complaint/process/">
+                                Learn more about the complaint process
+                            </a>
+                        </div>
 
-    <div class="u-js-only complaint-info-section">
-        <p class="h2">
-            What kind of response should I expect?
-        </p>
-        <p class="short-desc">You should expect that the company will review your complaint and explain the what it has done or will do to respond to your issues. Most consumers get an explanation from the company about why the issue happened, but some consumers also get problems fixed or money back</p>
-        <p class="short-desc">Here are the types of responses that consumers received in 2014:</p>
-        <img id="response-pie" src="form/img/response-pie.png"/>
+                        <div class="u-js-only complaint-info-section">
+                            <p class="h2">
+                                What kind of response should I expect?
+                            </p>
+                            <p class="short-desc">You should expect that the company will review your complaint and explain the what it has done or will do to respond to your issues. Most consumers get an explanation from the company about why the issue happened, but some consumers also get problems fixed or money back</p>
+                            <p class="short-desc">Here are the types of responses that consumers received in 2014:</p>
+                            <img id="response-pie" src="v0/form/img/response-pie.png"/>
 
-        <a class="jump-link" href="http://www.consumerfinance.gov/yourstory/">
-           Learn more about consumers who have used the CFPB’s complaint form
-        </a>
-    </div>
+                            <a class="jump-link" href="http://www.consumerfinance.gov/yourstory/">
+                               Learn more about consumers who have used the CFPB’s complaint form
+                            </a>
+                        </div>
+
+                        <div class="u-js-only complaint-info-section">
+                            <p class="h2">
+                            How will you use my information?
+                            </p>
+                            <p class="short-desc">We send the information you provide directly to the company so they can identify you and address your issue. We also publish complaints &mdash; without any personal information &mdash; so that consumers can learn from each others' experience and see how companies respond to complaints, and so that the public can see the kinds of problems people are having with financial products and services. We also share complaint information with other state and federal regulators to inform their work.</p>
+                            <a class="jump-link" href="http://www.consumerfinance.gov/complaint/data-use/">
+                              Learn more about how we use complaint information
+                            </a>
+                        </div>
 
 
-    <div class="u-js-only complaint-info-section">
-        <p class="h2">
-        How will you use my information?
-        </p>
-        <p class="short-desc">We send the information you provide directly to the company so they can identify you and address your issue. We also publish complaints &mdash; without any personal information &mdash; so that consumers can learn from each others' experience and see how companies respond to complaints, and so that the public can see the kinds of problems people are having with financial products and services. We also share complaint information with other state and federal regulators to inform their work.</p>
-        <a class="jump-link" href="http://www.consumerfinance.gov/complaint/data-use/">
-          Learn more about how we use complaint information
-        </a>
-    </div>
-
-
-</div><!-- END .type-and-filter -->
+                    </div>
                 </section>
             </div>
             <aside class="content_sidebar">
+                <section class="content_block content_block__flush-top content-l">
 
+                    <section class="content_block content-l_col content-l_col__stack-on-cols content-l_col-1-2">
+                        <h1 class="h5">
+                            Already started a complaint?
+                        </h1>
+                        <p class="short-desc">
+                            Log in to your account to check the status of a complaint, view a company’s response, or submit a new complaint.
+                        </p>
+                        <a class="jump-link" href="https://help.consumerfinance.gov/app/utils/login_form/">
+                            Log in to your account
+                        </a>
+                    </section>
 
-<section class="content_block content_block__flush-top content-l">
+                    <div class="content_line"></div>
+                    <section class="content_block
+                                    content-l_col
+                                    content-l_col__stack-on-cols
+                                    content-l_col-1-2 sidenav-item">
 
-        <section class="content_block content-l_col content-l_col__stack-on-cols content-l_col-1-2">
-        <h1 class="h5">
-            Already started a complaint?
-        </h1>
-        <p class="short-desc">
-            Log in to your account to check the status of a complaint, view a company’s response, or submit a new complaint.
-        </p>
-        <a class="jump-link" href="https://help.consumerfinance.gov/app/utils/login_form/">
-            Log in to your account
-        </a>
-		</section>
+                        <p class="short-desc">
+                            Para presentar una queja en español, llamar al (855) 411-2372
+                        </p>
+                    </section>
 
-                <div class="content_line"></div>
-        <section class="content_block content-l_col content-l_col__stack-on-cols content-l_col-1-2 sidenav-item">
+                    <div class="content_line"></div>
 
-	<p class="short-desc">Para presentar una queja en español, llamar al (855) 411-2372</p>
-        </section>
+                    <section class="content_block
+                                    content-l_col
+                                    content-l_col__stack-on-cols
+                                    content-l_col-1-2 sidenav-item">
 
-                <div class="content_line"></div>
+                        <p class="short-desc">Are you a current or former employee of a company that you think has violated federal consumer financial laws? Or, are you an industry insider who knows about such a company? Visit our <a href="http://www.consumerfinance.gov/equal-employment-opportunity/whistleblowers/">whistleblower</a> homepage.</p>
+                    </section>
 
-		<section class="content_block content-l_col content-l_col__stack-on-cols content-l_col-1-2 sidenav-item">
+                    <div class="content_line"></div>
 
-	<p class="short-desc">Are you a current or former employee of a company that you think has violated federal consumer financial laws? Or, are you an industry insider who knows about such a company? Visit our <a href="http://www.consumerfinance.gov/equal-employment-opportunity/whistleblowers/">whistleblower</a> homepage.</p>
-		</section>
+                    <section class="content_block
+                                    content-l_col
+                                    content-l_col__stack-on-cols
+                                    content-l_col-1-2 sidenav-item">
 
-  <div class="content_line"></div>
-
-  <section class="content_block content-l_col content-l_col__stack-on-cols content-l_col-1-2 sidenav-item">
-
-    <p class="short-desc">Want to find others like you? Visit the <a href="http://www.consumerfinance.gov/complaintdatabase/">complaint database</a> to read about consumers' experiences, in their own words.</p>
-  </section>
-</section>
-
-
-
-
+                        <p class="short-desc">Want to find others like you? Visit the <a href="http://www.consumerfinance.gov/complaintdatabase/">complaint database</a> to read about consumers' experiences, in their own words.</p>
+                    </section>
+                </section>
             </aside>
         </div>
     </main>
 
-
     <!-- /PRIMARY CONTENT -->
 
-
-        <footer class="footer" role="contentinfo">
+    <footer class="footer" role="contentinfo">
         <aside class="wrapper wrapper__match-content">
 
             <div class="footer-pre">
@@ -340,7 +323,7 @@
                 </ul>
                 <ul class="footer_nav-list">
                     <li class="list_item">
-                        <a class="list_link" href="./Home_files/Home.html">
+                        <a class="list_link" href="v0/Home_files/Home.html">
                             Contact us
                         </a>
                     </li>
@@ -453,7 +436,7 @@
                     <div class="footer_nested-col-group">
 
                         <div class="footer_logo">
-                            <img class="logo u-js-only" src="./Home_files/logo.svg" onerror="this.onerror=null;this.src=&#39;/static/img/logo.png&#39;;" alt="Consumer Financial Protection Bureau">
+                            <img class="logo u-js-only" src="v0/Home_files/logo.svg" onerror="this.onerror=null;this.src=&#39;/static/img/logo.png&#39;;" alt="Consumer Financial Protection Bureau">
                             <noscript>
                                 &lt;img class="logo logo__no-js"
                                      src="/static/img/logo.png"
@@ -535,12 +518,10 @@
     specific to a single page or section of the site, all custom JS should be added to src/static/js/app.js.
 -->
 
-<script src="./Home_files/main.min.js"></script>
+<script src="v0/Home_files/main.min.js"></script>
 
+<iframe id="rdbIndicator" width="100%" height="270" border="0" src="v0/Home_files/indicator.html" style="display: none; border: 0; position: fixed; left: 0; top: 0; z-index: 2147483647"></iframe>
 
+</body>
 
-
-
-
-
-<iframe id="rdbIndicator" width="100%" height="270" border="0" src="./Home_files/indicator.html" style="display: none; border: 0; position: fixed; left: 0; top: 0; z-index: 2147483647"></iframe></body></html>
+</html>
