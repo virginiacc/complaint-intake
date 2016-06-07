@@ -23,6 +23,9 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Installation and usage instructions to the readme
 - Phone number field to the form that appears when a matching company isn't found in the system in step 4
 
+### Changed
+- For debt collecction complaints, the phone number the debt collector is calling is now a separate field from the other consumer identifiers in step 4
+
 ### Deprecated
 - Nothing.
 
