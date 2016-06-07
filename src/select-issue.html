@@ -1480,7 +1480,7 @@ STOP ALL OF THE ISSUE LISTS
         </h3>
 
         <h3 id="mortgage_servicer_paymentslabel" for="select_subissue" class="subissue_label label_same_as_header mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
-            Have you missed any mortgage payments or are you in default on your mortgage?
+            Are you concerned about losing your home to foreclosure?
         </h3>
 
         <h3 id="debt_collection_labelv" for="select_subissue" class="last product subissue_label product_debt debt_collection_subissues label_same_as_header">
@@ -1713,54 +1713,100 @@ END OF ZOMBIE CREDIT REPORTING TOPLEVEL
 
 <!-- Mortgage servicer subissues -->
 
-<div id="mortgage_servicer_making_payments_subissues" class="issuelist-grid all-subissues">
-  <label class="radio block">
-    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_yes" />
-    Yes
-    <br /><small>Check “yes” if your mortgage company believes you are in default or have missed payments even if you believe the company is in error.</small>
-  </label>
-  <label class="radio block">
-    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_no" />
-    No
-    <br /><small></small>
-  </label>
+<div class="subissue_label label_same_as_header mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+    <div class="mortgage-servicer-subissue-question mortgage-servicer-subissue-question__radio" id="mortgage_servicer_foreclosure">
+        <p>
+            Please note: submitting a complaint will not automatically delay or stop a foreclosure.
+        </p>
+        <div class="issuelist-grid all-subissues mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_foreclosure" type="radio" class="radio_input subissue" value="yes" />
+            Yes
+          </label>
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_foreclosure" type="radio" class="radio_input subissue" value="no" />
+            No
+          </label>
+        </div>
+    </div>
+
+    <div class="mortgage-servicer-subissue-question mortgage-servicer-subissue-question__radio" id="mortgage_servicer_missed_payments">
+        <h3>
+            Have you missed any mortgage payments or are you in default on your mortgage?
+        </h3>
+        <div class="issuelist-grid all-subissues mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_missed_payments" type="radio" class="radio_input subissue" value="yes" />
+            Yes
+            <br /><small>Check “yes” if your mortgage company believes you are in default or have missed payments even if you believe the company is in error.</small>
+          </label>
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_missed_payments" type="radio" class="radio_input subissue" value="no" />
+            No
+          </label>
+        </div>
+    </div>
+
+    <div class="mortgage-servicer-subissue-question mortgage-servicer-subissue-question__radio mortgage-servicer-subissue-question__followup" id="mortgage_servicer_date_set" data-followup-to="mortgage_servicer_missed_payments">
+        <h3>
+            Is there a date scheduled for the foreclosure sale of your home?
+        </h3>
+        <div class="issuelist-grid all-subissues mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_date_set" type="radio" class="radio_input subissue" value="yes" />
+            Yes
+          </label>
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_date_set" type="radio" class="radio_input subissue" value="no" />
+            No
+          </label>
+        </div>
+        <div class="mortgage-servicer-subissue-question mortgage-servicer-subissue-question__followup mortgage-servicer-subissue-question__text row" id="mortgage_servicer_date" data-followup-to="mortgage_servicer_date_set">
+            <div class="cr-label cr-question-left cr-question-with-sidebar">
+                <label for="foreclosure-date">
+                    When is the scheduled foreclosure sale?
+                </label>
+                <input type="text" class="input-large left" placeholder="mm/dd/yyyy">
+            </div>
+
+            <div class="cr-label cr-question-right right-helper">
+                <p>
+                    You may find this date on the “Notice of Sale” or “Order Setting Sale.”
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mortgage-servicer-subissue-question mortgage-servicer-subissue-question__radio mortgage-servicer-subissue-question__followup" id="mortgage_servicer_pay_company" data-followup-to="mortgage_servicer_foreclosure mortgage_servicer_missed_payments">
+        <h3>
+            Did you pay a company to help you avoid foreclosure?
+        </h3>
+        <p>
+            Sometimes called ‘foreclosure rescue,’ ‘foreclosure defense,’ ‘foreclosure prevention,’ or ‘loss mitigation assistance’
+        </p>
+        <div class="issuelist-grid all-subissues mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_pay_company" type="radio" class="radio_input subissue" value="yes" />
+            Yes
+          </label>
+          <label class="radio block">
+            <input name="radio_mortgage_servicer_pay_company" type="radio" class="radio_input subissue" value="no" />
+            No
+          </label>
+        </div>
+        <div class="mortgage-servicer-subissue-question mortgage-servicer-subissue-question__followup mortgage-servicer-subissue-question__text row" id="mortgage_servicer_company_name" data-followup-to="mortgage_servicer_pay_company">
+            <div class="cr-label cr-question-left cr-question-with-sidebar">
+                <label for="foreclosure-company-name">
+                    What is the name of the company you paid to avoid foreclosure?
+                </label>
+                <input type="text" id="foreclosure-company-name" class="input-large left">
+            </div>
+        </div>
+    </div>
+
 </div>
 
-<div id="mortgage_servicer_unable_pay_subissues" class="issuelist-grid all-subissues">
-  <label class="radio block">
-    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_yes" />
-    Yes
-    <br /><small>Check “yes” if your mortgage company believes you are in default or have missed payments even if you believe the company is in error.</small>
-  </label>
-  <label class="radio block">
-    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_missed_payments" id="mortgage_servicer_missed_payments_no" />
-    No
-    <br /><small></small>
-  </label>
-</div>
-
-<!--
-<div class="mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
-  <div class="span3 cr-label">
-    <h3 id="mortgage_servicer_concerned_foreclosure_label" for="select_subissue" class="subissue_label label_same_as_header mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
-        Are you concerned about losing your home to foreclosure?
-    </h3>
-  </div>
-</div>
-<div class="mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
-  <label class="radio block">
-    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_losing_home" id="mortgage_servicer_losing_home_yes" />
-    Yes
-    <br /><small>Please note: submitting a complaint will not automatically delay or stop a foreclosure.</small>
-  </label>
-  <label class="radio block">
-    <input name="radio_" type="radio" class="radio_input subissue mortgage_servicer_losing_home" id="mortgage_servicer_losing_home_no" />
-    No
-    <br /><small></small>
-  </label>
-</div>
--->
-
+<!-- Vehicle loan subissues -->
 
 <div id="vehicle_loan_shopping_subissues" class="select-product-or-issue issuelist-grid all-subissues">
 

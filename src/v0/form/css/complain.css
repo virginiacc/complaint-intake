@@ -1616,7 +1616,6 @@ column-break-inside:avoid;
 
 .cruxform .subproduct-list {
 /* 	width: 600px; */
-
 }
 
 /*
@@ -1723,8 +1722,41 @@ cruxform input.company-name-input {
 
 */
 
+/* ==========================================================================
+   Mortgage follow-up questions
+   ========================================================================== */
+
+.cruxform .subissue_label.mortgage_servicer_making_payments_subissues.mortgage_servicer_unable_pay_subissues {
+    margin-top: -8px;
+}
+
+.cruxform .mortgage-servicer-subissue-question__text {
+    border-top: 1px dashed #ccc;
+    margin-top: 20px;
+}
+
+.cruxform .mortgage-servicer-subissue-question .cr-question-left {
+    width: 402px;
+}
+
+.cruxform .mortgage-servicer-subissue-question .cr-question-left label {
+    padding-left: 0;
+    border: none;
+    margin-left: 0;
+    background-color: transparent;
+}
+
+.cruxform .mortgage-servicer-subissue-question .cr-question-left input {
+    margin-left: 0;
+}
+
+
 .company_verification_fieldset .cr-question {
 	padding-left: 20px;
+}
+
+.mortgage-servicer-subissue-question__followup {
+    display: none;
 }
 
 .company-name-option {
@@ -1934,7 +1966,6 @@ button.secondary {
 
 #scrubbed-narrative span.redacted-text {
 	background: #75787B;
-
 }
 
 #no-email-address-checkbox {
@@ -2006,7 +2037,6 @@ button.secondary {
 	width: 18%;
 	float: left;
     margin-top: 24px;
-
 }
 
 #narrative-consent-take-two {
@@ -2044,7 +2074,6 @@ button.secondary {
 #attachment-drag-instructions {
 	font-size: 20px;
     color: #75787B;
-
 }
 
 #upload-button {
