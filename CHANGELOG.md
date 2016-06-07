@@ -24,4 +24,4 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Google Analytics references since GTM is used.
 
 ### Fixed
-- Nothing.
+- Two-column lists with an odd number of items no longer spill into a third column
