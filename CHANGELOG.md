@@ -26,9 +26,8 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Old prototype files into new Capital Framework structure (temporarily; the old code will be phased out as it is iteratively replaced with new code)
 - Installation and usage instructions to the readme
 - Phone number field to the form that appears when a matching company isn't found in the system in step 4
-
-### Changed
 - For debt collecction complaints, the phone number the debt collector is calling is now a separate field from the other consumer identifiers in step 4
+- Converted company-information.html state text inputs to drop-downs.
 
 ### Deprecated
 - Nothing.
