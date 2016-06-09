@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Submit a complaint | Your information</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="v0/form/css/normalize.css">
+    <link rel="stylesheet" href="v0/form/css/grid.css">
+    <link rel="stylesheet" href="v0/form/css/fonts.css">
+    <link rel="stylesheet" href="v0/form/css/new-core.css">
+    <link rel="stylesheet" href="v0/form/css/complain.css">
+    <link rel="stylesheet" href="v0/form/css/typeahead.css">
+    <!-- <link rel="stylesheet" href="v0/form/css/responsive.css"> -->
+
+    <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
+    <script src="v0/form/js/vendor/modernizr.custom.js"></script>
+    <script src="v0/form/js/vendor/bootstrap-modal.js"></script>
+
+<!--
+    Old IE polyfills for:
+    - HTML5 tags
+    - Media queries (so we can style mobile first)
+-->
+<!--[if lt IE 9]>
+<script src="v0/form/js/vendor/html5shim.js"></script>
+<script src="v0/form/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="yourinfo cruxform">
+
+    <div class="wrapper-banner" style="font-size: 16px;">
+        <div class="wrapper-container">
+            <small class="split">
+                <span class="official-website">An official website of the United States Government</span>
+            </small>
+        </div>
+    </div><!-- .wrapper-banner -->
+
+    <header class="wrapper-header">
+
+        <div class="wrapper-container">
+
+            <div class="brand">
+
+                <h1> Submit a complaint</h1>
+
+                <a class="brand-logo" href="https://consumerfinance.gov"><img src="v0/form/img/logo-cfpb-retina.png" alt="Consumer Financial Protection Bureau"></a>
+
+            </div><!-- .brand -->
+
+        </div><!-- .wrapper-container -->
+
+    </header><!-- .wrapper-header -->
+
+    <noscript>
+        For full functionality of this application, it is necessary to enable JavaScript.
+        Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+        instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
+    <div class="wrapper-body page-step-1">
+
+        <!-- ANNOTATIONS SIDEBAR -->
+
+        <div id="annotations-sidebar">
+            <p id="annotations-opener"><a href="#">Open annotations</a></p>
+
+            <p id="annotations-toggle" class="opened"><a href="#">Toggle annotations</a></p>
+
+            <ul id="annotations-list">
+                <li class="annotation-format">
+                    <h3 class="anno-title">Title of annotation</h3>
+                    <!--                    <h6 class="anno-date">Date added</h6> -->
+                    <p class="anno-link-text">
+                        <a class="anno-link" href="#">Link to element</a>
+                    </p>
+                    <div class="anno-comment">Placeholder text</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- END OF ANNOTATIONS SIDEBAR -->
+
+        <div class="wrapper-container">
+
+<!-- =============
+     BEGIN CONTENT
+     ============= -->
+
+     <section class="content row cr-content">
+
+        <!-- nav on the left side of the page -->
+        <nav class="span4 cr-steps secondary">
+            <!-- uses bootstrap's affix plugin -->
+            <div id="sticky-nav">
+                <ul>
+                    <li class="incomplete"><a href="select-product.html">1</span></a></li>
+                    <li class="incomplete"><a href="select-issue.html">2</a></li>
+                    <li class="incomplete"><a href="what-happened.html">3</a></li>
+                    <li class="incomplete"><a href="company-information.html">4</span></a></li>
+                    <li class="active incomplete"><a href="your-information.html">5</a></li>
+                    <li class="incomplete"><a href="review-and-submit.html">6</a></li>
+                </ul>
+                <!--            <a href="#" id="chat-now">Form trouble? Chat now.</a> -->
+            </div>
+            <!-- /#sticky-nav -->
+        </nav>
+        <!-- /nav on the left side of the page -->
+
+        <div class="span8 cr-primary">
+            <!-- .error-panel -->
+
+            <!-- end .error-panel -->
+
+            <div style="text-align: right; margin-top: 30px; margin-right: 30px;">
+                Have a question or need for help? <a>Chat Now</a>
+            </div>
+
+            <div id="select_product" class="cr-primary-container">
+                <h2>What people are involved?</h2>
+                <p class="page-intro your-info">If you are submitting this complaint for someone else, you can choose to include your contact information in the “point of contact” section.</p>
+
+                <!-- end .error-panel -->
+                <h3 id="primary-consumer-section">Primary consumer</h3>
+                <p>Tell us about the person who is having this issue.</p>
+                <!--            <p>The person who is having this issue</p> -->
+
+                <fieldset id="consumer1-identity" class="cr-fieldset">
+                    <!-- question -->
+                    <div class="row cr-question">
+                        <div class="span3 cr-label cr-question cr-question-left cr-question-last">
+                            <label for="primary-consumer-identity">
+                                This person is...
+                                <div class='is-required'>Answer Required</div>
+                            </label>
+
+                            <select name="primary-consumer-identity" id="primary-consumer-identity" class="input-medium">
+                                <option>Select an option...</option>
+                                <option id="primary-consumer-identity-option1" class="consumer-identity-options" value="#">Primary account holder</option>
+                                <option id="primary-consumer-identity-option2" class="consumer-identity-options" value="#">Additional account holder</option>
+                                <option id="primary-consumer-identity-option3" class="consumer-identity-options" value="#">Joint account holder</option>
+                                <option id="primary-consumer-identity-option4" class="consumer-identity-options" value="#">Additional card holder</option>
+            <!--
+                                <option id="primary-consumer-identity-option5" class="consumer-identity-options" value="#">Co-Signer</option>
+                                <option id="primary-consumer-identity-option6" class="consumer-identity-options" value="#">Co-borrower</option>
+                                <option id="primary-consumer-identity-option7" class="consumer-identity-options" value="#">Sender</option>
+                                <option id="primary-consumer-identity-option8" class="consumer-identity-options" value="#">Recipient</option>
+                            -->
+                        </select>
+
+                        <div id="ans-rel-other-who" style="display:none;">
+                            <input type="text" class="input-medium" name="cr-con1-other-who" id="cr-con1-other-who" placeholder="">
+                        </div>
+
+                    </div>
+
+                    <div class="span2 cr-label cr-question-right right-helper">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="cr-fieldset full-name-format">
+
+                <!-- First name and middle name -->
+                <div class="row cr-question ">
+                    <div class="span3 cr-label cr-question-left ">
+                        <label for="cr-first-name2_4851476384792477">
+                            First name
+                        </label>
+                        <input type="text" name="cr-first-name2" id="cr-first-name2_4851476384792477" placeholder="">
+                    </div>
+
+                    <!-- middle name -->
+                    <div class="span2 cr-label cr-question-right">
+                        <label for="cr-middle-name2_4851476384792477">
+                            Middle <small class="inline">(Optional)</small>
+                        </label>
+                        <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477" placeholder="">
+                    </div>
+                    <!-- /middle name -->
+                </div>
+                <!-- /First name and middle name -->
+
+                <!-- Last name and suffix -->
+                <div class="row cr-question cr-question-last">
+                    <div class="span3 cr-label cr-question-left">
+                        <label for="cr-last-name2_4851476384792477">
+                            Last name
+                            <div class='is-required'>Answer Required</div>
+                        </label>
+
+                        <input type="text" name="cr-last-name" id="cr-last-name2_4851476384792477" placeholder="">
+                    </div>
+
+                    <!-- suffix -->
+                    <div class="span2 cr-label cr-question-right">
+                        <label for="cr-suffix2">
+                            Suffix
+                            <small class="inline">(Optional)</small>
+                        </label>
+                        <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                            <option value="" disabled="disabled" selected="selected">Select...</option>
+                            <option value="">Jr</option>
+                            <option value="">Sr</option>
+                            <option value="">PhD</option>
+                            <option value="">DS</option>
+                            <option value="">Esq</option>
+                            <option value="">I</option>
+                            <option value="">II</option>
+                            <option value="">III</option>
+                            <option value="">IV</option>
+                            <option value="">V</option>
+                            <option value="">VI</option>
+                            <option value="">VII</option>
+                            <option value="">IX</option>
+                            <option value="">X</option>
+                        </select>
+
+                    </div>
+                    <!-- /suffix -->
+                </div>
+                <!-- /city and state -->
+            </fieldset>
+            <fieldset id="primary-consumer-phone-and-zip" class="cr-fieldset">
+
+                <!-- Zip code -->
+                <div class="row cr-question cr-question-last">
+
+                    <!-- suffix -->
+                    <div class="span2 cr-label cr-question-left">
+                        <label for="cr-suffix2">
+                            Phone number
+                        </label>
+                        <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477" placeholder="">
+
+                            <!--
+                            <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                                            <option value="" disabled="disabled" selected="selected">Select...</option>
+                                <option label="Alabama" value="2" >Alabama</option>
+                                <option label="Alaska" value="1" >Alaska</option>
+                                <option label="American Samoa" value="4" >American Samoa</option>
+                                <option label="Arizona" value="5" >Arizona</option>
+                                <option label="Arkansas" value="3" >Arkansas</option>
+                                <option label="California" value="6" >California</option>
+                                <option label="Colorado" value="7" >Colorado</option>
+                                <option label="Connecticut" value="8" >Connecticut</option>
+                                <option label="Delaware" value="10" >Delaware</option>
+                                <option label="District Of Columbia" value="9" >District Of Columbia</option>
+                                <option label="Federated States Of Micronesia" value="12" >Federated States Of Micronesia</option>
+                                <option label="Florida" value="11" >Florida</option>
+                                <option label="Georgia" value="13" >Georgia</option>
+                                <option label="Guam" value="14" >Guam</option>
+                                <option label="Hawaii" value="15" >Hawaii</option>
+                                <option label="Idaho" value="17" >Idaho</option>
+                                <option label="Illinois" value="18" >Illinois</option>
+                                <option label="Indiana" value="19" >Indiana</option>
+                                <option label="Iowa" value="16" >Iowa</option>
+                                <option label="Kansas" value="20" >Kansas</option>
+                                <option label="Kentucky" value="21" >Kentucky</option>
+                                <option label="Louisiana" value="22" >Louisiana</option>
+                                <option label="Maine" value="25" >Maine</option>
+                                <option label="Marshall Islands" value="26" >Marshall Islands</option>
+                                <option label="Maryland" value="24" >Maryland</option>
+                                <option label="Massachusetts" value="23" >Massachusetts</option>
+                                <option label="Michigan" value="27" >Michigan</option>
+                                <option label="Minnesota" value="28" >Minnesota</option>
+                                <option label="Mississippi" value="31" >Mississippi</option>
+                                <option label="Missouri" value="29" >Missouri</option>
+                                <option label="Montana" value="32" >Montana</option>
+                                <option label="Nebraska" value="35" >Nebraska</option>
+                                <option label="Nevada" value="39" >Nevada</option>
+                                <option label="New Hampshire" value="36" >New Hampshire</option>
+                                <option label="New Jersey" value="37" >New Jersey</option>
+                                <option label="New Mexico" value="38" >New Mexico</option>
+                                <option label="New York" value="40" >New York</option>
+                                <option label="North Carolina" value="33" >North Carolina</option>
+                                <option label="North Dakota" value="34" >North Dakota</option>
+                                <option label="Northern Mariana Islands" value="30" >Northern Mariana Islands</option>
+                                <option label="Ohio" value="41" >Ohio</option>
+                                <option label="Oklahoma" value="42" >Oklahoma</option>
+                                <option label="Oregon" value="43" >Oregon</option>
+                                <option label="Palau" value="46" >Palau</option>
+                                <option label="Pennsylvania" value="44" >Pennsylvania</option>
+                                <option label="Puerto Rico" value="45" >Puerto Rico</option>
+                                <option label="Rhode Island" value="47" >Rhode Island</option>
+                                <option label="South Carolina" value="48" >South Carolina</option>
+                                <option label="South Dakota" value="49" >South Dakota</option>
+                                <option label="Tennessee" value="50" >Tennessee</option>
+                                <option label="Texas" value="51" >Texas</option>
+                                <option label="Utah" value="52" >Utah</option>
+                                <option label="Vermont" value="55" >Vermont</option>
+                                <option label="Virgin Islands" value="54" >Virgin Islands</option>
+                                <option label="Virginia" value="53" >Virginia</option>
+                                <option label="Washington" value="56" >Washington</option>
+                                <option label="West Virginia" value="58" >West Virginia</option>
+                                <option label="Wisconsin" value="57" >Wisconsin</option>
+                                <option label="Wyoming" value="59" >Wyoming</option>
+                                <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
+                                <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
+                                <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
+                            </select>
+                        -->
+                    </div>
+                    <!-- /suffix -->
+                    <div class="span3 cr-label cr-question-right">
+                        <label for="cr-first-name2_4851476384792477">
+                            Zip Code
+                        </label>
+                        <input type="text" name="con1-zip" id="con1-zip" class="zipinput" placeholder="">
+                    </div>
+                </div>
+
+                <div class="row cr-question ">
+                    <div class="span3 cr-label cr-question-left ">
+                        <label for="cr-first-name2_4851476384792477">
+                            Address line 1
+                        </label>
+                        <input type="text" name="cr-first-name2" id="cr-first-name2_4851476384792477" placeholder="">
+                    </div>
+
+                    <div class="span2 cr-label cr-question-right">
+                        <label for="cr-middle-name2_4851476384792477">
+                            City
+                        </label>
+                        <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477" placeholder="">
+                    </div>
+                </div>
+                <div class="row cr-question cr-question-last">
+                    <div class="span3 cr-label cr-question-left">
+                        <label for="cr-last-name2_4851476384792477">
+                            Address line 2 <small class="inline">(Optional)</small>
+                            <div class='is-required'>Answer Required</div>
+                        </label>
+
+                        <input type="text" name="cr-last-name" id="cr-last-name2_4851476384792477" placeholder="">
+                    </div>
+
+                    <!-- suffix -->
+                    <div class="span2 cr-label cr-question-right">
+                        <label for="cr-suffix2">
+                            State
+                            <small class="inline"></small>
+                        </label>
+
+                        <input type="text" name="cr-last-name" id="cr-last-name2_4851476384792477" placeholder="">
+                    </div>
+                    <!-- /suffix -->
+                </div>
+            </fieldset>
+
+<!--
+                <fieldset class="cr-fieldset">
+                    <div class="row cr-question cr-question-last">
+                        <div class="span2 cr-label cr-question-left">
+                            <label for="cr-first-name2_4851476384792477">
+                                Zip Code
+                            </label>
+                            <input type="text" name="con1-zip" id="con1-zip" class="zipinput" placeholder="">
+
+                        </div>
+                        <div class="span3 cr-label cr-question-right">
+                        <p>This is important because lending laws often have provisions for people in different age groups.</p>
+                        </div>
+                    </div>
+                </fieldset>
+            -->
+
+
+            <fieldset id="primary-consumer-email" class="cr-fieldset">
+
+                <!-- email address -->
+                <div class="cr-question borrower-email cr-question-last">
+                    <div class="span3 cr-label cr-question-left cr-question-with-checkbox">
+                        <label for="con1-email">
+                            Email address <!-- <small class="inline">(This is required for official correspondence)</small> -->
+                            <div class='is-required'>Answer Required</div>
+                        </label>
+
+                        <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
+                        <p>We’ll use this email address to send updates about the status of this complaint. It will also be the username for the account.</p>
+                    </div>
+                    <div class="span2 cr-label cr-question-right right-helper question-checkbox">
+                        <label id="no-email-address-checkbox" class="radio block">
+                            <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox" id="cr-no-email">
+                            The primary consumer doesn't have an email address
+                        </label>
+                    </div>
+                </div>
+                <!-- /email  -->
+
+<!--
+
+    START CONSUMER DOESN'T HAVE EMAIL ADDRESS
+
+-->
+
+<div id="consumer-info-no-email" class="row cr-question">
+
+    <div class="span3 cr-label" style="border-top: dotted 1px #ccc; padding-top: 12px;">
+        <label>
+         How should we contact the primary consumer about the status of this complaint?
+         <div class='is-required'>Required</div>
+     </label>
+ </div>
+
+ <div class="span9 cr-answer cr-radios prodselect cr-behalf">
+    <label class="radio block">
+        <input type="radio" class='identify-account identify-user identification-type phone-number' name="identify-account" value="phone-number">
+        Text message
+    </label>
+
+    <label class="radio block">
+        <input type="radio" class='identify-account identify-user identification-type physical-mail' name="identify-account" value="physical-mail">
+        Mail
+    </label>
+
+    <label class="radio block last">
+        <input type="radio" class='identify-account identify-user identification-type someone-else' name="identify-account" value="someone-else">
+        Someone else will be the point of contact
+    </label>
+</div>
+</div>
+</fieldset>
+<fieldset class="cr-fieldset identify-options physical-mail">
+
+  <div class="row cr-question cr-question-last account-number-row">
+
+      <div class="span3 cr-label">
+          <p style="margin: 1em;">We will mail updates each time your complaint changes status.</p>
+      </div>
+  </div>
+</fieldset>   <!--  /physical mail   -->
+
+<fieldset class="cr-fieldset identify-options phone-number">
+    <div class="row cr-question cr-question-last account-number-row">
+        <div class="span3 cr-label">
+            <p style="margin: 1em;">We will text a message to the number you provided each time your complaint changes in status. Standard messaging rates may apply.</p>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="cr-fieldset identify-options someone-else">
+
+    <div class="row cr-question cr-question-last account-number-row">
+        <div class="span3 cr-label">
+         <p style="margin: 1em;">Be sure to include full contact information below.</p>
+     </div>
+
+        <!--
+                        <div class="span2 cr-label cr-question-right right-helper">
+                            <p></p>
+                        </div>
+                    -->
+                </div>
+            </fieldset>
+
+<!--
+
+END CONSUMER NO EMAIL ADDRESS
+
+-->
+
+</div>
+
+<!--
+//////////
+ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
+////////
+
+-->
+
+<div class="cr-primary-container">
+    <h3 id="additional-consumer-section">Additional consumer</h3>
+    <!--        <p>Someone who shares the account or participated in the transaction</p> -->
+
+    <fieldset class="cr-fieldset">
+        <!-- question -->
+        <div class="row cr-question">
+            <fieldset class="cr-fieldset">
+                <div class="span3 cr-label">
+                    <label>
+                        <span id="add-consumer-label">Does this complaint involve an additional account holder, card-holder or co-signer?</span> <small class="inline">(Optional)</small>
+                        <div class='is-required'>Optional</div>
+                    </label>
+
+                </div>
+
+                <div class="span9 cr-answer cr-radios cr-behalf cr-add-con prodselect">
+                    <label class="radio block">
+                        <input type="radio" class='add-consumer-yes' name="add-consumer" value="yes">
+                        Yes
+                    </label>
+
+                    <label class="radio block last">
+                        <input type="radio" class='add-consumer-no' name="add-consumer" value="no">
+                        No
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <!-- /question -->
+
+
+        <fieldset id="consumer2-identity" class="cr-fieldset additional-consumer">
+            <!-- question -->
+            <div class="row cr-question">
+                <div class="span3 cr-label cr-question-left">
+                    <label for="point-of-contact-identity">
+                        This person is...
+                        <div class='is-required'>Answer Required</div>
+                    </label>
+
+                    <select name="primary-consumer-identity" id="additional-consumer-identity" class="input-medium">
+                        <option>Select an option...</option>
+                        <option id="additional-consumer-identity-option1" class="consumer-identity-options" value="#">Primary account holder</option>
+                        <option id="additional-consumer-identity-option2" class="consumer-identity-options" value="#">Additional account holder</option>
+                        <option id="additional-consumer-identity-option3" class="consumer-identity-options" value="#">Joint account holder</option>
+                        <option id="additional-consumer-identity-option4" class="consumer-identity-options" value="#">Additional card holder</option>
+                    </select>
+
+                    <p class="ans-poc-other-who-spacer">&nbsp;</p>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="cr-fieldset additional-consumer full-name-format">
+
+            <!-- First name and middle name -->
+            <div class="row cr-question ">
+                <div class="span3 cr-label cr-question-left ">
+                    <label for="cr-first-name2_4851476384792477">
+                        First name
+                    </label>
+                    <input type="text" name="cr-first-name2" id="cr-first-name2_4851476384792477" placeholder="">
+                </div>
+
+                <!-- middle name -->
+                <div class="span2 cr-label cr-question-right">
+                    <label for="cr-middle-name2_4851476384792477">
+                        Middle <small class="inline">(Optional)</small>
+                    </label>
+                    <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477" placeholder="">
+                </div>
+                <!-- /middle name -->
+            </div>
+            <!-- /First name and middle name -->
+
+            <!-- Last name and suffix -->
+            <div class="row cr-question cr-question-last">
+                <div class="span3 cr-label cr-question-left">
+                    <label for="cr-last-name2_4851476384792477">
+                        Last name
+                        <div class='is-required'>Answer Required</div>
+                    </label>
+
+                    <input type="text" name="cr-last-name" id="cr-last-name2_4851476384792477" placeholder="">
+                </div>
+
+                <!-- suffix -->
+                <div class="span2 cr-label cr-question-right">
+                    <label for="cr-suffix2">
+                        Suffix
+                        <small class="inline">(Optional)</small>
+                    </label>
+                    <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                        <option value="" disabled="disabled" selected="selected">Select...</option>
+                        <option value="">Jr</option>
+                        <option value="">Sr</option>
+                        <option value="">PhD</option>
+                        <option value="">DS</option>
+                        <option value="">Esq</option>
+                        <option value="">I</option>
+                        <option value="">II</option>
+                        <option value="">III</option>
+                        <option value="">IV</option>
+                        <option value="">V</option>
+                        <option value="">VI</option>
+                        <option value="">VII</option>
+                        <option value="">IX</option>
+                        <option value="">X</option>
+                    </select>
+                </div>
+                <!-- /suffix -->
+            </div>
+            <!-- /city and state -->
+        </fieldset>
+<!--
+     <fieldset class="cr-fieldset additional-consumer">
+
+            <div class="row cr-question cr-question-last zipcode-row">
+                <div class="span3 cr-label cr-question-left">
+                    <label for="cr-first-name2_4851476384792477">
+                        Zip code <small class="inline">(Optional)</small>
+                    </label>
+                    <input type="text" name="con1-zip" id="con1-zip" class="zipinput" placeholder="">
+                </div>
+
+                <div class="span2 cr-label cr-question-right right-helper">
+                    <p>Your Zip Code can us identify trends in the marketplace</p>
+                </div>
+            </div>
+    </fieldset>
+-->
+<fieldset id="additional-consumer-email" class="cr-fieldset additional-consumer">
+    <!-- email address -->
+    <div class="cr-question cr-question-last borrower-email additional-consumer-email">
+        <div class="span3 cr-label cr-question-left cr-question-with-checkbox">
+            <label for="con1-email">
+                Email address <small id="addcon-optional-status" class="inline">(Optional)</small>
+                <div class='is-required'>Optional</div>
+            </label>
+
+            <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
+            <p id="addcon-email-helper">We’ll use this email address to send updates about the status of this complaint. It will also be the additional consumer's username for logging in to their account.</p>
+        </div>
+
+        <div class="span2 cr-label cr-question-right right-helper add-consumer">
+            <label id="cr-add-consumer-checkbox" class="radio block">
+                <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox" id="cr-add-consumer-full">
+                Allow this person to access this complaint and receive status updates.
+            </label>
+        </div>
+    </div>
+
+    <!-- Zip code -->
+    <div id="addcon-phone-number" class="row cr-question cr-question-last">
+        <!-- suffix -->
+        <div class="span2 cr-label cr-question-left">
+            <label for="cr-suffix2">
+                Phone number
+            </label>
+            <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477" placeholder="">
+        </div>
+        <!-- /zip code  -->
+    </fieldset>
+</div>
+
+<!--
+
+///////////////
+END OF Additional Consumer
+///////////////
+
+-->
+
+<!--
+
+///////////////
+POINT OF CONTACT
+///////////////
+
+-->
+
+<div class="cr-primary-container">
+    <h3 id="point-of-contact-header">Additional point of contact</h3>
+    <!--    <p>Someone who will communicate on behalf of the primary consumer</p> -->
+
+    <fieldset class="cr-fieldset">
+        <!-- question -->
+        <div class="row cr-question">
+            <fieldset class="cr-fieldset point-of-contact-question">
+                <div class="span3 cr-label">
+                    <label>
+                        Should we send status updates to anyone else about this complaint? <small class="inline">(Optional)</small>
+                        <div class='is-required'>Optional</div>
+                    </label>
+
+                </div>
+
+                <div class="span9 cr-answer cr-radios cr-behalf cr-add-poc prodselect">
+                    <label class="radio block">
+                        <input type="radio" class='add-poc-yes' name="add-poc-no" value="yes">
+                        Yes
+                    </label>
+
+                    <label class="radio block last">
+                        <input type="radio" class='add-poc-no' name="add-poc-no" value="no">
+                        No
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <!-- /question -->
+
+        <fieldset id="poc-relationship-to-consumer" class="cr-fieldset point-of-contact">
+           <!-- question -->
+           <div class="row cr-question">
+
+               <div class="span3 cr-label cr-question-left">
+                <label for="point-of-contact-identity">
+                    Relationship to consumer
+                    <div class='is-required'>Answer Required</div>
+                </label>
+
+                <select name="point-of-contact-identity" id="point-of-contact-identity" class="input-medium">
+                    <option>Select an option...</option>
+                    <option class="ans-rel-family-member" value="family-member">Family Member</option>
+                    <option class="ans-rel-friend" value="friend">Friend</option>
+                    <option class="ans-rel-attorney" value="attorney">Attorney</option>
+                    <option class="ans-rel-government-employee" value="gov-employee">Government employee</option>
+                    <option class="ans-rel-advocate" value="advocate">Advocate</option>
+                    <option class="ans-rel-housing-counselor" value="housing-counselor">Housing counselor</option>
+                    <option class="ans-rel-other" value="other">Other</option>
+                </select>
+
+                <p id="ans-poc-other-who-spacer">&nbsp;</p>
+            </div>
+
+            <div id="poc-access-div" class="span2 cr-label cr-question-right right-helper add-consumer">
+                <label id="cr-add-consumer-checkbox" class="radio block">
+                    <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox" id="cr-add-poc-full">
+                    Allow this person full access to this complaint in addition to status updates.
+                </label>
+            </div>
+
+        </div>
+        <div class="row cr-question">
+
+            <div id="ans-poc-other-who" class="selected_other cr-question cr-label cr-question-left cr-question-last">
+                <label id="cr-poc-other-who-label" for="cr-poc-other-who">
+                    Organization name
+                </label>
+                <input type="text" class="input-medium" name="cr-poc-other-who" id="cr-poc-other-who" placeholder="">
+            </div>
+        </div>
+
+    </fieldset>
+
+    <fieldset id="poc-disclosure" class="cr-fieldset">
+       <div class="row cr-question">
+
+           <p>Allowing full access may require documentation, such as a signed release form. You can include an authorization document as an attachment on the next page.</p>
+       </div>
+   </fieldset>
+
+   <fieldset class="cr-fieldset point-of-contact">
+
+     <!-- First name and middle name -->
+     <div class="row cr-question full-name-format">
+        <div class="span3 cr-label cr-question-left ">
+            <label for="cr-first-name2_4851476384792477">
+                First name
+            </label>
+            <input type="text" name="cr-first-name2" id="cr-first-name2_4851476384792477" placeholder="">
+        </div>
+
+        <!-- middle name -->
+        <div class="span2 cr-label cr-question-right">
+            <label for="cr-middle-name2_4851476384792477">
+                Middle <small class="inline">(Optional)</small>
+            </label>
+            <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477" placeholder="">
+        </div>
+        <!-- /middle name -->
+    </div>
+    <!-- /First name and middle name -->
+
+    <!-- Last name and suffix -->
+    <div class="row cr-question cr-question-last">
+        <div class="span3 cr-label cr-question-left">
+            <label for="cr-last-name2_4851476384792477">
+                Last name
+                <div class='is-required'>Answer Required</div>
+            </label>
+
+            <input type="text" name="cr-last-name" id="cr-last-name2_4851476384792477" placeholder="">
+        </div>
+
+        <!-- suffix -->
+        <div class="span2 cr-label cr-question-right">
+            <label for="cr-suffix2">
+                Suffix
+                <small class="inline">(Optional)</small>
+            </label>
+            <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                <option value="" disabled="disabled" selected="selected">Select...</option>
+                <option value="">Jr</option>
+                <option value="">Sr</option>
+                <option value="">PhD</option>
+                <option value="">DS</option>
+                <option value="">Esq</option>
+                <option value="">I</option>
+                <option value="">II</option>
+                <option value="">III</option>
+                <option value="">IV</option>
+                <option value="">V</option>
+                <option value="">VI</option>
+                <option value="">VII</option>
+                <option value="">IX</option>
+                <option value="">X</option>
+            </select>
+
+        </div>
+        <!-- /suffix -->
+    </div>
+    <!-- /city and state -->
+</fieldset>
+<!--
+     <fieldset class="cr-fieldset point-of-contact">
+
+            <div class="row cr-question cr-question-last zipcode-row">
+                <div class="span3 cr-label cr-question-left">
+                    <label for="cr-first-name2_4851476384792477">
+                        Zip code <small class="inline">(Optional)</small>
+                    </label>
+                    <input type="text" name="con1-zip" id="con1-zip" class="zipinput" placeholder="">
+                </div>
+
+                <div class="span2 cr-label cr-question-right right-helper">
+                    <p>Your Zip Code can us identify trends in the marketplace</p>
+                </div>
+            </div>
+    </fieldset>
+-->
+<fieldset id="poc-email-address" class="cr-fieldset point-of-contact">
+    <!-- email address -->
+    <div class="cr-question borrower-email">
+        <div class="span3 cr-label cr-question-left cr-question-with-checkbox cr-question-last poc-email-address">
+            <label for="con1-email">
+                Email address
+                <div class='is-required'>Required</div>
+            </label>
+
+            <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
+            <p>We’ll use this email address to send updates about the status of this complaint. <span id="poc-email-helper">It will also be the point of contact's username for logging in to their account.</span></p>
+        </div>
+        <div class="span2 cr-label cr-question-right right-helper question-checkbox">
+<!--
+                                <label class="radio block">
+                                    <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox" id="cr-no-email">
+                                    Allow this person to access this complaint and receive status updates.
+                                </label>
+                            -->
+                        </div>
+                    </div>
+                    <!-- /email  -->
+
+
+                    <!-- email address -->
+<!--
+            <div class="cr-question borrower-email cr-question-last normal-checkbox">
+                    <div class="span3 cr-label cr-question">
+
+                                <label class="radio block">
+                                    <input type="checkbox" name="cr-add-consumer-checkbox" value="cr-add-consumer-checkbox" class="cr-add-consumer-checkbox" id="cr-add-consumer-checkbox">
+                                    Allow this person to access this complaint and receive status updates.
+                                </label>
+                    </div>
+            </div>
+        -->
+        <!-- /email  -->
+
+        <div id="poc-phone-number" class="row cr-question cr-question-last">
+            <!-- suffix -->
+            <div class="span2 cr-label cr-question-left">
+                <label for="cr-suffix2">
+                    Phone number
+                </label>
+                <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477" placeholder="">
+            </div>
+
+        </fieldset>
+    </div>
+
+<!--
+
+///////////////
+END OF Point of contact
+///////////////
+
+-->
+
+<!--
+
+///////////////
+AFFILIATIONS
+///////////////
+
+-->
+
+<div class="cr-primary-container">
+    <h3 id="affiliations-section">Affiliations</h3>
+    <p>We use this information to help identify trends in the marketplace.</p>
+    <fieldset class="cr-fieldset">
+
+        <!-- question -->
+        <div id="affiliation-question" class="row cr-question">
+
+            <div class="span3 cr-label">
+
+                <label for="cr-military-status">
+                    <span id='military-question'>The primary consumer is:</span>
+                    <small class="block">(Optional, choose all that apply)</small>
+                </label>
+
+            </div>
+
+            <div id="affiliation-options" class="span9 cr-answer cr-radios cr-servicemember prodselect">
+
+                <label class="radio block">
+                    <input type="checkbox" name="cr-military-status" value="option1" class="cr-need-military-status" id="cr-military-status">
+                    A servicemember or veteran
+                </label>
+
+                <label class="radio block">
+                    <input type="checkbox" name="cr-military-status2" value="option2" class="cr-need-servicemember-info">
+                    The spouse or dependent of a servicemember or veteran
+                </label>
+                <label class="radio block">
+                    <input type="checkbox" name="cr-student" value="option3" class="cr-need-over-62">
+                    A current student
+                    <br/><small>Includes any college or university degree program</small>
+                </label>
+
+                <label class="radio block">
+                    <input type="checkbox" name="cr-justice-involved" value="option3" class="cr-need-over-62">
+                    A person with a disability
+                </label>
+            </div>
+
+        </div>
+        <!-- /question -->
+
+    </fieldset>
+    <fieldset id="servicemember-details" class="cr-fieldset affiliation-details cr-military-status">
+        <div class="row cr-question ">
+
+            <div class="span3 cr-label cr-question-left ">
+                <label for="cr-first-name2_4851476384792477">
+                    Current status
+                </label>
+                <select name="cr-current-status" id="cr-current-status">
+                    <option value="">Choose...</option>
+                    <option value="">Active</option>
+                    <option value="">Reserve</option>
+                    <option value="">National Guard</option>
+                    <option value="">Retired</option>
+                    <option value="">Veteran</option>
+                </select>
+
+            </div>
+
+            <!-- middle name -->
+            <div class="span2 cr-label cr-question-right">
+                <label for="cr-middle-name2_4851476384792477">
+                    Branch of service
+                </label>
+                <select name="cr-military-service" id="cr-military-service" class="block">
+                    <option value="">Choose...</option>
+                    <option value="">Marines</option>
+                    <option value="">Air Force</option>
+                    <option value="">Army</option>
+                    <option value="">Navy</option>
+                    <option value="">Coast Guard</option>
+                    <option value="">Public Health Service</option>
+                    <option value="">National Oceanic and Atmospheric Admin</option>
+                </select>
+
+            </div>
+            <!-- /middle name -->
+        </div>
+
+        <div class="row cr-question cr-question-last">
+            <div class="span3 cr-label cr-question-left">
+                <label for="cr-last-name2_4851476384792477">
+                    Rank <small class="inline">(Optional)</small>
+                </label>
+
+                <select name="cr-military-rank" id="cr-military-rank">
+                    <option value="">Choose...</option>
+                    <option value="">E1-E4</option>
+                    <option value="">E5-E7</option>
+                    <option value="">E8-E9</option>
+                    <option value="">O1-O3</option>
+                    <option value="">O4-O6</option>
+                    <option value="">O7-O10</option>
+                    <option value="">W01-CW5</option>
+                </select>
+
+            </div>
+
+            <!-- suffix -->
+            <div class="span2 cr-label cr-question-right">
+                <label for="cr-suffix2">
+                    Military base/location
+                    <small class="inline">(Optional)</small>
+                </label>
+                <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                    <option value="" disabled="disabled" selected="selected">Select...</option>
+                    <option value="">Minot Air Force Base</option>
+                    <option value="">McConnell Air Force Base</option>
+                    <option value="">Offutt Air Force Base</option>
+                    <option value="">Maxwell Air Force Base</option>
+                    <option value="">McClellan Air Force Base</option>
+                    <option value="">Fairchild Air Force Base</option>
+                </select>
+
+            </div>
+            <!-- /suffix -->
+        </div>
+        <!-- /city and state -->
+    </fieldset>
+
+
+</div>
+
+
+
+</div>
+<!-- /.primary -->
+<!-- options below form -->
+<div class="row cr-continue">
+  <a id="continue-button" href="review-and-submit.html"><button class="btn btn-arrow" type="button">Continue</button></a>
+  <a id="save-and-continue-later-link" href="#">Save and continue later</a>
+</div>
+<!-- /options below form -->
+</section>
+<!-- /.row -->
+
+<!-- =============
+     / END CONTENT
+     ============= -->
+
+ </div><!-- .wrapper-container -->
+
+</div><!-- .wrapper-body -->
+
+<footer class="wrapper-footer">
+    <div class="wrapper-container">
+        <nav>
+            <ul class="main-nav horizontal-separated">
+                <li><a id="privacy" href="#">Privacy act statement</a></li>
+                <li><a id="omb" href="#">OMB #3170-0011</a></li>
+            </ul>
+        </nav>
+
+        <div class="sub">
+            <p class="call-us">Have questions? Need help with this form? <span class="tel">(855) 411-2372</span></p>
+            <p class="official-tagline">An official website of the United States government</p>
+        </div>
+
+    </div><!-- .wrapper-container -->
+
+</footer><!-- .wrapper-footer -->
+
+<script src="v0/form/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="v0/form/js/vendor/bootstrap-typeahead.js"></script>
+<script src="v0/form/js/vendor/bootstrap-affix.js"></script>
+<script src="v0/form/data/companies.json"></script>
+<script src="v0/form/js/main.js"></script>
+<script src="v0/form/js/emulate.js"></script>
+<!-- <script src="v0/form/js/responsive.js"></script> -->
+
+<script src="v0/annotations.js"></script>
+
+<!-- TODO: Remove inline styling and scripting. -->
+<style type="text/css">
+    .brand h1 {
+        background: transparent url(v0/form/img/money_@2_alt.png) scroll no-repeat left center;
+        background-size:46px;
+    }
+</style>
+
+<div id='_cur'>
+    <img src="/static/editcore/editor/img/cursor.png" />
+</div>
+
+<style type="text/css">
+    #_cur{
+        position:absolute;
+        top:0px;
+        left:0px;
+        z-index:100000;
+        width:10px;
+        height:10px;
+        margin-left: -8px;
+        margin-top: -8px;
+        left: -10px;
+        top:-10px;
+        background:transparent;
+        opacity:.9;
+        border-radius:100%;
+        border:4px solid rgba(255,255,255,.6);
+    }
+
+    #_cur.clk{
+        border:4px dotted black;
+        background: transparent;
+    }
+</style>
+
+<script type="text/javascript">
+    var current_page_url = "/edit/project-20/get_zip";
+    var test_replay_page = false;
+</script>
+
+<script>
+
+    if(!window.env){
+        setTimeout(function(){
+            var product = localStorage.getItem("product_selected");
+            var subproduct = localStorage.getItem("subproduct_selected");
+            var issue = localStorage.getItem("issue_selected");
+            /*         alert(product + ', ' + subproduct + ', ' + issue); */
+            switch (product) {
+
+                case 'mortgage':
+                $('#primary-consumer-identity-option1').text('Primary borrower');
+                $('#primary-consumer-identity-option2').text('Co-borrower');
+                $('#primary-consumer-identity-option3').text('Co-signer');
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Primary borrower');
+                $('#additional-consumer-identity-option2').text('Co-borrower');
+                $('#additional-consumer-identity-option3').text('Co-signer');
+                $('#additional-consumer-identity-option4').remove();
+                break;
+
+                case 'student_loan':
+                $('#primary-consumer-identity-option1').text('Primary borrower');
+                $('#primary-consumer-identity-option2').text('Co-borrower');
+                $('#primary-consumer-identity-option3').text('Co-signer');
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Primary borrower');
+                $('#additional-consumer-identity-option2').text('Co-borrower');
+                $('#additional-consumer-identity-option3').text('Co-signer');
+                $('#additional-consumer-identity-option4').remove();
+                break
+
+                case 'vehicle_loan':
+                $('#primary-consumer-identity-option1').text('Primary borrower');
+                $('#primary-consumer-identity-option2').text('Co-borrower');
+                $('#primary-consumer-identity-option3').text('Co-signer');
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Primary borrower');
+                $('#additional-consumer-identity-option2').text('Co-borrower');
+                $('#additional-consumer-identity-option3').text('Co-signer');
+                $('#additional-consumer-identity-option4').remove();
+                // NOTE THAT THIS DOES NOT WORK FOR LEASES !!
+                break
+
+                case 'consumer_loan':
+                $('#primary-consumer-identity-option1').text('Primary borrower');
+                $('#primary-consumer-identity-option2').text('Co-borrower');
+                $('#primary-consumer-identity-option3').text('Co-signer');
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Primary borrower');
+                $('#additional-consumer-identity-option2').text('Co-borrower');
+                $('#additional-consumer-identity-option3').text('Co-signer');
+                $('#additional-consumer-identity-option4').remove();
+                break
+
+                case 'card':
+                $('#primary-consumer-identity-option1').text('Primary account holder');
+                $('#primary-consumer-identity-option2').text('Joint account holder');
+                $('#primary-consumer-identity-option3').text('Additional card holder');
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Primary account holder');
+                $('#additional-consumer-identity-option2').text('Joint account holder');
+                $('#additional-consumer-identity-option3').text('Additional card holder');
+                $('#additional-consumer-identity-option4').remove();
+                break
+
+                case 'checking':
+                $('#primary-consumer-identity-option1').text('Primary account holder');
+                $('#primary-consumer-identity-option2').text('Joint account holder');
+                $('#primary-consumer-identity-option3').remove();
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Primary account holder');
+                $('#additional-consumer-identity-option2').text('Joint account holder');
+                $('#additional-consumer-identity-option3').remove();
+                $('#additional-consumer-identity-option4').remove();
+                break
+
+                case 'credit_reporting':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                case 'debt':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                default:
+                $('#primary-consumer-identity-option1').text('Primary account holder');
+                $('#primary-consumer-identity-option2').text('Additional account holder');
+                $('#primary-consumer-identity-option3').text('Joint account holder');
+                $('#primary-consumer-identity-option4').text('Additional card holder');
+                $('#primary-consumer-identity-option5').text('Co-signer');
+                $('#primary-consumer-identity-option6').text('Co-borrower');
+                $('#primary-consumer-identity-option7').text('Sender');
+                $('#primary-consumer-identity-option8').text('Recipient');
+            }
+
+            switch (subproduct) {
+
+                case 'vehicle-lease':
+                $('#primary-consumer-identity-option1').text('Primary account holder');
+                $('#primary-consumer-identity-option2').text('Joint account holder');
+                $('#primary-consumer-identity-option3').text('Co-signer');
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Primary account holder');
+                $('#additional-consumer-identity-option2').text('Joint account holder');
+                $('#additional-consumer-identity-option3').text('Co-signer');
+                $('#additional-consumer-identity-option4').remove();
+                break
+
+                case 'international-money-transfer':
+                $('#primary-consumer-identity-option1').text('Sender');
+                $('#primary-consumer-identity-option2').text('Recipient');
+                $('#primary-consumer-identity-option3').remove();
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Sender');
+                $('#additional-consumer-identity-option2').text('Recipient');
+                $('#additional-consumer-identity-option3').remove();
+                $('#additional-consumer-identity-option4').remove();
+                $('#add-consumer-label').text('Do you want to include an additional consumer?');
+                $('#consumer1-identity').show().slideDown();
+                break
+
+                case 'domestic-money-transfer':
+                $('#primary-consumer-identity-option1').text('Sender');
+                $('#primary-consumer-identity-option2').text('Recipient');
+                $('#primary-consumer-identity-option3').remove();
+                $('#primary-consumer-identity-option4').remove();
+                $('#additional-consumer-identity-option1').text('Sender');
+                $('#additional-consumer-identity-option2').text('Recipient');
+                $('#additional-consumer-identity-option3').remove();
+                $('#additional-consumer-identity-option4').remove();
+                $('#add-consumer-label').text('Do you want to include an additional consumer?');
+                $('#consumer1-identity').show().slideDown();
+                break
+
+                case 'check-cashing':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                case 'money-order':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                case 'mobile-wallet':
+                $('#consumer1-identity').hide();
+                $('#additional-consumer-identity-option1').text('Primary account holder');
+                $('#additional-consumer-identity-option2').text('Joint account holder');
+                $('#additional-consumer-identity-option4').text('Recipient');
+                break
+
+                case 'refund-anticipation':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                case 'traveler-or-cashier':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                case 'virtual-currency':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                case 'debt-settlement':
+                $('#consumer1-identity').hide();
+                $('#consumer2-identity').remove();
+                break
+
+                default:
+                $('#consumer1-identity').hide();
+
+            }
+
+/*
+        if ( $('.company-name-input').val()) {
+        $(this).closest('.identify-product-options').slideDown(200);
+        }
+        */
+
+    }, 11);
+}
+</script>
+
+</body>
+</html>
