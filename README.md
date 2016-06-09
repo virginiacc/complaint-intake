@@ -42,11 +42,34 @@ Open a **gulp** tab in your terminal and run:
 gulp watch
 ```
 
-That should open a tab in your browser that points to `http://localhost:3000/dist/`. Go to the `v0/` directory there to see the current iteration.
+That should open a tab in your browser that points to `http://localhost:3000/dist/`, where you should see the complaint landing page.
 
 Do all your development on the files in `/src/`. Your browser should automatically refresh the page as you make changes to anything in `/src/`.
 
 Currently, the code lives in `/src/` and references legacy assets in `/src/v0/`. All the pages in there are being iteratively refactored to be more standard Capital Framework pages. Refactored JS and CSS will get moved to `/src/static/`.
+
+## Releases
+
+At the end of each sprint, we release the new iteration by updating the `gh-pages` branch. Here’s the process:
+
+1. Run one final `gulp` to make sure all the changes you want to release are built into the `dist` directory
+2. Make a copy of the `dist` directory somewhere, like your desktop
+3. Rename that copy of `dist` to the version you’re releasing, like `0.52`
+4. `git checkout gh-pages`
+5. Copy everything in your new version directory into the root of `gh-pages`, overwriting the old HTML files and the `static` and `v0` directories there
+6. Move your new version directory into `versions`
+7. `git add .`
+8. `git commit`
+9. `git push origin gh-pages`
+10. Check to make sure the latest version is available at two URLs:
+  - https://cfpb.github.io/complaint-intake/
+  - https://cfpb.github.io/complaint-intake/versions/X.XX/ (where X.XX is the version you’re releasing, like 0.52)
+11. Switch back to `master` (you’ll need to re-run `./setup.sh`)
+12. Update `changelog.md` with the latest version’s release notes
+13. `git add .`
+14. `git commit`
+15. `git push origin master`
+16. Released!
 
 ## Open source licensing info
 1. [TERMS](TERMS.md)
