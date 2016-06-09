@@ -35,7 +35,6 @@ body .wrapper-container.annoslide {
 }
 
 body p, body label {
-
 	font-size: 16px;
 }
 
@@ -51,7 +50,6 @@ body p, body label {
         background-image: url(../img/minicon_payday-loan_@2.png);
         background-size: 40px 40px;
     }
-
 }
 
 /* ==========================================================================
@@ -74,7 +72,6 @@ CHANGE TO GIVE ANNOTATIONS SPACE
 
 /* sidebar on the left with the steps */
 .cr-steps {
-
     width: 52px;
     margin: 0 0 0 0;
 /*     max-width: 263px; */
@@ -390,6 +387,22 @@ CHANGE TO GIVE ANNOTATIONS SPACE
 	margin-left: 18px;
 }
 
+.cruxform .cr-question-col input,
+.cruxform .cr-question-col select,
+.cruxform .cr-question-with-checkbox input,
+.cruxform .cr-question-with-checkbox select {
+    margin-left: 18px;
+}
+
+.cruxform .cr-question-col select {
+    /*
+        TODO: This is a static width to match the width of inputs.
+              This will need to be updated to be dynamic if the
+              form is responsive.
+    */
+    width: 160px;
+}
+
 .cruxform .cr-question-left input.zipinput,
 .cruxform .cr-question-right input.zipinput {
 	width: 100px;
@@ -410,8 +423,6 @@ cruxform .cr-question-left input.accountinput {
 	clear: none;
 	width: auto;
 	margin: 0px;
-
-
 }
 
 
@@ -453,11 +464,11 @@ cruxform .cr-question-left input.accountinput {
 
 
 .cruxform .cr-question-left label,
-.cruxform .cr-question-right label {
+.cruxform .cr-question-right label,
+.cruxform .cr-question-col label {
 	margin-left: 18px;
     padding-left: 0px;
     margin-top: 8px;
-
 }
 
 .cruxform .cr-question-right.question-checkbox label {
@@ -523,12 +534,21 @@ fieldset{
     margin:0px;
 }
 .cr-label label, .cr-label legend{
-    width:100%;
+    width: 100%;
     font-family: "Avenir Next Medium", Arial, sans-serif;
     font-weight: 400;
-    font-size:16px;
+    font-size: 16px;
     padding: 16px 8px 3px 18px;
     text-align: left;
+}
+
+.cr-label.cr-question-col {
+    /*
+        TODO: This is a static width four columns on a line.
+              This will need to be updated to be dynamic if the
+              form is responsive.
+    */
+    width: 23.575%;
 }
 
 /*

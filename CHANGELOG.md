@@ -2,15 +2,19 @@
 
 ### Added
 - Full address for additional contact.
+- CSS for columns in the form that are not floated.
 
 ### Changed
 - Converted company-information.html state text inputs to drop-downs.
+- Converted your-information.html state text inputs to drop-downs.
+- Order of name and address fields on your-information.html.
 
 ### Deprecated
 - Nothing.
 
 ### Removed
 - Empty `placeholder` attributes.
+- Unused main.less and gulp styles task code from cf-generator generated code.
 
 ### Fixed
 - Nothing.
