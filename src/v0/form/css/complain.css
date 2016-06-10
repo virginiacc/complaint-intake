@@ -406,15 +406,11 @@ CHANGE TO GIVE ANNOTATIONS SPACE
 .cruxform .cr-question-left input.zipinput,
 .cruxform .cr-question-right input.zipinput {
 	width: 100px;
-
 }
-
 
 cruxform .cr-question-left input.accountinput {
 	width: 220px;
-
 }
-
 
 .cruxform .cr-question-left input.checkbox,
 .cruxform .cr-question-right input.checkbox,
@@ -424,7 +420,6 @@ cruxform .cr-question-left input.accountinput {
 	width: auto;
 	margin: 0px;
 }
-
 
 .cruxform .cr-question-left input.checkbox {
 
@@ -455,13 +450,11 @@ cruxform .cr-question-left input.accountinput {
 	width: 370px;
 }
 
-
 .cruxform .cr-question-right.question-checkbox {
 	margin-left: 18px;
 	width: 300px;
 
 }
-
 
 .cruxform .cr-question-left label,
 .cruxform .cr-question-right label,
@@ -493,11 +486,8 @@ cruxform .cr-question-left input.accountinput {
 	padding: 16px 0 0 0;
 }
 
-
-
 .cruxform .cr-question .helper-left {
 	margin-top: 8px;
-
 }
 
 .cruxform .cr-question-right p {
@@ -521,7 +511,6 @@ cruxform .cr-question-left input.accountinput {
 
 .cruxform .cr-fieldset .cr-question-last {
 	padding-bottom: 24px;
-
 }
 
 .cr-question.cr-typeahead .cr-label {
@@ -530,10 +519,11 @@ cruxform .cr-question-left input.accountinput {
     padding-bottom: 0;
 }
 
-fieldset{
+fieldset {
     margin:0px;
 }
-.cr-label label, .cr-label legend{
+
+.cr-label label, .cr-label legend {
     width: 100%;
     font-family: "Avenir Next Medium", Arial, sans-serif;
     font-weight: 400;
@@ -543,7 +533,7 @@ fieldset{
 }
 
 .cr-label.cr-question-col {
-    /*
+   /*
         TODO: This is a static width four columns on a line.
               This will need to be updated to be dynamic if the
               form is responsive.
@@ -560,7 +550,6 @@ fieldset{
 .cr-review-page .cr-label label, .cr-review-page .cr-label legend{
     min-height: auto;
 }
-
 
 .cr-label label.first {
     padding-top: 15px;
@@ -659,7 +648,7 @@ fieldset{
     -o-animation: fadein .2s; /* Opera */
 }
 
-.cr-primary .visible-follow-up{
+.cr-primary .visible-follow-up {
     display: block;
     margin-left: 140px;
     padding-left:20px;
@@ -700,7 +689,7 @@ fieldset{
     padding-bottom: 15px;
 }
 
-.cr-answer hr{
+.cr-answer hr {
     /*margin: -1px 40px 0 168px;*/
     border: 0;
     border-bottom: 1px dashed #ccc;
@@ -741,15 +730,13 @@ input.international,
     margin-left:50px;
 }
 
-.terms-container label.checkbox.block{
+.terms-container label.checkbox.block {
     text-indent: -27px;
 }
 
-#terms{
+#terms {
     margin-right:10px;
 }
-
-
 
 .cr-continue {
     background-color: #f2f2f2;
@@ -769,7 +756,6 @@ input.international,
         background-image: url(../img/icon-continue-arrow-retina.png);
         background-size: 30px;
     }
-
 }
 
 .cr-continue .btn:hover {
@@ -1068,7 +1054,6 @@ dd.cr-disclose {
         background-image: url(../img/icon-numbers-sprite-retina.png);
         background-size: 25px 428px;
     }
-
 }
 
 /* Icons
@@ -1240,68 +1225,66 @@ dd {
     font-family: Georgia, serif;
 }
 
-
-
 /* Payday Lending Changes */
-.guide-panel{
+.guide-panel {
     background: #f3f3f3;
-    padding:20px;
-    margin:39px 26px 0 20px;
+    padding: 20px;
+    margin: 39px 26px 0 20px;
     border: 1px solid #bbb;
 }
 
-.guide-panel a{text-decoration: underline;}
-.guide-panel p{margin: 0px;}
+.guide-panel a { text-decoration: underline; }
+.guide-panel p { margin: 0px; }
 
 .cr-answer p {
     font-size: .8em;
     margin-right: 1em;
 }
 
-.error-panel{
+.error-panel {
     background: #F8DAD6;
-    padding:20px;
-    margin:39px 26px 0 20px;
+    padding: 20px;
+    margin: 39px 26px 0 20px;
     border: 1px solid #E9A092;
 }
 
-.error-panel a{
+.error-panel a {
     text-decoration: underline;
 }
 
-.panel-content{
-    margin-left:62px;
+.panel-content {
+    margin-left: 62px;
 }
 
-.panel-content ul{
-    padding:0px 0px 0px 20px;
+.panel-content ul {
+    padding: 0px 0px 0px 20px;
 }
 
-.icon-exc{
+.icon-exc {
     background: url(../img/green-ex.png);
-    background-repeat:no-repeat;
-    width:42px;
-    height:42px;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
 }
 
-.icon-info{
+.icon-info {
     background: url(../img/more-info.png);
-    background-repeat:no-repeat;
-    width:42px;
-    height:42px;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
 }
 
-.icon-x{
+.icon-x {
     background: url(../img/x-red.png);
-    background-repeat:no-repeat;
-    width:42px;
-    height:42px;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
 }
 
-.icon-gray-exc{
+.icon-gray-exc {
     background: url(../img/gray-exc.png);
-    width:22px;
-    height:22px;
+    width: 22px;
+    height: 22px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -1310,49 +1293,45 @@ dd {
         background-image: url(../img/minicon_alert_xsmall.png);
         background-size: 22px;
     }
-
 }
 
-
-
-
-.left-obj{
-    float:left;
-    margin-right:20px;
+.left-obj {
+    float: left;
+    margin-right: 20px;
 }
 
-.follow-up .left-obj{
-    margin:10px 15px 10px 0;
+.follow-up .left-obj {
+    margin: 10px 15px 10px 0;
 }
 
-#relationship-to-person{
+#relationship-to-person {
     padding-bottom: 15px;
     display: none;
 }
 
-.cr-primary #relationship-to-person .follow-up{
+.cr-primary #relationship-to-person .follow-up {
     margin-top: 0px;
 }
 
-.debt-state, .debt-website, #filter-personal-info{display: none;}
+.debt-state, .debt-website, #filter-personal-info { display: none; }
 
-#ans-rel-other-who{
+#ans-rel-other-who {
     display: none;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
-fieldset.cr-fieldset{
-    margin:0px;
-    padding:0px;
-    border:1px solid #ccc;
-    border-right:0px;
-    border-left:0px;
+fieldset.cr-fieldset {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-right: 0px;
+    border-left: 0px;
 }
 
-.is-required{
+.is-required {
     position: absolute;
 /*background: darkred;*/
-    left:-1000px;
+    left: -1000px;
 }
 
 ul, ul[class*="span"] {
@@ -1365,21 +1344,21 @@ ul, ul[class*="span"] {
 
 .cr-edit-sect a {
     display: inline-block;
-    background-color:#63666A;
+    background-color: #63666A;
     background-image: url(../img/edit-icon.png);
     background-repeat: no-repeat;
     background-position: 20px 10px;
-    padding:8px 30px 6px 45px;
+    padding: 8px 30px 6px 45px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    margin-top:-6px;
+    margin-top: -6px;
 
     color:white;
     text-decoration: none;
 }
 
-.cr-edit-sect a:hover{
-    background-color:#434547;;
+.cr-edit-sect a:hover {
+    background-color: #434547;;
 }
 
 .icon-twitter{display: block;background-image: url(https://help.consumerfinance.gov/euf/rightnow/optimized/1373459435/themes/complaint_form/img/icon-twitter.png);width: 25px;height: 25px;}
@@ -1405,7 +1384,7 @@ ul, ul[class*="span"] {
     background-color: #f7f5f4;
     padding: 4px 0;
     text-align: center;
-    font-size:.8em;
+    font-size: 0.8em;
 }
 
 .split {
@@ -1458,24 +1437,24 @@ hr.pull-up {
 /* ADDED FROM AKIANY PAGES */
 
 #_cur {
-	position:absolute;
-	top:0px;
-	left:0px;
-	z-index:100000;
-	width:10px;
-	height:10px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 100000;
+	width: 10px;
+	height: 10px;
 	margin-left: -8px;
 	margin-top: -8px;
 	left: -10px;
 	top:-10px;
-	background:transparent;
-	opacity:.9;
-	border-radius:100%;
-	border:4px solid rgba(255,255,255,.6);
+	background: transparent;
+	opacity: 0.9;
+	border-radius: 100%;
+	border: 4px solid rgba(255,255,255,.6);
 }
 
 #_cur.clk {
-	border:4px dotted black;
+	border: 4px dotted black;
 	background: transparent;
 }
 
@@ -1639,15 +1618,12 @@ column-break-inside:avoid;
 }
 
 /*
-
 .cruxform #zombie_subissues_sublabel {
 	margin-top: 24px;
 
 
 }
 */
-
-
 
 /*
 .cruxform #credit_reporting_subissues {
@@ -1658,7 +1634,6 @@ column-break-inside:avoid;
 */
 
 #zombie_subissues_sublabel {
-
 /* 	margin-top: 250px; */
 }
 
@@ -1780,7 +1755,6 @@ cruxform input.company-name-input {
 }
 
 .company-name-option {
-
 	height: 72px;
 	padding-top: 16px;
 	padding-bottom: 16px;
@@ -1795,7 +1769,7 @@ cruxform input.company-name-input {
 
 .company-name-option label,
 .company-name-option p {
-	float:  left;
+	float: left;
 	text-align: top;
 }
 
@@ -1835,7 +1809,7 @@ fieldset.narrative-consent {
 
 .cr-question-certify-checkbox {
 	padding: 0px 0px 48px 0px;
-    border-bottom :1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     margin: -12px 24px 42px 66px;
     width: 794px;
 }
@@ -1843,7 +1817,7 @@ fieldset.narrative-consent {
 .cr-question-consent-checkbox p,
 .cr-question-certify-checkbox p {
 	line-height: 1.4em;
-	margin: .2em;
+	margin: 0.2em;
 }
 
 .cr-consent-checkbox {
@@ -1879,7 +1853,7 @@ fieldset.narrative-consent {
 
 .cr-question-consent-checkbox input.consent-checkbox {
 	padding: 0px 8px 3px 18px;
-	margin-right: 13px !important
+	margin-right: 13px !important;
 }
 
 .cr-save-option {
@@ -1935,7 +1909,6 @@ fieldset.save-method {
 
 button.secondary {
 	background: #75787B;
-
 }
 
 .confirmation-2-column {
@@ -1943,11 +1916,9 @@ button.secondary {
 	padding-right: 54px;
 	float: left;
 	padding-bottom: 72px;
-
 }
 
 .confirmation-2-column p {
-
 	padding-bottom: 8px;
 }
 
@@ -1956,13 +1927,11 @@ button.secondary {
 	float: left;
 	clear: left;
 	padding-bottom: 28px;
-
 }
 
 #complaint-numbers {
 	width: 72%;
 	margin: 24px 0 28px 0;
-
 }
 
 #complaint-numbers p {
@@ -1973,7 +1942,6 @@ button.secondary {
 	margin-top: 48px;
 	margin-bottom: 8px;
 	border: 1px solid #ccc;
-
 }
 
 #scrubbed-narrative {
@@ -1981,7 +1949,6 @@ button.secondary {
   font-size: 14px;
   line-height: 21px;
   color: #75787B;
-
 }
 
 #scrubbed-narrative span.redacted-text {
@@ -2045,7 +2012,7 @@ button.secondary {
 }
 
 #review-sections .review-heading-text {
-	font-family: Avenir Next Demi, Arial;
+	font-family: "Avenir Next Demi", Arial;
 	font-size: 20px;
 	display: block;
 	width: 80%;
@@ -2088,7 +2055,6 @@ button.secondary {
 	text-align: center;
 	width: 100%;
 	padding-bottom: 24px;
-
 }
 
 #attachment-drag-instructions {
@@ -2143,12 +2109,10 @@ button.secondary {
 
 .product-specific-questions .cr-question-left label {
 	padding-bottom: 8px;
-
 }
 
 .welcome h2 {
 	margin-top: 18px;
-
 }
 
 ul#welcome-list {
@@ -2161,9 +2125,7 @@ ul#welcome-list li {
 	font-size: 20px;
 	line-height: 26px;
 	padding-bottom: 16px;
-
 }
-
 
 #get-started-button {
 	padding-right: 22px;
@@ -2176,19 +2138,15 @@ ul#welcome-list li {
 
 #get-started-button button:hover {
 	background-color: #328ed8;
-
 }
-
 
 .cruxform a:hover {
 	color: #328ed8;
 }
 
-
 #consumer2-identity .right-helper,
 .point-of-contact #poc-access-div {
 	padding-top: 20px;
-
 }
 
 #consumer2-identity .right-helper label,
@@ -2204,7 +2162,7 @@ ul#welcome-list li {
 h3 .helper-instructions {
 	font-size: 18px;
 	color: #919395;
-	font-family: Avenir Next Medium, sans-serif;
+	font-family: "Avenir Next Medium", sans-serif;
 }
 
 #resolution_options {
@@ -2219,10 +2177,8 @@ h3 .helper-instructions {
 }
 
 #resolution-options-list {
-
 	width: 100%;
 	clear: left;
-
 }
 
 #annotations-sidebar {
@@ -2232,7 +2188,7 @@ h3 .helper-instructions {
 	margin-top: 0px;
 	position: fixed;
 	top: 0;
-overflow-x: scroll;
+    overflow-x: scroll;
 	z-index: 5000;
 }
 
@@ -2240,19 +2196,16 @@ overflow-x: scroll;
 	background: #F8F8F8;
 	border-right: 6px solid #E3E4E5;
 	height: 100%;
-
 }
 
 #annotations-toggle {
 	font-size: 16px;
 	padding: 0 0 0 12px;
-
 }
 
 #annotations-opener {
 	display: block;
 	padding: 0 0 0 12px;
-
 }
 
 #annotations-list {
@@ -2286,7 +2239,6 @@ overflow-x: scroll;
 	letter-spacing: normal;
 	font-family: "Avenir Next Bold", Arial, sans-serif;
 	line-height: normal;
-
 }
 
 a.annotation-button {
@@ -2310,5 +2262,4 @@ a.annotation-button:hover,
 	padding-top: 8px;
 	padding-left: 24px;
 	font-family: "Avenir Next Medium", Arial, sans-serif
-
 }
