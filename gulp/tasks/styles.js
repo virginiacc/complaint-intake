@@ -32,14 +32,6 @@ gulp.task( 'styles:ie', function() {
   return gulp.src( configStyles.cwd + configStyles.src )
     .pipe( plugins.less( configStyles.settings ) )
     .on( 'error', handleErrors )
-    .pipe( plugins.replace(
-      /url\('chosen-sprite.png'\)/ig,
-      'url("/static/img/chosen-sprite.png")'
-    ) )
-    .pipe( plugins.replace(
-      /url\('chosen-sprite@2x.png'\)/ig,
-      'url("/static/img/chosen-sprite@2x.png")'
-    ) )
     .pipe( plugins.autoprefixer( {
       browsers: [ 'IE 7', 'IE 8' ]
     } ) )
