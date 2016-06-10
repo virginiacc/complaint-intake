@@ -8,6 +8,7 @@
 - Converted company-information.html state text inputs to drop-downs.
 - Converted your-information.html state text inputs to drop-downs.
 - Order of name and address fields on your-information.html.
+- Order of name and address fields on company-information.html.
 
 ### Deprecated
 - Nothing.
