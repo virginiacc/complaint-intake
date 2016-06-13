@@ -19,66 +19,94 @@
     <link rel="stylesheet" href="v0/form/css/complain.css">
     <link rel="stylesheet" href="v0/form/css/typeahead.css">
     <!-- <link rel="stylesheet" href="v0/form/css/responsive.css"> -->
+    <link rel="stylesheet" href="static/css/header.min.css">
+    <link rel="stylesheet" href="static/css/main.min.css">
 
     <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
     <script src="v0/form/js/vendor/modernizr.custom.js"></script>
     <script src="v0/form/js/vendor/bootstrap-modal.js"></script>
 
-<!--
-    Old IE polyfills for:
-    - HTML5 tags
-    - Media queries (so we can style mobile first)
--->
-<!--[if lt IE 9]>
-<script src="v0/form/js/vendor/html5shim.js"></script>
-<script src="v0/form/js/vendor/respond.min.js"></script>
-<![endif]-->
+    <!--
+        Old IE polyfills for:
+        - HTML5 tags
+        - Media queries (so we can style mobile first)
+    -->
+    <!--[if lt IE 9]>
+    <script src="v0/form/js/vendor/html5shim.js"></script>
+    <script src="v0/form/js/vendor/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 <body class="yourinfo cruxform">
 
-    <div class="wrapper-banner" style="font-size: 16px;">
-        <div class="wrapper-container">
-            <small class="split">
-                <span class="official-website">An official website of the United States Government</span>
-            </small>
+    <header class="o-header" role="banner">
+        <div class="m-global-eyebrow
+                    m-global-eyebrow__horizontal">
+            <div class="wrapper
+                        wrapper__match-content">
+                <div class="m-global-eyebrow_tagline">
+                    An official website of the
+                    <span class="m-global-eyebrow_tagline-usa">United States Government</span>
+                </div>
+                <div class="m-global-eyebrow_actions">
+                    <span class="m-global-eyebrow_phone">
+                        (855) 411-2372
+                    </span>
+                </div>
+            </div>
         </div>
-    </div><!-- .wrapper-banner -->
 
-    <header class="wrapper-header">
+        <div class="o-header_content js">
 
-        <div class="wrapper-container">
+            <div class="wrapper wrapper__match-content">
 
-            <div class="brand">
+                <a class="o-header_logo" href="/">
+                    <!--[if lt IE 9]>
+                    <img class="o-header_logo-img"
+                         src="/dist/static/img/logo_sm-exec.png"
+                         alt="Consumer Financial Protection Bureau"
+                         width="237"
+                         height="50">
+                     <![endif]-->
+                     <!--[if gt IE 8]><!-->
+                     <img class="o-header_logo-img u-js-only" src="/dist/static/img/logo_sm-exec.svg" onerror="this.onerror=null;this.src='/static/img/logo_sm-exec.png';" alt="Consumer Financial Protection Bureau" width="237" height="50">
+                     <noscript>
+                        &lt;img class="o-header_logo-img"
+                        src="/dist/static/img/logo_sm-exec.png"
+                        alt="Consumer Financial Protection Bureau"
+                        width="237"
+                        height="50"&gt;
+                    </noscript>
+                    <!--<![endif]-->
+                </a>
+            </div>
 
-                <h1> Submit a complaint</h1>
-
-                <a class="brand-logo" href="https://consumerfinance.gov"><img src="v0/form/img/logo-cfpb-retina.png" alt="Consumer Financial Protection Bureau"></a>
-
-            </div><!-- .brand -->
-
-        </div><!-- .wrapper-container -->
-
-    </header><!-- .wrapper-header -->
+        </div>
+        <script>
+        /* TODO: scope no-js to individual molecules/organisms. This is a hack to fix no-js on the on-demand header, while also allowing the menu to be scoped to o-header for on-demand pages. */
+        var headerDom = document.querySelector( '.o-header_content' );
+        headerDom.className = headerDom.className.replace('no-js','js');
+        </script>
+    </header>
 
     <noscript>
         For full functionality of this application, it is necessary to enable JavaScript.
         Here are the <a href="http://www.enable-javascript.com/" target="_blank">
         instructions how to enable JavaScript in your web browser</a>.
     </noscript>
+
     <div class="wrapper-body page-step-1">
 
         <!-- ANNOTATIONS SIDEBAR -->
 
         <div id="annotations-sidebar">
-            <p id="annotations-opener"><a href="#">Open annotations</a></p>
-
-            <p id="annotations-toggle" class="opened"><a href="#">Toggle annotations</a></p>
+            <p id="annotations-opener"><a href="#">⎘</a></p>
+            <p id="annotations-toggle" class="opened"><a href="#">⎗</a></p>
 
             <ul id="annotations-list">
                 <li class="annotation-format">
                     <h3 class="anno-title">Title of annotation</h3>
-                    <!--                    <h6 class="anno-date">Date added</h6> -->
+<!--                <h6 class="anno-date">Date added</h6> -->
                     <p class="anno-link-text">
                         <a class="anno-link" href="#">Link to element</a>
                     </p>
@@ -206,7 +234,7 @@
                             Suffix
                             <small class="inline">(Optional)</small>
                         </label>
-                        <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                        <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                             <option value="" disabled="disabled" selected="selected">Select...</option>
                             <option value="">Jr</option>
                             <option value="">Sr</option>
@@ -266,7 +294,7 @@
                             <small class="inline"></small>
                         </label>
 
-                        <select name="cr-suffix" id="state1" class="block">
+                        <select name="cr-suffix" id="state1">
                             <option value="" disabled="disabled" selected="selected">Select a state...</option>
                             <option label="Alabama" value="2" >Alabama</option>
                             <option label="Alaska" value="1" >Alaska</option>
@@ -488,32 +516,31 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
     <h3 id="additional-consumer-section">Additional consumer</h3>
     <!--        <p>Someone who shares the account or participated in the transaction</p> -->
 
-    <fieldset class="cr-fieldset">
-        <!-- question -->
-        <div class="row cr-question">
-            <fieldset class="cr-fieldset">
-                <div class="span3 cr-label">
-                    <label>
-                        <span id="add-consumer-label">Does this complaint involve an additional account holder, card-holder or co-signer?</span> <small class="inline">(Optional)</small>
-                        <div class='is-required'>Optional</div>
-                    </label>
+    <!-- question -->
+    <div class="row cr-question">
+        <fieldset class="cr-fieldset">
+            <div class="span3 cr-label">
+                <label>
+                    <span id="add-consumer-label">Does this complaint involve an additional account holder, card-holder or co-signer?</span> <small class="inline">(Optional)</small>
+                    <div class='is-required'>Optional</div>
+                </label>
 
-                </div>
+            </div>
 
-                <div class="span9 cr-answer cr-radios cr-behalf cr-add-con prodselect">
-                    <label class="radio block">
-                        <input type="radio" class='add-consumer-yes' name="add-consumer" value="yes">
-                        Yes
-                    </label>
+            <div class="span9 cr-answer cr-radios cr-behalf cr-add-con prodselect">
+                <label class="radio block">
+                    <input type="radio" class='add-consumer-yes' name="add-consumer" value="yes">
+                    Yes
+                </label>
 
-                    <label class="radio block last">
-                        <input type="radio" class='add-consumer-no' name="add-consumer" value="no">
-                        No
-                    </label>
-                </div>
-            </fieldset>
-        </div>
-        <!-- /question -->
+                <label class="radio block last">
+                    <input type="radio" class='add-consumer-no' name="add-consumer" value="no">
+                    No
+                </label>
+            </div>
+        </fieldset>
+    </div>
+    <!-- /question -->
 
 
         <fieldset id="consumer2-identity" class="cr-fieldset additional-consumer">
@@ -577,7 +604,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
                         Suffix
                         <small class="inline">(Optional)</small>
                     </label>
-                    <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                    <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                         <option value="" disabled="disabled" selected="selected">Select...</option>
                         <option value="">Jr</option>
                         <option value="">Sr</option>
@@ -674,7 +701,6 @@ POINT OF CONTACT
     <h3 id="point-of-contact-header">Additional point of contact</h3>
     <!--    <p>Someone who will communicate on behalf of the primary consumer</p> -->
 
-    <fieldset class="cr-fieldset">
         <!-- question -->
         <div class="row cr-question">
             <fieldset class="cr-fieldset point-of-contact-question">
@@ -753,7 +779,6 @@ POINT OF CONTACT
 
          <p>Allowing full access may require documentation, such as a signed release form. You can include an authorization document as an attachment on the next page.</p>
      </div>
- </fieldset>
 
  <fieldset class="cr-fieldset point-of-contact">
 
@@ -795,7 +820,7 @@ POINT OF CONTACT
                 Suffix
                 <small class="inline">(Optional)</small>
             </label>
-            <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+            <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                 <option value="" disabled="disabled" selected="selected">Select...</option>
                 <option value="">Jr</option>
                 <option value="">Sr</option>
@@ -917,7 +942,7 @@ POINT OF CONTACT
                             <small class="inline"></small>
                         </label>
 
-                        <select name="cr-suffix" id="state1" class="block">
+                        <select name="cr-suffix" id="state1">
                             <option value="" disabled="disabled" selected="selected">Select a state...</option>
                             <option label="Alabama" value="2" >Alabama</option>
                             <option label="Alaska" value="1" >Alaska</option>
@@ -1041,7 +1066,7 @@ AFFILIATIONS
 
                 <label for="cr-military-status">
                     <span id='military-question'>The primary consumer is:</span>
-                    <small class="block">(Optional, choose all that apply)</small>
+                    <small>(Optional, choose all that apply)</small>
                 </label>
 
             </div>
@@ -1096,7 +1121,7 @@ AFFILIATIONS
                 <label for="cr-middle-name2_4851476384792477">
                     Branch of service
                 </label>
-                <select name="cr-military-service" id="cr-military-service" class="block">
+                <select name="cr-military-service" id="cr-military-service">
                     <option value="">Choose...</option>
                     <option value="">Marines</option>
                     <option value="">Air Force</option>
@@ -1136,7 +1161,7 @@ AFFILIATIONS
                     Military base/location
                     <small class="inline">(Optional)</small>
                 </label>
-                <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+                <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                     <option value="" disabled="disabled" selected="selected">Select...</option>
                     <option value="">Minot Air Force Base</option>
                     <option value="">McConnell Air Force Base</option>

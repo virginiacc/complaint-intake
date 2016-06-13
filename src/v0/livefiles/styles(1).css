@@ -99,23 +99,23 @@ button {width: auto; overflow: visible;}
 
 /* let's clear some floats */
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
-.clearfix:after { clear: both; }  
-.clearfix { 
+.clearfix:after { clear: both; }
+.clearfix {
 		/* IE7 hack to mimic inline-block on block elements */
     *display: inline;
-    *zoom: 1; }  
+    *zoom: 1; }
 
 
 /***** BASE STYLES *****/
 
 body {
 	font-size: 100%;
-	font-family: Georgia, "Times New Roman", serif;
+	/* font-family: Georgia, "Times New Roman", serif; */
 	line-height: 1.5;
 	background: url(../img/diag_texture.png);
 	color: #333;
 	text-rendering: optimizeLegibility;
-	/*word-spacing: 0.15em; -- Chrome, fix your bugs. */
+	/* word-spacing: 0.15em; -- Chrome, fix your bugs. */
 }
 
 p {
@@ -1349,7 +1349,7 @@ section.newsroom h6 a{
 
 
 section.newsroom table, section.newsroom td{border: none; margin-top: 0px;}
-section.newsroom table a{font-family: georgia;}
+/* section.newsroom table a{font-family: georgia;} */
 section.newsroom header{margin-bottom: .5em;}
 section.newsroom .page{border-bottom: 1px dotted #AFAFB3;}
 
@@ -1358,7 +1358,7 @@ section.newsroom {
 	margin: 0 0 3em;
 	clear: both;
 	overflow: hidden;
-}		
+}
 
 	section.news{
 		width: 620px;

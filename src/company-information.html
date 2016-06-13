@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="v0/form/css/complain.css">
     <link rel="stylesheet" href="v0/form/css/typeahead.css">
     <!-- <link rel="stylesheet" href="v0/form/css/responsive.css"> -->
+    <link rel="stylesheet" href="static/css/header.min.css">
+    <link rel="stylesheet" href="static/css/main.min.css">
 
     <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
     <script src="v0/form/js/vendor/modernizr.custom.js"></script>
@@ -37,29 +39,55 @@
 </head>
 <body class="companyinfo cruxform">
 
-    <div class="wrapper-banner" style="font-size: 16px;">
-        <div class="wrapper-container">
-            <small class="split">
-                <span class="official-website">An official website of the United States Government</span>
-            </small>
+    <header class="o-header" role="banner">
+        <div class="m-global-eyebrow
+                    m-global-eyebrow__horizontal">
+            <div class="wrapper
+                        wrapper__match-content">
+                <div class="m-global-eyebrow_tagline">
+                    An official website of the
+                    <span class="m-global-eyebrow_tagline-usa">United States Government</span>
+                </div>
+                <div class="m-global-eyebrow_actions">
+                    <span class="m-global-eyebrow_phone">
+                        (855) 411-2372
+                    </span>
+                </div>
+            </div>
         </div>
-    </div><!-- .wrapper-banner -->
 
-    <header class="wrapper-header">
+        <div class="o-header_content js">
 
-        <div class="wrapper-container">
+            <div class="wrapper wrapper__match-content">
 
-            <div class="brand">
+                <a class="o-header_logo" href="/">
+                    <!--[if lt IE 9]>
+                    <img class="o-header_logo-img"
+                         src="/dist/static/img/logo_sm-exec.png"
+                         alt="Consumer Financial Protection Bureau"
+                         width="237"
+                         height="50">
+                     <![endif]-->
+                     <!--[if gt IE 8]><!-->
+                     <img class="o-header_logo-img u-js-only" src="/dist/static/img/logo_sm-exec.svg" onerror="this.onerror=null;this.src='/static/img/logo_sm-exec.png';" alt="Consumer Financial Protection Bureau" width="237" height="50">
+                     <noscript>
+                        &lt;img class="o-header_logo-img"
+                        src="/dist/static/img/logo_sm-exec.png"
+                        alt="Consumer Financial Protection Bureau"
+                        width="237"
+                        height="50"&gt;
+                    </noscript>
+                    <!--<![endif]-->
+                </a>
+            </div>
 
-                <h1> Submit a complaint</h1>
-
-                <a class="brand-logo" href="https://consumerfinance.gov"><img src="v0/form/img/logo-cfpb-retina.png" alt="Consumer Financial Protection Bureau"></a>
-
-            </div><!-- .brand -->
-
-        </div><!-- .wrapper-container -->
-
-    </header><!-- .wrapper-header -->
+        </div>
+        <script>
+        /* TODO: scope no-js to individual molecules/organisms. This is a hack to fix no-js on the on-demand header, while also allowing the menu to be scoped to o-header for on-demand pages. */
+        var headerDom = document.querySelector( '.o-header_content' );
+        headerDom.className = headerDom.className.replace('no-js','js');
+        </script>
+    </header>
 
     <noscript>
         For full functionality of this application, it is necessary to enable JavaScript.
@@ -70,9 +98,9 @@
         <!-- ANNOTATIONS SIDEBAR -->
 
         <div id="annotations-sidebar">
-            <p id="annotations-opener"><a href="#">Open annotations</a></p>
+            <p id="annotations-opener"><a href="#">⎘</a></p>
 
-            <p id="annotations-toggle" class="opened"><a href="#">Toggle annotations</a></p>
+            <p id="annotations-toggle" class="opened"><a href="#">⎗</a></p>
 
             <ul id="annotations-list">
                 <li class="annotation-format">
@@ -236,7 +264,7 @@ COMPANY-1
                         <small class="inline"></small>
                     </label>
 
-                    <select name="cr-suffix" id="state1" class="block">
+                    <select name="cr-suffix" id="state1">
                         <option value="" disabled="disabled" selected="selected">Select a state...</option>
                         <option label="Alabama" value="2" >Alabama</option>
                         <option label="Alaska" value="1" >Alaska</option>
@@ -448,7 +476,7 @@ COMPANY-2
                         <small class="inline"></small>
                     </label>
 
-                    <select name="cr-suffix" id="state2" class="block">
+                    <select name="cr-suffix" id="state2">
                         <option value="" disabled="disabled" selected="selected">Select a state...</option>
                         <option label="Alabama" value="2" >Alabama</option>
                         <option label="Alaska" value="1" >Alaska</option>
@@ -726,7 +754,7 @@ ADDITIONAL COMPANY
                         <small class="inline"></small>
                     </label>
 
-                    <select name="cr-suffix" id="state3" class="block">
+                    <select name="cr-suffix" id="state3">
                         <option value="" disabled="disabled" selected="selected">Select a state...</option>
                         <option label="Alabama" value="2" >Alabama</option>
                         <option label="Alaska" value="1" >Alaska</option>
@@ -1453,7 +1481,7 @@ MOBILE WALLET OPTIONS.
                 <small class="inline"></small>
             </label>
 
-            <select name="cr-suffix" id="state4" class="block">
+            <select name="cr-suffix" id="state4">
                 <option value="" disabled="disabled" selected="selected">Select a state...</option>
                 <option label="Alabama" value="2" >Alabama</option>
                 <option label="Alaska" value="1" >Alaska</option>
@@ -1566,7 +1594,7 @@ MOBILE WALLET OPTIONS.
                     <small class="inline"></small>
                 </label>
 
-                <select name="cr-suffix" id="billing-state4" class="block">
+                <select name="cr-suffix" id="billing-state4">
                     <option value="" disabled="disabled" selected="selected">Select a state...</option>
                     <option label="Alabama" value="2" >Alabama</option>
                     <option label="Alaska" value="1" >Alaska</option>
@@ -1682,7 +1710,7 @@ MOBILE WALLET OPTIONS.
                     <small class="inline"></small>
                 </label>
 
-                <select name="cr-suffix" id="billing-state5" class="block">
+                <select name="cr-suffix" id="billing-state5">
                     <option value="" disabled="disabled" selected="selected">Select a state...</option>
                     <option label="Alabama" value="2" >Alabama</option>
                     <option label="Alaska" value="1" >Alaska</option>

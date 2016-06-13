@@ -212,12 +212,12 @@
    ========================================================================== */
 
 .cr-theme .reading-type {
-  font-family: Georgia, "Times New Roman", serif;
+  /* font-family: Georgia, "Times New Roman", serif; */
 }
 
 .cr-theme .reading-type b,
 .cr-theme .reading-type strong {
-  font-family: Georgia, "Times New Roman", serif;
+  /* font-family: Georgia, "Times New Roman", serif; */
   font-weight: bold;
   font-style: normal;
 }
@@ -225,7 +225,7 @@
 /* @todo: account for italics in headings */
 .cr-theme .reading-type i,
 .cr-theme .reading-type em, {
-  font-family: Georgia, "Times New Roman", serif;
+  /* font-family: Georgia, "Times New Roman", serif; */
   font-weight: normal;
   font-style: italic;
 }

@@ -10,7 +10,6 @@
    Branding and header
    ========================================================================== */
 
-
 body .wrapper-body {
 
 }
@@ -75,7 +74,7 @@ CHANGE TO GIVE ANNOTATIONS SPACE
     width: 52px;
     margin: 0 0 0 0;
 /*     max-width: 263px; */
-    padding-top: 42px;
+/*    padding-top: 42px; */
     min-height: 600px;
 /*
     margin-bottom: -99999px;
@@ -1002,7 +1001,6 @@ dd.cr-disclose {
 }
 
 .cr-thank-you p {
-    font-family: Georgia, serif;
     line-height: 1.4em;
 }
 
@@ -1222,7 +1220,6 @@ dt {
 
 dd {
     padding-top: 0;
-    font-family: Georgia, serif;
 }
 
 /* Payday Lending Changes */
@@ -1419,7 +1416,6 @@ ul, ul[class*="span"] {
 }
 
 .cr-review-answer {
-    font-family: georgia;
     padding-top: 20px;
 }
 
@@ -2017,6 +2013,7 @@ button.secondary {
 	display: block;
 	width: 80%;
 	float: left;
+    margin-top: 24px;
 }
 
 #review-sections .review-edit-link {
@@ -2024,6 +2021,10 @@ button.secondary {
 	width: 18%;
 	float: left;
     margin-top: 24px;
+}
+
+#review-sections .review-edit-link a {
+    text-decoration: none;
 }
 
 #narrative-consent-take-two {
@@ -2063,7 +2064,7 @@ button.secondary {
 }
 
 #upload-button {
-	margin: 18px auto;
+	text-align: center;
 }
 
 #attachment-size-info {
