@@ -22,7 +22,7 @@
 - Unused `block` styles.
 
 ### Fixed
-- Nothing.
+- Fixed double underline on log in link.
 
 
 ## [v0.52](https://cfpb.github.io/complaint-intake/versions/0.52/)
