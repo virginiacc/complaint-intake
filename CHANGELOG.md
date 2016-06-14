@@ -1,6 +1,24 @@
 ## Unreleased
 
 ### Added
+- Nothing.
+
+### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.6.0](https://cfpb.github.io/complaint-intake/versions/0.52/)
+
+### Added
 - Full address for additional contact.
 - CSS for columns in the form that are not floated.
 
@@ -26,7 +44,7 @@
 - Turned absolute image paths to relative for publishing the form.
 
 
-## [v0.52](https://cfpb.github.io/complaint-intake/versions/0.52/)
+## [0.52](https://cfpb.github.io/complaint-intake/versions/0.52/)
 
 ### Added
 - Initial repository setup.
