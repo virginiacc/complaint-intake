@@ -23,6 +23,7 @@
 
 ### Fixed
 - Fixed double underline on log in link.
+- Turned absolute image paths to relative for publishing the form.
 
 
 ## [v0.52](https://cfpb.github.io/complaint-intake/versions/0.52/)
