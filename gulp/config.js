@@ -63,6 +63,7 @@ module.exports = {
     files: {
       src: [
         loc.src + '/**/*.html',
+        loc.src + '/**/*.css',
         loc.src + '/**/*.pdf',
         loc.src + '/_*/**/*',
         loc.src + '/robots.txt',
@@ -78,7 +79,8 @@ module.exports = {
     },
     vendorJs: {
       src: [
-        loc.lib + '/html5shiv/dist/html5shiv-printshiv.min.js'
+        loc.lib + '/html5shiv/dist/html5shiv-printshiv.min.js',
+        loc.src + '/static/js/header.min.js'
       ],
       dest: loc.dist + '/static/js/'
     },

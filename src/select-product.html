@@ -19,70 +19,94 @@
     <link rel="stylesheet" href="v0/form/css/complain.css">
     <link rel="stylesheet" href="v0/form/css/typeahead.css">
     <!-- <link rel="stylesheet" href="form/css/responsive.css"> -->
+    <link rel="stylesheet" href="static/css/header.min.css">
+    <link rel="stylesheet" href="static/css/main.min.css">
 
-<!--
-    Old IE polyfills for:
-    - HTML5 tags
-    - Media queries (so we can style mobile first)
--->
-<!--[if lt IE 9]>
-<script src="v0/form/js/vendor/html5shim.js"></script>
-<script src="v0/form/js/vendor/respond.min.js"></script>
-<![endif]-->
-
+    <!--
+        Old IE polyfills for:
+        - HTML5 tags
+        - Media queries (so we can style mobile first)
+    -->
+    <!--[if lt IE 9]>
+    <script src="v0/form/js/vendor/html5shim.js"></script>
+    <script src="v0/form/js/vendor/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body class="prodselect cruxform">
 
-    <div class="wrapper-banner" style="font-size: 16px;">
-        <div class="wrapper-container">
-            <small class="split">
-                <span class="official-website">An official website of the United States Government</span>
-            </small>
+    <header class="o-header" role="banner">
+        <div class="m-global-eyebrow
+                    m-global-eyebrow__horizontal">
+            <div class="wrapper
+                        wrapper__match-content">
+                <div class="m-global-eyebrow_tagline">
+                    An official website of the
+                    <span class="m-global-eyebrow_tagline-usa">United States Government</span>
+                </div>
+                <div class="m-global-eyebrow_actions">
+                    <span class="m-global-eyebrow_phone">
+                        (855) 411-2372
+                    </span>
+                </div>
+            </div>
         </div>
-    </div><!-- .wrapper-banner -->
 
-    <header class="wrapper-header">
+        <div class="o-header_content js">
 
-        <div class="wrapper-container">
+            <div class="wrapper wrapper__match-content">
 
-            <div class="brand">
+                <a class="o-header_logo" href="/">
+                    <!--[if lt IE 9]>
+                    <img class="o-header_logo-img"
+                         src="/dist/static/img/logo_sm-exec.png"
+                         alt="Consumer Financial Protection Bureau"
+                         width="237"
+                         height="50">
+                     <![endif]-->
+                     <!--[if gt IE 8]><!-->
+                     <img class="o-header_logo-img u-js-only" src="/dist/static/img/logo_sm-exec.svg" onerror="this.onerror=null;this.src='/static/img/logo_sm-exec.png';" alt="Consumer Financial Protection Bureau" width="237" height="50">
+                     <noscript>
+                        &lt;img class="o-header_logo-img"
+                        src="/dist/static/img/logo_sm-exec.png"
+                        alt="Consumer Financial Protection Bureau"
+                        width="237"
+                        height="50"&gt;
+                    </noscript>
+                    <!--<![endif]-->
+                </a>
+            </div>
 
-                <h1> Submit a complaint</h1>
+        </div>
+        <script>
+          /* TODO: scope no-js to individual molecules/organisms. This is a hack to fix no-js on the on-demand header, while also allowing the menu to be scoped to o-header for on-demand pages. */
+          var headerDom = document.querySelector( '.o-header_content' );
+          headerDom.className = headerDom.className.replace('no-js','js');
+        </script>
+    </header>
 
-                <a class="brand-logo" href="https://consumerfinance.gov">
-                  <img src="v0/form/img/logo-cfpb-retina.png" alt="Consumer Financial Protection Bureau">
-              </a>
+    <noscript>
+        For full functionality of this application, it is necessary to enable JavaScript.
+        Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+        instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
 
-          </div><!-- .brand -->
-
-      </div><!-- .wrapper-container -->
-
-  </header><!-- .wrapper-header -->
-
-  <noscript>
-    For full functionality of this application, it is necessary to enable JavaScript.
-    Here are the <a href="http://www.enable-javascript.com/" target="_blank">
-    instructions how to enable JavaScript in your web browser</a>.
-</noscript>
-
-<div class="wrapper-body page-step-1">
+    <div class="wrapper-body page-step-1">
     <!-- ANNOTATIONS SIDEBAR -->
 
-    <div id="annotations-sidebar">
-        <p id="annotations-opener"><a href="#">Open annotations</a></p>
+        <div id="annotations-sidebar">
+            <p id="annotations-opener"><a href="#">⎘</a></p>
+            <p id="annotations-toggle" class="opened"><a href="#">⎗</a></p>
 
-        <p id="annotations-toggle" class="opened"><a href="#">Toggle annotations</a></p>
+            <ul id="annotations-list">
+                <li class="annotation-format">
+                    <h3 class="anno-title">Title of annotation</h3>
+<!--                <h6 class="anno-date">Date added</h6> -->
+                    <p class="anno-link-text"><a class="anno-link" href="#">Link to element</a></p>
+                    <div class="anno-comment">Placeholder text</div>
+                </li>
+            </ul>
 
-        <ul id="annotations-list">
-            <li class="annotation-format">
-              <h3 class="anno-title">Title of annotation</h3>
-              <!--              <h6 class="anno-date">Date added</h6> -->
-              <p class="anno-link-text"><a class="anno-link" href="#">Link to element</a></p>
-              <div class="anno-comment">Placeholder text</div>
-          </li>
-      </ul>
-
-  </div>
+        </div>
 
   <!-- END OF ANNOTATIONS SIDEBAR -->
   <div class="wrapper-container">
@@ -602,7 +626,7 @@
                 In what state is the store located? <small class="inline"> (Optional)</small>
             </label>
 
-            <select name="cr-suffix" id="cr-suffix2_4851476384792477" class="block">
+            <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                 <option value="" disabled="disabled" selected="selected">Select a state...</option>
                 <option label="Alabama" value="2" >Alabama</option>
                 <option label="Alaska" value="1" >Alaska</option>

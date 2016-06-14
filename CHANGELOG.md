@@ -9,6 +9,9 @@
 - Converted your-information.html state text inputs to drop-downs.
 - Order of name and address fields on your-information.html.
 - Order of name and address fields on company-information.html.
+- Updated header for inside form pages to use minimal global header.
+- Imports Capital Framework and overrides unsupported fieldset styles.
+- Changes annotation toggle link to icon to save page real estate.
 
 ### Deprecated
 - Nothing.
@@ -16,6 +19,7 @@
 ### Removed
 - Empty `placeholder` attributes.
 - Unused main.less and gulp styles task code from cf-generator generated code.
+- Unused `block` styles.
 
 ### Fixed
 - Nothing.
