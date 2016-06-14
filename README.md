@@ -59,15 +59,15 @@ At the end of each sprint, we release the new iteration by updating the `gh-page
 5. Copy everything in your new version directory into the root of `gh-pages`, overwriting the old HTML files and the `static` and `v0` directories there
 6. Move your new version directory into `versions`
 7. `git add .`
-8. `git commit`
+8. `git commit -m 'Released X.X.X'` (where X.X.X is the version you’re releasing, like 0.6.0)
 9. `git push origin gh-pages`
 10. Check to make sure the latest version is available at two URLs:
   - https://cfpb.github.io/complaint-intake/
-  - https://cfpb.github.io/complaint-intake/versions/X.XX/ (where X.XX is the version you’re releasing, like 0.52)
+  - https://cfpb.github.io/complaint-intake/versions/X.X.X/ (where X.X.X is the version you’re releasing, like 0.6.0)
 11. Switch back to `master` (you’ll need to re-run `./setup.sh`)
-12. Update `changelog.md` with the latest version’s release notes
+12. Update `CHANGELOG.md` with the latest version’s release notes
 13. `git add .`
-14. `git commit`
+14. `git commit -m 'Updated changelog'`
 15. `git push origin master`
 16. Released!
 
