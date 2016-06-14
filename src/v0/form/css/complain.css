@@ -2264,3 +2264,7 @@ a.annotation-button:hover,
 	padding-left: 24px;
 	font-family: "Avenir Next Medium", Arial, sans-serif
 }
+
+#log-in-link {
+    text-decoration: none;
+}
