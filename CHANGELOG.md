@@ -5,6 +5,7 @@
 
 ### Changed
 - Full name and email for additional point of contact visible by default.
+- Updated footer for inside form pages to use minimal global footer.
 
 ### Deprecated
 - Nothing.
