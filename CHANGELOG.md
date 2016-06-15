@@ -1,7 +1,7 @@
 ## Unreleased
 
 ### Added
-- Nothing.
+- "Save and continue later" link on step 1 and 2.
 
 ### Changed
 - Nothing.
