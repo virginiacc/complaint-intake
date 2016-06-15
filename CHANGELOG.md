@@ -11,6 +11,7 @@
 
 ### Removed
 - Diagonal striping background images.
+- Optional text from company information and contact info steps.
 
 ### Fixed
 - Nothing.
