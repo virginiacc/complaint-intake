@@ -4,7 +4,7 @@
 - "Save and continue later" link on step 1 and 2.
 
 ### Changed
-- Nothing.
+- Full name and email for additional point of contact visible by default.
 
 ### Deprecated
 - Nothing.
