@@ -41,14 +41,7 @@
    Base
    ========================================================================== */
 
-html {
-    background: #fff url('../img/bg-stripes.png') top center;
-    background-size: 94px 93px;
-}
-
 body {
-    background: transparent url('../img/bg-green.svg') no-repeat -99999px -99999px;
-    background-size: 100%;
     color: #101820;
     font-family: "Avenir Next", Arial, sans-serif;
     font-size: 100%;

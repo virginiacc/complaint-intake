@@ -10,7 +10,7 @@
 - Nothing.
 
 ### Removed
-- Nothing.
+- Diagonal striping background images.
 
 ### Fixed
 - Nothing.
