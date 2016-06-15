@@ -11,24 +11,6 @@
 $(function() {
 
   /**
-   * We need the background image to remain fixed to the bottom of the screen
-   * but not move when accordions are opened/closed (which makes the screen
-   * longer). We give the body a background image and dynamically set its
-   * position below, relative to the user's viewport on DOM load.
-   * The background image bg-green.svg is 1578px x 954px
-   */
-  var documentHeight = $(document).height(),
-      documentWidth = $(document).width(),
-      bgHeight = (954 * documentWidth) / 1578,
-      bgBottom = Math.floor(documentHeight - bgHeight);
-
-  // We want it to be at least 650px so we use whichever is greater
-  bgBottom = Math.max(bgBottom, 650);
-
-  // Set the background position
-  $('body').css('background-position', '0 ' + bgBottom + 'px');
-
-  /**
    *  Highlight selected radios on DOM load
   **/
   $('.cr-radios .radio input').each(function(){

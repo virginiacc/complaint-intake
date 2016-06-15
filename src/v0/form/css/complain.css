@@ -1105,8 +1105,6 @@ dd.cr-disclose {
 .cr-modal-content { /* The actual box, centered in the fixed-position div */
     width: 60%;
     min-width: 200px;
-    background: #b5df9e url('../img/bg-green.svg') scroll repeat top center;
-    background-size: cover;
     position: relative;
     margin: 0 auto;
     padding: 20px;
