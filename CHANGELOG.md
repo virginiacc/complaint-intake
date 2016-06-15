@@ -4,7 +4,7 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Full name and email for additional point of contact visible by default.
 
 ### Deprecated
 - Nothing.

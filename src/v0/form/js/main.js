@@ -727,7 +727,7 @@ $('#addcon-phone-number').hide();
 $('#addcon-email-helper').hide();
 $('#poc-email-helper').hide();
 $('#poc-phone-number').hide();
-$('#poc-disclosure').hide();
+// $('#poc-disclosure').hide();
 
 
 
@@ -793,12 +793,12 @@ $('#poc-disclosure').hide();
         if($('#cr-add-poc-full').is(':checked')){
         $('#poc-phone-number').slideDown(400);
 		$('#poc-email-helper').slideDown();
-		$('#poc-disclosure').slideDown();
-        $('.poc-email-address').removeClass('cr-question-last');
+		//$('#poc-disclosure').slideDown();
+    $('.poc-email-address').removeClass('cr-question-last');
 
         }else{
         $('#poc-phone-number').slideUp(400);
-        $('#poc-disclosure').slideUp();
+        // $('#poc-disclosure').slideUp();
 		$('#poc-email-helper').hide();
         $('.poc-email-address').addClass('cr-question-last');
 
@@ -814,7 +814,6 @@ $('#poc-disclosure').hide();
   		$('.wrapper-container').removeClass('annoslide');
   });
 
-
   $('#annotations-toggle.closed').on('click', function(){
   		$('#annotations-list').slideDown();
   		$('#annotations-toggle a').text('Close annotations');
@@ -824,9 +823,6 @@ $('#poc-disclosure').hide();
   });
 
 $('.cr-military-status').slideUp();
-
-
-
     // error handling without adding a #error-elm
     $('.error-panel a').click(function(){
       $($(this).attr('href')).focus();
