@@ -1,6 +1,24 @@
 ## Unreleased
 
 ### Added
+- Nothing.
+
+### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.7.0](https://cfpb.github.io/complaint-intake/versions/0.7.0/)
+
+### Added
 - "Save and continue later" link on step 1 and 2.
 - Added pagination component from cfgov-refresh.
 
@@ -21,7 +39,7 @@
 - Nothing.
 
 
-## [0.6.0](https://cfpb.github.io/complaint-intake/versions/0.52/)
+## [0.6.0](https://cfpb.github.io/complaint-intake/versions/0.6.0/)
 
 ### Added
 - Full address for additional contact.
