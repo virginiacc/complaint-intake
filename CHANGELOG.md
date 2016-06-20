@@ -2,6 +2,7 @@
 
 ### Added
 - "Save and continue later" link on step 1 and 2.
+- Added pagination component from cfgov-refresh.
 
 ### Changed
 - Full name and email for additional point of contact visible by default.
@@ -13,6 +14,7 @@
 ### Removed
 - Diagonal striping background images.
 - Optional text from company information and contact info steps.
+- Sidebar navigation.
 
 ### Fixed
 - Nothing.
