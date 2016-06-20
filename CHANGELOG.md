@@ -7,6 +7,7 @@
 ### Changed
 - Full name and email for additional point of contact visible by default.
 - Updated footer for inside form pages to use minimal global footer.
+- Updated minimal global header to include Spanish-language link.
 
 ### Deprecated
 - Nothing.
