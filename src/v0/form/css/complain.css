@@ -737,17 +737,16 @@ input.international,
 }
 
 .cr-continue {
-    background-color: #f2f2f2;
-    margin: 0px 0 0 0px;
-    padding: 50px 70px 70px 40px;
+    padding-left: 35px;
+    padding-right: 95px;
 }
 
-.cr-continue .btn {
-    float: right;
-    padding: .6em 2.8em .5em .6em;
-    background: #0072CE url(../img/icon-continue-arrow.png) scroll no-repeat center right;
+.pre-footer {
+    border-top: 1px solid #d0d0ce;
+    padding-top: 30px;
 }
 
+/*
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
     .cr-continue .btn {
@@ -755,10 +754,7 @@ input.international,
         background-size: 30px;
     }
 }
-
-.cr-continue .btn:hover {
-    background-color: #74b2cd;
-}
+*/
 
 /* file upload */
 
@@ -1640,7 +1636,7 @@ column-break-inside:avoid;
 	border: 1px solid #2CB34A;
 }
 
-.cruxform .wrapper-body a {
+.cruxform .wrapper-body section a {
 	text-decoration: underline
 }
 
@@ -1662,8 +1658,11 @@ p.page-intro.extra-bottom {
 
 }
 
+.cruxform #save-and-continue-later-link {
+    text-decoration: underline;
+}
+
 .cruxform #save-and-continue-later-link,
-.cruxform #continue-button,
 .cruxform #save-and-continue-review-page {
 	text-align: right;
 	float: right;
@@ -1672,8 +1671,8 @@ p.page-intro.extra-bottom {
 
 .cruxform #save-and-continue-later-link,
 .cruxform #save-and-continue-review-page {
-	padding-right: 32px;
-	padding-top: 8px;
+	padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #review-placeholder {
@@ -1798,13 +1797,6 @@ fieldset.narrative-consent {
 
 .cr-question-consent-checkbox {
 	padding: 24px 24px 24px 24px;
-}
-
-.cr-question-certify-checkbox {
-	padding: 0px 0px 48px 0px;
-    border-bottom: 1px solid #ccc;
-    margin: -12px 24px 42px 66px;
-    width: 794px;
 }
 
 .cr-question-consent-checkbox p,
@@ -2138,7 +2130,7 @@ ul#welcome-list li {
 	background-color: #328ed8;
 }
 
-.cruxform a:hover {
+.cruxform section a:hover {
 	color: #328ed8;
 }
 

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="static/css/header.min.css">
     <link rel="stylesheet" href="static/css/footer.min.css">
     <link rel="stylesheet" href="static/css/main.min.css">
+    <link rel="stylesheet" href="static/css/pagination.min.css">
 
     <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
     <script src="v0/form/js/vendor/modernizr.custom.js"></script>
@@ -126,35 +127,6 @@
      ============= -->
 
        <section class="content row cr-content">
-
-            <!-- nav on the left side of the page -->
-            <nav class="span4 cr-steps secondary">
-                <!-- uses bootstrap's affix plugin -->
-                <div id="sticky-nav">
-                    <ul>
-
-
-                            <li class="incomplete"><a href="select-product.html">1</span></a></li>
-
-                            <li class="incomplete"><a href="select-issue.html">2</a></li>
-
-                            <li class="incomplete"><a href="what-happened.html">3</a></li>
-
-                            <li class="incomplete"><a href="company-information.html">4</span></a></li>
-
-                            <li class="incomplete"><a href="your-information.html">5</a></li>
-
-                            <li class="active incomplete"><a href="review-and-submit.html">6</a></li>
-
-                    </ul>
-
-<!--                     <a href="#" id="chat-now">Form trouble? Chat now.</a> -->
-
-                </div>
-                <!-- /#sticky-nav -->
-
-            </nav>
-            <!-- /nav on the left side of the page -->
 
 <div class="span8 cr-primary">
                 <!-- .error-panel -->
@@ -338,18 +310,42 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             </div>
                 <!-- /email  -->
 
-
-
-  <a id="continue-button" class="final-page" href="confirmation.html"><button class="btn btn-arrow" type="button">Submit complaint</button></a>
-  <a id="save-and-continue-later-link" class="final-page" href="#">Save and continue later</a>
 </div>
 <!-- /options below form -->
 
-            </div>
-            <!-- /.primary -->
+</section>
 
-        </section>
-        <!-- /.row -->
+<div class="row cr-continue">
+    <div class="pre-footer">
+        <nav class="m-pagination" role="navigation" aria-label="Pagination">
+            <a class="btn
+                  btn__super
+                  m-pagination_btn-prev"
+               href="your-information.html">
+                <span class="btn_icon__left
+                             cf-icon
+                             cf-icon-left"></span>
+                Previous
+            </a>
+            <a class="btn
+                      btn__super
+                      m-pagination_btn-next"
+               href="confirmation.html">
+                Submit complaint
+                <span class="btn_icon__right
+                             cf-icon
+                             cf-icon-right"></span>
+            </a>
+            <form action="">
+                <span class="m-pagination_label">
+                    Review
+                </span>
+            </form>
+        </nav>
+
+        <a id="save-and-continue-later-link" href="#">Save and continue later</a>
+    </div>
+</div>
 
 <!-- =============
      / END CONTENT
