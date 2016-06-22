@@ -65,6 +65,7 @@ module.exports = {
         loc.src + '/**/*.html',
         loc.src + '/**/*.css',
         loc.src + '/**/*.pdf',
+        loc.src + '/**/*.handlebars',
         loc.src + '/_*/**/*',
         loc.src + '/robots.txt',
         loc.src + '/favicon.ico',
@@ -80,7 +81,9 @@ module.exports = {
     vendorJs: {
       src: [
         loc.lib + '/html5shiv/dist/html5shiv-printshiv.min.js',
-        loc.src + '/static/js/header.min.js'
+        loc.lib + '/jquery/dist/jquery.min.js',
+        loc.src + '/static/js/header.min.js',
+        loc.src + '/static/js/footer.min.js'
       ],
       dest: loc.dist + '/static/js/'
     },

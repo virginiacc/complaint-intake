@@ -26,7 +26,6 @@
 
     <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
     <script src="v0/form/js/vendor/modernizr.custom.js"></script>
-    <script src="v0/form/js/vendor/bootstrap-modal.js"></script>
 
     <!--
         Old IE polyfills for:
@@ -34,7 +33,7 @@
         - Media queries (so we can style mobile first)
     -->
     <!--[if lt IE 9]>
-    <script src="v0/form/js/vendor/html5shim.js"></script>
+    <script src="static/js/html5shiv-printshiv.min.js"></script>
     <script src="v0/form/js/vendor/respond.min.js"></script>
     <![endif]-->
 
@@ -209,111 +208,8 @@ COMPANY-1
                 </div>
             </div>
 
-            <div class="row cr-question">
-                <div class="span3 cr-label cr-question-with-checkbox">
-                    <label for="company1-address1">
-                        Company address
-                    </label>
-                    <input type="text"
-                           name="cr-first-name2"
-                           id="company1-address1">
-                </div>
-            </div>
-
-            <div class="row cr-question">
-                <div class="span3 cr-label cr-question-with-checkbox">
-                    <label for="company1-address2">
-                        Address line 2 <small class="inline">(Optional)</small>
-                        <div class='is-required'>Answer Required</div>
-                    </label>
-                    <input type="text"
-                           name="cr-last-name"
-                           id="company1-address2">
-                </div>
-            </div>
-
-            <div class="row cr-question cr-question">
-                <div class="span3 cr-label cr-question-col">
-                    <label for="company1-city">
-                            City
-                    </label>
-                    <input type="text"
-                           name="cr-middle-name2"
-                           id="company1-city">
-                </div>
-
-                <div class="span3 cr-label cr-question-col">
-                    <label for="state1">
-                        State
-                        <small class="inline"></small>
-                    </label>
-
-                    <select name="cr-suffix" id="state1">
-                        <option value="" disabled="disabled" selected="selected">Select a state...</option>
-                        <option label="Alabama" value="2" >Alabama</option>
-                        <option label="Alaska" value="1" >Alaska</option>
-                        <option label="American Samoa" value="4" >American Samoa</option>
-                        <option label="Arizona" value="5" >Arizona</option>
-                        <option label="Arkansas" value="3" >Arkansas</option>
-                        <option label="California" value="6" >California</option>
-                        <option label="Colorado" value="7" >Colorado</option>
-                        <option label="Connecticut" value="8" >Connecticut</option>
-                        <option label="Delaware" value="10" >Delaware</option>
-                        <option label="District Of Columbia" value="9" >District Of Columbia</option>
-                        <option label="Federated States Of Micronesia" value="12" >Federated States Of Micronesia</option>
-                        <option label="Florida" value="11" >Florida</option>
-                        <option label="Georgia" value="13" >Georgia</option>
-                        <option label="Guam" value="14" >Guam</option>
-                        <option label="Hawaii" value="15" >Hawaii</option>
-                        <option label="Idaho" value="17" >Idaho</option>
-                        <option label="Illinois" value="18" >Illinois</option>
-                        <option label="Indiana" value="19" >Indiana</option>
-                        <option label="Iowa" value="16" >Iowa</option>
-                        <option label="Kansas" value="20" >Kansas</option>
-                        <option label="Kentucky" value="21" >Kentucky</option>
-                        <option label="Louisiana" value="22" >Louisiana</option>
-                        <option label="Maine" value="25" >Maine</option>
-                        <option label="Marshall Islands" value="26" >Marshall Islands</option>
-                        <option label="Maryland" value="24" >Maryland</option>
-                        <option label="Massachusetts" value="23" >Massachusetts</option>
-                        <option label="Michigan" value="27" >Michigan</option>
-                        <option label="Minnesota" value="28" >Minnesota</option>
-                        <option label="Mississippi" value="31" >Mississippi</option>
-                        <option label="Missouri" value="29" >Missouri</option>
-                        <option label="Montana" value="32" >Montana</option>
-                        <option label="Nebraska" value="35" >Nebraska</option>
-                        <option label="Nevada" value="39" >Nevada</option>
-                        <option label="New Hampshire" value="36" >New Hampshire</option>
-                        <option label="New Jersey" value="37" >New Jersey</option>
-                        <option label="New Mexico" value="38" >New Mexico</option>
-                        <option label="New York" value="40" >New York</option>
-                        <option label="North Carolina" value="33" >North Carolina</option>
-                        <option label="North Dakota" value="34" >North Dakota</option>
-                        <option label="Northern Mariana Islands" value="30" >Northern Mariana Islands</option>
-                        <option label="Ohio" value="41" >Ohio</option>
-                        <option label="Oklahoma" value="42" >Oklahoma</option>
-                        <option label="Oregon" value="43" >Oregon</option>
-                        <option label="Palau" value="46" >Palau</option>
-                        <option label="Pennsylvania" value="44" >Pennsylvania</option>
-                        <option label="Puerto Rico" value="45" >Puerto Rico</option>
-                        <option label="Rhode Island" value="47" >Rhode Island</option>
-                        <option label="South Carolina" value="48" >South Carolina</option>
-                        <option label="South Dakota" value="49" >South Dakota</option>
-                        <option label="Tennessee" value="50" >Tennessee</option>
-                        <option label="Texas" value="51" >Texas</option>
-                        <option label="Utah" value="52" >Utah</option>
-                        <option label="Vermont" value="55" >Vermont</option>
-                        <option label="Virgin Islands" value="54" >Virgin Islands</option>
-                        <option label="Virginia" value="53" >Virginia</option>
-                        <option label="Washington" value="56" >Washington</option>
-                        <option label="West Virginia" value="58" >West Virginia</option>
-                        <option label="Wisconsin" value="57" >Wisconsin</option>
-                        <option label="Wyoming" value="59" >Wyoming</option>
-                        <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
-                        <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
-                        <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
-                    </select>
-                </div>
+            <div id="address0" class="row cr-question address-template">
+                <!-- Handlebars will add address template here. -->
             </div>
 
             <div class="row cr-question">
@@ -421,111 +317,8 @@ COMPANY-2
                 </div>
             </div>
 
-            <div class="row cr-question">
-                <div class="span3 cr-label cr-question-with-checkbox">
-                    <label for="company2-address1">
-                        Company address
-                    </label>
-                    <input type="text"
-                           name="cr-first-name2"
-                           id="company2-address1">
-                </div>
-            </div>
-
-            <div class="row cr-question">
-                <div class="span3 cr-label cr-question-with-checkbox">
-                    <label for="company2-address2">
-                        Address line 2 <small class="inline">(Optional)</small>
-                        <div class='is-required'>Answer Required</div>
-                    </label>
-                    <input type="text"
-                           name="cr-last-name"
-                           id="company2-address2">
-                </div>
-            </div>
-
-            <div class="row cr-question cr-question">
-                <div class="span3 cr-label cr-question-col">
-                    <label for="company2-city">
-                            City
-                    </label>
-                    <input type="text"
-                           name="cr-middle-name2"
-                           id="company2-city">
-                </div>
-
-                <div class="span3 cr-label cr-question-col">
-                    <label for="state2">
-                        State
-                        <small class="inline"></small>
-                    </label>
-
-                    <select name="cr-suffix" id="state2">
-                        <option value="" disabled="disabled" selected="selected">Select a state...</option>
-                        <option label="Alabama" value="2" >Alabama</option>
-                        <option label="Alaska" value="1" >Alaska</option>
-                        <option label="American Samoa" value="4" >American Samoa</option>
-                        <option label="Arizona" value="5" >Arizona</option>
-                        <option label="Arkansas" value="3" >Arkansas</option>
-                        <option label="California" value="6" >California</option>
-                        <option label="Colorado" value="7" >Colorado</option>
-                        <option label="Connecticut" value="8" >Connecticut</option>
-                        <option label="Delaware" value="10" >Delaware</option>
-                        <option label="District Of Columbia" value="9" >District Of Columbia</option>
-                        <option label="Federated States Of Micronesia" value="12" >Federated States Of Micronesia</option>
-                        <option label="Florida" value="11" >Florida</option>
-                        <option label="Georgia" value="13" >Georgia</option>
-                        <option label="Guam" value="14" >Guam</option>
-                        <option label="Hawaii" value="15" >Hawaii</option>
-                        <option label="Idaho" value="17" >Idaho</option>
-                        <option label="Illinois" value="18" >Illinois</option>
-                        <option label="Indiana" value="19" >Indiana</option>
-                        <option label="Iowa" value="16" >Iowa</option>
-                        <option label="Kansas" value="20" >Kansas</option>
-                        <option label="Kentucky" value="21" >Kentucky</option>
-                        <option label="Louisiana" value="22" >Louisiana</option>
-                        <option label="Maine" value="25" >Maine</option>
-                        <option label="Marshall Islands" value="26" >Marshall Islands</option>
-                        <option label="Maryland" value="24" >Maryland</option>
-                        <option label="Massachusetts" value="23" >Massachusetts</option>
-                        <option label="Michigan" value="27" >Michigan</option>
-                        <option label="Minnesota" value="28" >Minnesota</option>
-                        <option label="Mississippi" value="31" >Mississippi</option>
-                        <option label="Missouri" value="29" >Missouri</option>
-                        <option label="Montana" value="32" >Montana</option>
-                        <option label="Nebraska" value="35" >Nebraska</option>
-                        <option label="Nevada" value="39" >Nevada</option>
-                        <option label="New Hampshire" value="36" >New Hampshire</option>
-                        <option label="New Jersey" value="37" >New Jersey</option>
-                        <option label="New Mexico" value="38" >New Mexico</option>
-                        <option label="New York" value="40" >New York</option>
-                        <option label="North Carolina" value="33" >North Carolina</option>
-                        <option label="North Dakota" value="34" >North Dakota</option>
-                        <option label="Northern Mariana Islands" value="30" >Northern Mariana Islands</option>
-                        <option label="Ohio" value="41" >Ohio</option>
-                        <option label="Oklahoma" value="42" >Oklahoma</option>
-                        <option label="Oregon" value="43" >Oregon</option>
-                        <option label="Palau" value="46" >Palau</option>
-                        <option label="Pennsylvania" value="44" >Pennsylvania</option>
-                        <option label="Puerto Rico" value="45" >Puerto Rico</option>
-                        <option label="Rhode Island" value="47" >Rhode Island</option>
-                        <option label="South Carolina" value="48" >South Carolina</option>
-                        <option label="South Dakota" value="49" >South Dakota</option>
-                        <option label="Tennessee" value="50" >Tennessee</option>
-                        <option label="Texas" value="51" >Texas</option>
-                        <option label="Utah" value="52" >Utah</option>
-                        <option label="Vermont" value="55" >Vermont</option>
-                        <option label="Virgin Islands" value="54" >Virgin Islands</option>
-                        <option label="Virginia" value="53" >Virginia</option>
-                        <option label="Washington" value="56" >Washington</option>
-                        <option label="West Virginia" value="58" >West Virginia</option>
-                        <option label="Wisconsin" value="57" >Wisconsin</option>
-                        <option label="Wyoming" value="59" >Wyoming</option>
-                        <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
-                        <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
-                        <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
-                    </select>
-                </div>
+            <div id="address1" class="row cr-question address-template">
+                <!-- Handlebars will add address template here. -->
             </div>
 
             <div class="row cr-question">
@@ -698,111 +491,8 @@ ADDITIONAL COMPANY
                 </div>
             </div>
 
-            <div class="row cr-question">
-                <div class="span3 cr-label cr-question-with-checkbox">
-                    <label for="company3-address1">
-                        Company address
-                    </label>
-                    <input type="text"
-                           name="cr-first-name2"
-                           id="company3-address1">
-                </div>
-            </div>
-
-            <div class="row cr-question">
-                <div class="span3 cr-label cr-question-with-checkbox">
-                    <label for="company3-address2">
-                        Address line 2 <small class="inline">(Optional)</small>
-                        <div class='is-required'>Answer Required</div>
-                    </label>
-                    <input type="text"
-                           name="cr-last-name"
-                           id="company3-address2">
-                </div>
-            </div>
-
-            <div class="row cr-question cr-question">
-                <div class="span3 cr-label cr-question-col">
-                    <label for="company3-city">
-                            City
-                    </label>
-                    <input type="text"
-                           name="cr-middle-name2"
-                           id="company3-city">
-                </div>
-
-                <div class="span3 cr-label cr-question-col">
-                    <label for="state3">
-                        State
-                        <small class="inline"></small>
-                    </label>
-
-                    <select name="cr-suffix" id="state3">
-                        <option value="" disabled="disabled" selected="selected">Select a state...</option>
-                        <option label="Alabama" value="2" >Alabama</option>
-                        <option label="Alaska" value="1" >Alaska</option>
-                        <option label="American Samoa" value="4" >American Samoa</option>
-                        <option label="Arizona" value="5" >Arizona</option>
-                        <option label="Arkansas" value="3" >Arkansas</option>
-                        <option label="California" value="6" >California</option>
-                        <option label="Colorado" value="7" >Colorado</option>
-                        <option label="Connecticut" value="8" >Connecticut</option>
-                        <option label="Delaware" value="10" >Delaware</option>
-                        <option label="District Of Columbia" value="9" >District Of Columbia</option>
-                        <option label="Federated States Of Micronesia" value="12" >Federated States Of Micronesia</option>
-                        <option label="Florida" value="11" >Florida</option>
-                        <option label="Georgia" value="13" >Georgia</option>
-                        <option label="Guam" value="14" >Guam</option>
-                        <option label="Hawaii" value="15" >Hawaii</option>
-                        <option label="Idaho" value="17" >Idaho</option>
-                        <option label="Illinois" value="18" >Illinois</option>
-                        <option label="Indiana" value="19" >Indiana</option>
-                        <option label="Iowa" value="16" >Iowa</option>
-                        <option label="Kansas" value="20" >Kansas</option>
-                        <option label="Kentucky" value="21" >Kentucky</option>
-                        <option label="Louisiana" value="22" >Louisiana</option>
-                        <option label="Maine" value="25" >Maine</option>
-                        <option label="Marshall Islands" value="26" >Marshall Islands</option>
-                        <option label="Maryland" value="24" >Maryland</option>
-                        <option label="Massachusetts" value="23" >Massachusetts</option>
-                        <option label="Michigan" value="27" >Michigan</option>
-                        <option label="Minnesota" value="28" >Minnesota</option>
-                        <option label="Mississippi" value="31" >Mississippi</option>
-                        <option label="Missouri" value="29" >Missouri</option>
-                        <option label="Montana" value="32" >Montana</option>
-                        <option label="Nebraska" value="35" >Nebraska</option>
-                        <option label="Nevada" value="39" >Nevada</option>
-                        <option label="New Hampshire" value="36" >New Hampshire</option>
-                        <option label="New Jersey" value="37" >New Jersey</option>
-                        <option label="New Mexico" value="38" >New Mexico</option>
-                        <option label="New York" value="40" >New York</option>
-                        <option label="North Carolina" value="33" >North Carolina</option>
-                        <option label="North Dakota" value="34" >North Dakota</option>
-                        <option label="Northern Mariana Islands" value="30" >Northern Mariana Islands</option>
-                        <option label="Ohio" value="41" >Ohio</option>
-                        <option label="Oklahoma" value="42" >Oklahoma</option>
-                        <option label="Oregon" value="43" >Oregon</option>
-                        <option label="Palau" value="46" >Palau</option>
-                        <option label="Pennsylvania" value="44" >Pennsylvania</option>
-                        <option label="Puerto Rico" value="45" >Puerto Rico</option>
-                        <option label="Rhode Island" value="47" >Rhode Island</option>
-                        <option label="South Carolina" value="48" >South Carolina</option>
-                        <option label="South Dakota" value="49" >South Dakota</option>
-                        <option label="Tennessee" value="50" >Tennessee</option>
-                        <option label="Texas" value="51" >Texas</option>
-                        <option label="Utah" value="52" >Utah</option>
-                        <option label="Vermont" value="55" >Vermont</option>
-                        <option label="Virgin Islands" value="54" >Virgin Islands</option>
-                        <option label="Virginia" value="53" >Virginia</option>
-                        <option label="Washington" value="56" >Washington</option>
-                        <option label="West Virginia" value="58" >West Virginia</option>
-                        <option label="Wisconsin" value="57" >Wisconsin</option>
-                        <option label="Wyoming" value="59" >Wyoming</option>
-                        <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
-                        <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
-                        <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
-                    </select>
-                </div>
+            <div id="address2" class="row cr-question address-template">
+                <!-- Handlebars will add address template here. -->
             </div>
 
             <div class="row cr-question">
@@ -889,7 +579,6 @@ END OF Additional Company
 
             </fieldset>
 
-
             <fieldset id="kwik-company-options" class="cr-fieldset company_verification_fieldset">
 
                 <div class="row cr-question">
@@ -900,26 +589,25 @@ END OF Additional Company
 
                     <div class="company-name-option">
                         <p><strong>Kwik Cash</strong>
-                            <br/>kwikcash.com</p>
-                            <label for=""><button class="btn-secondary" type="button">Select this company</button></label>
-                        </div>
+                        <br/>kwikcash.com</p>
+                        <label for=""><button class="btn-secondary" type="button">Select this company</button></label>
+                    </div>
 
-                        <div class="company-name-option">
-                            <p><strong>Quick Cash</strong>
-                                <br/>quick-cash.com</p>
-                                <label for=""><button class="btn-secondary" type="button">Select this company</button></label>
-                            </div>
+                    <div class="company-name-option">
+                        <p><strong>Quick Cash</strong>
+                        <br/>quick-cash.com</p>
+                        <label for=""><button class="btn-secondary" type="button">Select this company</button></label>
+                    </div>
 
-                            <div class="company-name-option">
-                                <p><strong>Kwik Kash</strong>
-                                    <br/>kwikkashloans.com</p>
-                                    <label for=""><button class="btn-secondary" type="button">Select this company</button></label>
-                                </div>
+                    <div class="company-name-option">
+                        <p><strong>Kwik Kash</strong>
+                        <br/>kwikkashloans.com</p>
+                        <label for=""><button class="btn-secondary" type="button">Select this company</button></label>
+                    </div>
 
-                            </div>
+                </div>
 
-                        </fieldset>
-
+            </fieldset>
 
 <!--
 /////
@@ -1409,7 +1097,7 @@ MOBILE WALLET OPTIONS.
 
 ////////////////////////////////////////////
     End of product-specific options
-////////////////////////////////////////////////////
+////////////////////////////////////////////
 
 -->
 
@@ -1417,469 +1105,144 @@ MOBILE WALLET OPTIONS.
 
 ////////////////////////////////////////////
     ADDITIONAL FIELDSETS
-////////////////////////////////////////////////////
+////////////////////////////////////////////
 
 -->
 
 <div id="fieldset_repository">
 
-  <fieldset class="cr-fieldset identify-options billing-address in-repository">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label cr-question-left">
-            <label for="billing-address1">
-                Billing address line 1
-            </label>
-            <input type="text"
-                   name="cr-first-name2"
-                   id="billing-address1">
+    <fieldset class="cr-fieldset identify-options billing-address in-repository">
+        <div id="address3" class="row cr-question address-template">
+            <!-- Handlebars will add address template here. -->
         </div>
-    </div>
-    <div class="row cr-question">
-        <div class="span3 cr-label cr-question-left">
-            <label for="billing-address2">
-                Address line 2 <small class="inline">(Optional)</small>
-                <div class='is-required'>Answer Required</div>
-            </label>
+    </fieldset>
 
-            <input type="text"
-                   name="cr-last-name"
-                   id="billing-address2">
+    <fieldset class="cr-fieldset identify-options residence-address in-repository">
+        <div id="address4" class="row cr-question address-template">
+            <!-- Handlebars will add address template here. -->
         </div>
-    </div>
-    <div class="row cr-question cr-question-last">
-        <div class="span2 cr-label cr-question-left">
-            <label for="cr-middle-name2_4851476384792477">
-                City
-            </label>
-            <input type="text"
-                   name="cr-middle-name2"
-                   id="cr-middle-name2_4851476384792477">
+    </fieldset>
+
+    <fieldset class="cr-fieldset identify-options address-dob in-repository">
+        <div id="address5" class="row cr-question address-template">
+            <!-- Handlebars will add address template here. -->
         </div>
-
-        <!-- state -->
-        <div class="span2 cr-label cr-question-right">
-            <label for="state4">
-                State
-                <small class="inline"></small>
-            </label>
-
-            <select name="cr-suffix" id="state4">
-                <option value="" disabled="disabled" selected="selected">Select a state...</option>
-                <option label="Alabama" value="2" >Alabama</option>
-                <option label="Alaska" value="1" >Alaska</option>
-                <option label="American Samoa" value="4" >American Samoa</option>
-                <option label="Arizona" value="5" >Arizona</option>
-                <option label="Arkansas" value="3" >Arkansas</option>
-                <option label="California" value="6" >California</option>
-                <option label="Colorado" value="7" >Colorado</option>
-                <option label="Connecticut" value="8" >Connecticut</option>
-                <option label="Delaware" value="10" >Delaware</option>
-                <option label="District Of Columbia" value="9" >District Of Columbia</option>
-                <option label="Federated States Of Micronesia" value="12" >Federated States Of Micronesia</option>
-                <option label="Florida" value="11" >Florida</option>
-                <option label="Georgia" value="13" >Georgia</option>
-                <option label="Guam" value="14" >Guam</option>
-                <option label="Hawaii" value="15" >Hawaii</option>
-                <option label="Idaho" value="17" >Idaho</option>
-                <option label="Illinois" value="18" >Illinois</option>
-                <option label="Indiana" value="19" >Indiana</option>
-                <option label="Iowa" value="16" >Iowa</option>
-                <option label="Kansas" value="20" >Kansas</option>
-                <option label="Kentucky" value="21" >Kentucky</option>
-                <option label="Louisiana" value="22" >Louisiana</option>
-                <option label="Maine" value="25" >Maine</option>
-                <option label="Marshall Islands" value="26" >Marshall Islands</option>
-                <option label="Maryland" value="24" >Maryland</option>
-                <option label="Massachusetts" value="23" >Massachusetts</option>
-                <option label="Michigan" value="27" >Michigan</option>
-                <option label="Minnesota" value="28" >Minnesota</option>
-                <option label="Mississippi" value="31" >Mississippi</option>
-                <option label="Missouri" value="29" >Missouri</option>
-                <option label="Montana" value="32" >Montana</option>
-                <option label="Nebraska" value="35" >Nebraska</option>
-                <option label="Nevada" value="39" >Nevada</option>
-                <option label="New Hampshire" value="36" >New Hampshire</option>
-                <option label="New Jersey" value="37" >New Jersey</option>
-                <option label="New Mexico" value="38" >New Mexico</option>
-                <option label="New York" value="40" >New York</option>
-                <option label="North Carolina" value="33" >North Carolina</option>
-                <option label="North Dakota" value="34" >North Dakota</option>
-                <option label="Northern Mariana Islands" value="30" >Northern Mariana Islands</option>
-                <option label="Ohio" value="41" >Ohio</option>
-                <option label="Oklahoma" value="42" >Oklahoma</option>
-                <option label="Oregon" value="43" >Oregon</option>
-                <option label="Palau" value="46" >Palau</option>
-                <option label="Pennsylvania" value="44" >Pennsylvania</option>
-                <option label="Puerto Rico" value="45" >Puerto Rico</option>
-                <option label="Rhode Island" value="47" >Rhode Island</option>
-                <option label="South Carolina" value="48" >South Carolina</option>
-                <option label="South Dakota" value="49" >South Dakota</option>
-                <option label="Tennessee" value="50" >Tennessee</option>
-                <option label="Texas" value="51" >Texas</option>
-                <option label="Utah" value="52" >Utah</option>
-                <option label="Vermont" value="55" >Vermont</option>
-                <option label="Virgin Islands" value="54" >Virgin Islands</option>
-                <option label="Virginia" value="53" >Virginia</option>
-                <option label="Washington" value="56" >Washington</option>
-                <option label="West Virginia" value="58" >West Virginia</option>
-                <option label="Wisconsin" value="57" >Wisconsin</option>
-                <option label="Wyoming" value="59" >Wyoming</option>
-                <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
-                <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
-                <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
-            </select>
-        </div>
-        <!-- /state -->
-    </div>
-    <!-- /city and state -->
-</fieldset>
-<fieldset class="cr-fieldset identify-options residence-address in-repository">
-
-    <div class="row cr-question ">
-
-        <div class="row cr-question">
+    </fieldset>
+    <fieldset class="cr-fieldset identify-options address-dob in-repository">
+        <div class="row cr-question cr-question-last">
             <div class="span3 cr-label cr-question-left">
-                <label for="billing-address3">
-                    Residence address line 1
-                </label>
-                <input type="text"
-                       name="cr-first-name2"
-                       id="billing-address3">
-            </div>
-        </div>
-        <div class="row cr-question">
-            <div class="span3 cr-label cr-question-left">
-                <label for="billing-address3">
-                    Address line 2 <small class="inline">(Optional)</small>
+                <label for="cr-last-name2_4851476384792477">
+                    Date of birth <small class="inline"></small>
                     <div class='is-required'>Answer Required</div>
                 </label>
-                <input type="text"
-                       name="cr-last-name"
-                       id="billing-address3">
+
+                <input type="text" name="cr-last-name" id="cr-last-name2_4851476384792477" placeholder="">
             </div>
+
+            <!-- suffix -->
+            <div class="span2 cr-label cr-question-right right-helper">
+                <p>Use format MM/DD/YYYY</p>
+            </div>
+            <!-- /suffix -->
         </div>
+        <!-- /city and state -->
+    </fieldset>
 
-        <div class="row cr-question cr-question-last">
-            <div class="span2 cr-label cr-question-left">
-                <label for="billing-city3">
-                    City
-                </label>
-                <input type="text"
-                       name="cr-middle-name2"
-                       id="billing-city3">
-            </div>
+    <fieldset class="cr-fieldset identify-options card-number in-repository">
 
-            <!-- state -->
-            <div class="span2 cr-label cr-question-right">
-                <label for="billing-state4">
-                    State
-                    <small class="inline"></small>
-                </label>
-
-                <select name="cr-suffix" id="billing-state4">
-                    <option value="" disabled="disabled" selected="selected">Select a state...</option>
-                    <option label="Alabama" value="2" >Alabama</option>
-                    <option label="Alaska" value="1" >Alaska</option>
-                    <option label="American Samoa" value="4" >American Samoa</option>
-                    <option label="Arizona" value="5" >Arizona</option>
-                    <option label="Arkansas" value="3" >Arkansas</option>
-                    <option label="California" value="6" >California</option>
-                    <option label="Colorado" value="7" >Colorado</option>
-                    <option label="Connecticut" value="8" >Connecticut</option>
-                    <option label="Delaware" value="10" >Delaware</option>
-                    <option label="District Of Columbia" value="9" >District Of Columbia</option>
-                    <option label="Federated States Of Micronesia" value="12" >Federated States Of Micronesia</option>
-                    <option label="Florida" value="11" >Florida</option>
-                    <option label="Georgia" value="13" >Georgia</option>
-                    <option label="Guam" value="14" >Guam</option>
-                    <option label="Hawaii" value="15" >Hawaii</option>
-                    <option label="Idaho" value="17" >Idaho</option>
-                    <option label="Illinois" value="18" >Illinois</option>
-                    <option label="Indiana" value="19" >Indiana</option>
-                    <option label="Iowa" value="16" >Iowa</option>
-                    <option label="Kansas" value="20" >Kansas</option>
-                    <option label="Kentucky" value="21" >Kentucky</option>
-                    <option label="Louisiana" value="22" >Louisiana</option>
-                    <option label="Maine" value="25" >Maine</option>
-                    <option label="Marshall Islands" value="26" >Marshall Islands</option>
-                    <option label="Maryland" value="24" >Maryland</option>
-                    <option label="Massachusetts" value="23" >Massachusetts</option>
-                    <option label="Michigan" value="27" >Michigan</option>
-                    <option label="Minnesota" value="28" >Minnesota</option>
-                    <option label="Mississippi" value="31" >Mississippi</option>
-                    <option label="Missouri" value="29" >Missouri</option>
-                    <option label="Montana" value="32" >Montana</option>
-                    <option label="Nebraska" value="35" >Nebraska</option>
-                    <option label="Nevada" value="39" >Nevada</option>
-                    <option label="New Hampshire" value="36" >New Hampshire</option>
-                    <option label="New Jersey" value="37" >New Jersey</option>
-                    <option label="New Mexico" value="38" >New Mexico</option>
-                    <option label="New York" value="40" >New York</option>
-                    <option label="North Carolina" value="33" >North Carolina</option>
-                    <option label="North Dakota" value="34" >North Dakota</option>
-                    <option label="Northern Mariana Islands" value="30" >Northern Mariana Islands</option>
-                    <option label="Ohio" value="41" >Ohio</option>
-                    <option label="Oklahoma" value="42" >Oklahoma</option>
-                    <option label="Oregon" value="43" >Oregon</option>
-                    <option label="Palau" value="46" >Palau</option>
-                    <option label="Pennsylvania" value="44" >Pennsylvania</option>
-                    <option label="Puerto Rico" value="45" >Puerto Rico</option>
-                    <option label="Rhode Island" value="47" >Rhode Island</option>
-                    <option label="South Carolina" value="48" >South Carolina</option>
-                    <option label="South Dakota" value="49" >South Dakota</option>
-                    <option label="Tennessee" value="50" >Tennessee</option>
-                    <option label="Texas" value="51" >Texas</option>
-                    <option label="Utah" value="52" >Utah</option>
-                    <option label="Vermont" value="55" >Vermont</option>
-                    <option label="Virgin Islands" value="54" >Virgin Islands</option>
-                    <option label="Virginia" value="53" >Virginia</option>
-                    <option label="Washington" value="56" >Washington</option>
-                    <option label="West Virginia" value="58" >West Virginia</option>
-                    <option label="Wisconsin" value="57" >Wisconsin</option>
-                    <option label="Wyoming" value="59" >Wyoming</option>
-                    <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
-                    <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
-                    <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
-                </select>
-            </div>
-            <!-- /state -->
-        </div>
-    </div>
-    <!-- /city and state -->
-</fieldset>
-
-
-<fieldset class="cr-fieldset identify-options address-dob in-repository">
-
-    <div class="row cr-question ">
-
-        <div class="row cr-question">
+        <div class="row cr-question cr-question-last account-number-row">
             <div class="span3 cr-label cr-question-left">
-                <label for="billing-address5">
-                    Residence address line 1
+                <label for="cr-first-name2_4851476384792477">
+                    Card number
                 </label>
-                <input type="text"
-                       name="cr-first-name2"
-                       id="billing-address5">
+                <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
+            </div>
+
+            <div class="span2 cr-label cr-question-right right-helper">
+                <p>This number is on the front of your card</p>
             </div>
         </div>
-        <div class="row cr-question">
+    </fieldset>
+
+    <fieldset class="cr-fieldset identify-options account-number in-repository">
+
+        <div class="row cr-question cr-question-last account-number-row">
             <div class="span3 cr-label cr-question-left">
-                <label for="billing-address5">
-                    Address line 2 <small class="inline">(Optional)</small>
-                    <div class='is-required'>Answer Required</div>
+                <label for="cr-first-name2_4851476384792477">
+                    Account number
                 </label>
-                <input type="text"
-                       name="cr-last-name"
-                       id="billing-address5">
-            </div>
-        </div>
-
-        <div class="row cr-question cr-question-last">
-            <div class="span2 cr-label cr-question-left">
-                <label for="city5">
-                    City
-                </label>
-                <input type="text"
-                       name="cr-middle-name2"
-                       id="city5">
+                <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
             </div>
 
-            <!-- state -->
-            <div class="span2 cr-label cr-question-right">
-                <label for="billing-state5">
-                    State
-                    <small class="inline"></small>
-                </label>
-
-                <select name="cr-suffix" id="billing-state5">
-                    <option value="" disabled="disabled" selected="selected">Select a state...</option>
-                    <option label="Alabama" value="2" >Alabama</option>
-                    <option label="Alaska" value="1" >Alaska</option>
-                    <option label="American Samoa" value="4" >American Samoa</option>
-                    <option label="Arizona" value="5" >Arizona</option>
-                    <option label="Arkansas" value="3" >Arkansas</option>
-                    <option label="California" value="6" >California</option>
-                    <option label="Colorado" value="7" >Colorado</option>
-                    <option label="Connecticut" value="8" >Connecticut</option>
-                    <option label="Delaware" value="10" >Delaware</option>
-                    <option label="District Of Columbia" value="9" >District Of Columbia</option>
-                    <option label="Federated States Of Micronesia" value="12" >Federated States Of Micronesia</option>
-                    <option label="Florida" value="11" >Florida</option>
-                    <option label="Georgia" value="13" >Georgia</option>
-                    <option label="Guam" value="14" >Guam</option>
-                    <option label="Hawaii" value="15" >Hawaii</option>
-                    <option label="Idaho" value="17" >Idaho</option>
-                    <option label="Illinois" value="18" >Illinois</option>
-                    <option label="Indiana" value="19" >Indiana</option>
-                    <option label="Iowa" value="16" >Iowa</option>
-                    <option label="Kansas" value="20" >Kansas</option>
-                    <option label="Kentucky" value="21" >Kentucky</option>
-                    <option label="Louisiana" value="22" >Louisiana</option>
-                    <option label="Maine" value="25" >Maine</option>
-                    <option label="Marshall Islands" value="26" >Marshall Islands</option>
-                    <option label="Maryland" value="24" >Maryland</option>
-                    <option label="Massachusetts" value="23" >Massachusetts</option>
-                    <option label="Michigan" value="27" >Michigan</option>
-                    <option label="Minnesota" value="28" >Minnesota</option>
-                    <option label="Mississippi" value="31" >Mississippi</option>
-                    <option label="Missouri" value="29" >Missouri</option>
-                    <option label="Montana" value="32" >Montana</option>
-                    <option label="Nebraska" value="35" >Nebraska</option>
-                    <option label="Nevada" value="39" >Nevada</option>
-                    <option label="New Hampshire" value="36" >New Hampshire</option>
-                    <option label="New Jersey" value="37" >New Jersey</option>
-                    <option label="New Mexico" value="38" >New Mexico</option>
-                    <option label="New York" value="40" >New York</option>
-                    <option label="North Carolina" value="33" >North Carolina</option>
-                    <option label="North Dakota" value="34" >North Dakota</option>
-                    <option label="Northern Mariana Islands" value="30" >Northern Mariana Islands</option>
-                    <option label="Ohio" value="41" >Ohio</option>
-                    <option label="Oklahoma" value="42" >Oklahoma</option>
-                    <option label="Oregon" value="43" >Oregon</option>
-                    <option label="Palau" value="46" >Palau</option>
-                    <option label="Pennsylvania" value="44" >Pennsylvania</option>
-                    <option label="Puerto Rico" value="45" >Puerto Rico</option>
-                    <option label="Rhode Island" value="47" >Rhode Island</option>
-                    <option label="South Carolina" value="48" >South Carolina</option>
-                    <option label="South Dakota" value="49" >South Dakota</option>
-                    <option label="Tennessee" value="50" >Tennessee</option>
-                    <option label="Texas" value="51" >Texas</option>
-                    <option label="Utah" value="52" >Utah</option>
-                    <option label="Vermont" value="55" >Vermont</option>
-                    <option label="Virgin Islands" value="54" >Virgin Islands</option>
-                    <option label="Virginia" value="53" >Virginia</option>
-                    <option label="Washington" value="56" >Washington</option>
-                    <option label="West Virginia" value="58" >West Virginia</option>
-                    <option label="Wisconsin" value="57" >Wisconsin</option>
-                    <option label="Wyoming" value="59" >Wyoming</option>
-                    <option label="Armed Forces Middle East" value="95" >Armed Forces Middle East</option>
-                    <option label="Armed Forces Americas" value="94" >Armed Forces Americas</option>
-                    <option label="Armed Forces Pacific" value="96" >Armed Forces Pacific</option>
-                </select>
+            <div class="span2 cr-label cr-question-right right-helper">
+                <p>This number is on your billing statements</p>
             </div>
-            <!-- /state -->
         </div>
-    </div>
-    <!-- /city and state -->
+    </fieldset>
 
-</fieldset>
-<fieldset class="cr-fieldset identify-options address-dob in-repository">
-    <div class="row cr-question cr-question-last">
-        <div class="span3 cr-label cr-question-left">
-            <label for="cr-last-name2_4851476384792477">
-                Date of birth <small class="inline"></small>
-                <div class='is-required'>Answer Required</div>
-            </label>
+    <fieldset class="cr-fieldset identify-options loan-number in-repository">
 
-            <input type="text" name="cr-last-name" id="cr-last-name2_4851476384792477" placeholder="">
+        <div class="row cr-question cr-question-last account-number-row">
+            <div class="span3 cr-label cr-question-left">
+                <label for="cr-first-name2_4851476384792477">
+                    Loan number
+                </label>
+                <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
+            </div>
+
+            <div class="span2 cr-label cr-question-right right-helper">
+                <p>This number is on your loan documents</p>
+            </div>
         </div>
+    </fieldset>
 
-        <!-- suffix -->
-        <div class="span2 cr-label cr-question-right right-helper">
-            <p>Use format MM/DD/YYYY</p>
+    <fieldset class="cr-fieldset identify-options transaction-number in-repository">
+
+        <div class="row cr-question cr-question-last account-number-row">
+            <div class="span3 cr-label cr-question-left">
+                <label for="cr-first-name2_4851476384792477">
+                    Transaction number
+                </label>
+                <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
+            </div>
+
+            <div class="span2 cr-label cr-question-right right-helper">
+                <p>This number is on your transaction receipt</p>
+            </div>
         </div>
-        <!-- /suffix -->
-    </div>
-    <!-- /city and state -->
-</fieldset>
+    </fieldset>
 
-<fieldset class="cr-fieldset identify-options card-number in-repository">
+    <fieldset class="cr-fieldset identify-options social-security-number in-repository">
 
-    <div class="row cr-question cr-question-last account-number-row">
-        <div class="span3 cr-label cr-question-left">
-            <label for="cr-first-name2_4851476384792477">
-                Card number
-            </label>
-            <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
+        <div class="row cr-question cr-question-last account-number-row">
+            <div class="span3 cr-label cr-question-left">
+                <label for="cr-first-name2_4851476384792477">
+                    Social security number
+                </label>
+                <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
+            </div>
+
+            <div class="span2 cr-label cr-question-right right-helper">
+                <p>Use format<br/>XXX-XX-XXXX</p>
+            </div>
         </div>
+    </fieldset>
 
-        <div class="span2 cr-label cr-question-right right-helper">
-            <p>This number is on the front of your card</p>
+    <fieldset class="cr-fieldset identify-options social-security-last-four in-repository">
+
+        <div class="row cr-question cr-question-last account-number-row">
+            <div class="span3 cr-label cr-question-left">
+                <label for="cr-first-name2_4851476384792477">
+                    Last four digits of Social Security Number
+                </label>
+                <input type="text" name="company-account" id="company-account" class="accountinput zipinput" placeholder="">
+            </div>
+
+            <div class="span2 cr-label cr-question-right right-helper">
+                <p></p>
+            </div>
         </div>
-    </div>
-</fieldset>
-
-<fieldset class="cr-fieldset identify-options account-number in-repository">
-
-    <div class="row cr-question cr-question-last account-number-row">
-        <div class="span3 cr-label cr-question-left">
-            <label for="cr-first-name2_4851476384792477">
-                Account number
-            </label>
-            <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
-        </div>
-
-        <div class="span2 cr-label cr-question-right right-helper">
-            <p>This number is on your billing statements</p>
-        </div>
-    </div>
-</fieldset>
-
-
-<fieldset class="cr-fieldset identify-options loan-number in-repository">
-
-    <div class="row cr-question cr-question-last account-number-row">
-        <div class="span3 cr-label cr-question-left">
-            <label for="cr-first-name2_4851476384792477">
-                Loan number
-            </label>
-            <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
-        </div>
-
-        <div class="span2 cr-label cr-question-right right-helper">
-            <p>This number is on your loan documents</p>
-        </div>
-    </div>
-</fieldset>
-<fieldset class="cr-fieldset identify-options transaction-number in-repository">
-
-    <div class="row cr-question cr-question-last account-number-row">
-        <div class="span3 cr-label cr-question-left">
-            <label for="cr-first-name2_4851476384792477">
-                Transaction number
-            </label>
-            <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
-        </div>
-
-        <div class="span2 cr-label cr-question-right right-helper">
-            <p>This number is on your transaction receipt</p>
-        </div>
-    </div>
-</fieldset>
-<fieldset class="cr-fieldset identify-options social-security-number in-repository">
-
-    <div class="row cr-question cr-question-last account-number-row">
-        <div class="span3 cr-label cr-question-left">
-            <label for="cr-first-name2_4851476384792477">
-                Social security number
-            </label>
-            <input type="text" name="company-account" id="company-account" class="accountinput" placeholder="">
-        </div>
-
-        <div class="span2 cr-label cr-question-right right-helper">
-            <p>Use format<br/>XXX-XX-XXXX</p>
-        </div>
-    </div>
-</fieldset>
-
-<fieldset class="cr-fieldset identify-options social-security-last-four in-repository">
-
-    <div class="row cr-question cr-question-last account-number-row">
-        <div class="span3 cr-label cr-question-left">
-            <label for="cr-first-name2_4851476384792477">
-                Last four digits of Social Security Number
-            </label>
-            <input type="text" name="company-account" id="company-account" class="accountinput zipinput" placeholder="">
-        </div>
-
-        <div class="span2 cr-label cr-question-right right-helper">
-            <p></p>
-        </div>
-    </div>
-</fieldset>
-
+    </fieldset>
 </div>
 
 <!--
@@ -1891,13 +1254,13 @@ MOBILE WALLET OPTIONS.
 -->
 <script>
 
-    if(!window.env){
-        setTimeout(function(){
-            var product = localStorage.getItem("product_selected");
-            var subproduct = localStorage.getItem("subproduct_selected");
-            var issue = localStorage.getItem("issue_selected");
+    if ( !window.env ) {
+        setTimeout( function() {
+            var product = localStorage.getItem( 'product_selected' );
+            var subproduct = localStorage.getItem( 'subproduct_selected' );
+            var issue = localStorage.getItem( 'issue_selected' );
 
-            /*         alert(product + ', ' + subproduct + ', ' + issue); */
+            /* alert(product + ', ' + subproduct + ', ' + issue); */
             switch (product) {
 
                 case 'mortgage':
@@ -2130,9 +1493,11 @@ MOBILE WALLET OPTIONS.
     </div>
 </footer>
 
-<script src="v0/form/js/vendor/jquery-1.9.1.min.js"></script>
+<!-- Deprecated scripts -->
+<script src="static/js/jquery.min.js"></script>
 <script src="v0/form/js/vendor/bootstrap-typeahead.js"></script>
 <script src="v0/form/js/vendor/bootstrap-affix.js"></script>
+<script src="v0/form/js/vendor/bootstrap-modal.js"></script>
 <script src="v0/form/data/companies.json"></script>
 <script src="v0/form/js/main.js"></script>
 <script src="v0/form/js/jquery.autocomplete.min.js"></script>
@@ -2141,6 +1506,9 @@ MOBILE WALLET OPTIONS.
 <!-- <script src="v0/form/js/responsive.js"></script> -->
 
 <script src="v0/annotations.js"></script>
+
+<!-- Modern scripts -->
+<script src="static/js/main.min.js"></script>
 
 <div id='_cur'>
     <img src="/static/editcore/editor/img/cursor.png" />
@@ -2182,5 +1550,6 @@ MOBILE WALLET OPTIONS.
     var current_page_url = "/edit/project-20/get_zip";
     var test_replay_page = false;
 </script>
+
 </body>
 </html>

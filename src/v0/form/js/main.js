@@ -540,16 +540,21 @@ $('fieldset.identify-options').hide();
 
 $('.company_verification_fieldset').hide();
 
-    $('.identify-account').on('change', function(){
-
-      if ( $('.identification-type').is(':checked') ) {
-    var identifytype = $(this).attr('value');
-    var companytype = $(this).closest('fieldset').attr('id');
-    $('fieldset.identify-options.active-' + companytype).hide();
-    $('.identify-account label.active').removeClass('active');
-        $('#fieldset_repository fieldset.' + identifytype).clone().appendTo($(this).closest('fieldset')).slideDown().addClass('active-' + companytype);
-      }
-    });
+/*
+// MOVED TO static/js/main.js
+// TODO: remove this block when it's verified form is working as expected.
+$( '.identify-account' ).on( 'change', function() {
+  if ( $( '.identification-type' ).is( ':checked' ) ) {
+    var identifytype = $(this).attr( 'value' );
+    var companytype = $(this).closest( 'fieldset' ).attr( 'id' );
+    $( 'fieldset.identify-options.active-' + companytype ).hide();
+    $( '.identify-account label.active' ).removeClass( 'active' );
+    $( '#fieldset_repository fieldset.' + identifytype )
+      .clone().appendTo( $( this ).closest( 'fieldset' ) )
+        .slideDown().addClass( 'active-' + companytype );
+  }
+} );
+*/
 
 /*
 
