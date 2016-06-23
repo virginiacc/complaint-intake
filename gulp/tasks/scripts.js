@@ -14,6 +14,11 @@ gulp.task( 'scripts', function() {
     .pipe( plugins.webpack( {
       output: {
         filename: '[name].js'
+      },
+      module: {
+        loaders: [
+          { test: /\.handlebars$/, loader: 'handlebars-loader' }
+        ]
       }
     } ) )
     .pipe( plugins.uglify() )

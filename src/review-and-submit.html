@@ -34,7 +34,7 @@
         - Media queries (so we can style mobile first)
     -->
     <!--[if lt IE 9]>
-    <script src="v0/form/js/vendor/html5shim.js"></script>
+    <script src="static/js/html5shiv-printshiv.min.js"></script>
     <script src="v0/form/js/vendor/respond.min.js"></script>
     <![endif]-->
 
@@ -297,30 +297,24 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
         </div><!-- REVIEW SECTION -->
 
-</div>
+    </div>
 
-
-
-  </div> <!-- select_product -->
-<!-- options below form -->
-<div class="row cr-continue">
-
-
-
-                <!-- email address -->
-            <div id="certify-checkbox" class="cr-question cr-question-certify-checkbox">
-<!--                    <p class="narrative-consent-text">Include this description in our database for researchers, journalists, and other consumers. We’ll remove identifying information before publishing. &nbsp;<a href="#">Learn more</a></p> -->
-                    <div class="span2 cr-label cr-question cr-certify-checkbox">
-                                <label class="radio">
-                                    <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox certify-checkbox" id="cr-no-email">
-                                    The information given is true to the best of my knowledge and belief. I understand that the CFPB cannot act as my lawyer, a court of law, or a financial advisor.
-                                </label>
-                    </div>
+</div> <!-- select_product -->
+    <!-- options below form -->
+    <div class="row cr-continue">
+        <!-- email address -->
+        <div id="certify-checkbox" class="cr-question cr-question-certify-checkbox">
+            <!--                    <p class="narrative-consent-text">Include this description in our database for researchers, journalists, and other consumers. We’ll remove identifying information before publishing. &nbsp;<a href="#">Learn more</a></p> -->
+            <div class="span2 cr-label cr-question cr-certify-checkbox">
+                <label class="radio">
+                    <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox certify-checkbox" id="cr-no-email">
+                    The information given is true to the best of my knowledge and belief. I understand that the CFPB cannot act as my lawyer, a court of law, or a financial advisor.
+                </label>
             </div>
-                <!-- /email  -->
-
-</div>
-<!-- /options below form -->
+        </div>
+        <!-- /email  -->
+    </div>
+    <!-- /options below form -->
 
 </section>
 
@@ -410,7 +404,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     </div>
 </footer>
 
-<script src="v0/form/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="static/js/jquery.min.js"></script>
 <script src="v0/form/js/vendor/bootstrap-typeahead.js"></script>
 <script src="v0/form/js/vendor/bootstrap-affix.js"></script>
 <script src="v0/form/data/companies.json"></script>

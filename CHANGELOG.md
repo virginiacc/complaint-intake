@@ -1,10 +1,13 @@
 ## Unreleased
 
 ### Added
-- Nothing.
+- Added handlebars for handling address template.
+- Added how to contact section to additional company contact.
 
 ### Changed
 - Removed type of friend.
+- Added international address format when changing address country.
+- Removed clean gulp task from build task.
 
 ### Deprecated
 - Nothing.
