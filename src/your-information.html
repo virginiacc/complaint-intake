@@ -546,18 +546,21 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
         </div>
     </div>
 
-    <!-- Zip code -->
     <div id="addcon-phone-number" class="row cr-question cr-question-last">
-        <!-- suffix -->
-        <div class="span2 cr-label cr-question-left">
-            <label for="cr-suffix2">
-                Phone number
-            </label>
-            <input type="text"
-                   name="cr-middle-name2"
-                   id="cr-middle-name2_4851476384792477">
+
+        <div id="address1" class="row cr-question address-template">
+            <!-- Handlebars will add address template here. -->
         </div>
-        <!-- /zip code  -->
+        <div class="row cr-question cr-question-last">
+            <!-- phone number -->
+            <div class="span3 cr-label cr-question-left">
+                <label for="address1-phone">
+                    Phone number
+                </label>
+                <input type="text" id="address1-phone">
+            </div>
+            <!-- /phone number -->
+        </div>
     </fieldset>
 </div>
 
@@ -779,27 +782,21 @@ POINT OF CONTACT
 
         <div id="poc-phone-number" class="row cr-question cr-question-last">
 
-            <fieldset id="additional-contact-phone-and-address">
+            <div id="address2" class="row cr-question address-template">
+                <!-- Handlebars will add address template here. -->
+            </div>
 
-                <div id="address0" class="row cr-question address-template">
-                    <!-- Handlebars will add address template here. -->
+            <div class="row cr-question cr-question-last">
+                <!-- phone number -->
+                <div class="span3 cr-label cr-question-left">
+                    <label for="address2-phone">
+                        Phone number
+                    </label>
+                    <input type="text" id="address2-phone">
                 </div>
-
-                <div class="row cr-question cr-question-last">
-                    <!-- phone number -->
-                    <div class="span2 cr-label cr-question-left">
-                        <label for="cr-suffix2">
-                            Phone number
-                        </label>
-                        <input type="text"
-                               name="cr-middle-name2"
-                               id="cr-middle-name2_4851476384792477">
-                    </div>
-                    <!-- /phone number -->
-                </div>
-            </fieldset>
-
-        </fieldset>
+                <!-- /phone number -->
+            </div>
+        </div>
     </div>
 
 <!--

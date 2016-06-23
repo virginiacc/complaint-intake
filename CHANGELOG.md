@@ -8,6 +8,7 @@
 - Removed type of friend.
 - Added international address format when changing address country.
 - Removed clean gulp task from build task.
+- Added address for additional consumer.
 
 ### Deprecated
 - Nothing.
