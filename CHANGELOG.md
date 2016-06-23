@@ -4,7 +4,7 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Removed type of friend.
 
 ### Deprecated
 - Nothing.

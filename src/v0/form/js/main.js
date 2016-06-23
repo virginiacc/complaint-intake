@@ -299,16 +299,16 @@ $('#mortgage_servicer_questions').hide();
     $('.radio_input').on('change', function(){
 
       if ( $('.product').is(':checked') ) {
-		$('.subproduct_label').hide();
-		$('.subproduct_sect').hide();
-		$('.subproduct_sect').hide();
-		$('#student_questions').hide();
-		$('#payday_questions').hide();
-		$('#vehicle_questions').hide();
+    $('.subproduct_label').hide();
+    $('.subproduct_sect').hide();
+    $('.subproduct_sect').hide();
+    $('#student_questions').hide();
+    $('#payday_questions').hide();
+    $('#vehicle_questions').hide();
         $('#subproduct_options label.active').removeClass('active');
         $('.product-specific-questions label.active').removeClass('active');
 
-		$('#product_options label.active').removeClass('active');
+    $('#product_options label.active').removeClass('active');
         $('#select_subproduct').fadeIn('fast');
         $('#' + $(this).attr('id') + '_label').fadeIn('fast');
         $('#' + $(this).attr('id') + '_products').slideDown(200);
@@ -324,25 +324,25 @@ $('#mortgage_servicer_questions').hide();
         $('.product-specific-questions label.active').removeClass('active');
         $(this).closest('label').addClass('active');
         if ( $(this).parent().attr('addtlquestions') == 'payday'){
-	      $('#payday_questions').slideDown().show();
-	      $('#payday_questions .follow-up').hide();
+        $('#payday_questions').slideDown().show();
+        $('#payday_questions .follow-up').hide();
         } else {
-	       $('#payday_questions').hide();
+         $('#payday_questions').hide();
         }
         if ( $(this).parent().attr('id') == 'federal-student-loan'){
-	      $('#student_questions').slideDown().show();
+        $('#student_questions').slideDown().show();
         } else if ( $(this).parent().attr('id') == 'non-federal-student-loan'){
-	      $('#student_questions').slideDown().show();
+        $('#student_questions').slideDown().show();
         } else {
-	       $('#student_questions').slideUp();
+         $('#student_questions').slideUp();
 
         }
         if ( $(this).parent().attr('id') == 'vehicle-loan'){
-	      $('#vehicle_questions').slideDown().show();
+        $('#vehicle_questions').slideDown().show();
         } else if ( $(this).parent().attr('id') == 'vehicle-lease'){
-	      $('#vehicle_questions').slideDown().show();
+        $('#vehicle_questions').slideDown().show();
         } else {
-	       $('#vehicle_questions').slideUp();
+         $('#vehicle_questions').slideUp();
         }
       }
     });
@@ -353,14 +353,14 @@ $('#mortgage_servicer_questions').hide();
         $('.product-specific-questions label.active').removeClass('active');
         $(this).closest('label').addClass('active');
         if ( $(this).parent().attr('id') == 'at-store' ){
-	      $('#store-questions').slideDown().show();
+        $('#store-questions').slideDown().show();
         } else {
-	       $('#store-questions').hide();
+         $('#store-questions').hide();
         }
         if ( $(this).parent().attr('id') == 'online' ){
-	      $('#online-questions').slideDown().show();
+        $('#online-questions').slideDown().show();
         } else {
-	       $('#online-questions').hide();
+         $('#online-questions').hide();
         }
 
       }
@@ -378,15 +378,15 @@ $('#zombie_subissues_sublabel').hide();
 $('.resolution-options').hide();
 
     $('#select_issue .radio_input').on('change', function(){
-		$('.resolution-options').slideDown();
+    $('.resolution-options').slideDown();
       if ( $('#select_issue .issue').is(':checked') ) {
-		$('.all-subissues').hide();
-		$('.debt-collection-zombie').hide();
-		$('.credit-reporting-zombie').hide();
-		$('.subissue_label').hide();
-		$('#zombie_subissues_sublabel').hide();
-		var subissuetype = $(this).attr('id');
-		$('#select_issue label.active').removeClass('active');
+    $('.all-subissues').hide();
+    $('.debt-collection-zombie').hide();
+    $('.credit-reporting-zombie').hide();
+    $('.subissue_label').hide();
+    $('#zombie_subissues_sublabel').hide();
+    var subissuetype = $(this).attr('id');
+    $('#select_issue label.active').removeClass('active');
         $('.' + $(this).attr('id') + '_subissues').fadeIn('fast');
         $('#' + $(this).attr('id') + '_subissues').slideDown(200);
         $(this).closest('label').addClass('active');
@@ -397,9 +397,9 @@ $('.resolution-options').hide();
     $('#select_subissue .radio_input').on('change', function(){
 
       if ( $('#select_subissue .issue').is(':checked') ) {
-		$('.subsubissues').hide();
-		$('#select_subissue label.active').removeClass('active');
-		$('#zombie_subissues_sublabel').slideDown();
+    $('.subsubissues').hide();
+    $('#select_subissue label.active').removeClass('active');
+    $('#zombie_subissues_sublabel').slideDown();
         $('#' + $(this).attr('id') + '_subissues_sublabel').slideDown();
         $('#' + $(this).attr('id') + '_subissues').slideDown(200).addClass('subsubissues');
         $(this).closest('label').addClass('active');
@@ -502,28 +502,28 @@ $('#forward-company3').hide()
 
 
 
-	$('#company2-forward').on('change', function(){
+  $('#company2-forward').on('change', function(){
       if ( $('#company2-forward').is(':checked') ) {
         $('#forward-company2').slideDown(400);
       }
     });
 
 
-	$('#company2-forward').on('change', function(){
+  $('#company2-forward').on('change', function(){
       if ( !$('#company2-forward').is(':checked') ) {
         $('#forward-company2').slideUp(400);
       }
     });
 
 
-	$('#company3-forward').on('change', function(){
+  $('#company3-forward').on('change', function(){
       if ( $('#company3-forward').is(':checked') ) {
         $('#forward-company3').slideDown(400);
       }
     });
 
 
-	$('#company3-forward').on('change', function(){
+  $('#company3-forward').on('change', function(){
       if ( !$('#company3-forward').is(':checked') ) {
         $('#forward-company3').slideUp(400);
       }
@@ -543,10 +543,10 @@ $('.company_verification_fieldset').hide();
     $('.identify-account').on('change', function(){
 
       if ( $('.identification-type').is(':checked') ) {
-		var identifytype = $(this).attr('value');
-		var companytype = $(this).closest('fieldset').attr('id');
-		$('fieldset.identify-options.active-' + companytype).hide();
-		$('.identify-account label.active').removeClass('active');
+    var identifytype = $(this).attr('value');
+    var companytype = $(this).closest('fieldset').attr('id');
+    $('fieldset.identify-options.active-' + companytype).hide();
+    $('.identify-account label.active').removeClass('active');
         $('#fieldset_repository fieldset.' + identifytype).clone().appendTo($(this).closest('fieldset')).slideDown().addClass('active-' + companytype);
       }
     });
@@ -633,7 +633,7 @@ $('fieldset.point-of-contact').hide();
     });
 
 
-	$('.add-poc-no').on('change', function(){
+  $('.add-poc-no').on('change', function(){
       if ( $('.add-poc-no').is(':checked') ) {
         $('fieldset.point-of-contact').slideUp(400);
         $('.cr-add-poc label.active').removeClass('active');
@@ -663,7 +663,7 @@ $('fieldset.point-of-contact').hide();
     });
 
 
-	$('#consumer-info-no-email').hide();
+  $('#consumer-info-no-email').hide();
     $('#cr-no-email').change(function(){
         if($('#cr-no-email').is(':checked')){
           $('#consumer-info-no-email').slideDown();
@@ -677,27 +677,27 @@ $('fieldset.point-of-contact').hide();
     $('.identify-user').on('change', function(){
 
       if ( $('.identification-type').is(':checked') ) {
-		var identifytype = $(this).attr('value');
-		$('fieldset.identify-options.active').hide();
-		$('.identify-options').removeClass('active');
+    var identifytype = $(this).attr('value');
+    $('fieldset.identify-options.active').hide();
+    $('.identify-options').removeClass('active');
         $('fieldset.' + identifytype).slideDown().addClass('active');
-		if ( identifytype == 'someone-else') {
-			// When "someone else" is selected, the "Point of contact" section slides down, the optional question slides up, and the header text changes
-			$('fieldset.point-of-contact').slideDown();
-	        $('fieldset.point-of-contact-question').slideUp();
-	        $('#point-of-contact-header').text('Point of contact');
-		}
-		else if ( identifytype != 'someone-else' && $('.add-poc-yes').is(':checked') ) {
-			// When "someone else" is not selected, but the consumer has already said "Yes" in the "Point of contact" section, the Point of contact section stays open but the optional question slides back down and the header changes back
-	        $('fieldset.point-of-contact-question').slideDown();
-	        $('#point-of-contact-header').text('Additional point of contact');
-		}
-		else {
-			// When "someone else" is not selected and the consumer hasn't said yes in the "Point of contact" section, everything returns to the default
-			$('fieldset.point-of-contact').slideUp();
-	        $('fieldset.point-of-contact-question').slideDown();
-	        $('#point-of-contact-header').text('Additional point of contact');
-		}
+    if ( identifytype == 'someone-else') {
+      // When "someone else" is selected, the "Point of contact" section slides down, the optional question slides up, and the header text changes
+      $('fieldset.point-of-contact').slideDown();
+          $('fieldset.point-of-contact-question').slideUp();
+          $('#point-of-contact-header').text('Point of contact');
+    }
+    else if ( identifytype != 'someone-else' && $('.add-poc-yes').is(':checked') ) {
+      // When "someone else" is not selected, but the consumer has already said "Yes" in the "Point of contact" section, the Point of contact section stays open but the optional question slides back down and the header changes back
+          $('fieldset.point-of-contact-question').slideDown();
+          $('#point-of-contact-header').text('Additional point of contact');
+    }
+    else {
+      // When "someone else" is not selected and the consumer hasn't said yes in the "Point of contact" section, everything returns to the default
+      $('fieldset.point-of-contact').slideUp();
+          $('fieldset.point-of-contact-question').slideDown();
+          $('#point-of-contact-header').text('Additional point of contact');
+    }
       }
     });
 
@@ -713,59 +713,62 @@ $('#poc-phone-number').hide();
 
 
 
-	$('#ans-poc-other-who').slideUp();
+  $('#ans-poc-other-who').slideUp();
     $('#point-of-contact-identity').on('change', function(){
-		var poctype = $(this).val();
-		$('#ans-poc-other-who').slideDown();
-		$('#ans-poc-other-who-spacer').slideUp();
+    var poctype = $(this).val();
+    $('#ans-poc-other-who').slideDown();
+    $('#ans-poc-other-who-spacer').slideUp();
 
-/* 		alert(poctype); */
+/*    alert(poctype); */
 
-		// Change out label for additional info field based on the user's selection for "Relationship to consumer"
-        switch (poctype) {
+      // Change out label for additional info field based on the user's selection for "Relationship to consumer"
+      $( '#ans-poc-other-who' ).show();
 
-        	case 'family-member':
-	            $('#cr-poc-other-who-label').text('Type of family member');
-				break;
+      switch (poctype) {
 
-			case 'friend':
-	            $('#cr-poc-other-who-label').text('Type of friend');
-				break
+        case 'family-member':
+          $('#cr-poc-other-who-label').text('Type of family member');
+          break;
 
-			case 'attorney':
-	            $('#cr-poc-other-who-label').text('Law firm or practice');
-				break
+        case 'friend':
+          $('#cr-poc-other-who-label').text('Type of friend');
+          $( '#ans-poc-other-who' ).hide();
+          break;
 
-			case 'gov-employee':
-	            $('#cr-poc-other-who-label').text('Agency or organization');
-				break
+        case 'attorney':
+          $('#cr-poc-other-who-label').text('Law firm or practice');
+          break;
 
-			case 'advocate':
-	            $('#cr-poc-other-who-label').text('Organization name');
-				break
+        case 'gov-employee':
+          $('#cr-poc-other-who-label').text('Agency or organization');
+          break;
 
-			case 'housing-counselor':
-	            $('#cr-poc-other-who-label').text('Organization name');
-				break
+        case 'advocate':
+          $('#cr-poc-other-who-label').text('Organization name');
+          break;
 
-			case 'other':
-	            $('#cr-poc-other-who-label').text('Type of relationship');
-				break
+        case 'housing-counselor':
+          $('#cr-poc-other-who-label').text('Organization name');
+          break;
 
-			default:
-	            $('#cr-poc-other-who-label').text('Organization name');
-        }
-    });
+        case 'other':
+          $('#cr-poc-other-who-label').text('Type of relationship');
+          break;
+
+        default:
+          $('#cr-poc-other-who-label').text('Organization name');
+      }
+    } );
 
     $('#cr-add-consumer-full').change(function(){
         if($('#cr-add-consumer-full').is(':checked')){
         $('#addcon-optional-status').text('');
-		$('#addcon-email-helper').slideDown();
+    $('#addcon-email-helper').slideDown();
         $('#addcon-phone-number').slideDown();
         $('.additional-consumer-email').removeClass('cr-question-last');
         }else{
         $('#addcon-optional-status').text('(Optional)');
-		$('#addcon-email-helper').slideUp();
+    $('#addcon-email-helper').slideUp();
         $('#addcon-phone-number').slideUp();
         $('.additional-consumer-email').addClass('cr-question-last');
         }
@@ -774,34 +777,34 @@ $('#poc-phone-number').hide();
     $('#cr-add-poc-full').change(function(){
         if($('#cr-add-poc-full').is(':checked')){
         $('#poc-phone-number').slideDown(400);
-		$('#poc-email-helper').slideDown();
-		//$('#poc-disclosure').slideDown();
+    $('#poc-email-helper').slideDown();
+    //$('#poc-disclosure').slideDown();
     $('.poc-email-address').removeClass('cr-question-last');
 
         }else{
         $('#poc-phone-number').slideUp(400);
         // $('#poc-disclosure').slideUp();
-		$('#poc-email-helper').hide();
+    $('#poc-email-helper').hide();
         $('.poc-email-address').addClass('cr-question-last');
 
         }
     });
 
   $('.DAMN').on('click', function(){
-  		alert('clicked!');
-  		$('#annotations-list').slideUp();
-  		$('#annotations-toggle a').text('Open annotations');
-  		$('#annotations-toggle').removeClass('opened');
-  		$('#annotations-toggle').addClass('closed');
-  		$('.wrapper-container').removeClass('annoslide');
+      alert('clicked!');
+      $('#annotations-list').slideUp();
+      $('#annotations-toggle a').text('Open annotations');
+      $('#annotations-toggle').removeClass('opened');
+      $('#annotations-toggle').addClass('closed');
+      $('.wrapper-container').removeClass('annoslide');
   });
 
   $('#annotations-toggle.closed').on('click', function(){
-  		$('#annotations-list').slideDown();
-  		$('#annotations-toggle a').text('Close annotations');
-  		$('#annotations-toggle').removeClass('closed');
-  		$('#annotations-toggle').addClass('opened');
-  		$('.wrapper-container').addClass('annoslide');
+      $('#annotations-list').slideDown();
+      $('#annotations-toggle a').text('Close annotations');
+      $('#annotations-toggle').removeClass('closed');
+      $('#annotations-toggle').addClass('opened');
+      $('.wrapper-container').addClass('annoslide');
   });
 
 $('.cr-military-status').slideUp();
@@ -843,45 +846,45 @@ $('.cr-military-status').slideUp();
 
 
   $('#save-and-continue-later-link').on('click', function(){
-    $('<div class="cr-modal"> <div class="cr-modal-bg">&nbsp;</div> <div class="cr-modal-offset"> <div class="cr-modal-content"> <div class="cr-modal-inner"> <h2>Create an account so you can continue later</h2> <p>Log in or create an account and we will send you a link and a complaint ID number that you can use to finish submitting this complaint.</p> <div id="save-options" class="select-product-or-issue select-save-method">                          <label class="radio block save-options-label">                 <input name="radio_" type="radio" class="radio_input product save-options-radio save-with-email selected" value="save-with-email" />                  Create an account                 <br /><small></small>             </label>                                                                            <label class="radio block save-options-label">                 <input name="radio_" type="radio" class="radio_input save-options-radio product save-with-login" value="save-with-login" />                  Log in                 <br /><small></small>             </label> </div> <hr class="save-method-hr" /> <fieldset id="save-with-email" class="save-method"> 		<div class="span3 cr-label cr-save-option email"> 			<label for="con1-email"> 			Email address or Phone number  			<div class="is-required">Answer Required</div> 			</label> 			<input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left"> 			<p>We will send a link to this email address to continue this complaint</p> 		</div> 		<div class="span3 cr-label cr-save-option"> 			<label for="con1-email"> 			Create a password 			<div class="is-required">Answer Required</div> 			</label> 			<input type="email" name="cr-password" id="cr-email2_2356852120719850" placeholder="" class="input-large left"> 			<p>Include letters and numbers, at least 8 characters</p> 		</div> 		 </fieldset> <fieldset id="save-with-phone" class="save-method"> 		 		<div class="span3 cr-label cr-save-option"> 			<label for="con1-email"> 			Phone number  			<div class="is-required">Answer Required</div> 			</label> 			<input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left"> 		<p>We will send a text message to this phone number. Standard messaging rates may apply.</p> 		</div> 		<div class="span3 cr-label cr-save-option"> 			<label for="con1-email"> 			Create a password 			<div class="is-required">Answer Required</div> 			</label> 			<input type="email" name="cr-password" id="cr-email2_2356852120719850" placeholder="" class="input-large left"> 			<p>Include letters and numbers, at least 8 characters</p> 		</div> 		 </fieldset> <fieldset id="save-with-login" class="save-method"> 		<p>If you have submitted a complaint to the CFPB in the past, log in to save this complaint to your account. </p> 		 		<div class="span3 cr-label cr-save-option email"> 			<label for="con1-email"> 			Email address or phone number 			<div class="is-required">Answer Required</div> 			</label> 			<input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left"> 		</div> 		<div class="span3 cr-label cr-save-option"> 			<label for="con1-email"> 			Password 			<div class="is-required">Answer Required</div> 			</label> 			<input type="email" name="cr-password" id="cr-email2_2356852120719850" placeholder="" class="input-large left"> 			 		</div> 		 		 		 </fieldset> <a id="save-and-continue-with-email" class="save-with-email save-type" href="#"><button class="btn" type="button">Create an account and save progress</button></a> <a id="save-and-continue-with-phone" class="save-with-phone save-type" href="#"><button class="btn" type="button">Save progress</button></a> <a id="save-and-continue-with-login" class="save-with-login save-type" href="#"><button class="btn" type="button">Log in and save progress</button></a><p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a></div></div></div></div>').appendTo('body');
+    $('<div class="cr-modal"> <div class="cr-modal-bg">&nbsp;</div> <div class="cr-modal-offset"> <div class="cr-modal-content"> <div class="cr-modal-inner"> <h2>Create an account so you can continue later</h2> <p>Log in or create an account and we will send you a link and a complaint ID number that you can use to finish submitting this complaint.</p> <div id="save-options" class="select-product-or-issue select-save-method">                          <label class="radio block save-options-label">                 <input name="radio_" type="radio" class="radio_input product save-options-radio save-with-email selected" value="save-with-email" />                  Create an account                 <br /><small></small>             </label>                                                                            <label class="radio block save-options-label">                 <input name="radio_" type="radio" class="radio_input save-options-radio product save-with-login" value="save-with-login" />                  Log in                 <br /><small></small>             </label> </div> <hr class="save-method-hr" /> <fieldset id="save-with-email" class="save-method">     <div class="span3 cr-label cr-save-option email">       <label for="con1-email">      Email address or Phone number       <div class="is-required">Answer Required</div>      </label>      <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">       <p>We will send a link to this email address to continue this complaint</p>     </div>    <div class="span3 cr-label cr-save-option">       <label for="con1-email">      Create a password       <div class="is-required">Answer Required</div>      </label>      <input type="email" name="cr-password" id="cr-email2_2356852120719850" placeholder="" class="input-large left">       <p>Include letters and numbers, at least 8 characters</p>     </div>     </fieldset> <fieldset id="save-with-phone" class="save-method">        <div class="span3 cr-label cr-save-option">       <label for="con1-email">      Phone number        <div class="is-required">Answer Required</div>      </label>      <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">     <p>We will send a text message to this phone number. Standard messaging rates may apply.</p>    </div>    <div class="span3 cr-label cr-save-option">       <label for="con1-email">      Create a password       <div class="is-required">Answer Required</div>      </label>      <input type="email" name="cr-password" id="cr-email2_2356852120719850" placeholder="" class="input-large left">       <p>Include letters and numbers, at least 8 characters</p>     </div>     </fieldset> <fieldset id="save-with-login" class="save-method">    <p>If you have submitted a complaint to the CFPB in the past, log in to save this complaint to your account. </p>         <div class="span3 cr-label cr-save-option email">       <label for="con1-email">      Email address or phone number       <div class="is-required">Answer Required</div>      </label>      <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">     </div>    <div class="span3 cr-label cr-save-option">       <label for="con1-email">      Password      <div class="is-required">Answer Required</div>      </label>      <input type="email" name="cr-password" id="cr-email2_2356852120719850" placeholder="" class="input-large left">           </div>             </fieldset> <a id="save-and-continue-with-email" class="save-with-email save-type" href="#"><button class="btn" type="button">Create an account and save progress</button></a> <a id="save-and-continue-with-phone" class="save-with-phone save-type" href="#"><button class="btn" type="button">Save progress</button></a> <a id="save-and-continue-with-login" class="save-with-login save-type" href="#"><button class="btn" type="button">Log in and save progress</button></a><p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a></div></div></div></div>').appendTo('body');
     $(".cr-modal").animate({
       opacity: 1
     }, 600 );
 /*     $('input.save-with-email').value(':checked'); */
     $('input.save-with-email').parent().addClass('active');
     $('input.save-with-email').prop("checked", true);
-	$('fieldset#save-with-phone').hide();
-	$('fieldset#save-with-login').hide();
-   	$('a.save-with-phone').hide();
-	$('a.save-with-login').hide();
+  $('fieldset#save-with-phone').hide();
+  $('fieldset#save-with-login').hide();
+    $('a.save-with-phone').hide();
+  $('a.save-with-login').hide();
 
-	    $('.save-options-radio').on('change', function(){
+      $('.save-options-radio').on('change', function(){
 
-	      if ( $('.save-options-radio').is(':checked') ) {
-			var savetype = $(this).attr('value');
-			$('fieldset.save-method').hide();
-			$('a.save-type').hide();
-			$('.save-options-label').removeClass('active');
-			$(this).parent().addClass('active');
-	        $('#' + savetype).fadeIn();
-	        $('a.' + savetype).fadeIn();
+        if ( $('.save-options-radio').is(':checked') ) {
+      var savetype = $(this).attr('value');
+      $('fieldset.save-method').hide();
+      $('a.save-type').hide();
+      $('.save-options-label').removeClass('active');
+      $(this).parent().addClass('active');
+          $('#' + savetype).fadeIn();
+          $('a.' + savetype).fadeIn();
 
-	    }
+      }
     });
-	$('#save-and-continue-with-email').on('click', function(){
-	    $('.cr-modal-inner').children().hide();
-	    $('<h2>Complaint saved!</h2> <p class="your-id-number">Your complaint draft ID number is <strong>141030-43002</strong></p> <p>We have sent an email to yourname@email.com that includes this draft ID and a link to log in to your account and finish submitting this complaint.</p> <p>You can also complete this complaint over the phone by calling us at (855) 411-2372 and providing the draft ID number along with your email address and password.</p> <p>Make sure to come back soon! Your link will expire on November 10th, 2014. After that date, your information will be securely removed from our servers.</p> <p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a>').appendTo('.cr-modal-inner');
-	});
+  $('#save-and-continue-with-email').on('click', function(){
+      $('.cr-modal-inner').children().hide();
+      $('<h2>Complaint saved!</h2> <p class="your-id-number">Your complaint draft ID number is <strong>141030-43002</strong></p> <p>We have sent an email to yourname@email.com that includes this draft ID and a link to log in to your account and finish submitting this complaint.</p> <p>You can also complete this complaint over the phone by calling us at (855) 411-2372 and providing the draft ID number along with your email address and password.</p> <p>Make sure to come back soon! Your link will expire on November 10th, 2014. After that date, your information will be securely removed from our servers.</p> <p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a>').appendTo('.cr-modal-inner');
+  });
 
-	$('#save-and-continue-with-phone').on('click', function(){
-	    $('.cr-modal-inner').children().hide();
-	    $('<h2>Complaint saved!</h2> <p class="your-id-number">Your complaint draft ID number is <strong>141030-43002</strong></p> <p>We have sent a text message to (512) 884-7870 that includes this draft ID and a link to log in to your account and finish submitting this complaint.</p> <p>You can also complete this complaint over the phone by calling us at (855) 411-2372 and providing the draft ID number along with your phone number and password.</p> <p>Make sure to come back soon! Your link will expire on November 10th, 2014. After that date, your information will be securely removed from our servers.</p> <p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a>').appendTo('.cr-modal-inner');
-	});
+  $('#save-and-continue-with-phone').on('click', function(){
+      $('.cr-modal-inner').children().hide();
+      $('<h2>Complaint saved!</h2> <p class="your-id-number">Your complaint draft ID number is <strong>141030-43002</strong></p> <p>We have sent a text message to (512) 884-7870 that includes this draft ID and a link to log in to your account and finish submitting this complaint.</p> <p>You can also complete this complaint over the phone by calling us at (855) 411-2372 and providing the draft ID number along with your phone number and password.</p> <p>Make sure to come back soon! Your link will expire on November 10th, 2014. After that date, your information will be securely removed from our servers.</p> <p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a>').appendTo('.cr-modal-inner');
+  });
 
-	$('#save-and-continue-with-login').on('click', function(){
-	    $('.cr-modal-inner').children().hide();
-	    $('<h2>Complaint saved!</h2> <p class="your-id-number">Your complaint draft ID number is <strong>141030-43002</strong></p> <p>We have sent an email to yourname@email.com that includes this draft ID and a link to log in to your account and finish submitting this complaint.</p> <p>You can also complete this complaint over the phone by calling us at (855) 411-2372 and providing the draft ID number along with your contact information.</p> <p>Make sure to come back soon! Your link will expire on November 10th, 2014. After that date, your information will be securely removed from our servers.</p> <p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a>').appendTo('.cr-modal-inner');
-	});
+  $('#save-and-continue-with-login').on('click', function(){
+      $('.cr-modal-inner').children().hide();
+      $('<h2>Complaint saved!</h2> <p class="your-id-number">Your complaint draft ID number is <strong>141030-43002</strong></p> <p>We have sent an email to yourname@email.com that includes this draft ID and a link to log in to your account and finish submitting this complaint.</p> <p>You can also complete this complaint over the phone by calling us at (855) 411-2372 and providing the draft ID number along with your contact information.</p> <p>Make sure to come back soon! Your link will expire on November 10th, 2014. After that date, your information will be securely removed from our servers.</p> <p>&nbsp;</p> <a href="#" class="cr-modal-close">Close</a>').appendTo('.cr-modal-inner');
+  });
 
   });
 
