@@ -2,6 +2,7 @@
 
 ### Added
 - Added handlebars for handling address template.
+- Added how to contact section to additional company contact.
 
 ### Changed
 - Removed type of friend.

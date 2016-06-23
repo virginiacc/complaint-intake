@@ -1526,132 +1526,127 @@ $(function(){
   $("#company2-not-boarded").hide();
   $("#company3-not-boarded").hide();
 
-
-
   // setup autocomplete function pulling from companies[] array
-  $('#company1-name').autocomplete({
+  $( '#company1-name' ).autocomplete( {
     lookup: companies,
     autoSelectFirst: false,
-    minChars:2,
-/*     formatResult: function (suggestion, currentValue), */
-    onSelect: function (suggestion) {
-      $('.company_verification_fieldset').hide();
+    minChars: 2,
+/*  formatResult: function (suggestion, currentValue), */
+    onSelect: function( suggestion ) {
+      $( '.company_verification_fieldset' ).hide();
 
       var companymessage = suggestion.message;
       var optionsID = suggestion.data;
       var automatched1 = 'matched';
-      $('#company-type-1 .company-match-info').remove();
+      $( '#company-type-1 .company-match-info' ).remove();
 
-      $('#' + optionsID).appendTo('#company-name-fieldset-1').show().slideDown();
-      $('#forward-company1').html(companymessage);
-      if (automatched1 == 'matched'){
-          $("#company1-not-boarded").hide();
+      $( '#' + optionsID ).appendTo( '#company-name-fieldset-1' ).show().slideDown();
+      $( '#forward-company1' ).html( companymessage );
+      if ( automatched1 === 'matched' ){
+          $( '#company1-not-boarded' ).hide();
       }
 
     }
+  } );
+
+  $( '#company1-name' ).change( function() {
+      // If the company entered is not in the array, ask for more info
+      var companyentered = $( this ).val();
+      $( '#company1-not-boarded' ).hide();
+      $.each( companies, function( index, element ) {
+        $( '#company1-not-boarded' ).removeClass( 'company-matched' );
+        var val = element.value;
+        if ( val === companyentered ) {
+          $( '#company1-not-boarded' ).addClass( 'company-matched' );
+        }
+      } );
+      $( '#company1-not-boarded' ).show().slideDown();
+      $( '#company1-not-boarded.company-matched' ).hide();
+      // show product options based on product type (see function in main.js)
+      $( '#company-type-1 .identify-product-options' ).slideDown();
   });
 
-
-    $('#company1-name').change(function() {
-        // If the company entered is not in the array, ask for more info
-        var companyentered = $(this).val();
-        $("#company1-not-boarded").hide();
-        $.each( companies, function( index, element ) {
-            $('#company1-not-boarded').removeClass('company-matched');
-
-
-            var val = element.value;
-            if ( val == companyentered ) {
-                $('#company1-not-boarded').addClass('company-matched');
-            }
-         });
-        $("#company1-not-boarded").show().slideDown();
-        $("#company1-not-boarded.company-matched").hide();
-        // show product options based on product type (see function in main.js)
-        $('#company-type-1 .identify-product-options').slideDown();
-    });
-
-    $('#company1-name').focusout(function() {
-        $('#company-type-1 .identify-product-options').slideDown();
-    });
-
+  $( '#company1-name' ).focusout( function() {
+      $( '#company-type-1 .identify-product-options' ).slideDown();
+  } );
 
   // setup autocomplete function pulling from companies[] array
-  $('#company2-name').autocomplete({
+  $( '#company2-name' ).autocomplete( {
     lookup: companies,
-    minChars:2,
-    onSelect: function (suggestion) {
+    minChars: 2,
+    onSelect: function( suggestion ) {
       var companymessage = suggestion.message;
       var optionsID = suggestion.data;
       var automatched2 = 'matched';
-      $('#' + optionsID).appendTo('#company-name-fieldset-2').show().slideDown();
-      $('#forward-company2').html(companymessage);
-      if (automatched2 == 'matched'){
-          $("#company2-not-boarded").hide();
+      $( '#' + optionsID ).appendTo( '#company-name-fieldset-2' ).show().slideDown();
+      $( '#forward-company2' ).html( companymessage );
+      if ( automatched2 === 'matched' ){
+        $( '#company2-not-boarded' ).hide();
       }
     }
+  } );
+
+  $( '#company2-name' ).change( function() {
+      // If the company entered is not in the array, ask for more info
+      var companyentered = $( this ).val();
+      $( '#company1-not-boarded' ).hide();
+
+      $.each( companies, function( index, element ) {
+          $( '#company2-not-boarded' ).removeClass( 'company-matched' );
+          var val = element.value;
+          if ( val === companyentered ) {
+            $( '#company2-not-boarded' ).addClass( 'company-matched' );
+          }
+      } );
+      $( '#company2-not-boarded' ).show().slideDown();
+      $( '#company2-not-boarded.company-matched' ).hide();
+      // show product options based on product type (see function in main.js)
+      $( '#company-type-2 .identify-product-options .row:last-child' ).hide();
+      $( '#company-type-2 .identify-product-options' ).slideDown();
   });
 
-    $('#company2-name').change(function() {
-        // If the company entered is not in the array, ask for more info
-        var companyentered = $(this).val();
-        $("#company1-not-boarded").hide();
-
-        $.each( companies, function( index, element ) {
-            $('#company2-not-boarded').removeClass('company-matched');
-            var val = element.value;
-            if ( val == companyentered ) {
-                $('#company2-not-boarded').addClass('company-matched');
-            }
-         });
-        $("#company2-not-boarded").show().slideDown();
-        $("#company2-not-boarded.company-matched").hide();
-        // show product options based on product type (see function in main.js)
-        $('#company-type-2 .identify-product-options').slideDown();
-    });
-
-    $('#company2-name').focusout(function() {
-        $('#company-type-2 .identify-product-options').slideDown();
-    });
-
+  $( '#company2-name' ).focusout( function() {
+      $( '#company-type-2 .identify-product-options .row:last-child' ).hide();
+      $( '#company-type-2 .identify-product-options' ).slideDown();
+  } );
 
   // setup autocomplete function pulling from companies[] array
-  $('#company3-name').autocomplete({
+  $( '#company3-name' ).autocomplete( {
     lookup: companies,
-    minChars:3,
-    onSelect: function (suggestion) {
+    minChars: 3,
+    onSelect: function( suggestion ) {
       var companymessage = suggestion.message;
       var optionsID = suggestion.data;
       var automatched3 = 'matched';
-      $('#' + optionsID).appendTo('#company-name-fieldset-3').show().slideDown();
-      $('#forward-company3').html(companymessage);
-      if (automatched3 == 'matched'){
-          $("#company3-not-boarded").hide();
+      $( '#' + optionsID ).appendTo( '#company-name-fieldset-3' ).show().slideDown();
+      $( '#forward-company3' ).html( companymessage );
+      if ( automatched3 === 'matched' ) {
+        $( '#company3-not-boarded' ).hide();
       }
     }
+  } );
+
+  $( '#company3-name' ).change( function() {
+      // If the company entered is not in the array, ask for more info
+      var companyentered = $( this ).val();
+      $( '#company1-not-boarded' ).hide();
+
+      $.each( companies, function( index, element ) {
+          $( '#company3-not-boarded' ).removeClass( 'company-matched' );
+          var val = element.value;
+          if ( val === companyentered ) {
+              $( '#company3-not-boarded' ).addClass( 'company-matched' );
+          }
+       });
+      $( '#company3-not-boarded' ).show().slideDown();
+      $( '#company3-not-boarded.company-matched' ).hide();
+      // show product options based on product type (see function in main.js)
+      $( '#company-type-3 .identify-product-options' ).slideDown();
   });
 
-    $('#company3-name').change(function() {
-        // If the company entered is not in the array, ask for more info
-        var companyentered = $(this).val();
-        $("#company1-not-boarded").hide();
-
-        $.each( companies, function( index, element ) {
-            $('#company3-not-boarded').removeClass('company-matched');
-            var val = element.value;
-            if ( val == companyentered ) {
-                $('#company3-not-boarded').addClass('company-matched');
-            }
-         });
-        $("#company3-not-boarded").show().slideDown();
-        $("#company3-not-boarded.company-matched").hide();
-        // show product options based on product type (see function in main.js)
-        $('#company-type-3 .identify-product-options').slideDown();
-    });
-
-    $('#company3-name').focusout(function() {
-        $('#company-type-3 .identify-product-options').slideDown();
-    });
+  $( '#company3-name' ).focusout( function() {
+      $( '#company-type-3 .identify-product-options' ).slideDown();
+  } );
 /*
 
   if (optionsID !== 'undefined'){

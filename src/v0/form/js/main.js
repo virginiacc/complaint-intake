@@ -10,6 +10,8 @@
 
 $(function() {
 
+  var _additionalCompanyProduct;
+
   /**
    *  Highlight selected radios on DOM load
   **/
@@ -497,37 +499,41 @@ Show/hide helper text when consumer chooses "I want a response from this company
 $('fieldset.identify-product-options').hide();
 $('.company-1-checkbox').hide();
 
-$('#forward-company2').hide()
-$('#forward-company3').hide()
+$('#forward-company2').hide();
+$('#forward-company3').hide();
+
+//$( '#company-name-fieldset-3' ).hide();
+
+  $( '#company2-forward' ).on( 'change', function() {
+    if ( $( '#company2-forward' ).is( ':checked' ) ) {
+      $( '#forward-company2' ).slideDown( 400 );
+      $( '#identify-debt-collection-company .row:last-child' ).slideDown( 400 );
+    }
+  } );
 
 
-
-  $('#company2-forward').on('change', function(){
-      if ( $('#company2-forward').is(':checked') ) {
-        $('#forward-company2').slideDown(400);
-      }
-    });
-
-
-  $('#company2-forward').on('change', function(){
-      if ( !$('#company2-forward').is(':checked') ) {
-        $('#forward-company2').slideUp(400);
-      }
-    });
+  $( '#company2-forward' ).on( 'change', function() {
+    if ( !$( '#company2-forward' ).is( ':checked' ) ) {
+      $( '#forward-company2' ).slideUp( 400 );
+      $( '#identify-debt-collection-company .row:last-child' ).slideUp( 400 );
+    }
+  } );
 
 
-  $('#company3-forward').on('change', function(){
-      if ( $('#company3-forward').is(':checked') ) {
-        $('#forward-company3').slideDown(400);
-      }
-    });
+  $( '#company3-forward' ).on( 'change', function() {
+    if ( $( '#company3-forward' ).is( ':checked' ) ) {
+      $( '#forward-company3' ).slideDown( 400 );
+      $( '#additional-company-div .identify-product-options' ).slideDown( 400 );
+    }
+  } );
 
 
-  $('#company3-forward').on('change', function(){
-      if ( !$('#company3-forward').is(':checked') ) {
-        $('#forward-company3').slideUp(400);
-      }
-    });
+  $( '#company3-forward' ).on( 'change', function() {
+    if ( !$('#company3-forward' ).is( ':checked' ) ) {
+      $( '#forward-company3' ).slideUp(400);
+      $( '#additional-company-div .identify-product-options' ).slideUp( 400 );
+    }
+  } );
 
 /*
 
@@ -564,20 +570,105 @@ Show/hide sections of Company Info
 
 $('fieldset.additional-company').hide();
 
+$( '.add-company-yes' ).on( 'change', function(){
+  if ( $('.add-company-yes').is( ':checked' ) ) {
+    $( 'fieldset.additional-company' ).slideDown( 400 );
+    // Hide company name initially.
+    $( 'fieldset.additional-company.company-name-fieldset-3' ).hide();
 
+    $( '#additional-consumer-identity' ).on( 'change', function() {
+      var product = document.querySelector( '#additional-consumer-identity' ).value;
+      if ( product === 'Select one...' ) {
+        $( 'fieldset.additional-company.company-name-fieldset-3' ).slideUp( 400 );
+      } else {
+        $( 'fieldset.additional-company.company-name-fieldset-3' ).slideDown( 400 );
+        $( '#company3-forward' ).prop( 'checked', false );
+        switch ( _additionalCompanyProduct ) {
+          case 'mortgage':
+            $('#identify-mortgage-company').remove();
+          break;
 
-   $('.add-company-yes').on('change', function(){
-      if ( $('.add-company-yes').is(':checked') ) {
-        $('fieldset.additional-company').slideDown(400);
+          case 'student_loan':
+            $('#identify-student-loan-company').remove();
+          break;
+
+          case 'vehicle_loan':
+            $('#identify-vehicle-loan-company').remove();
+          break;
+
+          case 'consumer_loan':
+            $('#identify-storefront-services-company').remove();
+          break;
+
+          case 'card':
+            $('#identify-most-prepaids-company').remove();
+          break;
+
+          case 'checking':
+            $('#identify-checking-savings-company').remove();
+          break;
+
+          case 'money_trans':
+            $('#identify-money-transfer-company').remove();
+          break;
+
+          case 'credit_reporting':
+            $('#identify-credit-reporting-company').remove();
+          break;
+
+          case 'debt':
+            $('#identify-debt-collection-company').remove();
+          break;
+        }
+
+        switch ( product ) {
+          case 'mortgage':
+            $('#identify-mortgage-company').appendTo('#additional-company-div');
+          break;
+
+          case 'student_loan':
+            $('#identify-student-loan-company').appendTo('#additional-company-div');
+          break;
+
+          case 'vehicle_loan':
+            $('#identify-vehicle-loan-company').appendTo('#additional-company-div');
+          break;
+
+          case 'consumer_loan':
+            $('#identify-storefront-services-company').appendTo('#additional-company-div');
+          break;
+
+          case 'card':
+            $('#identify-most-prepaids-company').appendTo('#additional-company-div');
+          break;
+
+          case 'checking':
+            $('#identify-checking-savings-company').appendTo('#additional-company-div');
+          break;
+
+          case 'money_trans':
+            $('#identify-money-transfer-company').appendTo('#additional-company-div');
+          break;
+
+          case 'credit_reporting':
+            $('#identify-credit-reporting-company').appendTo('#additional-company-div');
+          break;
+
+          case 'debt':
+            $('#identify-debt-collection-company').appendTo('#additional-company-div');
+          break;
+        }
+        _additionalCompanyProduct = product;
       }
-    });
+    } );
+  }
+} );
 
-
-   $('.add-company-no').on('change', function(){
-      if ( $('.add-company-no').is(':checked') ) {
-        $('fieldset.additional-company').slideUp(400);
-      }
-    });
+$( '.add-company-no' ).on( 'change', function(){
+  if ( $( '.add-company-no' ).is( ':checked' ) ) {
+    $( 'fieldset.additional-company' ).slideUp( 400 );
+  }
+} );
 
 /*
 

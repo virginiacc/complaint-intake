@@ -180,7 +180,11 @@ COMPANY-1
                                 question-checkbox
                                 company-1-checkbox">
                         <label class="radio block">
-                            <input type="checkbox" name="company-unknown" value="company-unknown" class="cr-company-unknown checkbox" id="company-unknown">
+                            <input type="checkbox"
+                                   name="company-unknown"
+                                   value="company-unknown"
+                                   class="cr-company-unknown checkbox"
+                                   id="company-unknown">
                             I don't know the company name
                         </label>
                     </div>
@@ -288,9 +292,19 @@ COMPANY-2
                     <input type="company2-name" name="company2-name" id="company2-name" placeholder="" class="input-large left company-name-input">
                     <p id="forward-company2" class="forward-company-details">We will forward your complaint to this company and ask for a response.</p>
                 </div>
-                <div class="span2 cr-label cr-question-right right-helper question-checkbox company-2-checkbox additional-company-checkbox">
+                <div class="span2
+                            cr-label
+                            cr-question-right
+                            right-helper
+                            question-checkbox
+                            company-2-checkbox
+                            additional-company-checkbox">
                     <label class="radio block">
-                        <input id="company2-forward" type="checkbox" name="company-unknown" value="company-unknown" class="cr-company-unknown checkbox" >
+                        <input id="company2-forward"
+                               type="checkbox"
+                               name="company-unknown"
+                               value="company-unknown"
+                               class="cr-company-unknown checkbox">
                         This company should also receive and respond to this complaint.
                     </label>
                 </div>
@@ -429,15 +443,15 @@ ADDITIONAL COMPANY
 
                 <select name="additional-consumer-identity" id="additional-consumer-identity" class="input-medium">
                     <option>Select one...</option>
-                    <option class="ans-con1-coborrower" value="Co-borrower">Credit reporting</option>
-                    <option class="ans-con1-coborrower" value="Co-borrower">Debt collection</option>
-                    <option class="ans-con1-primary-account" value="Primary account holder">Mortgage</option>
-                    <option class="ans-con1-additional-card-holder" value="Additional card holder">Student loan</option>
-                    <option class="ans-con1-cosigner" value="Co-Signer">Vehicle loan or lease</option>
-                    <option class="ans-con1-coborrower" value="Co-borrower">Credit or prepaid card</option>
-                    <option class="ans-con1-coborrower" value="Co-borrower">Checking or savings account</option>
-                    <option class="ans-con1-coborrower" value="Co-borrower">Money transfer or money service</option>
-                    <option class="ans-con1-coborrower" value="Co-borrower">Payday, online, store, or other loan</option>
+                    <option class="ans-con1-coborrower" value="credit_reporting">Credit reporting</option>
+                    <option class="ans-con1-coborrower" value="debt">Debt collection</option>
+                    <option class="ans-con1-primary-account" value="mortgage">Mortgage</option>
+                    <option class="ans-con1-additional-card-holder" value="student_loan">Student loan</option>
+                    <option class="ans-con1-cosigner" value="vehicle_loan">Vehicle loan or lease</option>
+                    <option class="ans-con1-coborrower" value="card">Credit or prepaid card</option>
+                    <option class="ans-con1-coborrower" value="checking">Checking or savings account</option>
+                    <option class="ans-con1-coborrower" value="money_trans">Money transfer or money service</option>
+                    <option class="ans-con1-coborrower" value="consumer_loan">Payday, online, store, or other loan</option>
                 </select>
 
                 <div id="ans-rel-other-who" style="display:none;">
@@ -462,9 +476,19 @@ ADDITIONAL COMPANY
 
                     <p id="forward-company3" class="forward-company-details">We will forward your complaint to this company and ask for a response.</p>
                 </div>
-                <div class="span2 cr-label cr-question-right right-helper question-checkbox company-2-checkbox additional-company-checkbox">
+                <div class="span2
+                            cr-label
+                            cr-question-right
+                            right-helper
+                            question-checkbox
+                            company-2-checkbox
+                            additional-company-checkbox">
                     <label class="radio block">
-                        <input type="checkbox" name="company3-forward" value="company-unknown" class="cr-company-unknown checkbox" id="company3-forward">
+                        <input type="checkbox"
+                               name="company3-forward"
+                               value="company-unknown"
+                               class="cr-company-unknown checkbox"
+                               id="company3-forward">
                         This company should also receive and respond to this complaint.
                     </label>
                 </div>
@@ -532,7 +556,7 @@ ADDITIONAL COMPANY
             </div>
         </div>
     </fieldset><!-- not-boarded -->
-
+</div>
 <!--
 
 ///////////////
@@ -873,7 +897,7 @@ DEBT COLLECTION OPTIONS.
 
 <fieldset id="identify-debt-collection-company" class="cr-fieldset identify-product-options">
 
-    <div class="row cr-question cr-question-last">
+    <div class="row cr-question">
         <div class="span3 cr-label cr-question-left identify-debt-collection-company-phone">
             <label for="cr-first-name2_4851476384792477">
                 What phone number has been receiving calls from this debt collector?
@@ -1510,9 +1534,11 @@ MOBILE WALLET OPTIONS.
 <!-- Modern scripts -->
 <script src="static/js/main.min.js"></script>
 
+<!--
 <div id='_cur'>
     <img src="/static/editcore/editor/img/cursor.png" />
 </div>
+-->
 
 <!-- TODO: Remove inline styling and scripting. -->
 <style type="text/css">
