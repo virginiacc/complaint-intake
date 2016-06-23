@@ -333,7 +333,7 @@ $('#mortgage_servicer_questions').hide();
         }
         if ( $(this).parent().attr('id') == 'federal-student-loan'){
         $('#student_questions').slideDown().show();
-        } else if ( $(this).parent().attr('id') == 'non-federal-student-loan'){
+        } else if ( $(this).parent().attr('id') == 'private-student-loan'){
         $('#student_questions').slideDown().show();
         } else {
          $('#student_questions').slideUp();

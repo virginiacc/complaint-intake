@@ -17,7 +17,7 @@
 - Nothing.
 
 ### Fixed
-- Nothing.
+- Show "what school" input when selecting private student loan on step 1.
 
 
 ## [0.7.0](https://cfpb.github.io/complaint-intake/versions/0.7.0/)
