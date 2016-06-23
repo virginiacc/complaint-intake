@@ -1,6 +1,24 @@
 ## Unreleased
 
 ### Added
+- Nothing.
+
+### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.8.0](https://cfpb.github.io/complaint-intake/versions/0.8.0/)
+
+### Added
 - Added handlebars for handling address template.
 - Added how to contact section to additional company contact.
 
