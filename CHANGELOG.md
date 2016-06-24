@@ -10,7 +10,7 @@
 - Nothing.
 
 ### Removed
-- Nothing.
+- cursor.png and associated styles.
 
 ### Fixed
 - Nothing.
