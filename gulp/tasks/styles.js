@@ -15,7 +15,11 @@ gulp.task( 'styles:modern', function() {
     .pipe( plugins.less( configStyles.settings ) )
     .on( 'error', handleErrors )
     .pipe( plugins.autoprefixer( {
-      browsers: [ 'last 2 version' ]
+      browsers: [ 'last 2 version',
+                  'not ie <= 8',
+                  'android 4',
+                  'BlackBerry 7',
+                  'BlackBerry 10' ]
     } ) )
     .pipe( plugins.header( configBanner, { pkg: configPkg } ) )
     .pipe( plugins.rename( {
@@ -33,7 +37,7 @@ gulp.task( 'styles:ie', function() {
     .pipe( plugins.less( configStyles.settings ) )
     .on( 'error', handleErrors )
     .pipe( plugins.autoprefixer( {
-      browsers: [ 'IE 7', 'IE 8' ]
+      browsers: [ 'ie 7-8' ]
     } ) )
     .pipe( mqr( {
       width: '75em'
