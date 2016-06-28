@@ -1,6 +1,32 @@
 'use strict';
 
 var Modal = require( './organisms/Modal' );
+var webStorageProxy = require( './modules/util/web-storage-proxy' );
+
+// Handle showing dispute case number.
+var attemptedContactYesDom = document.querySelector( '#resolution-options-list' );
+var caseNumberDom = document.querySelector( '#case-number' );
+if ( attemptedContactYesDom ) {
+  attemptedContactYesDom.addEventListener( 'click', _showCaseInput );
+}
+
+function _showCaseInput( evt ) {
+  var target = evt.target;
+  var productId = 'product_selected';
+  var product = webStorageProxy.getItem( productId, window.localStorage );
+  if ( target.id === 'contacted-company' &&
+       product === 'credit_reporting' ) {
+    // TODO: Remove when toggle buttons are working correctly.
+    //       This is an awful hack to get the selecting to jump back and forth
+    //       between the yes/no radio buttons correctly.
+    document.querySelector( '#contacted-cfpb' ).parentNode.classList.remove( 'active' );
+    caseNumberDom.classList.remove( 'u-hidden' );
+  } else {
+    document.querySelector( '#contacted-company' ).parentNode.classList.remove( 'active' );
+    caseNumberDom.classList.add( 'u-hidden' );
+  }
+}
+
 
 // Handle international addresses.
 var addressHandlebars = require( '../tmpl/address.handlebars' );

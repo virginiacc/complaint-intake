@@ -3,6 +3,8 @@
 ### Added
 - Added "what people are involved" section to step 5.
 - Added Modal organism.
+- Added case number input for debt collection product.
+- Added web-storage-proxy module for getting localStorage value.
 
 ### Changed
 - Updated autoprefixer to 3.1.0.
