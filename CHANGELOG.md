@@ -1,7 +1,7 @@
 ## Unreleased
 
 ### Added
-- Nothing.
+- Added "what people are involved" section to step 5.
 
 ### Changed
 - Updated autoprefixer to 3.1.0.
