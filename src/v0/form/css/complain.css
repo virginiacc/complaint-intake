@@ -1554,20 +1554,17 @@ column-break-inside:avoid;
     text-transform: none;
 }
 
-.cruxform h3 {
+.cruxform .wrapper-body h3 {
 	font-size: 22px;
     line-height: 28px;
     margin-top: 0;
     margin-bottom: 8px;
+    padding-top: 42px;
     text-transform: none;
 }
 
 .cruxform p {
 	max-width: 718px;
-}
-
-.cruxform h3 {
-	padding-top: 42px;
 }
 
 .whathappened textarea {

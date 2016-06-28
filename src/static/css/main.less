@@ -6,6 +6,7 @@
 // Project-specific Less rules go after the imports.
 
 // Import Capital Framework.
+@import (less) 'cf-core.less';
 @import (less) 'cf-forms.less';
 @import (less) 'cf-icons.less';
 @import (less) 'cf-pagination.less';
@@ -14,7 +15,6 @@
 @import (less) 'cf-expandables.less';
 @import (less) 'cf-grid.less';
 @import (less) 'cf-typography.less';
-@import (less) 'cf-core.less';
 @import (less) 'cf-layout.less';
 
 // Import the brand color palette.
@@ -30,6 +30,12 @@
 
 // Import the Capital Framework enhancements
 @import (less) 'cf-enhancements.less';
+
+/* Organism pieces
+   ========================================================================== */
+
+@import (less) "organisms/modal.less";
+
 
 // Override Capital Framework fieldset borders and default body font.
 fieldset {

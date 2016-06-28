@@ -1648,10 +1648,8 @@ $(function(){
       $( '#company-type-3 .identify-product-options' ).slideDown();
   } );
 /*
-
   if (optionsID !== 'undefined'){
         alert('variable exists!');
    });
-
 */
 });
