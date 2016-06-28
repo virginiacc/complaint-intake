@@ -26,7 +26,6 @@ $(function() {
   **/
   $('#sticky-nav').affix({offset: 110});
 
-
   /**
    * "Why do we need this?"" toggles
    */
@@ -56,10 +55,10 @@ $(function() {
    * Display characters left
    */
   $('.cr-count-me').on('keyup', function() {
-    var $this = $(this),
-        maxLength = parseInt($this.attr('maxlength')),
-        $counter = $('.char-count[data-count-watch=' + $this.attr('id') + '] span'),
-        currentLength = $this.val().length;
+    var $this = $(this);
+    var maxLength = parseInt($this.attr('maxlength'));
+    var $counter = $('.char-count[data-count-watch=' + $this.attr('id') + '] span');
+    var currentLength = $this.val().length;
 
     $counter.text(maxLength - currentLength);
   });
@@ -76,17 +75,17 @@ $(function() {
    * When a country other than USA is selected, switch zip/state address fields
    */
   $('select.country').on('change', function(){
-    var country = $(this).val(),
-        $international = $(this).parents('.cr-primary-container').find('.international'),
-        $domestic = $(this).parents('.cr-primary-container').find('.domestic');
+    var country = $(this).val();
+    var $international = $(this).parents('.cr-primary-container').find('.international');
+    var $domestic = $(this).parents('.cr-primary-container').find('.domestic');
 
-        if ( country === 'US' ) {
-          $international.hide();
-          $domestic.show();
-        } else {
-          $international.show();
-          $domestic.hide();
-        }
+    if ( country === 'US' ) {
+      $international.hide();
+      $domestic.show();
+    } else {
+      $international.show();
+      $domestic.hide();
+    }
   });
 
   /**
@@ -241,28 +240,28 @@ $(function() {
 
     // check if radio was selected in first question
     if ( $('#cr-describe-issue').val() ) {
-        numPassed++;
-        $('#cr-question-1 .cr-validate').removeClass('failure').addClass('success');
-        $('#cr-question-1 .cr-validate-message').hide();
+      numPassed++;
+      $('#cr-question-1 .cr-validate').removeClass('failure').addClass('success');
+      $('#cr-question-1 .cr-validate-message').hide();
     } else {
-        $('#cr-question-1 .cr-validate').removeClass('success').addClass('failure');
-        $('#cr-question-1 .cr-validate-message').show();
+      $('#cr-question-1 .cr-validate').removeClass('success').addClass('failure');
+      $('#cr-question-1 .cr-validate-message').show();
     }
 
     // check if text was entered in third question's textarea
     if ( $('#cr-answer-3 textarea').val() && $('#cr-answer-3 textarea').val().length > 0 ) {
-        numPassed++;
-        $('#cr-answer-3 .cr-validate-message').hide();
+      numPassed++;
+      $('#cr-answer-3 .cr-validate-message').hide();
     } else {
-        $('#cr-answer-3 textarea').addClass('failure');
-        $('#cr-answer-3 .cr-validate').removeClass('success').addClass('failure');
-        $('#cr-answer-3 .cr-validate-message').show();
+      $('#cr-answer-3 textarea').addClass('failure');
+      $('#cr-answer-3 .cr-validate').removeClass('success').addClass('failure');
+      $('#cr-answer-3 .cr-validate-message').show();
     }
 
     // check if text was entered in fourth question's textarea
     if ( $('#cr-answer-4 textarea').val() && $('#cr-answer-4 textarea').val().length > 0 ) {
-        $('#cr-answer-4 .cr-validate-message').hide();
-        numPassed++;
+      $('#cr-answer-4 .cr-validate-message').hide();
+      numPassed++;
     } else {
       $('#cr-answer-4 textarea').addClass('failure');
       $('#cr-answer-4 .cr-validate').removeClass('success').addClass('failure');
@@ -272,7 +271,7 @@ $(function() {
 
     if (numPassed >= 3) {
       document.location.href = 'step-2.html';
-    }else{
+    } else {
       // show error panel
       $(".error-panel").show();
 
@@ -296,19 +295,17 @@ $('#payday_questions').hide();
 $('#vehicle_questions').hide();
 $('#mortgage_servicer_questions').hide();
 
+$('.radio_input').on('change', function(){
 
-
-    $('.radio_input').on('change', function(){
-
-      if ( $('.product').is(':checked') ) {
+  if ( $('.product').is(':checked') ) {
     $('.subproduct_label').hide();
     $('.subproduct_sect').hide();
     $('.subproduct_sect').hide();
     $('#student_questions').hide();
     $('#payday_questions').hide();
     $('#vehicle_questions').hide();
-        $('#subproduct_options label.active').removeClass('active');
-        $('.product-specific-questions label.active').removeClass('active');
+    $('#subproduct_options label.active').removeClass('active');
+    $('.product-specific-questions label.active').removeClass('active');
 
     $('#product_options label.active').removeClass('active');
         $('#select_subproduct').fadeIn('fast');
@@ -316,7 +313,6 @@ $('#mortgage_servicer_questions').hide();
         $('#' + $(this).attr('id') + '_products').slideDown(200);
         $(this).closest('label').addClass('active');
       }
-
     });
 
     $('#subproduct_options .radio_input_subpro').on('change', function(){
@@ -325,26 +321,26 @@ $('#mortgage_servicer_questions').hide();
         $('#subproduct_options label.active').removeClass('active');
         $('.product-specific-questions label.active').removeClass('active');
         $(this).closest('label').addClass('active');
+
         if ( $(this).parent().attr('addtlquestions') == 'payday'){
-        $('#payday_questions').slideDown().show();
-        $('#payday_questions .follow-up').hide();
+          $('#payday_questions').slideDown().show();
+          $('#payday_questions .follow-up').hide();
         } else {
          $('#payday_questions').hide();
         }
         if ( $(this).parent().attr('id') == 'federal-student-loan'){
-        $('#student_questions').slideDown().show();
+          $('#student_questions').slideDown().show();
         } else if ( $(this).parent().attr('id') == 'private-student-loan'){
-        $('#student_questions').slideDown().show();
+          $('#student_questions').slideDown().show();
         } else {
-         $('#student_questions').slideUp();
-
+          $('#student_questions').slideUp();
         }
         if ( $(this).parent().attr('id') == 'vehicle-loan'){
-        $('#vehicle_questions').slideDown().show();
+          $('#vehicle_questions').slideDown().show();
         } else if ( $(this).parent().attr('id') == 'vehicle-lease'){
-        $('#vehicle_questions').slideDown().show();
+          $('#vehicle_questions').slideDown().show();
         } else {
-         $('#vehicle_questions').slideUp();
+          $('#vehicle_questions').slideUp();
         }
       }
     });
@@ -355,19 +351,17 @@ $('#mortgage_servicer_questions').hide();
         $('.product-specific-questions label.active').removeClass('active');
         $(this).closest('label').addClass('active');
         if ( $(this).parent().attr('id') == 'at-store' ){
-        $('#store-questions').slideDown().show();
+          $('#store-questions').slideDown().show();
         } else {
-         $('#store-questions').hide();
+          $('#store-questions').hide();
         }
         if ( $(this).parent().attr('id') == 'online' ){
-        $('#online-questions').slideDown().show();
+          $('#online-questions').slideDown().show();
         } else {
-         $('#online-questions').hide();
+          $('#online-questions').hide();
         }
-
       }
      });
-
 
 /* $('.select-issue-page .select-product-or-issue').hide(); */
 
@@ -379,58 +373,52 @@ $('#credit_reporting_subsubissues').hide();
 $('#zombie_subissues_sublabel').hide();
 $('.resolution-options').hide();
 
-    $('#select_issue .radio_input').on('change', function(){
+  $('#select_issue .radio_input').on('change', function(){
     $('.resolution-options').slideDown();
-      if ( $('#select_issue .issue').is(':checked') ) {
-    $('.all-subissues').hide();
-    $('.debt-collection-zombie').hide();
-    $('.credit-reporting-zombie').hide();
-    $('.subissue_label').hide();
-    $('#zombie_subissues_sublabel').hide();
-    var subissuetype = $(this).attr('id');
-    $('#select_issue label.active').removeClass('active');
-        $('.' + $(this).attr('id') + '_subissues').fadeIn('fast');
-        $('#' + $(this).attr('id') + '_subissues').slideDown(200);
-        $(this).closest('label').addClass('active');
-      }
-    });
-
-
-    $('#select_subissue .radio_input').on('change', function(){
-
-      if ( $('#select_subissue .issue').is(':checked') ) {
-    $('.subsubissues').hide();
-    $('#select_subissue label.active').removeClass('active');
-    $('#zombie_subissues_sublabel').slideDown();
-        $('#' + $(this).attr('id') + '_subissues_sublabel').slideDown();
-        $('#' + $(this).attr('id') + '_subissues').slideDown(200).addClass('subsubissues');
-        $(this).closest('label').addClass('active');
-
-
-      }
-    });
-
-    $('.all-subissues .radio_input').on('change', function(){
-
-      if ( $('.radio_input').is(':checked') ) {
-        $(this).parents('.all-subissues').find('label').removeClass('active');
-        $(this).closest('label').addClass('active');
-      }
-    });
-
-
-    $('.subsubissues .radio_input').on('change', function(){
-
-      if ( $('.radio_input').is(':checked') ) {
-        $('.subsubissues label').removeClass('active');
-        $(this).closest('label').addClass('active');
-      }
-    });
-
-
-  $('.resolution-attempt').on('change', function(){
-      $(this).closest('label').toggleClass('active');
+    if ( $('#select_issue .issue').is(':checked') ) {
+      $('.all-subissues').hide();
+      $('.debt-collection-zombie').hide();
+      $('.credit-reporting-zombie').hide();
+      $('.subissue_label').hide();
+      $('#zombie_subissues_sublabel').hide();
+      var subissuetype = $(this).attr('id');
+      $('#select_issue label.active').removeClass('active');
+      $('.' + $(this).attr('id') + '_subissues').fadeIn('fast');
+      $('#' + $(this).attr('id') + '_subissues').slideDown(200);
+      $(this).closest('label').addClass('active');
+    }
   });
+
+
+  $('#select_subissue .radio_input').on('change', function(){
+    if ( $('#select_subissue .issue').is(':checked') ) {
+      $('.subsubissues').hide();
+      $('#select_subissue label.active').removeClass('active');
+      $('#zombie_subissues_sublabel').slideDown();
+      $('#' + $(this).attr('id') + '_subissues_sublabel').slideDown();
+      $('#' + $(this).attr('id') + '_subissues').slideDown(200).addClass('subsubissues');
+      $(this).closest('label').addClass('active');
+    }
+  });
+
+  $( '.all-subissues .radio_input' ).on( 'change', function() {
+
+    if ( $( '.radio_input' ).is( ':checked' ) ) {
+      $( this ).parents( '.all-subissues' ).find( 'label' ).removeClass( 'active' );
+      $( this ).closest( 'label' ).addClass( 'active' );
+    }
+  } );
+
+  $( '.subsubissues .radio_input' ).on( 'change', function() {
+    if ( $( '.radio_input' ).is( ':checked' ) ) {
+      $( '.subsubissues label' ).removeClass( 'active' );
+      $( this ).closest( 'label' ).addClass( 'active' );
+    }
+  } );
+
+  $( '.resolution-attempt' ).on( 'change', function() {
+    $( this ).closest( 'label' ).toggleClass( 'active' );
+  } );
 
 /**
  * Shows and hides mortgage subissue followup questions based on answers to
@@ -511,7 +499,6 @@ $('#forward-company3').hide();
     }
   } );
 
-
   $( '#company2-forward' ).on( 'change', function() {
     if ( !$( '#company2-forward' ).is( ':checked' ) ) {
       $( '#forward-company2' ).slideUp( 400 );
@@ -519,14 +506,12 @@ $('#forward-company3').hide();
     }
   } );
 
-
   $( '#company3-forward' ).on( 'change', function() {
     if ( $( '#company3-forward' ).is( ':checked' ) ) {
       $( '#forward-company3' ).slideDown( 400 );
       $( '#additional-company-div .identify-product-options' ).slideDown( 400 );
     }
   } );
-
 
   $( '#company3-forward' ).on( 'change', function() {
     if ( !$('#company3-forward' ).is( ':checked' ) ) {
@@ -541,9 +526,7 @@ Show/hide product identification options
 
 */
 
-
 $('fieldset.identify-options').hide();
-
 $('.company_verification_fieldset').hide();
 
 /*
