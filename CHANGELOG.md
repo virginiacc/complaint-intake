@@ -4,7 +4,7 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Updated autoprefixer to 3.1.0.
 
 ### Deprecated
 - Nothing.
