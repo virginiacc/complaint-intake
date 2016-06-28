@@ -2,6 +2,7 @@
 
 ### Added
 - Added "what people are involved" section to step 5.
+- Added Modal organism.
 
 ### Changed
 - Updated autoprefixer to 3.1.0.
