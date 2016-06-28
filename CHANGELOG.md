@@ -14,7 +14,7 @@
 - cursor.png and associated styles.
 
 ### Fixed
-- Nothing.
+- Fix issue where "how to contact" in additional company erroneously displays.
 
 
 ## [0.8.0](https://cfpb.github.io/complaint-intake/versions/0.8.0/)
