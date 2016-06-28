@@ -623,39 +623,39 @@ $( '.add-company-yes' ).on( 'change', function(){
 
         switch ( product ) {
           case 'mortgage':
-            $('#identify-mortgage-company').appendTo('#additional-company-div');
+            $('#identify-mortgage-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'student_loan':
-            $('#identify-student-loan-company').appendTo('#additional-company-div');
+            $('#identify-student-loan-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'vehicle_loan':
-            $('#identify-vehicle-loan-company').appendTo('#additional-company-div');
+            $('#identify-vehicle-loan-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'consumer_loan':
-            $('#identify-storefront-services-company').appendTo('#additional-company-div');
+            $('#identify-storefront-services-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'card':
-            $('#identify-most-prepaids-company').appendTo('#additional-company-div');
+            $('#identify-most-prepaids-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'checking':
-            $('#identify-checking-savings-company').appendTo('#additional-company-div');
+            $('#identify-checking-savings-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'money_trans':
-            $('#identify-money-transfer-company').appendTo('#additional-company-div');
+            $('#identify-money-transfer-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'credit_reporting':
-            $('#identify-credit-reporting-company').appendTo('#additional-company-div');
+            $('#identify-credit-reporting-company').appendTo('#additional-company-div').hide();
           break;
 
           case 'debt':
-            $('#identify-debt-collection-company').appendTo('#additional-company-div');
+            $('#identify-debt-collection-company').appendTo('#additional-company-div').hide();
           break;
         }
         _additionalCompanyProduct = product;
