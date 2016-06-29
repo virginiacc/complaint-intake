@@ -5,6 +5,7 @@
 
 ### Changed
 - Moves inline JS to modules.
+- Added prefixes to address fields.
 
 ### Deprecated
 - Nothing.
