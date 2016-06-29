@@ -1,6 +1,24 @@
 ## Unreleased
 
 ### Added
+- Nothing.
+
+### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.9.0](https://cfpb.github.io/complaint-intake/versions/0.9.0/)
+
+### Added
 - Added "what people are involved" section to step 5.
 - Added Modal organism.
 - Added case number input for debt collection product.
