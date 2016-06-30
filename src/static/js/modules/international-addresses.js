@@ -35,7 +35,8 @@ function init() {
 }
 
 function _initAddress( addressDom, id ) {
-  addressDom.innerHTML = addressHandlebars( { id: id } );
+  var label = addressDom.getAttribute( 'data-label' );
+  addressDom.innerHTML = addressHandlebars( { id: id, label: label } );
   _countryDropdownDom = addressDom.querySelector( '#address-country-' + id );
   _addressMap[_countryDropdownDom.id] = addressDom;
   _countryDropdownDom.addEventListener( 'change', _countryChanged );
@@ -43,8 +44,9 @@ function _initAddress( addressDom, id ) {
 
 function _countryChanged( evt ) {
   var tmp = evt.target.id.split( '-' );
+  var label = evt.target.getAttribute( 'data-label' );
   var id = tmp[tmp.length-1];
-  var opts = { id: id };
+  var opts = { id: id, label: label };
   opts[ 'country' + evt.target.value ] = true;
   // 100 is the value code for the USA.
   if ( evt.target.value !== '100' ) {
