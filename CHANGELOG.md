@@ -4,13 +4,14 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Moves inline JS to modules.
 
 ### Deprecated
 - Nothing.
 
 ### Removed
-- Nothing.
+- Removed unused inline brand styles.
+- Removed unused inline JS.
 
 ### Fixed
 - Nothing.

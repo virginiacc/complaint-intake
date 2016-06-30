@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="static/css/main.min.css">
     <link rel="stylesheet" href="static/css/pagination.min.css">
 
+    <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
+    <script src="v0/form/js/vendor/modernizr.custom.js"></script>
 
     <!--
         Old IE polyfills for:
@@ -34,6 +36,7 @@
     <script src="static/js/html5shiv-printshiv.min.js"></script>
     <script src="v0/form/js/vendor/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body class="prodselect cruxform">
 
@@ -834,62 +837,14 @@ What type of credit reporting product?
 <script src="static/js/jquery.min.js"></script>
 <script src="v0/form/js/vendor/bootstrap-typeahead.js"></script>
 <script src="v0/form/js/vendor/bootstrap-affix.js"></script>
-
-<script>
-  if( !window.env ) {
-    setTimeout( function(){
-      $( '#product_options .radio_input' ).click( function(){
-        // save the product to local storage
-        var prod = $( this ).attr( 'id' );
-        localStorage.setItem( 'product_selected', prod );
-        localStorage.setItem( 'consent', 'false' );
-      } );
-    }, 1);
-
-    setTimeout( function(){
-      $( '#subproduct_options .radio' ).click( function(){
-        // save the subproduct to local storage
-        var subpro = $( this ).attr( 'id' );
-        var issuelist = $( this ).attr( 'issues' );
-        localStorage.setItem( 'issue_list', issuelist );
-        localStorage.setItem( 'subproduct_selected', subpro );
-        /*
-            if ( $(this).attr('id') == 'payday-loan' ){
-          alert('payday is happening.');
-        }
-        */
-
-        /*      alert(subpro + ', ' + issuelist); */
-      } );
-    }, 1);
-  }
-</script>
-
 <script src="v0/form/data/companies.json"></script>
 <script src="v0/form/js/main.js"></script>
 <script src="v0/form/js/emulate.js"></script>
-<!-- Custom modernizr for touch detection only, see the .js file for the build link -->
-<script src="v0/form/js/vendor/modernizr.custom.js"></script>
-
 <!-- <script src="v0/form/js/responsive.js"></script> -->
-
 <script src="v0/annotations.js"></script>
 
 <!-- Modern scripts -->
 <script src="static/js/main.min.js"></script>
-
-<!-- TODO: Remove inline styles and scripts -->
-<style type="text/css">
-.brand h1 {
-    background: transparent url(v0/form/img/money_@2_alt.png) scroll no-repeat left center;
-    background-size:46px;
-}
-</style>
-
-<script type="text/javascript">
-  var current_page_url = '/edit/project-20/get_zip';
-  var test_replay_page = false;
-</script>
 
 </body>
 </html>

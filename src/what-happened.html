@@ -245,20 +245,6 @@
 
 </div>
 
-    <script>
-    if(!window.env){
-        setTimeout(function(){
-            var subproductname = localStorage.getItem("subproduct_selected");
-            var issueselected = localStorage.getItem("issue_selected");
-    /*         alert(subproductname + ' loves ' +  issueselected); */
-
-
-        },
-
-        11);
-    }
-    </script>
-
         </div>
         <!-- /.primary -->
 </section>
@@ -366,50 +352,10 @@
 <script src="v0/form/js/main.js"></script>
 <script src="v0/form/js/emulate.js"></script>
 <!-- <script src="v0/form/js/responsive.js"></script> -->
-
 <script src="v0/annotations.js"></script>
 
 <!-- Modern scripts -->
 <script src="static/js/main.min.js"></script>
-
-<!-- TODO: Remove inline styling and scripting. -->
-<style type="text/css">
-.brand h1 {
-    background: transparent url(v0/form/img/money_@2_alt.png) scroll no-repeat left center;
-    background-size:46px;
-}
-</style>
-
-<script>
-if(!window.env){
-    setTimeout(function(){
-        $('#what-happened').change(function(e){
-            // save the product to local storage
-            var narrative = $(this).val();
-            localStorage.setItem('narrative', (narrative));
-        });
-        $('#desired-resolution').change(function(e){
-            // save the product to local storage
-            var desiredres = $(this).val();
-            localStorage.setItem('desiredres', (desiredres));
-        });
-        $('#narrative-consent-checkbox').change(function(){
-              if ( $(this).is(':checked') ) {
-                  localStorage.setItem('consent', 'true');
-                  } else {
-                  localStorage.setItem('consent', 'false');
-                  }
-        });
-
-
-    }, 1);
-}
-</script>
-
-<script type="text/javascript">
-    var current_page_url = "/edit/project-20/get_zip";
-    var test_replay_page = false;
-</script>
 
 </body>
 </html>
