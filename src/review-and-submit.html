@@ -411,77 +411,10 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 <script src="v0/form/js/main.js"></script>
 <script src="v0/form/js/emulate.js"></script>
 <!-- <script src="v0/form/js/responsive.js"></script> -->
-
-<script>
-
-$('#review-narrative-consent').hide();
-$('#narrative-consent-take-two').hide();
-
-
-if(!window.env){
-    setTimeout(function(){
-        // grab stuff from step 1
-        var product = localStorage.getItem("product_selected").replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('_', ' ').replace('_', ' ');;
-        var subproduct = localStorage.getItem("subproduct_selected").replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');
-        var issue = localStorage.getItem("issue_selected").replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');
-        var issuetext = localStorage.getItem("issuetext");
-        var subissuetext = localStorage.getItem("subissuetext");
-
-        var desiredres = localStorage.getItem("desiredres");
-        var narrative = localStorage.getItem("narrative");
-        var consent = localStorage.getItem("consent");
-        var desiredres = localStorage.getItem("desiredres");
-
-/*
-        $('#review-product-name').text(product);
-        $('#review-subproduct-name').text(subproduct);
-*/
-
-/*         $('#review-issue-name').text(issue); */
-
-        if (narrative !== null) {
-        $('#review-what-happened-text').text(narrative);
-        }
-
-/*
-        if (desiredres !== null) {
-        $('#review-desired-resolution-text').text(desiredres);
-        }
-*/
-
-        if (consent == 'true') {
-        $('#narrative-consent-take-two').hide();
-        $('#review-narrative-consent').show();
-        }
-
-        if (consent == 'false') {
-        $('#review-narrative-consent').hide();
-        $('#narrative-consent-take-two').show();
-
-        }
-    },
-
-    1);
-}
-</script>
-
 <script src="v0/annotations.js"></script>
 
 <!-- Modern scripts -->
 <script src="static/js/main.min.js"></script>
-
-<!-- TODO: Remove inline styling and scripting. -->
-<style type="text/css">
-.brand h1 {
-    background: transparent url(v0/form/img/money_@2_alt.png) scroll no-repeat left center;
-    background-size:46px;
-}
-</style>
-
-<script type="text/javascript">
-  var current_page_url = '/edit/project-20/get_zip';
-  var test_replay_page = false;
-</script>
 
 </body>
 </html>

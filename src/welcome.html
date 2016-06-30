@@ -239,31 +239,5 @@
 <!-- Modern scripts -->
 <script src="static/js/main.min.js"></script>
 
-<!-- TODO: Remove inline styling and scripting. -->
-<style type="text/css">
-.brand h1 {
-    background: transparent url(v0/form/img/money_@2_alt.png) scroll no-repeat left center;
-    background-size:46px;
-}
-</style>
-
-<script>
-if( !window.env ){
-  setTimeout( function(){
-    // grab stuff from step 1
-    var subproductname = localStorage.getItem( 'subproduct_selected' )
-      .replace( '-', ' ' ).replace( '-', ' ' ).replace( '-', ' ' )
-        .replace( '-', ' ' ).replace( '-', ' ' );
-    $( '#product-name-for-ask' ).text( subproductname );
-  }, 1);
-}
-</script>
-
-<script type="text/javascript">
-  var current_page_url = '/edit/project-20/get_zip';
-  var test_replay_page = false;
-</script>
-
 </body>
-
 </html>

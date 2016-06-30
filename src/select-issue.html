@@ -2674,39 +2674,6 @@ Stop all of the sub-issue lists
 -->
 
     </div>
-
-<script>
-    if(!window.env){
-        setTimeout(function(){
-            // grab stuff from step 1
-            var subproductname = localStorage.getItem("subproduct_selected").replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');
-            var issuelist = localStorage.getItem("issue_list");
-            $('#product-name-in-subhead').text(subproductname);
-            $('.all-topissues').hide();
-            $('#issue_options_' + issuelist).slideDown(200);
-    /*         $('#issue_options_' + issuelist).show();         */
-
-        },
-
-        1);
-    }
-</script>
-
-<script>
-    if(!window.env){
-        setTimeout(function(){
-
-            $('#select_issue .all-topissues .radio_input').click(function(e){
-                // save the topissue to local storage
-                var issueselected = $(this).attr('id');
-                localStorage.setItem('issue_selected', (issueselected));
-            });
-
-
-        }, 1);
-    }
-</script>
-
 </section>
 
 <div class="row cr-continue">
@@ -2812,24 +2779,10 @@ Stop all of the sub-issue lists
 <script src="v0/form/js/main.js"></script>
 <script src="v0/form/js/emulate.js"></script>
 <!-- <script src="form/js/responsive.js"></script> -->
-
 <script src="v0/annotations.js"></script>
 
 <!-- Modern scripts -->
 <script src="static/js/main.min.js"></script>
-
-<!-- TODO: Remove inline styles and scripts -->
-<style type="text/css">
-.brand h1 {
-    background: transparent url(v0/form/img/money_@2_alt.png) scroll no-repeat left center;
-    background-size:46px;
-}
-</style>
-
-<script type="text/javascript">
-  var current_page_url = '/edit/project-20/get_zip';
-  var test_replay_page = false;
-</script>
 
 </body>
 </html>
