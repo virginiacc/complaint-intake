@@ -6,6 +6,7 @@
 ### Changed
 - Moves inline JS to modules.
 - Added prefixes to address fields.
+- Formatted Social Security Number input field as three fields.
 
 ### Deprecated
 - Nothing.
