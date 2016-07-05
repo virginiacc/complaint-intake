@@ -2230,3 +2230,23 @@ a.annotation-button:hover,
 #log-in-link {
     text-decoration: none;
 }
+
+/* Format Social Security number on my company step to XXX-XX-XXXX. */
+#ssn1,
+#ssn2,
+#ssn3 {
+    float: left;
+    clear: initial;
+}
+
+#ssn1 {
+    width: 41px;
+}
+
+#ssn2 {
+    width: 31px;
+}
+
+#ssn3 {
+    width: 49px;
+}
