@@ -1,10 +1,139 @@
 'use strict';
 
+var companiesAutocomplete = require( './companies-autocomplete' );
 var internationalAddresses = require( './international-addresses' );
 var webStorageProxy = require( '../modules/util/web-storage-proxy' );
 
 function init() {
+  companiesAutocomplete.init();
   internationalAddresses.init();
+
+  // Show/hide follow-up info when certain radio buttons are selected
+  $( '.cr-radios .radio input' ).on( 'change', function() {
+    var $container = $( this ).parents( '.cr-radios' );
+    $( this ).parent().addClass( 'selected' );
+    $( '.cr-radios .radio input:not(:checked)' ).parent().removeClass( 'selected' );
+
+    if ( $container ) {
+      if ( $container.find( 'input.yes' ).is( ':checked' ) ) {
+        $container.find( '.radio-follow-up .yes' ).show();
+        $container.find( '.radio-follow-up .no' ).hide();
+      } else {
+        $container.find( '.radio-follow-up .yes' ).hide();
+        $container.find( '.radio-follow-up .no' ).show();
+      }
+    }
+  } );
+
+  // Show/hide sections of Company Info.
+  var _additionalCompanyProduct;
+  $( 'fieldset.additional-company' ).hide();
+
+  $( '.add-company-yes' ).on( 'change', function(){
+    if ( $( '.add-company-yes' ).is( ':checked' ) ) {
+      $( 'fieldset.additional-company' ).slideDown( 400 );
+      // Hide company name initially.
+      $( 'fieldset.additional-company.company-name-fieldset-3' ).hide();
+
+      $( '#additional-consumer-identity' ).val( 'Select one...' );
+
+      $( '#additional-consumer-identity' ).on( 'change', function() {
+        var product = document.querySelector( '#additional-consumer-identity' ).value;
+        $( '#additional-company-div .identify-product-options' ).remove();
+        if ( product === 'Select one...' ) {
+          $( 'fieldset.additional-company.company-name-fieldset-3' ).slideUp( 400 );
+        } else {
+          $( 'fieldset.additional-company.company-name-fieldset-3' ).slideDown( 400 );
+          $( '#company3-forward' ).prop( 'checked', false );
+          $( '#forward-company3' ).hide();
+
+          var $productOption;
+          switch ( product ) {
+            case 'mortgage':
+              $productOption = $( '#identify-mortgage-company' ).clone();
+            break;
+
+            case 'student_loan':
+              $productOption = $( '#identify-student-loan-company' ).clone();
+            break;
+
+            case 'vehicle_loan':
+              $productOption = $( '#identify-vehicle-loan-company' ).clone();
+            break;
+
+            case 'consumer_loan':
+              $productOption = $( '#identify-storefront-services-company' ).clone();
+            break;
+
+            case 'card':
+              $productOption = $( '#identify-most-prepaids-company' ).clone();
+            break;
+
+            case 'checking':
+              $productOption = $( '#identify-checking-savings-company' ).clone();
+            break;
+
+            case 'money_trans':
+              $productOption = $( '#identify-money-transfer-company' ).clone();
+            break;
+
+            case 'credit_reporting':
+              $productOption = $( '#identify-credit-reporting-company' ).clone();
+            break;
+
+            case 'debt':
+              $productOption = $( '#identify-debt-collection-company' ).clone();
+            break;
+          }
+          $productOption.attr( 'id' , '');
+          $productOption.appendTo( $( '#additional-company-div .cr-fieldset' )[0] );
+          $productOption.find( '.identify-account' ).on( 'change', function() {
+            if ( $( '.identification-type' ).is( ':checked' ) ) {
+              internationalAddresses.initOptions( this );
+            }
+          } );
+          _additionalCompanyProduct = product;
+        }
+      } );
+    }
+  } );
+
+  $( '.add-company-no' ).on( 'change', function(){
+    if ( $( '.add-company-no' ).is( ':checked' ) ) {
+      $( 'fieldset.additional-company' ).slideUp( 400 );
+      $( '#additional-company-div .identify-product-options' ).slideUp( 400 );
+    }
+  } );
+
+  // Show/hide helper text when consumer chooses "I want a response from this company.
+  $( 'fieldset.identify-product-options' ).hide();
+  $( '.company-1-checkbox' ).hide();
+  $( '#forward-company2' ).hide();
+  $( '#forward-company3' ).hide();
+
+  $( '#company2-forward' ).on( 'change', function() {
+    if ( $( '#company2-forward' ).is( ':checked' ) ) {
+      $( '#forward-company2' ).slideDown( 400 );
+      $( '#identify-credit-reporting-company' ).slideDown( 400 );
+    } else {
+      $( '#forward-company2' ).slideUp( 400 );
+      $( '#identify-credit-reporting-company' ).slideUp( 400 );
+    }
+  } );
+
+  $( '#company3-forward' ).on( 'change', function() {
+    if ( $( '#company3-forward' ).is( ':checked' ) ) {
+      $( '#forward-company3' ).slideDown( 400 );
+      $( '#additional-company-div .identify-product-options' ).slideDown( 400 );
+    } else {
+      $( '#forward-company3' ).slideUp(400);
+      $( '#additional-company-div .identify-product-options' ).slideUp( 400 );
+    }
+  } );
+
+  // Show/hide product identification options.
+  $( 'fieldset.identify-options' ).hide();
+  $( '.company_verification_fieldset' ).hide();
 
   if ( !window.env ) {
     setTimeout( function() {

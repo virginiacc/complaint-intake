@@ -17,21 +17,25 @@ function init() {
 
   $( '.identify-account' ).on( 'change', function() {
     if ( $( '.identification-type' ).is( ':checked' ) ) {
-      var identifytype = $(this).attr( 'value' );
-      var companytype = $(this).closest( 'fieldset' ).attr( 'id' );
-      $( 'fieldset.identify-options.active-' + companytype ).hide();
-      $( '.identify-account label.active' ).removeClass( 'active' );
-      $( '#fieldset_repository fieldset.' + identifytype )
-        .clone().appendTo( $( this ).closest( 'fieldset' ) )
-          .slideDown( 'fast', function() {
-            var address = this.querySelector( '.address-template' );
-            if ( address ) {
-              var id = address.id.substring( address.id.length-1 );
-              _initAddress( address, id );
-            }
-          } ).addClass( 'active-' + companytype );
+      initOptions( this );
     }
   } );
+}
+
+function initOptions( context ) {
+  var identifytype = $( context ).attr( 'value' );
+  var companytype = $( context ).closest( 'fieldset' ).attr( 'id' );
+  $( 'fieldset.identify-options.active-' + companytype ).hide();
+  $( '.identify-account label.active' ).removeClass( 'active' );
+  $( '#fieldset_repository fieldset.' + identifytype )
+    .clone().appendTo( $( context ).closest( 'fieldset' ) )
+      .slideDown( 'fast', function() {
+        var address = this.querySelector( '.address-template' );
+        if ( address ) {
+          var id = address.id.substring( address.id.length-1 );
+          _initAddress( address, id );
+        }
+      } ).addClass( 'active-' + companytype );
 }
 
 function _initAddress( addressDom, id ) {
@@ -61,5 +65,6 @@ function _countryChanged( evt ) {
 }
 
 module.exports = {
-  init: init
+  init: init,
+  initOptions: initOptions
 };

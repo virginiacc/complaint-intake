@@ -16,7 +16,7 @@
 - Removed unused inline JS.
 
 ### Fixed
-- Nothing.
+- Identify options on company information page that were not showing.
 
 
 ## [0.9.0](https://cfpb.github.io/complaint-intake/versions/0.9.0/)
