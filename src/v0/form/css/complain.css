@@ -39,7 +39,7 @@ body p, body label {
 .brand h1 {
     background: transparent url(../img/minicon_payday-loan.png) scroll no-repeat left center;
     padding: 12px 0 12px 50px;
-    margin: .5em 0;
+    margin: 0.5em 0;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -127,9 +127,6 @@ CHANGE TO GIVE ANNOTATIONS SPACE
     text-decoration: none;
 /*     text-indent: 8px; */
 }
-
-
-
 
 .cr-steps li a .status {
     display: none;
@@ -229,53 +226,11 @@ CHANGE TO GIVE ANNOTATIONS SPACE
 
 /* Question and answer modules
     .cr-primary: right side question/answer container
-    .cr-title: small header on top of each section w/ "why do we need this" link
     .cr-question: question and answer
     ========================================================================== */
 
 .cr-primary a {
     text-decoration: none;
-}
-
-.cr-primary .cr-title {
-    margin-bottom: 6px;
-}
-
-.cr-primary .cr-title h2 {
-    margin: 0;
-    font-size: 1.1em;
-    display: inline-block;
-}
-
-.cr-primary .cr-title aside {
-    margin: 0;
-    font-size: .9em;
-    float: right;
-    line-height: 1.7em;
-    font-family: "Avenir Next Bold", Arial, sans-serif;
-}
-
-.cr-primary .cr-title aside a {
-    background: transparent url(../img/icon-plus-sign.png) scroll no-repeat center right;
-    padding: 10px 20px;
-}
-
-.cr-primary .cr-title aside a.active {
-    background-image: url(../img/icon-minus-sign.png);
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-
-    .cr-primary .cr-title aside a {
-        background-image: url(../img/icon-plus-sign-retina.png);
-        background-size: 14px;
-    }
-
-    .cr-primary .cr-title aside a.active {
-        background-image: url(../img/icon-minus-sign-retina.png);
-        background-size: 14px;
-    }
-
 }
 
 .cr-question {
@@ -705,8 +660,6 @@ fieldset {
     -o-animation: fadein .2s; /* Opera */
 }
 
-span.international,
-input.international,
 .cr-company-address,
 .cr-diff-company-address,
 .cr-servicemember-info,
@@ -931,12 +884,10 @@ dd.cr-disclose {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-
     .cr-review-title aside a {
         background-image: url(../img/icon-edit-retina.png);
         background-size: 14px;
     }
-
 }
 
 .cr-review-body {
@@ -1049,13 +1000,6 @@ dd.cr-disclose {
     }
 }
 
-/* Icons
-   ==========================================================================
-*/
-.cr-why {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
-}
-
 /* Chat stuff
    ========================================================================== */
 
@@ -1128,21 +1072,6 @@ dd.cr-disclose {
     top: 10px;
     right: 10px;
 }
-
-/* Sticky sidebar nav
-   ========================================================================== */
-
-
-#sticky-nav {
-    z-index: 10;
-}
-
-#sticky-nav.affix {
-    position: fixed;
-    width: 52px;
-    top: 0;
-}
-
 
 /* Animations
    ========================================================================== */
@@ -1410,11 +1339,6 @@ ul, ul[class*="span"] {
 
 .cr-review-answer {
     padding-top: 20px;
-}
-
-.brand-logo, .brand-logo img {
-    width: auto;
-    height: 40px;
 }
 
 hr.pull-up {
@@ -2251,10 +2175,6 @@ a.annotation-button:hover,
 #ssn3 {
     width: 49px;
     margin-left: 10px;
-}
-
-.social-security-number {
-    position: relative;
 }
 
 .social-security-number .dash::before,

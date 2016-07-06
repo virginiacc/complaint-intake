@@ -1,12 +1,22 @@
 'use strict';
 
-var internationalAddresses = require( './international-addresses' );
 var webStorageProxy = require( '../modules/util/web-storage-proxy' );
 
 function init() {
-  internationalAddresses.init();
+  // Focus on first text input field.
+  $( '#what-happened' ).focus();
 
-  if( !window.env ) {
+  // Display characters left
+  $( '.cr-count-me' ).on( 'keyup', function() {
+    var $this = $( this );
+    var maxLength = parseInt( $this.attr( 'maxlength' ) );
+    var $counter = $( '.char-count[data-count-watch=' + $this.attr( 'id' ) + '] span' );
+    var currentLength = $this.val().length;
+
+    $counter.text( maxLength - currentLength );
+  } );
+
+  if ( !window.env ) {
     setTimeout( function() {
       $( '#what-happened' ).change( function() {
           // save the product to local storage
