@@ -216,7 +216,7 @@ function init() {
           $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary borrower' );
+          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
           $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#additional-consumer-identity-option4' ).remove();
@@ -227,7 +227,7 @@ function init() {
           $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary borrower' );
+          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
           $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#additional-consumer-identity-option4' ).remove();
@@ -238,7 +238,7 @@ function init() {
           $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary borrower' );
+          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
           $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#additional-consumer-identity-option4' ).remove();
@@ -250,30 +250,28 @@ function init() {
           $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary borrower' );
+          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
           $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
           $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#additional-consumer-identity-option4' ).remove();
           break;
 
         case 'card':
-          $( '#primary-consumer-identity-option1' ).text( 'Primary account holder' );
           $( '#primary-consumer-identity-option2' ).text( 'Joint account holder' );
           $( '#primary-consumer-identity-option3' ).text( 'Additional card holder' );
           $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary account holder' );
           $( '#additional-consumer-identity-option2' ).text( 'Joint account holder' );
           $( '#additional-consumer-identity-option3' ).text( 'Additional card holder' );
           $( '#additional-consumer-identity-option4' ).remove();
           break;
 
         case 'checking':
-          $( '#primary-consumer-identity-option1' ).text( 'Primary account holder' );
-          $( '#primary-consumer-identity-option2' ).text( 'Joint account holder' );
+          $( '#primary-consumer-identity-option1' ).text( 'Joint account holder' );
+          $( '#primary-consumer-identity-option2' ).text( 'Other' );
           $( '#primary-consumer-identity-option3' ).remove();
           $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Joint account holder' );
+          $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
+          $( '#additional-consumer-identity-option2' ).text( 'Other' );
           $( '#additional-consumer-identity-option3' ).remove();
           $( '#additional-consumer-identity-option4' ).remove();
           break;
@@ -302,11 +300,9 @@ function init() {
       switch (subproduct) {
 
         case 'vehicle-lease':
-          $( '#primary-consumer-identity-option1' ).text( 'Primary account holder' );
           $( '#primary-consumer-identity-option2' ).text( 'Joint account holder' );
           $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary account holder' );
           $( '#additional-consumer-identity-option2' ).text( 'Joint account holder' );
           $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
           $( '#additional-consumer-identity-option4' ).remove();
@@ -350,8 +346,8 @@ function init() {
 
         case 'mobile-wallet':
           $( '#consumer1-identity' ).hide();
-          $( '#additional-consumer-identity-option1' ).text( 'Primary account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Joint account holder' );
+          $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
+          $( '#additional-consumer-identity-option2' ).text( 'Sender' );
           $( '#additional-consumer-identity-option4' ).text( 'Recipient' );
           break;
 
