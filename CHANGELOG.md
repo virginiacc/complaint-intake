@@ -4,6 +4,24 @@
 - Nothing.
 
 ### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.10.0](https://cfpb.github.io/complaint-intake/versions/0.10.0/)
+
+### Added
+- Nothing.
+
+### Changed
 - Moves inline JS to modules.
 - Added prefixes to address fields.
 - Formatted Social Security Number input field as three fields.
