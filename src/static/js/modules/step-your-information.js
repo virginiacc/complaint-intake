@@ -11,14 +11,24 @@ function init() {
 
    // Show/hide military status
   $( '.cr-servicemember input' ).on( 'change', function(){
-    if ( $( '.cr-need-servicemember-info' ).is( ':checked' ) ) {
-      $( '.cr-servicemember-info, .cr-military-status' ).slideDown( 400 );
+    if ( $( '#cr-military-spouse' ).is( ':checked' ) ) {
+      $( '#servicemember-details' ).slideDown( 400 );
+      $( '.cr-servicemember-info' ).slideUp( 300 );
       $( '.cr-military-status hr' ).hide();
-    } else if ( $( '.cr-need-military-status' ).is( ':checked' ) ) {
-      $( '.cr-military-status' ).slideDown( 400 );
+    } else {
+      $( '#servicemember-details' ).slideUp( 400 );
+    }
+
+    if ( $( '#cr-military-status' ).is( ':checked' ) ) {
+      $( '#servicemember-details1' ).slideDown( 400 );
       $( '.cr-servicemember-info' ).slideUp( 300 );
       $( '.cr-military-status hr' ).show();
     } else {
+      $( '#servicemember-details1' ).slideUp( 400 );
+    }
+
+    if ( !$( '#cr-military-status' ).is( ':checked' ) &&
+         !$( '#cr-military-spouse' ).is( ':checked' ) ) {
       $( '.cr-servicemember-info, .cr-military-status' ).slideUp( 300 );
     }
   } );
@@ -126,13 +136,14 @@ function init() {
   $( '#addcon-email-helper' ).hide();
   $( '#poc-email-helper' ).hide();
   $( '#poc-phone-number' ).hide();
+  $( '#poc-allow-access-disclosure' ).hide();
+  $( '#add-consumer-allow-access-disclosure' ).hide();
   // $( '#poc-disclosure' ).hide();
 
   $( '#ans-poc-other-who' ).slideUp();
     $( '#point-of-contact-identity' ).on( 'change', function(){
     var poctype = $(this).val();
     $( '#ans-poc-other-who' ).slideDown();
-    $( '#ans-poc-other-who-spacer' ).slideUp();
 
     /* alert(poctype); */
 
@@ -146,8 +157,7 @@ function init() {
         break;
 
       case 'friend':
-        $( '#cr-poc-other-who-label' ).text( 'Type of friend' );
-        $( '#ans-poc-other-who' ).hide();
+        $( '#ans-poc-other-who' ).slideUp();
         break;
 
       case 'attorney':
@@ -180,11 +190,13 @@ function init() {
       $( '#addcon-optional-status' ).text( '' );
       $( '#addcon-email-helper' ).slideDown();
       $( '#addcon-phone-number' ).slideDown();
+      $( '#add-consumer-allow-access-disclosure' ).slideDown();
       $( '.additional-consumer-email' ).removeClass( 'cr-question-last' );
     } else {
       $( '#addcon-optional-status' ).text( '(Optional)' );
       $( '#addcon-email-helper' ).slideUp();
       $( '#addcon-phone-number' ).slideUp();
+      $( '#add-consumer-allow-access-disclosure' ).slideUp();
       $( '.additional-consumer-email' ).addClass( 'cr-question-last' );
     }
   } );
@@ -193,11 +205,11 @@ function init() {
     if ( $( '#cr-add-poc-full' ).is( ':checked' ) ) {
       $( '#poc-phone-number' ).slideDown( 400 );
       $( '#poc-email-helper' ).slideDown();
-      //$( '#poc-disclosure' ).slideDown();
+      $( '#poc-allow-access-disclosure' ).slideDown();
       $( '.poc-email-address' ).removeClass( 'cr-question-last' );
     } else {
       $( '#poc-phone-number' ).slideUp( 400 );
-      // $( '#poc-disclosure' ).slideUp();
+      $( '#poc-allow-access-disclosure' ).slideUp();
       $( '#poc-email-helper' ).hide();
       $( '.poc-email-address' ).addClass( 'cr-question-last' );
     }
