@@ -444,11 +444,15 @@ cruxform .cr-question-left input.accountinput {
 }
 
 .cruxform .cr-question-right p {
-    margin: 0px 0px 0 18px;
+    margin: 0 0 0 18px;
 }
 
 .cruxform .cr-question-left p {
-    margin: 44px 0px 4px 18px;
+    margin: 44px 0 4px 18px;
+}
+
+.borrower-email .cr-question-left p {
+    margin-top: 0;
 }
 
 .cruxform .cr-question-left.identify-debt-collection-company-phone {
@@ -476,13 +480,18 @@ fieldset {
     margin:0px;
 }
 
-.cr-label label, .cr-label legend {
+.cr-label label,
+.cr-label legend {
     width: 100%;
     font-family: "Avenir Next Medium", Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
     padding: 16px 8px 3px 18px;
     text-align: left;
+}
+
+.cr-label .label-subtext {
+    padding-left: 18px;
 }
 
 .cr-label.cr-question-col {
@@ -1837,10 +1846,6 @@ button.secondary {
     background: #75787B;
 }
 
-#no-email-address-checkbox {
-    text-indent: -18px;
-}
-
 #review-sections {
     padding-top: 16px;
     margin-bottom: 56px;
@@ -2036,12 +2041,13 @@ ul#welcome-list li {
     padding-top: 20px;
 }
 
-#consumer2-identity .right-helper label,
-.point-of-contact .right-helper label {
+#consumer2-identity .right-helper label {
     text-indent: -16px;
 }
 
-#poc-disclosure p {
+#poc-disclosure p,
+#add-consumer p,
+#addcon-phone-number p {
     margin-left: 20px;
     padding: 8px 0;
 }
@@ -2185,4 +2191,9 @@ a.annotation-button:hover,
     float: left;
     margin-left: 10px;
     margin-top: 5px;
+}
+
+#affiliations {
+    border-top: dotted 1px #ccc;
+    padding-top: 12px;
 }

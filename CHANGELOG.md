@@ -8,6 +8,9 @@
 - Added prefixes to address fields.
 - Formatted Social Security Number input field as three fields.
 - Changes drop-down text for your information "This person is..." drop-down.
+- Moves affiliations section to primary consumer section.
+- Makes affiliations checkboxes show current status sections concurrently.
+- Move checkboxes onto its own row.
 
 ### Deprecated
 - Nothing.
