@@ -13,7 +13,7 @@
 - Nothing.
 
 ### Fixed
-- Nothing.
+- Fixed incorrect "person involved" drop-down.
 
 
 ## [0.10.0](https://cfpb.github.io/complaint-intake/versions/0.10.0/)

@@ -222,169 +222,80 @@ function init() {
       var issue = webStorageProxy.getItem( 'issue_selected', localStorage );
 
       // alert(product + ', ' + subproduct + ', ' + issue);
-      switch ( product ) {
-        case 'mortgage':
-          $( '#primary-consumer-identity-option1' ).text( 'Primary borrower' );
-          $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#additional-consumer-identity-option4' ).remove();
-          break;
-
-        case 'student_loan':
-          $( '#primary-consumer-identity-option1' ).text( 'Primary borrower' );
-          $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#additional-consumer-identity-option4' ).remove();
-          break;
-
-        case 'vehicle_loan':
-          $( '#primary-consumer-identity-option1' ).text( 'Primary borrower' );
-          $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#additional-consumer-identity-option4' ).remove();
-          // NOTE THAT THIS DOES NOT WORK FOR LEASES !!
-          break;
-
-        case 'consumer_loan':
-          $( '#primary-consumer-identity-option1' ).text( 'Primary borrower' );
-          $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
-          $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#additional-consumer-identity-option4' ).remove();
-          break;
-
-        case 'card':
-          $( '#primary-consumer-identity-option2' ).text( 'Joint account holder' );
-          $( '#primary-consumer-identity-option3' ).text( 'Additional card holder' );
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option2' ).text( 'Joint account holder' );
-          $( '#additional-consumer-identity-option3' ).text( 'Additional card holder' );
-          $( '#additional-consumer-identity-option4' ).remove();
-          break;
-
-        case 'checking':
-          $( '#primary-consumer-identity-option1' ).text( 'Joint account holder' );
-          $( '#primary-consumer-identity-option2' ).text( 'Other' );
-          $( '#primary-consumer-identity-option3' ).remove();
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Other' );
-          $( '#additional-consumer-identity-option3' ).remove();
-          $( '#additional-consumer-identity-option4' ).remove();
-          break;
-
-        case 'credit_reporting':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        case 'debt':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        default:
-          $( '#primary-consumer-identity-option1' ).text( 'Primary account holder' );
-          $( '#primary-consumer-identity-option2' ).text( 'Additional account holder' );
-          $( '#primary-consumer-identity-option3' ).text( 'Joint account holder' );
-          $( '#primary-consumer-identity-option4' ).text( 'Additional card holder' );
-          $( '#primary-consumer-identity-option5' ).text( 'Co-signer' );
-          $( '#primary-consumer-identity-option6' ).text( 'Co-borrower' );
-          $( '#primary-consumer-identity-option7' ).text( 'Sender' );
-          $( '#primary-consumer-identity-option8' ).text( 'Recipient' );
+      if ( product === 'credit_reporting' ) {
+        $( '#consumer1-identity' ).hide();
+        $( '#consumer2-identity' ).remove();
+      } else if ( product === 'debt' ) {
+        $( '#consumer1-identity' ).hide();
+        $( '#consumer2-identity' ).remove();
+      } else if ( product === 'mortgage' ||
+                  product === 'student_loan' ||
+                  product === 'vehicle_loan' ||
+                  product === 'consumer_loan' ) {
+        $( '#primary-consumer-identity-option1' ).text( 'Primary borrower' );
+        $( '#primary-consumer-identity-option2' ).text( 'Co-borrower' );
+        $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
+        $( '#additional-consumer-identity-option1' ).text( 'Additional account holder' );
+        $( '#additional-consumer-identity-option2' ).text( 'Co-borrower' );
+        $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
+      } else if ( product === 'card' ) {
+        $( '#primary-consumer-identity-option1' ).text( 'Joint account holder' );
+        $( '#primary-consumer-identity-option2' ).text( 'Additional card holder' );
+        $( '#primary-consumer-identity-option3' ).hide();
+        $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
+        $( '#additional-consumer-identity-option2' ).text( 'Additional card holder' );
+        $( '#additional-consumer-identity-option3' ).hide();
+      } else if ( product === 'checking' ) {
+        $( '#primary-consumer-identity-option1' ).text( 'Joint account holder' );
+        $( '#primary-consumer-identity-option2' ).text( 'Other' );
+        $( '#primary-consumer-identity-option3' ).hide();
+        $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
+        $( '#additional-consumer-identity-option2' ).text( 'Other' );
+        $( '#additional-consumer-identity-option3' ).hide();
+      } else if ( product === 'money_trans' ) {
+        $( '#primary-consumer-identity-option1' ).text( 'Sender' );
+        $( '#primary-consumer-identity-option2' ).text( 'Recipient' );
+        $( '#primary-consumer-identity-option3' ).hide();
+        $( '#additional-consumer-identity-option1' ).text( 'Sender' );
+        $( '#additional-consumer-identity-option2' ).text( 'Recipient' );
+        $( '#additional-consumer-identity-option3' ).hide();
       }
 
-      switch (subproduct) {
-
-        case 'vehicle-lease':
-          $( '#primary-consumer-identity-option2' ).text( 'Joint account holder' );
-          $( '#primary-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option2' ).text( 'Joint account holder' );
-          $( '#additional-consumer-identity-option3' ).text( 'Co-signer' );
-          $( '#additional-consumer-identity-option4' ).remove();
-          break;
-
-        case 'international-money-transfer':
-          $( '#primary-consumer-identity-option1' ).text( 'Sender' );
-          $( '#primary-consumer-identity-option2' ).text( 'Recipient' );
-          $( '#primary-consumer-identity-option3' ).remove();
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Sender' );
-          $( '#additional-consumer-identity-option2' ).text( 'Recipient' );
-          $( '#additional-consumer-identity-option3' ).remove();
-          $( '#additional-consumer-identity-option4' ).remove();
-          $( '#add-consumer-label' ).text( 'Do you want to include an additional consumer?' );
-          $( '#consumer1-identity' ).show().slideDown();
-          break;
-
-        case 'domestic-money-transfer':
-          $( '#primary-consumer-identity-option1' ).text( 'Sender' );
-          $( '#primary-consumer-identity-option2' ).text( 'Recipient' );
-          $( '#primary-consumer-identity-option3' ).remove();
-          $( '#primary-consumer-identity-option4' ).remove();
-          $( '#additional-consumer-identity-option1' ).text( 'Sender' );
-          $( '#additional-consumer-identity-option2' ).text( 'Recipient' );
-          $( '#additional-consumer-identity-option3' ).remove();
-          $( '#additional-consumer-identity-option4' ).remove();
-          $( '#add-consumer-label' ).text( 'Do you want to include an additional consumer?' );
-          $( '#consumer1-identity' ).show().slideDown();
-          break;
-
-        case 'check-cashing':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        case 'money-order':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        case 'mobile-wallet':
-          $( '#consumer1-identity' ).hide();
-          $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
-          $( '#additional-consumer-identity-option2' ).text( 'Sender' );
-          $( '#additional-consumer-identity-option4' ).text( 'Recipient' );
-          break;
-
-        case 'refund-anticipation':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        case 'traveler-or-cashier':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        case 'virtual-currency':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        case 'debt-settlement':
-          $( '#consumer1-identity' ).hide();
-          $( '#consumer2-identity' ).remove();
-          break;
-
-        default:
-          $( '#consumer1-identity' ).hide();
+      if ( subproduct === 'vehicle-lease' ) {
+        $( '#primary-consumer-identity-option1' ).text( 'Joint account holder' );
+        $( '#primary-consumer-identity-option2' ).text( 'Co-signer' );
+        $( '#primary-consumer-identity-option3' ).remove();
+        $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
+        $( '#additional-consumer-identity-option2' ).text( 'Co-signer' );
+        $( '#additional-consumer-identity-option3' ).remove();
+      } else if ( subproduct === 'international-money-transfer' ||
+                  subproduct === 'domestic-money-transfer' ||
+                  subproduct === 'check-cashing' ||
+                  subproduct === 'money-order' ||
+                  subproduct === 'traveler-or-cashier' ||
+                  subproduct === 'virtual-currency' ||
+                  subproduct === 'foreign-currency-exchange' ) {
+        $( '#primary-consumer-identity-option1' ).text( 'Sender' );
+        $( '#primary-consumer-identity-option2' ).text( 'Recipient' );
+        $( '#primary-consumer-identity-option3' ).remove();
+        $( '#additional-consumer-identity-option1' ).text( 'Sender' );
+        $( '#additional-consumer-identity-option2' ).text( 'Recipient' );
+        $( '#additional-consumer-identity-option3' ).remove();
+        $( '#add-consumer-label' ).text( 'Do you want to include an additional consumer?' );
+        $( '#consumer1-identity' ).show().slideDown();
+      } else if ( subproduct === 'mobile-wallet' ) {
+        $( '#consumer1-identity' ).hide();
+        $( '#additional-consumer-identity-option1' ).text( 'Joint account holder' );
+        $( '#additional-consumer-identity-option2' ).text( 'Sender' );
+        $( '#additional-consumer-identity-option3' ).text( 'Recipient' ).show();
+      } else if ( subproduct === 'refund-anticipation' ) {
+        $( '#consumer1-identity' ).hide();
+        $( '#consumer2-identity' ).remove();
+      } else if ( subproduct === 'debt-settlement' ) {
+        $( '#consumer1-identity' ).hide();
+        $( '#consumer2-identity' ).remove();
+      } else {
+        $( '#consumer1-identity' ).hide();
       }
 
     }, 11);
