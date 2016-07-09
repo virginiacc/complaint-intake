@@ -5,6 +5,7 @@
 
 ### Changed
 - Removes "Optional" text next to address fields when all fields are optional.
+- Hides all but first radio buttons on step 5 on page load.
 
 ### Deprecated
 - Nothing.

@@ -136,15 +136,11 @@
     <section class="content row cr-content">
 
         <div class="span8 cr-primary">
-            <!-- .error-panel -->
-
-            <!-- end .error-panel -->
-
             <div style="text-align: right; margin-top: 30px; margin-right: 30px;">
                 Have a question or need for help? <a>Chat Now</a>
             </div>
 
-            <div id="select_product" class="cr-primary-container">
+            <div id="select_person" class="cr-primary-container">
                 <h2>What people are involved?</h2>
                 <p class="page-intro your-info">
                     Identify who is involved in this complaint. This could include
@@ -152,23 +148,25 @@
                     for you (third party), such as a lawyer, financial advisor, or relative.
                 </p>
 
-                <div class="select-product-or-issue all-topissues">
+                <div id="select-who-involved" class="select-product-or-issue all-topissues">
                     <label class="radio block u-mt0">
-                        <input name="radio_" type="radio" class="radio_input" />
+                        <input id="select-who-involved_just-me" name="radio_" type="radio" class="radio_input" />
                         Just me
                     </label>
 
                     <label class="radio block u-mt0">
-                        <input name="radio_" type="radio" class="radio_input" />
+                        <input id="select-who-involved_someone-else" name="radio_" type="radio" class="radio_input" />
                         Someone else
                     </label>
 
                     <label class="radio block">
-                        <input name="radio_" type="radio" class="radio_input" />
+                        <input id="select-who-involved_me-someone-else" name="radio_" type="radio" class="radio_input" />
                         Me and someone else
                     </label>
                 </div>
+            </div>
 
+            <div id="select_product" class="cr-primary-container">
                 <!-- end .error-panel -->
                 <h3 id="primary-consumer-section">Primary consumer</h3>
                 <p>Tell us about the person who is having this issue.</p>
@@ -630,7 +628,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
 
 -->
 
-<div class="cr-primary-container">
+<div id="additional-consumer" class="cr-primary-container">
     <h3 id="additional-consumer-section">Additional consumer</h3>
     <!--        <p>Someone who shares the account or participated in the transaction</p> -->
 
@@ -825,7 +823,7 @@ POINT OF CONTACT
 
 -->
 
-<div class="cr-primary-container">
+<div id="point-of-contact" class="cr-primary-container">
     <h3 id="point-of-contact-header">Additional point of contact</h3>
     <!--    <p>Someone who will communicate on behalf of the primary consumer</p> -->
 

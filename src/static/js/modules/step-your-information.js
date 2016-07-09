@@ -130,7 +130,6 @@ function init() {
 
   // ADDITIONAL INFO FOR TYPE OF POINT OF CONTACT.
   // point-of-contact-identity.
-
   $( '#consumer1-identity' ).hide();
   $( '#addcon-phone-number' ).hide();
   $( '#addcon-email-helper' ).hide();
@@ -140,8 +139,31 @@ function init() {
   $( '#add-consumer-allow-access-disclosure' ).hide();
   // $( '#poc-disclosure' ).hide();
 
+  // Hide primary and additional consumer, and point of contact by default.
+  $( '#select_product' ).hide();
+  $( '#additional-consumer' ).hide();
+  $( '#point-of-contact' ).hide();
+
+  $( '#select-who-involved .radio' ).on( 'change', function() {
+    if ( $ ( '#select-who-involved_just-me' ).is( ':checked' ) ) {
+      $( '#select_product' ).slideDown();
+      $( '#additional-consumer' ).slideDown();
+      $( '#point-of-contact' ).slideDown();
+    }
+    else if ( $ ( '#select-who-involved_someone-else' ).is( ':checked' ) ) {
+      $( '#select_product' ).slideDown();
+      $( '#additional-consumer' ).slideDown();
+      $( '#point-of-contact' ).slideDown();
+    }
+    else if ( $ ( '#select-who-involved_me-someone-else' ).is( ':checked' ) ) {
+      $( '#select_product' ).slideDown();
+      $( '#additional-consumer' ).slideDown();
+      $( '#point-of-contact' ).slideDown();
+    }
+  } );
+
   $( '#ans-poc-other-who' ).slideUp();
-    $( '#point-of-contact-identity' ).on( 'change', function(){
+    $( '#point-of-contact-identity' ).on( 'change', function() {
     var poctype = $(this).val();
     $( '#ans-poc-other-who' ).slideDown();
 
