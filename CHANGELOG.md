@@ -4,6 +4,24 @@
 - Nothing.
 
 ### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.10.1](https://cfpb.github.io/complaint-intake/versions/0.10.1/)
+
+### Added
+- Nothing.
+
+### Changed
 - Removes "Optional" text next to address fields when all fields are optional.
 - Hides all but first radio buttons on step 5 on page load.
 
