@@ -4,7 +4,7 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Removes "Optional" text next to address fields when all fields are optional.
 
 ### Deprecated
 - Nothing.

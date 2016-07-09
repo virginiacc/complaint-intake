@@ -40,7 +40,11 @@ function initOptions( context ) {
 
 function _initAddress( addressDom, id ) {
   var label = addressDom.getAttribute( 'data-label' );
-  addressDom.innerHTML = addressHandlebars( { id: id, label: label } );
+  if ( label !== 'Company address' ) {
+    addressDom.innerHTML = addressHandlebars( { id: id, label: label, addOptionalText: true } );
+  } else {
+    addressDom.innerHTML = addressHandlebars( { id: id, label: label, addOptionalText: false } );
+  }
   _countryDropdownDom = addressDom.querySelector( '#address-country-' + id );
   _addressMap[_countryDropdownDom.id] = addressDom;
   _countryDropdownDom.addEventListener( 'change', _countryChanged );
@@ -55,6 +59,10 @@ function _countryChanged( evt ) {
   // 100 is the value code for the USA.
   if ( evt.target.value !== '100' ) {
     opts.isInternational = true;
+  }
+
+  if ( label !== 'Company address' ) {
+    opts.addOptionalText = true;
   }
   _addressContainerDom = _addressMap[evt.target.id];
   _countryDropdownDom = _addressContainerDom.querySelector( '#address-country-' + id );

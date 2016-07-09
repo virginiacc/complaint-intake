@@ -406,7 +406,7 @@
 <div class="row cr-question">
     <div class="span3 cr-label cr-question-left">
         <label for="address-line2-{{id}}">
-            {{label}} line 2 <small class="inline">(Optional)</small>
+            {{label}} line 2 {{#if addOptionalText}}<small class="inline">(Optional)</small>{{/if}}
             <div class='is-required'>Answer Required</div>
         </label>
 
@@ -419,7 +419,7 @@
 <div class="row cr-question">
     <div class="span3 cr-label cr-question-left">
         <label for="address-line3-{{id}}">
-            {{label}} address line 3 <small class="inline">(Optional)</small>
+            {{label}} line 3 {{#if addOptionalText}}<small class="inline">(Optional)</small>{{/if}}
             <div class='is-required'>Answer Required</div>
         </label>
 
