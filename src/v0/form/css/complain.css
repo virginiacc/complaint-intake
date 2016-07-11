@@ -2164,22 +2164,46 @@ a.annotation-button:hover,
 /* Format Social Security number on my company step to XXX-XX-XXXX. */
 #ssn1,
 #ssn2,
-#ssn3 {
+#ssn3,
+#bd1,
+#bd2,
+#bd3 {
     float: left;
     clear: initial;
 }
 
-#ssn1 {
-    width: 41px;
+#ssn1::-webkit-input-placeholder,
+#ssn2::-webkit-input-placeholder,
+#ssn3::-webkit-input-placeholder,
+#bd1::-webkit-input-placeholder,
+#bd2::-webkit-input-placeholder,
+#bd3::-webkit-input-placeholder {
+    color: #ccc;
 }
 
-#ssn2 {
-    width: 31px;
+#ssn1::-moz-placeholder,
+#ssn2::-moz-placeholder,
+#ssn3::-moz-placeholder,
+#bd1::-moz-placeholder,
+#bd2::-moz-placeholder,
+#bd3::-moz-placeholder {
+    color: #ccc;
+}
+
+#ssn1 {
+    width: 45px;
+}
+
+#ssn2,
+#bd1,
+#bd2 {
+    width: 39px;
     margin-left: 10px;
 }
 
-#ssn3 {
-    width: 49px;
+#ssn3,
+#bd3 {
+    width: 57px;
     margin-left: 10px;
 }
 
