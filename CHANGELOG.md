@@ -4,6 +4,24 @@
 - Nothing.
 
 ### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.10.2](https://cfpb.github.io/complaint-intake/versions/0.10.2/)
+
+### Added
+- Nothing.
+
+### Changed
 - Updates formatting of date inputs to three fields.
 - Updates placeholder text to social security number inputs.
 
