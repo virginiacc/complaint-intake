@@ -4,7 +4,8 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Updates formatting of date inputs to three fields.
+- Updates placeholder text to social security number inputs.
 
 ### Deprecated
 - Nothing.
