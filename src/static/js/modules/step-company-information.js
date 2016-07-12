@@ -141,9 +141,10 @@ function init() {
       var subproduct = webStorageProxy.getItem( 'subproduct_selected', localStorage );
       var issue = webStorageProxy.getItem( 'issue_selected', localStorage );
 
+      $( '#company-type-2' ).hide();
+
       /* alert(product + ', ' + subproduct + ', ' + issue); */
       switch ( product ) {
-
         case 'mortgage':
           $( '#company-intro-1' ).text( 'Mortgage company' );
           $( '#company-type-1' ).show();
@@ -195,17 +196,16 @@ function init() {
         case 'debt':
           $( '#company-intro-1' ).text( 'Debt collection company' );
           $( '#company-type-1' ).show();
+          $( '#company-type-2' ).show();
           $( '#identify-debt-collection-company' ).appendTo( '#company-type-1' );
           break;
 
         default:
           $( '#company-intro-1' ).text( 'Company information' );
           $( '#company-type-1' ).show();
-          $( '#company-type-2' ).hide();
-
       }
-      switch (subproduct) {
 
+      switch ( subproduct ) {
         case 'credit-repair':
           $( '#company-intro-1' ).text( 'Credit repair company' );
           $( '#company-type-1' ).show();
@@ -235,24 +235,53 @@ function init() {
           $( '#company-type-1' ).show();
           $( '#identify-credit-reporting-company' ).remove();
           $( '#identify-storefront-services-company' ).appendTo( '#company-type-1' );
-      }
-      switch (issue) {
 
-        case 'debt_collection':
-          $( '#company-intro-2' ).text( 'Debt collection company' );
-          $( '#company-type-2' ).show();
-          $( '#identify-debt-collection-company' ).appendTo( '#company-type-2' );
+        // Debt collection subproducts.
+        case 'credit-card-debt-collection':
+          $( '#company-intro-2' ).text( 'Credit card company' );
           break;
 
+        case 'mortgage-debt-collection':
+          $( '#company-intro-2' ).text( 'Mortgage company' );
+          break;
+
+        case 'medical-debt-collection':
+          $( '#company-intro-2' ).text( 'Medical company' );
+          break;
+
+        case 'payday-loan-debt-collection':
+          $( '#company-intro-2' ).text( 'Payday loan company' );
+          break;
+
+        case 'auto-debt-collection':
+          $( '#company-intro-2' ).text( 'Auto company' );
+          break;
+
+        case 'federal-student-debt-collection':
+          $( '#company-intro-2' ).text( 'Federal student loan company' );
+          break;
+
+        case 'non-federal-student-debt-collection':
+          $( '#company-intro-2' ).text( 'Non-federal student loan company' );
+          break;
+
+        case 'other-debt-collection':
+          $( '#company-intro-2' ).text( 'Other debt company' );
+          break;
+
+        case 'unknown-debt-collection':
+          $( '#company-intro-2' ).text( 'Unknown company' );
+          break;
+      }
+
+      switch ( issue ) {
         case 'credit_reporting':
           $( '#company-intro-2' ).text( 'Credit reporting company' );
           $( '#company-type-2' ).show();
           $( '#identify-credit-reporting-company' ).appendTo( '#company-type-2' );
           break;
-
-        default:
-          $( '#company-type-2' ).hide();
       }
+
       /*
       if ( $( '.company-name-input' ).val()) {
       $(this).closest( '.identify-product-options' ).slideDown(200);

@@ -93,9 +93,11 @@ function init() {
     setTimeout( function() {
       // grab stuff from step 1
       var subproduct = webStorageProxy.getItem( 'subproduct_selected', localStorage );
-      var subproductname = subproduct.replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');
+      if ( subproduct ) {
+        var subproductname = subproduct.replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ').replace('-', ' ');
+        $( '#product-name-in-subhead' ).text( subproductname );
+      }
       var issuelist = webStorageProxy.getItem( 'issue_list', localStorage );
-      $( '#product-name-in-subhead' ).text( subproductname );
       $( '.all-topissues' ).hide();
       $( '#issue_options_' + issuelist ).slideDown( 200 );
       // $('#issue_options_' + issuelist).show();

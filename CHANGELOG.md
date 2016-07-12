@@ -1,10 +1,13 @@
 ## Unreleased
 
 ### Added
-- Nothing.
+- Where did you get the loan fieldset from debt collection/payday loan.
 
 ### Changed
-- Nothing.
+- Removes fieldset borders that were being applied outside of pagination.
+- Added `data-` prefix to data attributes.
+- Added second company to debt collection sub-products.
+- Added placeholder text for step 2 when product is not selected.
 
 ### Deprecated
 - Nothing.
@@ -13,7 +16,7 @@
 - Nothing.
 
 ### Fixed
-- Nothing.
+- Fixed toggle on dispute case section for all products.
 
 
 ## [0.10.2](https://cfpb.github.io/complaint-intake/versions/0.10.2/)

@@ -287,17 +287,17 @@ What type of credit reporting product?
 <div id="subproduct_options" class="select-product-or-issue">
  <!--     -->
  <div id="mortgage_products" class="subproduct_sect mortgage_products">
-  <label id="home-mortgage" class="radio block" issues="mortgage">
+  <label id="home-mortgage" class="radio block" data-issues="mortgage">
     <input name="sec_selex" type="radio" class="radio_input_subpro"/>
     Home mortgage
     <br /><small></small>
   </label>
-  <label id="home-equity-line-of-credit" class="radio block" issues="mortgage">
+  <label id="home-equity-line-of-credit" class="radio block" data-issues="mortgage">
     <input name="sec_selex" type="radio" class="radio_input_subpro"/>
     Home equity line of credit
     <br /><small></small>
   </label>
-  <label id="reverse-mortgage" class="radio block" issues="mortgage">
+  <label id="reverse-mortgage" class="radio block" data-issues="mortgage">
     <input name="sec_selex" type="radio" class="radio_input_subpro"/>
     Reverse mortgage
     <br /><small></small>
@@ -307,18 +307,18 @@ What type of credit reporting product?
 
 <div id="student_loan_products" class="subproduct_sect student_loan_products">
 
-  <label id="federal-student-loan" class="radio block" issues="student_loan">
+  <label id="federal-student-loan" class="radio block" data-issues="student_loan">
     <input name="sec_selex" type="radio" class="radio_input_subpro"/>
     Federal student loan
     <br /><small>Stafford, Direct Subsidized, Direct Unsubsidized, consolidation, PLUS, Perkins, Federal Family Education Loan (FFEL)</small>
   </label>
-  <label id="private-student-loan" class="radio block" issues="student_loan">
+  <label id="private-student-loan" class="radio block" data-issues="student_loan">
     <input name="sec_selex" type="radio" class="radio_input_subpro"/>
     Private student loan
     <br /><small>Private, alternative, or co-signed loans; federal loans refinanced with a private lender; other student loans</small>
   </label>
 <!--
-            <label id="student-loan-unsure" class="radio block" issues="student_loan">
+            <label id="student-loan-unsure" class="radio block" data-issues="student_loan">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
                 I don't know
                 <br /><small></small>
@@ -328,12 +328,12 @@ What type of credit reporting product?
 
         <div id="vehicle_loan_products" class="subproduct_sect vehicle_loan_products">
 
-          <label id="vehicle-loan" class="radio block" issues="vehicle_loan">
+          <label id="vehicle-loan" class="radio block" data-issues="vehicle_loan">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Loan
             <br /><small></small>
           </label>
-          <label id="vehicle-lease" class="radio block" issues="vehicle_lease">
+          <label id="vehicle-lease" class="radio block" data-issues="vehicle_lease">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Lease
             <br /><small></small>
@@ -342,27 +342,27 @@ What type of credit reporting product?
 
         <fieldset id="consumer_loan_products" class="subproduct_sect consumer_loan_products">
 
-          <label id="payday-loan" class="radio block" addtlquestions="payday" issues="payday_loan">
+          <label id="payday-loan" class="radio block" data-addtlquestions="payday" data-issues="payday_loan">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Payday loan
             <br /><small></small>
           </label>
-          <label id="pawn-loan" class="radio block" addtlquestions="payday" issues="pawn_loan">
+          <label id="pawn-loan" class="radio block" data-addtlquestions="payday" data-issues="pawn_loan">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Pawn loan
             <br /><small></small>
           </label>
-          <label id="title-loan" class="radio block" addtlquestions="payday" issues="title_loan">
+          <label id="title-loan" class="radio block" data-addtlquestions="payday" data-issues="title_loan">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Title loan
             <br /><small></small>
           </label>
-          <label id="installment-loan" class="radio block" addtlquestions="payday" issues="installment_loan">
+          <label id="installment-loan" class="radio block" data-addtlquestions="payday" data-issues="installment_loan">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Installment loan
             <br /><small></small>
           </label>
-          <label id="personal-line-of-credit" class="radio block" issues="personal_line_of_credit">
+          <label id="personal-line-of-credit" class="radio block" data-issues="personal_line_of_credit">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Personal line of credit
             <br /><small></small>
@@ -371,49 +371,49 @@ What type of credit reporting product?
 
         <div id="card_products" class="subproduct_sect card_products">
 
-          <label id="credit-card" class="radio block" issues="credit_card">
+          <label id="credit-card" class="radio block" data-issues="credit_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Credit card
             <br /><small>Used for purchasing items on credit</small>
           </label>
-          <label id="gift-card" class="radio block" issues="prepaid_card">
+          <label id="gift-card" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Gift card
             <br /><small>Gift, loyalty or promotional card issued by a store</small>
           </label>
-          <label id="government-benefit-card" class="radio block" issues="prepaid_card">
+          <label id="government-benefit-card" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Government benefit card
             <br /><small>Used for Social Security, unemployment compensation or a tax refund</small>
           </label>
-          <label id="reloadable-prepaid-card" class="radio block" issues="prepaid_card">
+          <label id="reloadable-prepaid-card" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Reloadable prepaid card
             <br /><small>Used for shopping anywhere</small>
           </label>
-          <label id="ID-prepaid-card" class="radio block" issues="prepaid_card">
+          <label id="ID-prepaid-card" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             ID prepaid card
             <br /><small>Prepaid card attached to a student or other ID</small>
           </label>
-          <label id="mobile-wallet" class="radio block" issues="prepaid_card">
+          <label id="mobile-wallet" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Mobile wallet
             <br /><small>Used for making payments on your mobile phone</small>
           </label>
 
-          <label id="payroll-card" class="radio block" issues="prepaid_card">
+          <label id="payroll-card" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Payroll card
             <br /><small>Used for receiving your paycheck from your employer</small>
           </label>
 
-          <label id="transit-card" class="radio block" issues="prepaid_card">
+          <label id="transit-card" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Transit card
             <br /><small>A transit card that can be used for shopping anywhere</small>
           </label>
-          <label id="refund-anticipation" class="radio block" issues="refund_anticipation">
+          <label id="refund-anticipation" class="radio block" data-issues="refund_anticipation">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Refund anticipation card
             <br /><small>Used for receiving a tax refund</small>
@@ -422,29 +422,29 @@ What type of credit reporting product?
 
         <div id="checking_products" class="subproduct_sect checking_products">
 
-          <label id="checking-account" class="radio block" issues="checking_account">
+          <label id="checking-account" class="radio block" data-issues="checking_account">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Checking account
             <br /><small></small>
           </label>
 
-          <label id="savings-account" class="radio block" issues="savings_account">
+          <label id="savings-account" class="radio block" data-issues="savings_account">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Savings account
             <br /><small></small>
           </label>
-          <label id="certificate-of-deposit" class="radio block" issues="certificate_of_deposit">
+          <label id="certificate-of-deposit" class="radio block" data-issues="certificate_of_deposit">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             CD (Certificate of Deposit)
             <br /><small></small>
           </label>
-          <label id="other-bank-product-or-service" class="radio block" issues="checking_account">
+          <label id="other-bank-product-or-service" class="radio block" data-issues="checking_account">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Other bank product or service
             <br /><small></small>
           </label>
 <!--
-            <label id="cashing-a-check-without-an-account" class="radio block" issues="check_cashing">
+            <label id="cashing-a-check-without-an-account" class="radio block" data-issues="check_cashing">
                 <input name="sec_selex" type="radio" class="radio_input_subpro"/>
                 Cashing a check without an account
                 <br /><small></small>
@@ -455,58 +455,58 @@ What type of credit reporting product?
 
         <div id="money_trans_products" class="subproduct_sect money_trans_products">
 
-          <label id="domestic-money-transfer" class="radio block" issues="money_transfer">
+          <label id="domestic-money-transfer" class="radio block" data-issues="money_transfer">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Domestic (US) money transfer
             <br /><small></small>
           </label>
-          <label id="international-money-transfer" class="radio block" issues="money_transfer">
+          <label id="international-money-transfer" class="radio block" data-issues="money_transfer">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             International money transfer
             <br /><small></small>
           </label>
-          <label id="check-cashing" class="radio block" issues="check_cashing">
+          <label id="check-cashing" class="radio block" data-issues="check_cashing">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Check cashing
             <br /><small></small>
           </label>
-          <label id="mobile-wallet" class="radio block" issues="prepaid_card">
+          <label id="mobile-wallet" class="radio block" data-issues="prepaid_card">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Mobile wallet
             <br /><small></small>
           </label>
 
-          <label id="money-order" class="radio block" issues="money_order">
+          <label id="money-order" class="radio block" data-issues="money_order">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Money order
             <br /><small></small>
           </label>
 
-          <label id="refund-anticipation" class="radio block" issues="refund_anticipation">
+          <label id="refund-anticipation" class="radio block" data-issues="refund_anticipation">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Refund anticipation check
             <br /><small></small>
           </label>
 
-          <label id="traveler-or-cashier" class="radio block" issues="traveler_cashier_check">
+          <label id="traveler-or-cashier" class="radio block" data-issues="traveler_cashier_check">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Traveler's check or cashier's check
             <br /><small></small>
           </label>
 
-          <label id="foreign-currency-exchange" class="radio block" issues="fx_exchange">
+          <label id="foreign-currency-exchange" class="radio block" data-issues="fx_exchange">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Foreign currency exchange
             <br /><small></small>
           </label>
 
-          <label id="virtual-currency" class="radio block" issues="virtual_currency">
+          <label id="virtual-currency" class="radio block" data-issues="virtual_currency">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Virtual currency
             <br /><small></small>
           </label>
 
-          <label id="debt-settlement" class="radio block" issues="credit_repair">
+          <label id="debt-settlement" class="radio block" data-issues="credit_repair">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Debt settlement
             <br /><small></small>
@@ -516,48 +516,48 @@ What type of credit reporting product?
 
         <div id="debt_products" class="subproduct_sect debt_products">
 
-          <label id="credit-card-debt-collection" class="radio block" issues="debt_collection">
+          <label id="credit-card-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Credit card debt
             <br /><small></small>
           </label>
-          <label id="mortgage-debt-collection" class="radio block" issues="debt_collection">
+          <label id="mortgage-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Mortgage debt
             <br /><small></small>
           </label>
-          <label id="medical-debt-collection" class="radio block" issues="debt_collection">
+          <label id="medical-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Medical debt
             <br /><small></small>
           </label>
-          <label id="payday-loan-debt-collection" class="radio block" issues="debt_collection">
+          <label id="payday-loan-debt-collection" class="radio block" data-addtlquestions="payday" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Payday loan debt
             <br /><small></small>
           </label>
-          <label id="auto-debt-collection" class="radio block" issues="debt_collection">
+          <label id="auto-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Auto debt
             <br /><small></small>
           </label>
-          <label id="federal-student-debt-collection" class="radio block" issues="debt_collection">
+          <label id="federal-student-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Federal student loan debt
             <br /><small></small>
           </label>
 
-          <label id="non-federal-student-debt-collection" class="radio block" issues="debt_collection">
+          <label id="non-federal-student-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Non-federal student loan debt
             <br /><small></small>
           </label>
-          <label id="other-debt-collection" class="radio block" issues="debt_collection">
+          <label id="other-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Other debt
             <br /><small></small>
           </label>
-          <label id="unknown-debt-collection" class="radio block" issues="debt_collection">
+          <label id="unknown-debt-collection" class="radio block" data-issues="debt_collection">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             I do not know
             <br /><small></small>
@@ -566,12 +566,12 @@ What type of credit reporting product?
 
         <div id="credit_reporting_products" class="subproduct_sect credit_reporting_products">
 
-          <label id="credit-reporting" class="radio block" issues="credit_reporting">
+          <label id="credit-reporting" class="radio block" data-issues="credit_reporting">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Credit reporting or credit score
             <br /><small></small>
           </label>
-          <label id="credit-repair" class="radio block" issues="credit_repair">
+          <label id="credit-repair" class="radio block" data-issues="credit_repair">
             <input name="sec_selex" type="radio" class="radio_input_subpro"/>
             Credit repair services
             <br /><small></small>
