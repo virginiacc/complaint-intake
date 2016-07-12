@@ -26,9 +26,9 @@ function init() {
 
       $( '#product_options label.active' ).removeClass( 'active' );
       $( '#select_subproduct' ).fadeIn( 'fast' );
-      $( '#' + $(this).attr( 'id' ) + '_label' ).fadeIn( 'fast' );
-      $( '#' + $(this).attr( 'id' ) + '_products' ).slideDown(200);
-      $(this).closest( 'label' ).addClass( 'active' );
+      $( '#' + $( this ).attr( 'id' ) + '_label' ).fadeIn( 'fast' );
+      $( '#' + $( this ).attr( 'id' ) + '_products' ).slideDown(200);
+      $( this ).closest( 'label' ).addClass( 'active' );
     }
   } );
 
@@ -36,24 +36,26 @@ function init() {
     if ( $( '.radio_input_subpro' ).is( ':checked' ) ) {
       $( '#subproduct_options label.active' ).removeClass( 'active' );
       $( '.product-specific-questions label.active' ).removeClass( 'active' );
-      $(this).closest( 'label' ).addClass( 'active' );
+      $( this ).closest( 'label' ).addClass( 'active' );
 
-      if ( $(this).parent().attr( 'addtlquestions' ) == 'payday' ){
+      if ( $( this ).parent().attr( 'data-addtlquestions' ) === 'payday' ){
         $( '#payday_questions' ).slideDown().show();
         $( '#payday_questions .follow-up' ).hide();
       } else {
-       $( '#payday_questions' ).hide();
+        $( '#payday_questions' ).slideUp();
       }
-      if ( $(this).parent().attr( 'id' ) == 'federal-student-loan' ){
+
+      if ( $( this ).parent().attr( 'id' ) === 'federal-student-loan' ){
         $( '#student_questions' ).slideDown().show();
-      } else if ( $(this).parent().attr( 'id' ) == 'private-student-loan' ){
+      } else if ( $( this ).parent().attr( 'id' ) === 'private-student-loan' ){
         $( '#student_questions' ).slideDown().show();
       } else {
         $( '#student_questions' ).slideUp();
       }
-      if ( $(this).parent().attr( 'id' ) == 'vehicle-loan' ){
+
+      if ( $( this ).parent().attr( 'id' ) === 'vehicle-loan' ){
         $( '#vehicle_questions' ).slideDown().show();
-      } else if ( $(this).parent().attr( 'id' ) == 'vehicle-lease' ){
+      } else if ( $( this ).parent().attr( 'id' ) === 'vehicle-lease' ){
         $( '#vehicle_questions' ).slideDown().show();
       } else {
         $( '#vehicle_questions' ).slideUp();
@@ -64,13 +66,13 @@ function init() {
   $( '.product-specific-questions .radio_input_subpro' ).on( 'change', function(){
     if ( $( '.radio_input_subpro' ).is( ':checked' ) ) {
       $( '.product-specific-questions label.active' ).removeClass( 'active' );
-      $(this).closest( 'label' ).addClass( 'active' );
-      if ( $(this).parent().attr( 'id' ) == 'at-store' ){
+      $( this ).closest( 'label' ).addClass( 'active' );
+      if ( $( this ).parent().attr( 'id' ) === 'at-store' ){
         $( '#store-questions' ).slideDown().show();
       } else {
         $( '#store-questions' ).hide();
       }
-      if ( $(this).parent().attr( 'id' ) == 'online' ){
+      if ( $( this ).parent().attr( 'id' ) === 'online' ){
         $( '#online-questions' ).slideDown().show();
       } else {
         $( '#online-questions' ).hide();
@@ -92,12 +94,12 @@ function init() {
       $( '#subproduct_options .radio' ).click( function(){
         // save the subproduct to local storage
         var subpro = $( this ).attr( 'id' );
-        var issuelist = $( this ).attr( 'issues' );
+        var issuelist = $( this ).attr( 'data-issues' );
         webStorageProxy.setItem( 'issue_list', issuelist, localStorage );
         webStorageProxy.setItem( 'subproduct_selected', subpro, localStorage );
 
         /*
-        if ( $(this).attr('id') == 'payday-loan' ){
+        if ( $( this ).attr('id') === 'payday-loan' ){
           alert('payday is happening.');
         }
         // alert(subpro + ', ' + issuelist);

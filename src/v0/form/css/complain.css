@@ -477,7 +477,14 @@ cruxform .cr-question-left input.accountinput {
 }
 
 fieldset {
-    margin:0px;
+    margin: 0;
+}
+
+/* Override pagination fieldset settings. */
+.content fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .cr-label label,
