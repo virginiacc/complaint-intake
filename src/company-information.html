@@ -262,6 +262,7 @@ COMPANY-1
     </fieldset><!-- not-boarded -->
 
     <!-- THIS IS WHERE THE OPTIONS GO! -->
+    <div class="identify-product-options"></div>
 
 </div> <!-- company-type 1 -->
 
@@ -383,6 +384,8 @@ COMPANY-2
     </fieldset><!-- not-boarded -->
 
 <!-- THIS IS WHERE THE OPTIONS GO! -->
+<div class="identify-product-options">
+</div>
 
 </div> <!-- company-type -->
 
@@ -409,7 +412,7 @@ ADDITIONAL COMPANY
 
 -->
 
-<div id="additional-company-div" class="cr-primary-container">
+<div id="company-type-3" class="cr-primary-container">
     <h3 id="additional-company">Additional company</h3>
     <fieldset class="cr-fieldset">
         <!-- question -->
@@ -459,12 +462,32 @@ ADDITIONAL COMPANY
                     <option class="ans-con1-coborrower" value="card">Credit or prepaid card</option>
                     <option class="ans-con1-coborrower" value="checking">Checking or savings account</option>
                     <option class="ans-con1-coborrower" value="money_trans">Money transfer or money service</option>
-                    <option class="ans-con1-coborrower" value="consumer_loan">Payday, online, store, or other loan</option>
+                    <option class="ans-con1-coborrower" value="consumer_loan">Payday, store, or other loan</option>
                 </select>
 
                 <div id="ans-rel-other-who" style="display:none;">
                     <input type="text" class="input-medium" name="cr-con1-other-who" id="cr-con1-other-who" placeholder="">
                 </div>
+
+                <select name="additional-consumer-identity2" id="additional-consumer-identity2" class="input-medium">
+                    <option>Select sub-product...</option>
+                    <option class="ans-con1-coborrower" value="credit-reporting">Credit reporting or credit score</option>
+                    <option class="ans-con1-coborrower" value="credit-repair">Credit repair services</option>
+                </select>
+
+                <select name="additional-consumer-identity3" id="additional-consumer-identity3" class="input-medium">
+                    <option>Select sub-product...</option>
+                    <option class="ans-con1-coborrower" value="domestic-money-transfer">Domestic (US) money transfer</option>
+                    <option class="ans-con1-coborrower" value="international-money-transfer">International money transfer</option>
+                    <option class="ans-con1-coborrower" value="check-cashing">Check cashing</option>
+                    <option class="ans-con1-coborrower" value="mobile-wallet">Mobile wallet</option>
+                    <option class="ans-con1-coborrower" value="money-order">Money order</option>
+                    <option class="ans-con1-coborrower" value="refund-anticipation">Refund anticipation check</option>
+                    <option class="ans-con1-coborrower" value="traveler-or-cashier">Traveler's check or cashier's check</option>
+                    <option class="ans-con1-coborrower" value="foreign-currency-exchange">Foreign currency exchange</option>
+                    <option class="ans-con1-coborrower" value="virtual-currency">Virtual currency</option>
+                    <option class="ans-con1-coborrower" value="debt-settlement">Debt settlement</option>
+                </select>
 
             </div>
         </div>
@@ -566,6 +589,8 @@ ADDITIONAL COMPANY
             </div>
         </div>
     </fieldset><!-- not-boarded -->
+
+    <div class="identify-product-options"></div>
 </div>
 <!--
 
@@ -642,600 +667,6 @@ END OF Additional Company
                 </div>
 
             </fieldset>
-
-<!--
-/////
-MORTGAGE OPTIONS.
-/////
--->
-
-<fieldset id="identify-mortgage-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios cr-behalf prodselect">
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type loan-number' name="identify-account" value="loan-number">
-                Loan number
-            </label>
-
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type account-number' name="identify-account" value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio" class='identify-account identification-type residence-address' name="identify-account" value="residence-address">
-                Residence address
-            </label>
-
-            <label class="radio block last">
-                <input type="radio" class='identify-account identification-type billing-address' name="identify-account" value="billing-address">
-                Billing address
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-STUDENT LOAN OPTIONS.
-/////
--->
-
-<fieldset id="identify-student-loan-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios cr-behalf prodselect">
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type loan-number' name="identify-account" value="loan-number">
-                Loan number
-            </label>
-
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type account-number' name="identify-account" value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio" class='identify-account identification-type billing-address' name="identify-account" value="billing-address">
-                Billing address
-            </label>
-
-            <label class="radio block last">
-                <input type="radio"
-                       class='identify-account
-                             identification-type
-                             social-security-number'
-                       name="identify-account"
-                       value="social-security-number">
-                Social security number
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-PAYDAY & INSTALLMENT LOAN OPTIONS.
-/////
--->
-
-<fieldset id="identify-payday-other-loan-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <label class="radio block">
-            <input type="radio" class='identify-account identification-type loan-number' name="identify-account" value="loan-number">
-            Loan number
-        </label>
-
-        <label class="radio block last">
-            <input type="radio" class='identify-account identification-type billing-address' name="identify-account" value="billing-address">
-            Billing address
-        </label>
-    </div>
-</div>
-
-</fieldset>
-
-<!--
-/////
-VEHICLE LOAN OR LEASE OPTIONS.
-/////
--->
-
-<fieldset id="identify-vehicle-loan-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type loan-number' name="identify-account" value="loan-number">
-                Loan number
-            </label>
-
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type account-number' name="identify-account" value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio" class='identify-account identification-type billing-address' name="identify-account" value="billing-address">
-                Billing address
-            </label>
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-CHECKING OR SAVINGS OPTIONS.
-/////
--->
-
-<fieldset id="identify-checking-savings-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type account-number' name="identify-account" value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio" class='identify-account identification-type billing-address' name="identify-account" value="billing-address">
-                Billing address
-            </label>
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-MONEY TRANSFER OPTIONS.
-/////
--->
-
-<fieldset id="identify-money-transfer-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              account-number"
-                       name="identify-account"
-                       value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              transaction-number"
-                       name="identify-account"
-                       value="transaction-number">
-                Transaction number
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-CREDIT REPORTING OPTIONS.
-/////
--->
-
-<fieldset id="identify-credit-reporting-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              account-number"
-                       name="identify-account"
-                       value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              address-dob"
-                       name="identify-account"
-                       value="address-dob">
-                Residence address + Date of birth
-            </label>
-            <label class="radio block last">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              social-security-number"
-                       name="identify-account"
-                       value="social-security-number">
-                Social security number
-            </label>
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-DEBT COLLECTION OPTIONS.
-/////
--->
-
-<fieldset id="identify-debt-collection-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label cr-question-left identify-debt-collection-company-phone">
-            <label for="cr-first-name2_4851476384792477">
-                What phone number has been receiving calls from this debt collector?
-            </label>
-            <input type="text"
-                   name="company-account"
-                   id="company-account"
-                   class="accountinput"
-                   placeholder="">
-        </div>
-    </div>
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              account-number"
-                       name="identify-account"
-                       value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              social-security-last-four"
-                       name="identify-account"
-                       value="social-security-last-four">
-                Last four digits of Social Security Number
-            </label>
-
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              loan-number"
-                       name="identify-account"
-                       value="loan-number">
-                Loan number
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-
-<!--
-/////
-CREDIT REPAIR, DEBT SETTLEMENT OPTIONS.
-/////
--->
-
-<fieldset id="identify-credit-debt-repair-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              account-number"
-                       name="identify-account"
-                       value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              billing-address"
-                       name="identify-account"
-                       value="billing-address">
-                Billing address
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-STOREFRONT SERVICES OPTIONS.
-/////
--->
-
-<fieldset id="identify-storefront-services-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              account-number"
-                       name="identify-account"
-                       value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              transaction-number"
-                       name="identify-account"
-                       value="transaction-number">
-                Transaction number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              billing-address"
-                       name="identify-account"
-                       value="billing-address">
-                Billing address
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-MOST PREPAIDS OPTIONS.
-/////
--->
-
-<fieldset id="identify-most-prepaids-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              account-number"
-                       name="identify-account"
-                       value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              card-number"
-                       name="identify-account"
-                       value="card-number">
-                Card number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              billing-address"
-                       name="identify-account"
-                       value="billing-address">
-                Billing address
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-PAYROLL AND GOVT PREPAIDS OPTIONS.
-/////
--->
-
-<fieldset id="identify-payroll-govt-prepaid-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              account-number"
-                       name="identify-account"
-                       value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              card-number"
-                       name="identify-account"
-                       value="card-number">
-                Card number
-            </label>
-
-            <label class="radio block last">
-                <input type="radio"
-                       class="identify-account
-                              identification-type
-                              billing-address"
-                       name="identify-account"
-                       value="billing-address">
-                Billing address
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-/////
-MOBILE WALLET OPTIONS.
-/////
--->
-
-<fieldset id="identify-mobile-wallet-company" class="cr-fieldset identify-product-options">
-
-    <div class="row cr-question">
-        <div class="span3 cr-label">
-            <label>
-                How should this company identify you?
-                <div class='is-required'>Required</div>
-            </label>
-
-        </div>
-
-        <div class="span9 cr-answer cr-radios prodselect cr-behalf">
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type account-number' name="identify-account" value="account-number">
-                Account number
-            </label>
-
-            <label class="radio block">
-                <input type="radio" class='identify-account identification-type email-address' name="identify-account" value="email-address">
-                Email address on account
-            </label>
-
-        </div>
-    </div>
-
-</fieldset>
-
-<!--
-
-////////////////////////////////////////////
-    End of product-specific options
-////////////////////////////////////////////
-
--->
 
 <!--
 
