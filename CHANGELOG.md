@@ -1,6 +1,24 @@
 ## Unreleased
 
 ### Added
+- Nothing.
+
+### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.11.0](https://cfpb.github.io/complaint-intake/versions/0.11.0/)
+
+### Added
 - Where did you get the loan fieldset from debt collection/payday loan.
 
 ### Changed

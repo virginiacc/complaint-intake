@@ -52,7 +52,7 @@ Currently, the code lives in `/src/` and references legacy assets in `/src/v0/`.
 
 At the end of each sprint, we release the new iteration by updating the `gh-pages` branch. Here’s the process:
 
-1. Run one final `gulp` to make sure all the changes you want to release are built into the `dist` directory
+1. Run one final `gulp clean && gulp build` to make sure all the changes you want to release are built into the `dist` directory
 2. Make a copy of the `dist` directory somewhere, like your desktop
 3. Rename that copy of `dist` to the version you’re releasing, like `0.52`
 4. `git checkout gh-pages`
@@ -64,12 +64,13 @@ At the end of each sprint, we release the new iteration by updating the `gh-page
 10. Check to make sure the latest version is available at two URLs:
   - https://cfpb.github.io/complaint-intake/
   - https://cfpb.github.io/complaint-intake/versions/X.X.X/ (where X.X.X is the version you’re releasing, like 0.6.0)
-11. Switch back to `master` (you’ll need to re-run `./setup.sh`)
+11. Switch back to `master`
 12. Update `CHANGELOG.md` with the latest version’s release notes
-13. `git add .`
-14. `git commit -m 'Updated changelog'`
-15. `git push origin master`
-16. Released!
+13. Update `package.json` with the latest version
+14. `git add .`
+15. `git commit -m 'Updated changelog'`
+16. `git push origin master`
+17. Released!
 
 ## Open source licensing info
 1. [TERMS](TERMS.md)
