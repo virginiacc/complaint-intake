@@ -2208,6 +2208,10 @@ a.annotation-button:hover,
     margin-left: 10px;
 }
 
+#bd1 {
+    margin-left: 18px;
+}
+
 #ssn3,
 #bd3 {
     width: 57px;
@@ -2227,4 +2231,9 @@ a.annotation-button:hover,
 #affiliations {
     border-top: dotted 1px #ccc;
     padding-top: 12px;
+}
+
+#additional-consumer-identity2,
+#additional-consumer-identity3 {
+    clear: none;
 }

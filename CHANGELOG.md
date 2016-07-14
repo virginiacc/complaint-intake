@@ -8,6 +8,9 @@
 - Added `data-` prefix to data attributes.
 - Added second company to debt collection sub-products.
 - Added placeholder text for step 2 when product is not selected.
+- Made "how should this company identify you" section a template.
+- Updated product option combinations.
+- Updated company name selection to handle proper state when removing name.
 
 ### Deprecated
 - Nothing.

@@ -1537,99 +1537,46 @@ function _companySelected3( suggestion ) {
 function _companySelected( suggestion, step ) {
   var companymessage = suggestion.message;
   var optionsID = suggestion.data;
-  var automatched = 'matched';
   $( '#' + optionsID ).appendTo( '#company-name-fieldset-' + step ).show().slideDown();
   $( '#forward-company' + step ).html( companymessage );
-  if ( automatched === 'matched' ) {
-    $( '#company' + step + '-not-boarded' ).hide();
-  }
+  _checkCompanyInput( suggestion.value, step );
 }
 
-function _checkCompanyInput( i ) {
+function _checkCompanyInput( value, i ) {
   $( '#company' + i + '-not-boarded' ).hide();
-}
-
-function _checkCompanyInput1( value ) {
-  _checkCompanyInput();
-  $( '#company-type-1 .identify-product-options' ).hide();
-
-  // If the company entered is not in the array, ask for more info.
-  var companyentered = value;
-  if ( companyentered !== '' ) {
+  $( '#company-type-' + i + ' .identify-product-options' ).hide();
+  if ( value !== '' ) {
+    var matchFound = false;
     $.each( _companies, function( index, element ) {
-      $( '#company1-not-boarded' ).removeClass( 'company-matched' );
-      var val = element.value;
-      if ( val === companyentered ) {
-        $( '#company1-not-boarded' ).addClass( 'company-matched' );
+      if ( element.value === value ) {
+        matchFound = true;
       }
     } );
-    $( '#company1-not-boarded' ).show().slideDown();
-    $( '#company1-not-boarded.company-matched' ).hide();
-    // show product options based on product type (see function in main.js)
-    $( '#company-type-1 .identify-product-options' ).slideDown();
-  }
-}
 
-function _checkCompanyInput2( value ) {
-  _checkCompanyInput();
-  //$( '#company-type-2 .identify-product-options .row:last-child' ).hide();
-  //$( '#company-type-2 .identify-product-options' ).slideDown();
+    if ( matchFound ) {
+      $( '#company' + i + '-not-boarded' ).slideUp();
+    } else {
+      $( '#company' + i + '-not-boarded' ).slideDown();
+    }
 
-  // If the company entered is not in the array, ask for more info
-  var companyentered = value;
-  if ( companyentered !== '' ) {
-    $.each( _companies, function( index, element ) {
-      $( '#company2-not-boarded' ).removeClass( 'company-matched' );
-      var val = element.value;
-      if ( val === companyentered ) {
-        $( '#company2-not-boarded' ).addClass( 'company-matched' );
-      }
-    } );
-    $( '#company2-not-boarded' ).show().slideDown();
-    $( '#company2-not-boarded.company-matched' ).hide();
-    // show product options based on product type (see function in main.js)
-    //$( '#company-type-2 .identify-product-options .row:last-child' ).hide();
-    //$( '#company-type-2 .identify-product-options' ).slideDown();
-  }
-}
-
-function _checkCompanyInput3( value ) {
-  _checkCompanyInput();
-  $( '#company-type-3 .identify-product-options' ).slideDown();
-
-  // If the company entered is not in the array, ask for more info
-  var companyentered = value;
-
-  if ( companyentered !== '' ) {
-    $.each( _companies, function( index, element ) {
-        $( '#company3-not-boarded' ).removeClass( 'company-matched' );
-        var val = element.value;
-        if ( val === companyentered ) {
-            $( '#company3-not-boarded' ).addClass( 'company-matched' );
-        }
-     });
-    $( '#company3-not-boarded' ).show().slideDown();
-    $( '#company3-not-boarded.company-matched' ).hide();
-    // show product options based on product type (see function in main.js)
-    $( '#company-type-3 .identify-product-options' ).slideDown();
+    if ( i === 1 || $( '#company' + i + '-forward' ).is( ':checked' ) ) {
+      // Show product options based on product type.
+      $( '#company-type-' + i + ' .identify-product-options' ).slideDown();
+    }
+  } else if ( i > 1 && $( '#company' + i + '-forward' ).is( ':checked' ) ) {
+    $( '#company' + i + '-forward' ).click();
   }
 }
 
 var _functMap = {
   '_companySelected1':   _companySelected1,
-  '_checkCompanyInput1': _checkCompanyInput1,
   '_companySelected2':   _companySelected2,
-  '_checkCompanyInput2': _checkCompanyInput2,
   '_companySelected3':   _companySelected3,
-  '_checkCompanyInput3': _checkCompanyInput3
 }
 
 function _setEvents( i ) {
-  $( '#company' + i + '-name' ).change( function() {
-    _functMap[ '_checkCompanyInput' + i ]( $( this ).val() );
-  } );
   $( '#company' + i + '-name' ).focusout( function() {
-    _functMap[ '_checkCompanyInput' + i ]( $( this ).val() );
+    _checkCompanyInput( $( this ).val(), i );
   } );
 }
 
