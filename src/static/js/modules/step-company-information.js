@@ -89,6 +89,21 @@ function init() {
     }
   } );
 
+  $( '#company-type-2-option' ).hide();
+
+  // Whether to show/hide the second company.
+  $( '.second-company-yes' ).on( 'change', function() {
+    if ( $( '.second-company-yes' ).is( ':checked' ) ) {
+      $( '#company-type-2' ).slideDown();
+    }
+  } );
+
+  $( '.second-company-no' ).on( 'change', function() {
+    if ( $( '.second-company-no' ).is( ':checked' ) ) {
+      $( '#company-type-2' ).slideUp();
+    }
+  } );
+
   // Show/hide sections of Company Info.
   $( 'fieldset.additional-company' ).hide();
 
@@ -242,6 +257,98 @@ function init() {
     }
   } );
 
+  function _getSubproduct( subproduct ) {
+    var subProductQ = '';
+    switch ( subproduct ) {
+      case 'payday-loan':
+        subProductQ = 'Payday loan';
+        break;
+      case 'pawn-loan':
+        subProductQ = 'Pawn loan';
+        break;
+      case 'title-loan':
+        subProductQ = 'Title loan';
+        break;
+      case 'installment-loan':
+        subProductQ = 'Installment loan';
+        break;
+      case 'personal-line-of-credit':
+        subProductQ = 'Personal line of credit';
+        break;
+      case 'checking-account':
+        subProductQ = 'Checking account';
+        break;
+      case 'savings-account':
+        subProductQ = 'Savings account';
+        break;
+      case 'certificate-of-deposit':
+        subProductQ = 'Certificate of deposit';
+        break;
+      case 'other-bank-product-or-service':
+        subProductQ = 'Other bank product or service';
+        break;
+    }
+
+    return subProductQ;
+  }
+
+  function _showSecondCompanyQuestion( product, subproduct, issue ) {
+    var comp1Sel = '#company-type-1 .identify-product-options';
+    var comp1Options = document.querySelector( comp1Sel );
+
+    var comp2Sel = '#company-type-2 .identify-product-options';
+    var comp2Options = document.querySelector( comp2Sel );
+
+    var secondCompanyTitle = '';
+    var secondCompanyOptions = {};
+    switch ( product ) {
+      case 'mortgage':
+        secondCompanyTitle = 'Mortgage company';
+        secondCompanyOptions = _mortgageOptions;
+        break;
+      case 'consumer_loan':
+        secondCompanyTitle = _getSubproduct( subproduct );
+        secondCompanyOptions = _consumerLoanOptions;
+        break;
+      case 'student_loan':
+        secondCompanyTitle = 'Student loan company';
+        secondCompanyOptions = _studentLoanOptions;
+        break;
+      case 'vehicle_loan':
+        secondCompanyTitle = 'Vehicle loan company';
+        secondCompanyOptions = _vehicleLoanOptions;
+        break;
+      case 'card':
+        secondCompanyTitle = 'Credit card company';
+        secondCompanyOptions = _cardOptions;
+        break;
+      case 'checking':
+        secondCompanyTitle = _getSubproduct( subproduct );
+        secondCompanyOptions = _checkingOptions;
+        break;
+    }
+
+    if ( issue === 'debt_collection' ) {
+      $( '#company-intro-1' ).text( 'Debt collection company' );
+      $( '#company-type-1-product' ).text( 'debt collection company' );
+    } else if ( issue === 'credit_reporting' ) {
+      $( '#company-intro-1' ).text( 'Credit reporting company' );
+      $( '#company-type-1-product' ).text( 'credit reporting company' );
+   }
+
+    $( '#company-type-1' ).show();
+    $( '#company-type-2-option_header' ).text( 'Does the complaint also involve the ' + secondCompanyTitle.toLowerCase() + '?' );
+    $( '#company-intro-2' ).text( secondCompanyTitle );
+    $( '.company-2-checkbox' ).hide();
+    $( '.company-2-checkbox input' ).prop( 'checked', true );
+    $( '#forward-company2' ).show();
+    $( '#company-type-2-option' ).show();
+    comp1Options.innerHTML = identifyOptionsHandlebars( _debtOptions );
+    comp2Options.innerHTML = identifyOptionsHandlebars( secondCompanyOptions );
+    $( '#company-type-1-subproduct' ).text( secondCompanyTitle.toLowerCase() );
+    $( '#company-type-1-intro-text' ).show();
+  }
+
   // Show/hide product identification options.
   $( 'fieldset.identify-options' ).hide();
   $( '.company_verification_fieldset' ).hide();
@@ -259,18 +366,17 @@ function init() {
       var comp2Options = document.querySelector( comp2Sel );
 
       $( '#company-type-1 .identify-product-options' ).hide();
+      $( '#company-type-1-intro-text' ).hide();
       $( '#company-type-2' ).hide();
       $( '#company-type-2 .identify-product-options' ).hide();
+      $( '.company-2-checkbox' ).show();
 
       if ( product === 'mortgage' ) {
         $( '#company-intro-1' ).text( 'Mortgage company' );
         $( '#company-type-1' ).show();
         comp1Options.innerHTML = identifyOptionsHandlebars( _mortgageOptions );
-
-        if ( issue === 'debt_collection' ) {
-          $( '#company-intro-2' ).text( 'Debt collection company' );
-          $( '#company-type-2' ).show();
-          comp2Options.innerHTML = identifyOptionsHandlebars( _debtOptions );
+        if ( issue === 'debt_collection' || issue === 'credit_reporting' ) {
+          _showSecondCompanyQuestion( product, subproduct, issue );
         }
       } else if ( product === 'credit_reporting' ) {
         if ( subproduct === 'credit-reporting' ) {
@@ -285,47 +391,38 @@ function init() {
       } else if ( product === 'card' ) {
         $( '#company-intro-1' ).text( 'Company information' );
         $( '#company-type-1' ).show();
-          comp1Options.innerHTML = identifyOptionsHandlebars( _cardOptions );
-        if ( subproduct === 'credit-card' && issue === 'debt_collection' ) {
-          $( '#company-intro-2' ).text( 'Debt collection company' );
-          $( '#company-type-2' ).show();
-          comp2Options.innerHTML = identifyOptionsHandlebars( _debtOptions );
+        comp1Options.innerHTML = identifyOptionsHandlebars( _cardOptions );
+        if ( subproduct === 'credit-card' &&
+             ( issue === 'debt_collection' || issue === 'credit_reporting' ) ) {
+          _showSecondCompanyQuestion( product, subproduct, issue );
         }
       } else if ( product === 'checking' ) {
         $( '#company-intro-1' ).text( 'Company information' );
         $( '#company-type-1' ).show();
         comp1Options.innerHTML = identifyOptionsHandlebars( _checkingOptions );
-        if ( issue === 'debt_collection' ) {
-          $( '#company-intro-2' ).text( 'Debt collection company' );
-          $( '#company-type-2' ).show();
-          comp2Options.innerHTML = identifyOptionsHandlebars( _debtOptions );
+        if ( issue === 'debt_collection' || issue === 'credit_reporting' ) {
+          _showSecondCompanyQuestion( product, subproduct, issue );
         }
       } else if ( product === 'vehicle_loan' ) {
         $( '#company-intro-1' ).text( 'Vehicle loan company' );
         $( '#company-type-1' ).show();
         comp1Options.innerHTML = identifyOptionsHandlebars( _vehicleLoanOptions );
-        if ( issue === 'debt_collection' ) {
-          $( '#company-intro-2' ).text( 'Debt collection company' );
-          $( '#company-type-2' ).show();
-          comp2Options.innerHTML = identifyOptionsHandlebars( _debtOptions );
+        if ( issue === 'debt_collection' || issue === 'credit_reporting' ) {
+          _showSecondCompanyQuestion( product, subproduct, issue );
         }
       } else if ( product === 'student_loan' ) {
         $( '#company-intro-1' ).text( 'Student loan company' );
         $( '#company-type-1' ).show();
         comp1Options.innerHTML = identifyOptionsHandlebars( _studentLoanOptions );
-        if ( issue === 'debt_collection' ) {
-          $( '#company-intro-2' ).text( 'Debt collection company' );
-          $( '#company-type-2' ).show();
-          comp2Options.innerHTML = identifyOptionsHandlebars( _debtOptions );
+        if ( issue === 'debt_collection' || issue === 'credit_reporting' ) {
+          _showSecondCompanyQuestion( product, subproduct, issue );
         }
       } else if ( product === 'consumer_loan' ) {
         $( '#company-intro-1' ).text( 'Company information' );
         $( '#company-type-1' ).show();
         comp1Options.innerHTML = identifyOptionsHandlebars( _consumerLoanOptions );
-        if ( issue === 'debt_collection' ) {
-          $( '#company-intro-2' ).text( 'Debt collection company' );
-          $( '#company-type-2' ).show();
-          comp2Options.innerHTML = identifyOptionsHandlebars( _debtOptions );
+        if ( issue === 'debt_collection' || issue === 'credit_reporting' ) {
+          _showSecondCompanyQuestion( product, subproduct, issue );
         }
       } else if ( product === 'money_trans' ) {
         $( '#company-intro-1' ).text( 'Company information' );

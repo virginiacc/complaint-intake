@@ -155,6 +155,12 @@ COMPANY-1
 
     <h3 id="company-intro-1" class="company-intro">Company information</h3>
 
+    <p id="company-type-1-intro-text" class="page-intro select-product extra-bottom">
+        Based on the issue selected, it appears the complaint actually has to do with a
+        <span id="company-type-1-product">[product]</span>,
+        not a <span id="company-type-1-subproduct">[subproduct]</span>.
+    </p>
+
     <fieldset id="company-name-fieldset-1" class="cr-fieldset">
         <!-- question -->
         <div class="row cr-question">
@@ -277,9 +283,28 @@ End company-1
 COMPANY-2
 ///////////
 -->
-<!-- this was an easy fix for spacing-->
 
-<!-- end easy -->
+<!-- Start company 2 question -->
+<div id="company-type-2-option">
+
+    <h3 id="company-type-2-option_header" for="select_subproduct" class="last product subproduct_label product_vehicle_loan label_same_as_header" style="display: block;">
+        Do you think your complaint involves the [mortgage company]?
+    </h3>
+    <div class="span9 cr-answer cr-radios cr-behalf prodselect">
+        <label class="radio block">
+            <input type="radio" class="second-company-yes" name="add-company" value="yes">
+            Yes
+        </label>
+
+        <label class="radio block last">
+            <input type="radio" class="second-company-no" name="add-company" value="no">
+            No
+        </label>
+    </div>
+
+</div>
+
+<!-- Start company 2 input -->
 
 <div id="company-type-2" class="company-type">
 

@@ -4,7 +4,8 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Changed behavior for select a company step so that debt/credit reporting
+  company is always on top and second company is hidden behind a toggle.
 
 ### Deprecated
 - Nothing.
