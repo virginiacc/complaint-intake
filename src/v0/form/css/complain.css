@@ -2237,3 +2237,7 @@ a.annotation-button:hover,
 #additional-consumer-identity3 {
     clear: none;
 }
+
+#company-type-2-option .prodselect {
+    margin-left: 0;
+}
