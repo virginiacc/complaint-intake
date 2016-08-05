@@ -4,7 +4,7 @@
 - Nothing.
 
 ### Changed
-- Nothing.
+- Updated text copy on your information step.
 
 ### Deprecated
 - Nothing.
