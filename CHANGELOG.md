@@ -4,6 +4,24 @@
 - Nothing.
 
 ### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
+## [0.12.1](https://cfpb.github.io/complaint-intake/versions/0.12.1/)
+
+### Added
+- Nothing.
+
+### Changed
 - Updated text copy on your information step.
 
 ### Deprecated
