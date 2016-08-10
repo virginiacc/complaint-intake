@@ -13,7 +13,7 @@
 - Nothing.
 
 ### Fixed
-- Nothing.
+- Fixed CSS columns to work around recent Chrome bugs.
 
 
 ## [0.12.1](https://cfpb.github.io/complaint-intake/versions/0.12.1/)
