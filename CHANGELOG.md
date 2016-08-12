@@ -13,8 +13,25 @@
 - Nothing.
 
 ### Fixed
-- Fixed CSS columns to work around recent Chrome bugs.
+- Nothing.
 
+
+## [0.12.2](https://cfpb.github.io/complaint-intake/versions/0.12.2/)
+
+### Added
+- Nothing.
+
+### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Fixed CSS columns to work around recent Chrome bugs.
 
 ## [0.12.1](https://cfpb.github.io/complaint-intake/versions/0.12.1/)
 
