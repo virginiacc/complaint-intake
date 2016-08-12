@@ -1414,24 +1414,9 @@ hr.pull-up {
 .issueselect label.block,
 #payday_questions_options label.block,
 #resolution_options label.block,
+.select-save-method label.block,
 .cr-radios label {
-    display: inline-block;
-    position: relative;
-    background: #dee0e2;
-    width: 100%;
-    border: 2px solid #dee0e2;
-    padding: 18px 30px 15px 45px;
-    margin-bottom: 4px;
-    margin-right: 4px;
-    cursor: pointer;
-}
-
-.prodselect label.block,
-.issueselect label.block,
-#payday_questions_options label.block,
-#resolution_options label.block,
-.select-save-method label.block {
-    display: inline-block;
+    display: block;
     position: relative;
     background: #dee0e2;
     width: 100%;
@@ -1440,15 +1425,35 @@ hr.pull-up {
     margin-bottom: 4px;
     margin-right: 4px;
     cursor: pointer;
-/*
--webkit-column-break-inside:avoid;
--moz-column-break-inside:avoid;
--o-column-break-inside:avoid;
--ms-column-break-inside:avoid;
-column-break-inside:avoid;
-*/
-    -webkit-margin-before: 2px;
-    -webkit-margin-after: 2px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.select-product-or-issue label:nth-child(2n + 1),
+.prodselect label.block:nth-child(2n + 1),
+.issueselect label.block:nth-child(2n + 1),
+#payday_questions_options label.block:nth-child(2n + 1),
+#resolution_options label.block:nth-child(2n + 1),
+.select-save-method label.block:nth-child(2n + 1),
+.cr-radios label {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.select-product-or-issue label:first-child,
+.prodselect label.block:first-child,
+.issueselect label.block:first-child,
+#payday_questions_options label.block:first-child,
+#resolution_options label.block:first-child,
+.select-save-method label.block:first-child,
+.cr-radios label {
+    margin-top: 4px;
 }
 /*
   @media (min-width: 641px) {
