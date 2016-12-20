@@ -1687,6 +1687,48 @@ cruxform input.company-name-input {
     padding-top: 16px;
 }
 
+/* ==========================================================================
+   Affiliation details
+   ========================================================================== */
+
+#affiliations > .prodselect {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.affiliation-details > .cr-label > label {
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+
+.affiliation-section:not(:last-of-type) {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+#small-business-owner-details {
+    padding-top: 15px;
+}
+
+#small-business-owner-details > .span3.cr-label {
+    margin-left: 0;
+}
+
+#small-business-owner-details .select-product-or-issue.all-topissues {
+    box-sizing: border-box;
+    padding: 15px 18px 0 18px;
+}
+
+#small-business-owner-followups {
+    display: none;
+}
+
+/* ==========================================================================
+   Company autocomplete and not boarded
+   ========================================================================== */
+
 .autocomplete-suggestions { border: 1px solid #777; background: #fff; cursor: pointer; overflow: auto; }
 .autocomplete-suggestion { padding: 14px 12px; font-size: 16px; white-space: nowrap; overflow: hidden; border-bottom: dotted 1px #ccc; }
 .autocomplete-selected { background: #f0f0f0; }
@@ -1706,6 +1748,10 @@ cruxform input.company-name-input {
     width: 452px;
     overflow: visible;
 }
+
+/* ==========================================================================
+   Consent checkboxes
+   ========================================================================== */
 
 fieldset.narrative-consent {
     width: 720px;
@@ -1759,6 +1805,10 @@ fieldset.narrative-consent {
     margin-right: 13px !important;
 }
 
+/* ==========================================================================
+   Saving
+   ========================================================================== */
+
 .cr-save-option {
     margin-left: 0px;
     padding-left: 0px;
@@ -1793,6 +1843,10 @@ hr.save-method-hr,
 fieldset.save-method {
     padding: 12px 24px 32px 0;
 }
+
+/* ==========================================================================
+   Everything else
+   ========================================================================== */
 
 #attachment-alert {
     border: 1px solid #FFB149;
