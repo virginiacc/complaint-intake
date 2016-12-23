@@ -5,6 +5,7 @@
 - Add dynamic pronouns (i.e. "you" vs. "them") to step 5 content.
 
 ### Changed
+- Updated welcome page to use the final, cleared content.
 - Updated step 5 to use the final, cleared content.
 
 ### Deprecated

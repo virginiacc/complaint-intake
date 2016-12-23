@@ -2069,20 +2069,17 @@ button.secondary {
     padding-bottom: 8px;
 }
 
+.welcome {
+    font-family: 'AvenirNextLTW01-Regular',Arial,sans-serif;
+}
+
 .welcome h2 {
     margin-top: 18px;
 }
 
-ul#welcome-list {
-    margin: 32px 0 24px 20px;
+ol#welcome-list {
     padding: 0;
-    width: 620px;
-}
-
-ul#welcome-list li {
-    font-size: 20px;
-    line-height: 26px;
-    padding-bottom: 16px;
+    list-style-type: none;
 }
 
 #get-started-button {
