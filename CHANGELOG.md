@@ -6,6 +6,7 @@
 
 ### Changed
 - Updated welcome page to use the final, cleared content.
+- Updated step 3 to use the final, cleared content.
 - Updated step 5 to use the final, cleared content.
 
 ### Deprecated
