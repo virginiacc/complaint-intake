@@ -132,7 +132,7 @@ function init() {
         // When "someone else" is selected, the "Point of contact" section slides down, the optional question slides up, and the header text changes
         $( 'fieldset.point-of-contact' ).slideDown();
         $( 'fieldset.point-of-contact-question' ).slideUp();
-        $( '#point-of-contact-header' ).text( 'Point of contact' );
+        $( '#point-of-contact-header' ).text( 'Additional point of contact' );
       } else if ( identifytype != 'someone-else' && $( '.add-poc-yes' ).is( ':checked' ) ) {
         // When "someone else" is not selected, but the consumer has already said "Yes" in the "Point of contact" section, the Point of contact section stays open but the optional question slides back down and the header changes back
         $( 'fieldset.point-of-contact-question' ).slideDown();
@@ -158,26 +158,40 @@ function init() {
   $( '#add-consumer-allow-access-disclosure' ).hide();
   // $( '#poc-disclosure' ).hide();
 
-  // Hide primary and additional consumer, and point of contact by default.
+  // Hide primary and additional consumer, point of contact, and all pronouns by default.
   $( '#select_product' ).hide();
   $( '#additional-consumer' ).hide();
   $( '#point-of-contact' ).hide();
+  $( '.consumer-pronoun' ).hide();
 
+  // Show the correct sections and pronouns
   $( '#select-who-involved .radio' ).on( 'change', function() {
     if ( $ ( '#select-who-involved_just-me' ).is( ':checked' ) ) {
       $( '#select_product' ).slideDown();
       $( '#additional-consumer' ).slideDown();
       $( '#point-of-contact' ).slideDown();
+      $( '.consumer-pronoun' )
+        .hide()
+        .filter( '.consumer-pronoun__second-person' )
+        .show();
     }
     else if ( $ ( '#select-who-involved_someone-else' ).is( ':checked' ) ) {
       $( '#select_product' ).slideDown();
       $( '#additional-consumer' ).slideDown();
       $( '#point-of-contact' ).slideDown();
+      $( '.consumer-pronoun' )
+        .hide()
+        .filter( '.consumer-pronoun__third-person' )
+        .show();
     }
     else if ( $ ( '#select-who-involved_me-someone-else' ).is( ':checked' ) ) {
       $( '#select_product' ).slideDown();
       $( '#additional-consumer' ).slideDown();
       $( '#point-of-contact' ).slideDown();
+      $( '.consumer-pronoun' )
+        .hide()
+        .filter( '.consumer-pronoun__second-person' )
+        .show();
     }
   } );
 
@@ -322,7 +336,7 @@ function init() {
         $( '#additional-consumer-identity-option1' ).text( 'Sender' );
         $( '#additional-consumer-identity-option2' ).text( 'Recipient' );
         $( '#additional-consumer-identity-option3' ).remove();
-        $( '#add-consumer-label' ).text( 'Do you want to include an additional consumer?' );
+        $( '#add-consumer-label' ).text( 'Does this complaint involve someone else?' );
         $( '#consumer1-identity' ).show().slideDown();
       } else if ( subproduct === 'mobile-wallet' ) {
         $( '#consumer1-identity' ).hide();

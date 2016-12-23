@@ -2,9 +2,10 @@
 
 ### Added
 - Added small business affiliation.
+- Add dynamic pronouns (i.e. "you" vs. "them") to step 5 content.
 
 ### Changed
-- Nothing.
+- Updated step 5 to use the final, cleared content.
 
 ### Deprecated
 - Nothing.

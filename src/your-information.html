@@ -136,16 +136,10 @@
     <section class="content row cr-content">
 
         <div class="span8 cr-primary">
-            <div style="text-align: right; margin-top: 30px; margin-right: 30px;">
-                Have a question or need for help? <a>Chat Now</a>
-            </div>
-
             <div id="select_person" class="cr-primary-container">
-                <h2>What people are involved?</h2>
+                <h2>Who are the people involved?</h2>
                 <p class="page-intro your-info">
-                    Identify who is involved in this complaint. This could include
-                    yourself, a co-borrower, or someone helping submit the complaint
-                    for you (third party), such as a lawyer, financial advisor, or relative.
+                    Identify who is involved in this complaint. This could include yourself, a co-borrower, or someone helping submit the complaint for you, such as a lawyer, an advocate, or a family member.
                 </p>
 
                 <div id="select-who-involved" class="select-product-or-issue all-topissues">
@@ -168,8 +162,15 @@
 
             <div id="select_product" class="cr-primary-container">
                 <!-- end .error-panel -->
-                <h3 id="primary-consumer-section">Primary consumer</h3>
-                <p>Tell us about the person who is having this issue.</p>
+                <h3 id="primary-consumer-section">
+                    <span class="consumer-pronoun consumer-pronoun__second-person">
+                        Your
+                    </span>
+                    <span class="consumer-pronoun consumer-pronoun__third-person">
+                        Their
+                    </span>
+                    information
+                </h3>
                 <!-- <p>The person who is having this issue</p> -->
 
                 <fieldset id="consumer1-identity" class="cr-fieldset">
@@ -177,7 +178,14 @@
                     <div class="row cr-question">
                         <div class="span3 cr-label cr-question cr-question-left cr-question-last">
                             <label for="primary-consumer-identity">
-                                How is this person involved in the complaint?
+                                How are
+                                <span class="consumer-pronoun consumer-pronoun__second-person">
+                                    you
+                                </span>
+                                <span class="consumer-pronoun consumer-pronoun__third-person">
+                                    they
+                                </span>
+                                involved in the complaint?
                                 <div class='is-required'>Answer Required</div>
                             </label>
 
@@ -213,7 +221,7 @@
                     <!-- middle name -->
                     <div class="span3 cr-label cr-question-col">
                         <label for="cr-middle-name2_4851476384792477">
-                            Middle <small class="inline">(Optional)</small>
+                            Middle <small class="inline">(optional)</small>
                         </label>
                         <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477">
                     </div>
@@ -236,7 +244,7 @@
                     <div class="span3 cr-label cr-question-col">
                         <label for="cr-suffix2">
                             Suffix
-                            <small class="inline">(Optional)</small>
+                            <small class="inline">(optional)</small>
                         </label>
                         <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                             <option value="" disabled="disabled" selected="selected">Select...</option>
@@ -267,17 +275,32 @@
                     <!-- Handlebars will add address template here. -->
                 </div>
 
-                <div class="row cr-question cr-question-last">
+                <div class="row cr-question">
                     <!-- phone number -->
                     <div class="span2 cr-label cr-question-left">
                         <label for="cr-suffix2">
                             Phone number
+                            <small class="inline">(optional)</small>
                         </label>
                         <input type="text"
                                name="cr-middle-name2"
                                id="cr-middle-name2_4851476384792477">
                     </div>
                     <!-- /phone number -->
+                </div>
+
+                <div class="row cr-question cr-question-last">
+                    <!-- age -->
+                    <div class="span2 cr-label cr-question-left">
+                        <label for="cr-age">
+                            Age
+                            <small class="inline">(optional)</small>
+                        </label>
+                        <input type="text"
+                               name="cr-age"
+                               id="cr-age">
+                    </div>
+                    <!-- /age -->
                 </div>
 
             </fieldset>
@@ -306,11 +329,11 @@
                 <div class="cr-question borrower-email">
                     <div class="span2 cr-label cr-question-left">
                         <label for="con1-email">
-                            Email address <!-- <small class="inline">(This is required for official correspondence)</small> -->
+                            Email <!-- <small class="inline">(This is required for official correspondence)</small> -->
                             <div class='is-required'>Answer Required</div>
                         </label>
 
-                        <p>We’ll use this email address to send updates about the status of this complaint. It will also be the username for the account.</p>
+                        <p>We’ll use this email address to send status updates about this complaint. It will also be the username for the account.</p>
 
                         <input type="email"
                                name="cr-email2"
@@ -323,7 +346,13 @@
                     <div class="span2 cr-label right-helper question-checkbox">
                         <label id="no-email-address-checkbox">
                             <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox" id="cr-no-email">
-                            The primary consumer doesn't have an email address
+                            <span class="consumer-pronoun consumer-pronoun__second-person">
+                                You
+                            </span>
+                            <span class="consumer-pronoun consumer-pronoun__third-person">
+                                They
+                            </span>
+                            don’t have an email address.
                         </label>
                     </div>
                 </div>
@@ -337,7 +366,14 @@
 
         <div class="span3 cr-label" style="border-top: dotted 1px #ccc; padding-top: 12px;">
             <label>
-               How should we contact the primary consumer about the status of this complaint?
+               How should we contact
+               <span class="consumer-pronoun consumer-pronoun__second-person">
+                    you
+                </span>
+                <span class="consumer-pronoun consumer-pronoun__third-person">
+                    them
+                </span>
+               about the status of this complaint?
                <div class='is-required'>Required</div>
             </label>
         </div>
@@ -364,7 +400,7 @@
             <div class="row cr-question cr-question-last account-number-row">
 
                 <div class="span3 cr-label">
-                    <p style="margin: 1em;">We will mail updates each time your complaint changes status.</p>
+                    <p style="margin: 1em;">We will mail status updates about this complaint to the address you provided.</p>
                 </div>
             </div>
         </fieldset>   <!--  /physical mail   -->
@@ -372,7 +408,7 @@
         <fieldset class="cr-fieldset identify-options phone-number">
             <div class="row cr-question cr-question-last account-number-row">
                 <div class="span3 cr-label">
-                    <p style="margin: 1em;">We will text a message to the number you provided each time your complaint changes in status. Standard messaging rates may apply.</p>
+                    <p style="margin: 1em;">We will text status updates about this complaint to the number you provided. Standard text messaging rates may apply.</p>
                 </div>
             </div>
         </fieldset>
@@ -381,7 +417,7 @@
 
             <div class="row cr-question cr-question-last account-number-row">
                 <div class="span3 cr-label">
-                   <p style="margin: 1em;">Be sure to include full contact information below.</p>
+                   <p style="margin: 1em;">Please include the full contact information in the section “Additional point of contact” below.</p>
                 </div>
 
                 <!--
@@ -401,10 +437,17 @@
     <div class="row cr-question" id="affiliations">
         <div class="span3 cr-label">
             <label id="affiliations-section">
-               What affiliations does the primary consumer have? Choose all that apply.
-              <small>(Optional)</small>
+               What affiliations do
+               <span class="consumer-pronoun consumer-pronoun__second-person">
+                    you
+                </span>
+                <span class="consumer-pronoun consumer-pronoun__third-person">
+                    they
+                </span>
+               have? Choose all that apply.
+              <small>(optional)</small>
             </label>
-            <p class="label-subtext">We use this information to help identify trends in the marketplace.</p>
+            <p class="label-subtext">The law may provide additional financial protections for certain groups.</p>
         </div>
         <fieldset class="span9 cr-answer prodselect cr-behalf">
 
@@ -484,7 +527,7 @@
             <div class="row cr-question cr-question-last">
                 <div class="span3 cr-label cr-question-left">
                     <label for="cr-military-rank1">
-                        Rank <small class="inline">(Optional)</small>
+                        Rank <small class="inline">(optional)</small>
                     </label>
 
                     <select name="cr-military-rank1" id="cr-military-rank1">
@@ -503,7 +546,7 @@
                 <div class="span2 cr-label cr-question-right">
                     <label for="cr-military-base1">
                         Military base/location
-                        <small class="inline">(Optional)</small>
+                        <small class="inline">(optional)</small>
                     </label>
                     <select name="cr-military-base1" id="cr-military-base1">
                         <option value="" disabled="disabled" selected="selected">Select...</option>
@@ -563,7 +606,7 @@
             <div class="row cr-question cr-question-last">
                 <div class="span3 cr-label cr-question-left">
                     <label for="cr-last-name2_4851476384792477">
-                        Rank <small class="inline">(Optional)</small>
+                        Rank <small class="inline">(optional)</small>
                     </label>
 
                     <select name="cr-military-rank" id="cr-military-rank">
@@ -582,7 +625,7 @@
                 <div class="span2 cr-label cr-question-right">
                     <label for="cr-suffix2">
                         Military base/location
-                        <small class="inline">(Optional)</small>
+                        <small class="inline">(optional)</small>
                     </label>
                     <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                         <option value="" disabled="disabled" selected="selected">Select...</option>
@@ -773,7 +816,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
 -->
 
 <div id="additional-consumer" class="cr-primary-container">
-    <h3 id="additional-consumer-section">Additional consumer</h3>
+    <h3 id="additional-consumer-section">Additional person’s information</h3>
     <!--        <p>Someone who shares the account or participated in the transaction</p> -->
 
     <!-- question -->
@@ -782,7 +825,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
             <div class="span3 cr-label">
                 <label>
                     <span id="add-consumer-label">
-                        Does this complaint involve an additional account holder, card-holder or co-signer?
+                        Does this complaint involve someone else?
                     </span>
                 </label>
             </div>
@@ -835,7 +878,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
                 <!-- middle name -->
                 <div class="span3 cr-label cr-question-col">
                     <label for="cr-middle-name2_4851476384792477">
-                        Middle <small class="inline">(Optional)</small>
+                        Middle <small class="inline">(optional)</small>
                     </label>
                     <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477">
                 </div>
@@ -858,7 +901,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
                 <div class="span3 cr-label cr-question-col">
                     <label for="cr-suffix2">
                         Suffix
-                        <small class="inline">(Optional)</small>
+                        <small class="inline">(optional)</small>
                     </label>
                     <select name="cr-suffix" id="cr-suffix2_4851476384792477">
                         <option value="" disabled="disabled" selected="selected">Select...</option>
@@ -892,8 +935,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
 
             <div class="row cr-question">
                 <p id="add-consumer-allow-access-disclosure">
-                Allowing full access may require documentation, such as a signed release form.
-                You can include an authorization document as an attachment on the next page.
+                    Allowing full access may require documentation, such as a release form signed and submitted by the primary consumer. You can include an authorization as an attachment in Step 3.
                 </p>
             </div>
         </fieldset>
@@ -925,7 +967,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
             <!-- phone number -->
             <div class="span3 cr-label cr-question-left">
                 <label for="address1-phone">
-                    Phone number
+                    Phone number <small class="inline">(optional)</small>
                 </label>
                 <input type="text" id="address1-phone">
             </div>
@@ -936,7 +978,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
     <div class="cr-question cr-question-last borrower-email additional-consumer-email">
         <div class="span3 cr-label cr-question-left cr-question-with-checkbox">
             <label for="con1-email">
-                Email address <small id="addcon-optional-status" class="inline">(Optional)</small>
+                Email
                 <div class='is-required'>Optional</div>
             </label>
 
@@ -944,7 +986,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
                    name="cr-email2"
                    id="cr-email2_2356852120719850"
                    class="input-large left">
-            <p id="addcon-email-helper">We’ll use this email address to send updates about the status of this complaint. It will also be the additional consumer's username for logging in to their account.</p>
+            <p id="addcon-email-helper">We’ll use this email address to send status updates about this complaint. It will also be the username for the account.</p>
         </div>
     </div>
     </fieldset>
@@ -975,7 +1017,7 @@ POINT OF CONTACT
             <fieldset class="cr-fieldset point-of-contact-question">
                 <div class="span3 cr-label">
                     <label>
-                        Should we send status updates to anyone else about this complaint?
+                        Should we send status updates about this complaint to anyone else?
                     </label>
                 </div>
 
@@ -1000,8 +1042,7 @@ POINT OF CONTACT
 
              <div class="span3 cr-label">
                 <label for="point-of-contact-identity">
-                    Relationship to consumer
-                    <div class='is-required'>Answer Required</div>
+                    Relationship to you
                 </label>
 
                 <select name="point-of-contact-identity" id="point-of-contact-identity" class="input-medium">
@@ -1049,7 +1090,7 @@ POINT OF CONTACT
                 <!-- middle name -->
                 <div class="span3 cr-label cr-question-col">
                     <label for="cr-middle-name2_4851476384792477">
-                        Middle <small class="inline">(Optional)</small>
+                        Middle <small class="inline">(optional)</small>
                     </label>
                     <input type="text" name="cr-middle-name2" id="cr-middle-name2_4851476384792477">
                 </div>
@@ -1099,13 +1140,13 @@ POINT OF CONTACT
                     <div id="poc-access-div" class="span2 cr-label right-helper add-consumer">
                         <label id="cr-add-consumer-checkbox">
                             <input type="checkbox" name="no-email" value="no-email" class="cr-no-email checkbox" id="cr-add-poc-full">
-                            Allow this person full access to this complaint in addition to status updates.
+                            Allow this person to access this complaint and receive status updates.
                         </label>
                     </div>
                 </div>
 
                 <div class="row cr-question">
-                    <p id="poc-allow-access-disclosure">Allowing full access may require documentation, such as a signed release form. You can include an authorization document as an attachment on the next page.</p>
+                    <p id="poc-allow-access-disclosure">Allowing full access may require documentation, such as a release form signed and submitted by the primary consumer. You can include this as an attachment in Step 3.</p>
                 </div>
             </fieldset>
     <!--
@@ -1139,7 +1180,7 @@ POINT OF CONTACT
             <!-- phone number -->
             <div class="span3 cr-label cr-question-left">
                 <label for="address2-phone">
-                    Phone number
+                    Phone number <small class="inline">(optional)</small>
                 </label>
                 <input type="text" id="address2-phone">
             </div>
@@ -1150,7 +1191,7 @@ POINT OF CONTACT
     <div class="cr-question borrower-email">
         <div class="span3 cr-label cr-question-left cr-question-with-checkbox cr-question-last poc-email-address">
             <label for="con1-email">
-                Email address
+                Email
                 <div class='is-required'>Required</div>
             </label>
 
@@ -1158,7 +1199,7 @@ POINT OF CONTACT
                    name="cr-email2"
                    id="cr-email2_2356852120719850"
                    class="input-large left">
-            <p>We’ll use this email address to send updates about the status of this complaint. <span id="poc-email-helper">It will also be the point of contact's username for logging in to their account.</span></p>
+            <p>We’ll use this email address to send status updates about this complaint. It will also be the username for the account.</span></p>
         </div>
         <div class="span2 cr-label cr-question-right right-helper question-checkbox">
 <!--
