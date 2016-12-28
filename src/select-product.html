@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
 
-    <title>Submit a complaint | Select a product</title>
+    <title>Submit a complaint | What is this complaint about?</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -144,13 +144,9 @@
         </div>
         <!-- end .error-panel -->
 
-        <div style="text-align: right; margin-top: 30px; margin-right: 30px;">
-          Have a question or need for help? <a>Chat Now</a>
-        </div>
-
         <div id="select_product" class="cr-primary-container">
-          <h2>What product or service is this complaint about?</h2>
-          <p class="page-intro page-intro select-product extra-bottom">Select an option below to get started. If you've submitted a complaint to the CFPB in the past, <a id="log-in-link" href="https://help.consumerfinance.gov/app/utils/login_form/">log in</a> to submit this complaint with your account.</p>
+          <h2>What is this complaint about?</h2>
+          <p class="page-intro page-intro select-product extra-bottom">Choose the product or service that best matches your complaint.</p>
 
           <!-- This is hidden with CSS as it's redundant from the header of the page -->
           <label for="cr-describe-issue" class="last label_same_as_header">
@@ -586,19 +582,19 @@ What type of credit reporting product?
 
 
         <h3 id="payday_questions_label" for="select_subproduct" class="last product ">
-          Where did you get the loan?
+          Where did you get the loan? <small class="inline">(optional)</small>
         </h3>
       </div>
       <fieldset id="payday_questions_options" class="payday_questions">
 
-        <label id="online" class="radio block" >
-          <input name="sec_selex" type="radio" class="radio_input_subpro"/>
-          Online
+        <label id="at-store" class="radio block" >
+          <input name="loan_origination" type="radio" class="radio_input_subpro"/>
+          In person/at a store (even if you applied online)
           <br /><small></small>
         </label>
-        <label id="at-store" class="radio block" >
-          <input name="sec_selex" type="radio" class="radio_input_subpro"/>
-          At a store
+        <label id="online" class="radio block" >
+          <input name="loan_origination" type="radio" class="radio_input_subpro"/>
+          Online
           <br /><small></small>
         </label>
 
@@ -608,11 +604,13 @@ What type of credit reporting product?
 
         <div class="span3 cr-label cr-question-left cr-question-with-sidebar">
           <label for="con1-email">
-            Website address or name of mobile app<small class="inline"> (Optional)</small>
+            What is the company’s website? <small class="inline">(optional)</small>
           </label>
 
           <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
-          <p></p>
+        </div>
+        <div class="span2 cr-label cr-question-right right-helper">
+          <p>This can help us identify the company.</p>
         </div>
       </fieldset>
 
@@ -620,7 +618,7 @@ What type of credit reporting product?
 
         <div class="span3 cr-label cr-question-left cr-question-with-sidebar">
           <label for="con1-email">
-            In what state is the store located? <small class="inline"> (Optional)</small>
+            Where is the store located? <small class="inline">(optional)</small>
           </label>
 
           <select name="cr-suffix" id="cr-suffix2_4851476384792477">
@@ -691,7 +689,7 @@ What type of credit reporting product?
         </div>
 
         <div class="span2 cr-label cr-question-right right-helper">
-          <p>This is important because different states have different lending regulations.</p>
+          <p>This helps us identify trends from state to state.</p>
         </div>
       </fieldset>
     </div>
@@ -702,7 +700,7 @@ What type of credit reporting product?
 
         <div class="span3 cr-label cr-question-left cr-question-with-sidebar">
           <label for="con1-email">
-            What school were you attending when you received the loan? <small class="inline"> (Optional)</small>
+            What school were you attending when you got the loan? <small class="inline"> (optional)</small>
           </label>
 
           <input type="email" name="cr-email2" id="cr-email2_2356852120719850" placeholder="" class="input-large left">
@@ -710,7 +708,7 @@ What type of credit reporting product?
         </div>
 
         <div class="span2 cr-label cr-question-right right-helper">
-          <p>This helps us identify trends in the marketplace.</p>
+          <p>This helps us understand the student lending practices of different schools.</p>
         </div>
       </fieldset>
     </div>
