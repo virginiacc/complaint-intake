@@ -1912,6 +1912,19 @@ button.secondary {
     background: #75787B;
 }
 
+.review .cr-primary {
+    padding-bottom: 0;
+}
+
+.review .pre-footer {
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.review .pre-footer .btn {
+    text-transform: none;
+}
+
 #review-sections {
     padding-top: 16px;
     margin-bottom: 56px;
@@ -1956,6 +1969,10 @@ button.secondary {
     margin-bottom: 0px;
 }
 
+#review-sections .review-section + h2 {
+    margin-top: 60px;
+}
+
 #review-sections .review-column p {
     margin: 8px 0px;
 }
@@ -1965,8 +1982,8 @@ button.secondary {
 }
 
 #review-sections .review-heading-text {
-    font-family: "Avenir Next Demi", Arial;
-    font-size: 20px;
+    font-family: 'AvenirNextLTW01-Regular', Arial, sans-serif;
+    font-size: 22px;
     display: block;
     width: 80%;
     float: left;
@@ -1989,10 +2006,17 @@ button.secondary {
     float: left;
     clear: left;
     border-top: 1px solid #BABBBD;
+    border-bottom: 1px solid #BABBBD;
     padding-top: 18px;
+    padding-bottom: 18px;
     margin-top: 32px;
     margin-bottom: 0px;
     padding-right: 8px;
+}
+
+#narrative-consent-take-two .radio {
+    padding-top: 0;
+    padding-left: 0;
 }
 
 #attachment-fieldset {

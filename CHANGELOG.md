@@ -11,6 +11,7 @@
 - Updated step 3 to use the final, cleared content.
 - Updated step 4 to use the final, cleared content.
 - Updated step 5 to use the final, cleared content.
+- Updated review page to use the final, cleared content.
 
 ### Deprecated
 - Nothing.
