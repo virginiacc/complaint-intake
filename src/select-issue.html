@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
 
-    <title>Submit a complaint | Select an issue</title>
+    <title>Submit a complaint | What type of problem are you having?</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -150,14 +150,9 @@
                 </div>
                 <!-- end .error-panel -->
 
-                <div style="text-align: right; margin-top: 30px; margin-right: 30px;">
-                  Have a question or need for help? <a>Chat Now</a>
-                </div>
-
 <div id="select_issue" class="cr-primary-container">
-    <h2>What type of issue is your complaint about?</h2>
-    <p class="page-intro select-issue">Most of the <strong><span id="product-name-in-subhead">[no product selected]</span></strong> complaints we receive are about these types of issues.</p>
-    <p class="page-intro2 extra-bottom">Select the issue that best describes your complaint, and on the next page we'll ask you to describe the issue in your own words. </p>
+    <h2>What type of problem are you having?</h2>
+    <p class="page-intro select-issue">Most of the <strong><span id="product-name-in-subhead">[no product selected]</span></strong> complaints we get are about one of the following topics. Select the one that best describes your complaint. You will have the chance to explain your complaint in detail in the next step.</p>
 
 
 
@@ -1259,7 +1254,7 @@ STOP ALL OF THE ISSUE LISTS
     <div class="span3 cr-label">
         <h3 id="generic_subissue_intro" for="select_subissue" class="last product subissue_label label_same_as_header student_loan_dealing_with_lender_or_servicer student_loan_getting_a_loan_subissues student_loan_cannot_repay_loan_subissues student_loan_dealing_with_lender_or_servicer_subissues vehicle_loan_shopping_subissues vehicle_loan_getting_the_loan_subissues vehicle_loan_problems_making_payments_subissues vehicle_loan_unable_to_pay_subissues vehicle_loan_end_of_loan_subissues checking_account_opening_account_subissues checking_account_managing_account_subissues checking_account_closing_account_subissues savings_account_opening_account_subissues savings_account_managing_account_subissues savings_account_closing_account_subissues certificate_of_deposit_opening_account_subissues certificate_of_deposit_managing_account_subissues certificate_of_deposit_closing_account_subissues credit_card_getting_a_card_subissues credit_card_advertising_promotions_subissues credit_card_problems_with_terms_subissues credit_card_disagree_with_fees_subissues credit_card_billing_disputes_subissues credit_card_repayment_assistance_subissues credit_card_closing_card_subissues credit_reporting_incorrect_information_subissues credit_reporting_company_investigation_subissues credit_reporting_improper_use_subissues credit_reporting_unable_to_get_report_or_score_subissues credit_reporting_credit_monitoring_identity_protection_subissues debt_collection_communication_tactics_subissues debt_collection_continued_attempts_not_owe_subissues debt_collection_verification_of_debt_subissues debt_collection_false_statements_subissues debt_collection_improper_contact_or_sharing_subissues debt_collection_legal_action_subissues">
 
-            Select one:
+            Which best describes your problem?
         </h3>
 
         <h3 id="mortgage_servicer_paymentslabel" for="select_subissue" class="subissue_label label_same_as_header mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
@@ -1267,11 +1262,11 @@ STOP ALL OF THE ISSUE LISTS
         </h3>
 
         <h3 id="debt_collection_labelv" for="select_subissue" class="last product subissue_label product_debt debt_collection_subissues label_same_as_header">
-            Which of these is the primary problem?
+            Which best describes your problem?
         </h3>
 
         <h3 id="credit_reporting_label" for="select_subissue" class="last product subissue_label product_credit_reporting credit_reporting_subissues label_same_as_header">
-            Which of these is the primary problem?
+            Which best describes your problem?
         </h3>
     </div>
 
@@ -1366,7 +1361,7 @@ CREDIT REPORTING TOP LEVEL LIVES IN TWO PLACES OMG
 </div>
 
 <div id="zombie_subissues_sublabel" for="select_subissue_zombie" class="last product ">
-    <h3>Select one:</h3>
+    <h3>Which best describes what happened?</h3>
 </div>
 
 <!--
@@ -1455,7 +1450,9 @@ END OF ZOMBIE CREDIT REPORTING TOPLEVEL
 <div class="subissue_label label_same_as_header mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
     <div class="mortgage-servicer-subissue-question mortgage-servicer-subissue-question__radio" id="mortgage_servicer_foreclosure">
         <p>
-            Please note: submitting a complaint will not automatically delay or stop a foreclosure.
+            <strong>
+                Important: submitting a complaint will not automatically delay or stop a foreclosure.
+            </strong>
         </p>
         <div class="issuelist-grid all-subissues mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
           <label class="radio block">
@@ -1473,11 +1470,13 @@ END OF ZOMBIE CREDIT REPORTING TOPLEVEL
         <h3>
             Have you missed any mortgage payments or are you in default on your mortgage?
         </h3>
+        <p>
+            Select “Yes” if your mortgage company believes you are in default or have missed payments, even if you believe the company is in error.
+        </p>
         <div class="issuelist-grid all-subissues mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
           <label class="radio block">
             <input name="radio_mortgage_servicer_missed_payments" type="radio" class="radio_input subissue" value="yes" />
             Yes
-            <br /><small>Check “yes” if your mortgage company believes you are in default or have missed payments even if you believe the company is in error.</small>
           </label>
           <label class="radio block">
             <input name="radio_mortgage_servicer_missed_payments" type="radio" class="radio_input subissue" value="no" />
@@ -1512,7 +1511,7 @@ END OF ZOMBIE CREDIT REPORTING TOPLEVEL
 
             <div class="cr-label cr-question-right right-helper">
                 <p>
-                    You may find this date on the “Notice of Sale” or “Order Setting Sale.”
+                    You can find this date on the “Notice of Sale” or “Order Setting Sale” documents.
                 </p>
             </div>
         </div>
@@ -1523,7 +1522,7 @@ END OF ZOMBIE CREDIT REPORTING TOPLEVEL
             Did you pay a company to help you avoid foreclosure?
         </h3>
         <p>
-            Sometimes called ‘foreclosure rescue,’ ‘foreclosure defense,’ ‘foreclosure prevention,’ or ‘loss mitigation assistance’
+            This can also be called “foreclosure rescue,” “foreclosure defense,” “foreclosure prevention,” or “loss mitigation assistance.”
         </p>
         <div class="issuelist-grid all-subissues mortgage_servicer_making_payments_subissues mortgage_servicer_unable_pay_subissues">
           <label class="radio block">
@@ -2634,7 +2633,7 @@ Stop all of the sub-issue lists
 
 </div>
     <div id="resolution-options-header" class="cr-primary-container resolution-options">
-        <h3>Have you already attempted to resolve this issue with the company?</h3>
+        <h3>Have you already tried to fix this problem with the company?</h3>
     </div>
 
     <div id="resolution_options" class="cr-primary-container resolution-options">
