@@ -12,6 +12,7 @@
 - Updated step 4 to use the final, cleared content.
 - Updated step 5 to use the final, cleared content.
 - Updated review page to use the final, cleared content.
+- Hid annotations for user testing.
 
 ### Deprecated
 - Nothing.
@@ -21,7 +22,6 @@
 
 ### Fixed
 - Nothing.
-
 
 ## [0.12.2](https://cfpb.github.io/complaint-intake/versions/0.12.2/)
 
