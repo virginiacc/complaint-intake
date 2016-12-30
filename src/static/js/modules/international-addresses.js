@@ -40,10 +40,12 @@ function initOptions( context ) {
 
 function _initAddress( addressDom, id ) {
   var label = addressDom.getAttribute( 'data-label' );
-  if ( label !== 'Company address' ) {
-    addressDom.innerHTML = addressHandlebars( { id: id, label: label, addOptionalText: true } );
+  if ( label !== 'Company address' && label !== 'Business address' ) {
+    addressDom.innerHTML = addressHandlebars( { id: id, label: label, addOptionalText: true, addressIsOptional: false  } );
+  } else if ( label === 'Business address' ) {
+    addressDom.innerHTML = addressHandlebars( { id: id, label: label, addOptionalText: true, addressIsOptional: true } );
   } else {
-    addressDom.innerHTML = addressHandlebars( { id: id, label: label, addOptionalText: false } );
+    addressDom.innerHTML = addressHandlebars( { id: id, label: label, addOptionalText: false, addressIsOptional: false  } );
   }
   _countryDropdownDom = addressDom.querySelector( '#address-country-' + id );
   _addressMap[_countryDropdownDom.id] = addressDom;
@@ -60,9 +62,11 @@ function _countryChanged( evt ) {
   if ( evt.target.value !== '100' ) {
     opts.isInternational = true;
   }
-
   if ( label !== 'Company address' ) {
     opts.addOptionalText = true;
+  }
+  if ( label === 'Business address' ) {
+    opts.addressIsOptional = true;
   }
   _addressContainerDom = _addressMap[evt.target.id];
   _countryDropdownDom = _addressContainerDom.querySelector( '#address-country-' + id );

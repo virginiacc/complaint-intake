@@ -1,8 +1,7 @@
 <div class="row cr-question">
     <div class="span3 cr-label cr-question-left">
         <label for="address-country-{{id}}">
-            {{label}} country
-            <small class="inline"></small>
+            {{label}} country {{#if addressIsOptional}}<small class="inline">(optional)</small>{{/if}}
         </label>
 
         <select id="address-country-{{id}}" class="filled" data-label="{{label}}">
@@ -396,7 +395,7 @@
 <div class="row cr-question">
     <div class="span3 cr-label cr-question-left">
         <label for="address-line1-{{id}}">
-            {{label}} line 1
+            {{label}} line 1 {{#if addressIsOptional}}<small class="inline">(optional)</small>{{/if}}
         </label>
         <input type="text"
                name="address-line1-{{id}}"
@@ -406,7 +405,7 @@
 <div class="row cr-question">
     <div class="span3 cr-label cr-question-left">
         <label for="address-line2-{{id}}">
-            {{label}} line 2 {{#if addOptionalText}}<small class="inline">(Optional)</small>{{/if}}
+            {{label}} line 2 {{#if addOptionalText}}<small class="inline">(optional)</small>{{/if}}
             <div class='is-required'>Answer Required</div>
         </label>
 
@@ -419,7 +418,7 @@
 <div class="row cr-question">
     <div class="span3 cr-label cr-question-left">
         <label for="address-line3-{{id}}">
-            {{label}} line 3 {{#if addOptionalText}}<small class="inline">(Optional)</small>{{/if}}
+            {{label}} line 3 {{#if addOptionalText}}<small class="inline">(optional)</small>{{/if}}
             <div class='is-required'>Answer Required</div>
         </label>
 
@@ -432,7 +431,7 @@
 <div class="row cr-question cr-question-last">
     <div class="span2 cr-label cr-question-col">
         <label for="address-city-{{id}}">
-            City
+            City {{#if addressIsOptional}}<small class="inline">(optional)</small>{{/if}}
         </label>
         <input type="text"
                name="address-city-{{id}}"
@@ -444,14 +443,12 @@
 
         {{#if isInternational}}
         <label for="address-state-{{id}}">
-            State/Province/Region
-            <small class="inline"></small>
+            State/Province/Region {{#if addressIsOptional}}<small class="inline">(optional)</small>{{/if}}
         </label>
         <input type="text" name="address-state-{{id}}" id="address-state-{{id}}" placeholder="">
         {{else}}
         <label for="address-state-{{id}}">
-            State
-            <small class="inline"></small>
+            State {{#if addressIsOptional}}<small class="inline">(optional)</small>{{/if}}
         </label>
         <select name="address-state-{{id}}" id="address-state-{{id}}">
             <option value="" disabled="disabled" selected="selected">Select a state...</option>
@@ -524,14 +521,14 @@
     <div class="span3 cr-label cr-question-col">
         {{#if isInternational}}
         <label for="address-zipcode-{{id}}">
-            ZIP/Postal code
+            ZIP/Postal code {{#if addressIsOptional}}<small class="inline">(optional)</small>{{/if}}
         </label>
         <input type="text"
                name="address-zipcode-{{id}}"
                id="address-zipcode-{{id}}">
         {{else}}
         <label for="address-zipcode-{{id}}">
-            ZIP code
+            ZIP code {{#if addressIsOptional}}<small class="inline">(optional)</small>{{/if}}
         </label>
         <input type="text"
                name="address-zipcode-{{id}}"

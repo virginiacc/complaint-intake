@@ -1,7 +1,7 @@
 ## Unreleased
 
 ### Added
-- Nothing.
+- Added small business affiliation.
 
 ### Changed
 - Nothing.
@@ -10,7 +10,7 @@
 - Nothing.
 
 ### Removed
-- Nothing.
+- Removed student and disability affiliations.
 
 ### Fixed
 - Nothing.

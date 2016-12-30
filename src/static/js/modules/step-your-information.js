@@ -9,7 +9,7 @@ function init() {
 
   internationalAddresses.init();
 
-   // Show/hide military status
+  // Show/hide affiliation follow-up questions
   $( '.cr-servicemember input' ).on( 'change', function(){
     if ( $( '#cr-military-spouse' ).is( ':checked' ) ) {
       $( '#servicemember-details' ).slideDown( 400 );
@@ -27,12 +27,31 @@ function init() {
       $( '#servicemember-details1' ).slideUp( 400 );
     }
 
+    if ( $( '#cr-small-business-owner' ).is( ':checked' ) ) {
+      $( '#small-business-owner-details' ).slideDown( 400 );
+      $( '.cr-servicemember-info' ).slideUp( 300 );
+      $( '.cr-military-status hr' ).show();
+    } else {
+      $( '#small-business-owner-details' ).slideUp( 400 );
+    }
+
     if ( !$( '#cr-military-status' ).is( ':checked' ) &&
-         !$( '#cr-military-spouse' ).is( ':checked' ) ) {
+         !$( '#cr-military-spouse' ).is( ':checked' ) &&
+         !$( '#cr-small-business-owner' ).is( ':checked' ) ) {
       $( '.cr-servicemember-info, .cr-military-status' ).slideUp( 300 );
     }
   } );
   $( '.cr-military-status' ).slideUp();
+
+  // Show/hide small business follow-up questions
+  $( '#small-business-owner-details .select-product-or-issue' ).on( 'change', '.radio_input', function() {
+    var isBusinessOwner = $( this ).val();
+    if( isBusinessOwner === 'yes' ) {
+      $( '#small-business-owner-followups' ).slideDown( 400 );
+    } else {
+      $( '#small-business-owner-followups' ).slideUp( 400 );
+    }
+  });
 
   // Show/hide sections of Your Info.
   $( 'fieldset.additional-consumer' ).hide();
