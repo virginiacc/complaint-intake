@@ -1,6 +1,6 @@
 {
   "name": "complaint-intake",
-  "version": "0.12.2",
+  "version": "0.13.0",
   "description": "Improving the forms used by consumers to submit complaints about the financial marketplace.",
   "homepage": "https://github.com/cfpb/complaint-intake/",
   "author": {

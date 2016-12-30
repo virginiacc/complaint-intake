@@ -1,6 +1,23 @@
 ## Unreleased
 
 ### Added
+- Nothing.
+
+### Changed
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+## [0.13.0](https://cfpb.github.io/complaint-intake/versions/0.13.0/)
+
+### Added
 - Added small business affiliation.
 - Add dynamic pronouns (i.e. "you" vs. "them") to step 5 content.
 
