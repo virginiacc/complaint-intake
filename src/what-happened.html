@@ -104,8 +104,29 @@
         Here are the <a href="http://www.enable-javascript.com/" target="_blank">
         instructions how to enable JavaScript in your web browser</a>.
     </noscript>
+    <div class="content content__2-1 content__bleedbar">
+    <!-- BREADCRUMBS -->
+      <div class="content_wrapper" >
+        <div class="content_main content__flush-bottom content__flush-top" >
 
-    <div class="wrapper-body page-step-1">
+        
+
+          <div class="content-l">
+            <div class="content-l_col content-l_col-1">
+                <nav class="m-breadcrumbs">
+                  <div class="m-breadcrumbs_item">Submit a complaint</div>
+                  <div class="m-breadcrumbs_item" >Step 3 of 5</div>
+                </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF BREADCRUMBS -->
+
+
+    <div class="content_wrapper" >
+        <div class="content_main" >
+    <div class="page-step-1">
 
 
 <!-- ANNOTATIONS SIDEBAR -->
@@ -127,15 +148,14 @@
 
 <!-- END OF ANNOTATIONS SIDEBAR -->
 
-    <div class="wrapper-container">
 
 <!-- =============
      BEGIN CONTENT
      ============= -->
 
-        <section class="content row cr-content">
+        <section class="content row cr-cont">
 
-            <div class="span8 cr-primary">
+            <div class="cr-primary">
                 <!-- .error-panel -->
                 <div class="guide-panel error-panel" style="display:none;">
                     <div class='icon-x left-obj'></div>
@@ -151,16 +171,20 @@
                 <!-- end .error-panel -->
 
   <div id="select_product" class="cr-primary-container">
-    <h2>What happened?</h2>
-    <p class="what-happened">Describe what happened, and we’ll send your comments to the companies involved.</p>
-    <ul>
-        <li>
-            Include dates, amounts, and actions that were taken by you or the company.
-        </li>
-        <li>
-            Do not include personal information, such as your name, account number, address, Social Security number, etc. We may ask for some of this information later, to help the company identify you and your account.
-        </li>
-    </ul>
+    <h1>What happened?</h1>
+    <div class="block block__sub block__flush-bottom">
+        <h3>
+            Describe what happened, and we’ll send your comments to the companies involved.
+        </h3>
+        <ul>
+            <li>
+                Include dates, amounts, and actions that were taken by you or the company.
+            </li>
+            <li>
+                Do not include personal information, such as your name, account number, address, Social Security number, etc. We may ask for some of this information later, to help the company identify you and your account.
+            </li>
+        </ul>
+    </div>
 
      <fieldset class="cr-fieldset narrative-consent">
 
@@ -192,54 +216,58 @@
             </div>
 
      </fieldset>
-
-    <h3 id="desired-resolution-header">What would be a fair resolution to your problem?</h3>
+     <div class="block ">
+    <h3 class="h2" id="desired-resolution-header">What would be a fair resolution to this issue?</h3>
     <p id="desired-resolution-intro">We’ll forward this information to the companies involved. Be specific so they know what resolution you are looking for. The company may or may not offer to resolve your complaint.</p>
 
 
 
      <fieldset class="cr-fieldset narrative-consent">
+        <div class="content-l">
+            <div class="content-l_col content-l_col-1">
 
-            <div class="cr-question cr-question-consent-checkbox">
+                <div class="cr-question cr-question-consent-checkbox block block__bg block__flush-top block__flush-bottom block__border-top block__border-bottom block__padded-top block__padded-bottom">
 
 
-        <div class="large_textbox" id="desired_resolution_div">
-            <textarea name="desired-resolution" id="desired_resolution" cols="30" rows="12" maxlength="4000" class="cr-count-me"></textarea>
+                    <div class="large_textbox" id="desired_resolution_div">
+                        <textarea name="desired-resolution" id="desired_resolution" cols="30" rows="12" maxlength="4000" class="cr-count-me"></textarea>
 <!--             <div class="cr-validate-message failure">Please describe what happened so we can understand the issue.</div> -->
-        </div>
+                    </div>
+                </div>
             </div>
+        </div>
     </fieldset>
+</div>
 
-
-    <h3 id="attachments-header">Attach documents (optional)</h3>
-    <p id="attachments-intro">Including copies or photos of supporting letters, emails, statements, contracts, or documents related to your problem can help the companies better understand and resolve your complaint.</p>
+    <h3 class="h2" id="attachments-header">Attach documents (optional)</h3>
+    <p id="attachments-intro">Include copies or photos of documents related to your issue, such as contracts, letters, and receipts, and we will forward all materials to the company for review.</p>
     <fieldset id="attachment-fieldset" class="cr-fieldset">
+        
 
       <div id="attachment-drag-drop-area" class="drag-drop">
 
             <div id="upload-section" class="span3 cr-label cr-question-left cr-question-with-checkbox span9 cr-answer upload-file">
-          <p id="attachment-drag-instructions">&nbsp;&nbsp;Drop files here to attach them</p>
+                
+            <div class="uploader_header h2 u-mb5">
+            Select a file to attach
+        </div>
+        <div class="micro-copy">
+            We accept all file formats, except .dll, .dmg, .exe and .msi, up to 10 MB per file.
+            All uploaded files will be scanned for viruses and will be immediately deleted
+            if one is detected.
+        </div>
+
           <label id="upload-button" for="upload-file">
-          <button class="btn" type="button">Select files to upload</button>
+          <button class="btn u-mt15" id="select-a-file-to-upload" type="button">
+            Select a file to upload
+            <span class="cf-icon cf-icon-update cf-icon__pulse u-hidden" id="right-waiting-indicator"></span>
+        </button>
           </label>
           <input type="file" id="upload-file" name="upload-file">
             </div>
 
       </div>
-      <p id="attachment-size-info">We accept all file formats except executable files (.exe) or .dlls, up to 100MB per file.</p>
     </fieldset>
-
-    <div id="attachment-alert">
-        <div id="attachment-alert-icon" class='icon-exc left-obj'></div>
-        <p>
-            We will forward the attachments to each company involved with your complaint.
-        </p>
-        <p>
-            If you don’t want the companies to see any personal information on an attachment, please remove or hide it before uploading.
-        </p>
-    </div>
-
-
 </div>
 
         </div>
@@ -290,10 +318,25 @@
 <!-- =============
      / END CONTENT
      ============= -->
-
-    </div><!-- .wrapper-container -->
-
+     </div><!-- .wrapper-container -->
 </div><!-- .wrapper-body -->
+
+<aside class="content_sidebar" ><div class="block block__flush-top" ><h2 class="h2" >About us</h2><p >
+                The CFPB is an independent federal agency built to protect consumers. We write 
+                and enforce rules that keep banks and other financial companies operating fairly. 
+                We also educate and empower consumers, helping them make more informed choices
+                to achieve their financial goals.
+            </p><h2 class="h5 header-slug block" ><span class="header-slug_inner" >HAVE A QUESTION? ¿PREGUNTAS?</span></h2><p >(855) 411-2372</p><h2 class="h5 header-slug block"  data-aura-class=""><span class="header-slug_inner" >LOG INTO YOUR ACCOUNT</span></h2><p >
+            Want to check the status of a complaint you already submitted?
+        </p><div class="form-group "  ><div class="login-element-space" ><label for="" ><span class="login-label" >
+                        Username
+                    </span></label><input class="response_input__long" maxlength="40" type="text" id="41:162;ausername" ></div><div ><label for="" ><span class="login-label" >
+                        Password
+                    </span></label><input class="response_input__long" maxlength="40" type="password" id="41:162;apassword" ></div></div><div class="login-element-space"><a href="login/ForgotPassword" target="_blank" >Forgot password?</a><button class="btn btn__super" type="submit" >
+                Log in
+                <span class="cf-icon cf-icon-update cf-icon__pulse u-hidden" ></span></button></div></div></aside>
+    </div>
+</div>
 
 <footer class="o-footer" role="contentinfo">
     <div class="wrapper wrapper__match-content">

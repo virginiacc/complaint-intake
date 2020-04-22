@@ -1,6 +1,8 @@
 'use strict';
 
 var _companies = [
+  { autocom: 'true', value: 'Test Financial', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
+  { autocom: 'true', value: 'Test financial', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
   { autocom: 'true', value: 'Amex', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
   { autocom: 'true', value: 'Bank of America', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },
   { autocom: 'true', value: 'Capital One', data: '', message: '<p class="company-match-info">We will forward your complaint to this company and ask for a response.</p>' },

@@ -165,7 +165,7 @@ function init() {
   $( '.consumer-pronoun' ).hide();
 
   // Show the correct sections and pronouns
-  $( '#select-who-involved .radio' ).on( 'change', function() {
+  $( '#select-who-involved .a-radio' ).on( 'change', function() {
     if ( $ ( '#select-who-involved_just-me' ).is( ':checked' ) ) {
       $( '#select_product' ).slideDown();
       $( '#additional-consumer' ).slideDown();

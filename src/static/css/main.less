@@ -16,6 +16,7 @@
 @import (less) 'cf-grid.less';
 @import (less) 'cf-typography.less';
 @import (less) 'cf-layout.less';
+@import (less) 'cf-notifications.less';
 
 // Import the brand color palette.
 @import (less) 'brand-palette.less';
@@ -30,6 +31,10 @@
 
 // Import the Capital Framework enhancements
 @import (less) 'cf-enhancements.less';
+
+@import (less) 'breadcrumbs.less';
+@import (less) 'tracker.less';
+
 
 /* Organism pieces
    ========================================================================== */
@@ -57,4 +62,21 @@ body {
 
 #annotations-sidebar {
   display: none !important;
+}
+
+.clipboard svg {
+  fill: @green;
+  height: 72px;
+}
+
+#mid-form-note .m-notification {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin-bottom: 45px;
+  margin-top: 15px;
+
+  .m-notification_content:before {
+    top: 3px;
+  }
 }

@@ -13,64 +13,75 @@ function init() {
   $( '#credit_reporting_subsubissues' ).hide();
   $( '#zombie_subissues_sublabel' ).hide();
   $( '.resolution-options' ).hide();
+  $('#mid-form-note').hide();
 
-  $( '#select_issue .radio_input' ).on( 'change', function() {
+  $( '#select_issue .a-radio' ).on( 'change', function() {
     $( '.resolution-options' ).slideDown();
+      $('#mid-form-note').slideDown();
+
     if ( $( '#select_issue .issue' ).is( ':checked' ) ) {
+      var $el = $(this);
       $( '.all-subissues' ).hide();
       $( '.debt-collection-zombie' ).hide();
       $( '.credit-reporting-zombie' ).hide();
       $( '.subissue_label' ).hide();
       $( '#zombie_subissues_sublabel' ).hide();
       var subissuetype = $( this ).attr( 'id' );
-      $( '#select_issue label.active' ).removeClass( 'active' );
-      $( '.' + $( this ).attr( 'id' ) + '_subissues' ).fadeIn( 'fast' );
-      $( '#' + $( this ).attr( 'id' ) + '_subissues' ).slideDown( 200 );
-      $( this ).closest( 'label' ).addClass( 'active' );
+      console.log(subissuetype);
+      if ( $el.hasClass('debt-collection-issue') ) {
+          subissuetype = 'debt_collection';
+      } else if ( $el.hasClass('credit-reporting-issue') ) {
+          subissuetype = 'credit_reporting';
+      }
+      console.log(subissuetype);
+      $( '#select_issue .active' ).removeClass( 'active' );
+      $( '.' + subissuetype + '_subissues' ).fadeIn( 'fast' );
+      $( '#' + subissuetype + '_subissues' ).slideDown( 200 );
+      $( this ).addClass( 'active' );
     }
   } );
 
-  $( '#select_subissue .radio_input' ).on( 'change', function() {
+  $( '#select_subissue .a-radio' ).on( 'change', function() {
     if ( $( '#select_subissue .issue' ).is( ':checked' ) ) {
       $( '.subsubissues' ).hide();
-      $( '#select_subissue label.active' ).removeClass( 'active' );
+      $( '#select_subissue .active' ).removeClass( 'active' );
       $( '#zombie_subissues_sublabel' ).slideDown();
       $( '#' + $(this).attr( 'id' ) + '_subissues_sublabel' ).slideDown();
       $( '#' + $(this).attr( 'id' ) + '_subissues' ).slideDown( 200 ).addClass( 'subsubissues' );
-      $(this).closest( 'label' ).addClass( 'active' );
+      $(this).addClass( 'active' );
     }
   } );
 
-  $( '.all-subissues .radio_input' ).on( 'change', function() {
+  $( '.all-subissues .a-radio' ).on( 'change', function() {
 
-    if ( $( '.radio_input' ).is( ':checked' ) ) {
-      $( this ).parents( '.all-subissues' ).find( 'label' ).removeClass( 'active' );
-      $( this ).closest( 'label' ).addClass( 'active' );
+    if ( $( '.a-radio' ).is( ':checked' ) ) {
+      $( this ).parents( '.all-subissues' ).find( '.a-radio' ).removeClass( 'active' );
+      $( this ).addClass( 'active' );
     }
   } );
 
-  $( '.subsubissues .radio_input' ).on( 'change', function() {
-    if ( $( '.radio_input' ).is( ':checked' ) ) {
-      $( '.subsubissues label' ).removeClass( 'active' );
-      $( this ).closest( 'label' ).addClass( 'active' );
+  $( '.subsubissues .a-radio' ).on( 'change', function() {
+    if ( $( '.a-radio' ).is( ':checked' ) ) {
+      $( '.subsubissues .a-radio' ).removeClass( 'active' );
+      $( this ).addClass( 'active' );
     }
   } );
 
   $( '.resolution-attempt' ).on( 'change', function() {
-    $( this ).closest( 'label' ).toggleClass( 'active' );
+    $( this ).toggleClass( 'active' );
   } );
 
   /**
    * Shows and hides mortgage subissue followup questions based on answers to
    * preceeding trigger questions
    */
-  $( '.mortgage-servicer-subissue-question__radio' ).on( 'change', '.radio_input', function() {
+  $( '.mortgage-servicer-subissue-question__radio' ).on( 'change', '.a-radio', function() {
     var mortageQuestionModel = {};
     var thisQuestionID = $( this ).parents( '.mortgage-servicer-subissue-question__radio' ).attr( 'id' );
     var $folowupQuestions = $( '[data-followup-to*="' + thisQuestionID + '"]' );
     $( '.mortgage-servicer-subissue-question__radio' ).each( function() {
       var questionID = $( this ).attr( 'id' );
-      var questionValue = $(this).find( '.radio_input:checked' ).val();
+      var questionValue = $(this).find( '.a-radio:checked' ).val();
       mortageQuestionModel[ questionID ] = questionValue;
     } );
     $folowupQuestions.each( function() {
@@ -104,7 +115,7 @@ function init() {
     }, 1 );
 
     setTimeout( function() {
-      $( '#select_issue .all-topissues .radio_input' ).click( function() {
+      $( '#select_issue .all-topissues .a-radio' ).click( function() {
         // save the topissue to local storage
         var issueselected = $( this ).attr( 'id' );
         webStorageProxy.setItem( 'issue_selected', issueselected, localStorage );

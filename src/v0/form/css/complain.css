@@ -85,12 +85,12 @@ CHANGE TO GIVE ANNOTATIONS SPACE
 
 /* main area with questions and form to fill out */
 .cr-primary {
-    width: 898px; /* this is bumped up with max width below to throttle it */
-    min-width: 640px;
+    /*width: 898px; *//* this is bumped up with max width below to throttle it */
+/*    min-width: 640px;
     max-width: 898px;
-    margin-left: 10px;
-    padding-bottom: 88px;
-}
+    margin-left: 10px;*/
+/*    padding-bottom: 88px;
+*/}
 
 /*
 CHANGE TO GIVE ANNOTATIONS SPACE
@@ -100,7 +100,7 @@ CHANGE TO GIVE ANNOTATIONS SPACE
 
 */
 .cr-primary .cr-primary-container {
-    padding: 32px 32px 0 32px;
+    padding-bottom: 32px;
 }
 
 
@@ -705,11 +705,6 @@ fieldset {
     margin-right:10px;
 }
 
-.cr-continue {
-    padding-left: 35px;
-    padding-right: 95px;
-}
-
 .pre-footer {
     border-top: 1px solid #d0d0ce;
     padding-top: 30px;
@@ -763,8 +758,7 @@ fieldset {
 }
 
 .cr-answer.upload-file button {
-    padding: .5em .9em;
-    background-color: #63666a;
+    text-transform: none;
 }
 
 /* Validation
@@ -1376,13 +1370,12 @@ hr.pull-up {
 }
 
 /* .select-product-or-issue, */
-.all-topissues,
+/*.all-topissues,
 .all-subissues,
 #debt_collection_subissues,
 #credit_reporting_subissues,
 #debt_collection_subsubissues,
 #credit_reporting_subsubissues,
-#product_options,
 #resolution_options,
 #subproduct_options,
 #issue_options,
@@ -1397,7 +1390,7 @@ hr.pull-up {
  -webkit-column-gap: 4px;
  vertical-align: top;
 
-}
+}*/
 
 .select-save-method {
     display: inline-block;
@@ -1491,29 +1484,30 @@ hr.pull-up {
   outline: none;
 }
 
-.cruxform h2 {
+/*.cruxform h2 {
     font-size: 26px;
     line-height: 33px;
     margin-top: 0;
     margin-bottom: 8px;
     text-transform: none;
-}
+}*/
 
-.cruxform .wrapper-body h3 {
+/*.cruxform .wrapper-body h3 {
     font-size: 22px;
     line-height: 28px;
     margin-top: 0;
     margin-bottom: 8px;
     padding-top: 42px;
     text-transform: none;
-}
+}*/
 
 .cruxform p {
     max-width: 718px;
 }
 
 .whathappened textarea {
-    width: 718px;
+    width: 100%;
+    resize: none;
 }
 
 .cruxform .cr-answer-left input {
@@ -2036,7 +2030,8 @@ button.secondary {
     margin: 14px auto;
     text-align: center;
     width: 100%;
-    padding-bottom: 24px;
+    background-color: white;
+    padding: 30px;
 }
 
 #attachment-drag-instructions {
@@ -2097,27 +2092,19 @@ button.secondary {
     font-family: 'AvenirNextLTW01-Regular',Arial,sans-serif;
 }
 
-.welcome h2 {
-    margin-top: 18px;
-}
+
 
 ol#welcome-list {
     padding: 0;
     list-style-type: none;
 }
 
-#get-started-button {
-    padding-right: 22px;
-}
 
 #get-started-button button {
-    width: 220px;
-    padding: 12px;
+    text-transform: none;
 }
 
-#get-started-button button:hover {
-    background-color: #328ed8;
-}
+
 
 .cruxform section a:hover {
     color: #328ed8;
@@ -2320,4 +2307,18 @@ a.annotation-button:hover,
 
 #company-type-2-option .prodselect {
     margin-left: 0;
+}
+
+.login-label {
+    font-family: "AvenirNextLTW01-Medium",Arial,sans-serif;
+}
+
+.login-element-space button {
+    display: block;
+    margin-top: 10px;
+}
+
+.response_input__long {
+    width: 100%;
+    box-sizing: border-box;
 }

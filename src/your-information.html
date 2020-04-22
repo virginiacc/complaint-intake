@@ -104,8 +104,29 @@
         Here are the <a href="http://www.enable-javascript.com/" target="_blank">
         instructions how to enable JavaScript in your web browser</a>.
     </noscript>
+    <div class="content content__2-1 content__bleedbar">
+    <!-- BREADCRUMBS -->
+      <div class="content_wrapper" >
+        <div class="content_main content__flush-bottom content__flush-top" >
 
-    <div class="wrapper-body page-step-1">
+        
+
+          <div class="content-l">
+            <div class="content-l_col content-l_col-1">
+                <nav class="m-breadcrumbs">
+                  <div class="m-breadcrumbs_item">Submit a complaint</div>
+                  <div class="m-breadcrumbs_item" >Step 5 of 5</div>
+                </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF BREADCRUMBS -->
+
+
+    <div class="content_wrapper" >
+        <div class="content_main" >
+    <div class="page-step-1">
 
         <!-- ANNOTATIONS SIDEBAR -->
 
@@ -127,36 +148,63 @@
 
         <!-- END OF ANNOTATIONS SIDEBAR -->
 
-        <div class="wrapper-container">
+        <div>
 
 <!-- =============
      BEGIN CONTENT
      ============= -->
 
-    <section class="content row cr-content">
+    <section class="content row">
 
-        <div class="span8 cr-primary">
+        <div class=" cr-primary">
             <div id="select_person" class="cr-primary-container">
-                <h2>Who are the people involved?</h2>
-                <p class="page-intro your-info">
-                    Identify who is involved in this complaint. This could include yourself, a co-borrower, or someone helping submit the complaint for you, such as a lawyer, an advocate, or a family member.
-                </p>
+                <h1>Who are the people involved?</h1>
+
+                <p class="h3">
+                            Identify who is involved in this complaint. This could include:</p>
+
+                <ul class="h3 u-mt20">
+                                <li>“Just you” if you are the account holder or borrower</li>
+                                <li>“You and someone else” if you are submitting for yourself and want to include another account holder or co-borrower</li>
+                                <li>“Someone else” if you are submitting for someone else as an authorized third party, such as a lawyer, advocate, or power of attorney</li></ul>
+                
 
                 <div id="select-who-involved" class="select-product-or-issue all-topissues">
-                    <label class="radio block">
-                        <input id="select-who-involved_just-me" name="radio_" type="radio" class="radio_input" />
-                        Just you
-                    </label>
-
-                    <label class="radio block">
-                        <input id="select-who-involved_someone-else" name="radio_" type="radio" class="radio_input" />
-                        Someone else
-                    </label>
-
-                    <label class="radio block">
-                        <input id="select-who-involved_me-someone-else" name="radio_" type="radio" class="radio_input" />
-                        You and someone else
-                    </label>
+                    <div class="content-l content-l__half-gutter-on-small" >
+                      <fieldset class="o-form_fieldset" >
+                          <div class="content-l_col content-l_col-1-2" >
+                              <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="radio_" 
+                                         type="radio" 
+                                         class="a-radio radio_input_subpro" 
+                                         id="select-who-involved_just-me" />
+                                  <label class="a-label" for="select-who-involved_just-me">
+                                      <div class="a-label_text">Just you</div>
+                                  </label>
+                              </div>
+                             <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="radio_" 
+                                         type="radio" 
+                                         class="a-radio radio_input_subpro" 
+                                         id="select-who-involved_someone-else" />
+                                  <label class="a-label" for="select-who-involved_someone-else">
+                                      <div class="a-label_text">Someone else</div>
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="content-l_col content-l_col-1-2" >
+                               <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="radio_" 
+                                         type="radio" 
+                                         class="a-radio radio_input_subpro" 
+                                         id="select-who-involved_me-someone-else" />
+                                  <label class="a-label" for="select-who-involved_me-someone-else">
+                                      <div class="a-label_text">You and someone else</div>
+                                  </label>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
                 </div>
             </div>
 
@@ -454,31 +502,40 @@
             <!-- question -->
             <div id="affiliation-question" class="row cr-question">
                 <div id="affiliation-options"
-                     class="span9 cr-answer cr-radios cr-servicemember prodselect">
-                    <label class="radio block">
-                        <input type="checkbox"
-                               name="cr-military-status"
-                               value="option1"
-                               class="cr-need-military-status"
-                               id="cr-military-status">
-                        A servicemember or veteran
-                    </label>
-                    <label class="radio block">
-                        <input type="checkbox"
-                               name="cr-military-status2"
-                               value="option2"
-                               class="cr-need-servicemember-info"
-                               id="cr-military-spouse">
-                        The spouse or dependent of a servicemember or veteran
-                    </label>
-                    <label class="radio block">
-                        <input type="checkbox"
-                               name="cr-small-business-owner"
-                               value="option3"
-                               class="cr-small-business-owner"
-                               id="cr-small-business-owner">
-                        A small business owner
-                    </label>
+                     class="  cr-radios cr-servicemember prodselect">
+
+                      <div class="content-l content-l__half-gutter-on-small" >
+                      <fieldset class="o-form_fieldset" >
+                          <div class="content-l_col content-l_col-1-2" >
+                              <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="cr-military-status" 
+                                         type="checkbox" 
+                                         class="a-radio radio_input" 
+                                         id="cr-military-status"
+                                         value="option1" />
+                                  <label class="a-label" for="cr-military-status">
+                                      <div class="a-label_text">A servicemember or veteran</div>
+                                  </label>
+                              </div>
+                            
+                          </div>
+                          <div class="content-l_col content-l_col-1-2" >
+                               <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="cr-military-status" 
+                                         type="radio" 
+                                         class="a-radio " 
+                                         id="cr-military-status2"
+                                         value="option2" />
+                                  <label class="a-label" for="cr-military-status2">
+                                      <div class="a-label_text">The spouse or dependent of a servicemember or veteran</div>
+                                  </label>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+
+                   
+                    
                 </div>
             </div>
             <!-- /question -->
@@ -822,7 +879,7 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
     <!-- question -->
     <div class="row cr-question">
         <fieldset class="cr-fieldset">
-            <div class="span3 cr-label">
+            <div class=" cr-label">
                 <label>
                     <span id="add-consumer-label">
                         Does this complaint involve someone else?
@@ -831,15 +888,36 @@ ADDITIONAL CONSUMER. SAME AS ABOVE CONTENT, MOSTLY
             </div>
 
             <div class="span9 cr-answer cr-radios cr-behalf cr-add-con prodselect">
-                <label class="radio block">
-                    <input type="radio" class='add-consumer-yes' name="add-consumer" value="yes">
-                    Yes
-                </label>
+                <div class="content-l content-l__half-gutter-on-small" >
+                      <fieldset class="o-form_fieldset" >
+                          <div class="content-l_col content-l_col-1-2" >
+                              <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="add-consumer" 
+                                         type="radio" 
+                                         class="a-radio radio_input add-consumer-yes" 
+                                         id="add-consumer-yes"
+                                         value="yes" />
+                                  <label class="a-label" for="add-consumer-yes">
+                                      <div class="a-label_text">Yes</div>
+                                  </label>
+                              </div>
+                            
+                          </div>
+                          <div class="content-l_col content-l_col-1-2" >
+                               <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="add-consumer" 
+                                         type="radio" 
+                                         class="a-radio add-consumer-no" 
+                                         id="add-consumer-no"
+                                         value="no" />
+                                  <label class="a-label" for="add-consumer-no">
+                                      <div class="a-label_text">No</div>
+                                  </label>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
 
-                <label class="radio block last">
-                    <input type="radio" class='add-consumer-no' name="add-consumer" value="no">
-                    No
-                </label>
             </div>
         </fieldset>
     </div>
@@ -1020,18 +1098,39 @@ POINT OF CONTACT
                         Should we send status updates about this complaint to anyone else?
                     </label>
                 </div>
-
                 <div class="span9 cr-answer cr-radios cr-behalf cr-add-poc prodselect">
-                    <label class="radio block">
-                        <input type="radio" class='add-poc-yes' name="add-poc-no" value="yes">
-                        Yes
-                    </label>
 
-                    <label class="radio block last">
-                        <input type="radio" class='add-poc-no' name="add-poc-no" value="no">
-                        No
-                    </label>
+                <div class="content-l content-l__half-gutter-on-small" >
+                      <fieldset class="o-form_fieldset" >
+                          <div class="content-l_col content-l_col-1-2" >
+                              <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="add-poc-no" 
+                                         type="radio" 
+                                         class="a-radio radio_input add-poc-yes" 
+                                         id="add-poc-yes"
+                                         value="yes" />
+                                  <label class="a-label" for="add-poc-yes">
+                                      <div class="a-label_text">Yes</div>
+                                  </label>
+                              </div>
+                            
+                          </div>
+                          <div class="content-l_col content-l_col-1-2" >
+                               <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
+                                  <input name="add-poc-no" 
+                                         type="radio" 
+                                         class="a-radio add-poc-no" 
+                                         id="add-poc-no"
+                                         value="no" />
+                                  <label class="a-label" for="add-poc-no">
+                                      <div class="a-label_text">No</div>
+                                  </label>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
                 </div>
+                    
             </fieldset>
         </div>
         <!-- /question -->
@@ -1289,7 +1388,25 @@ END OF Point of contact
  </div><!-- .wrapper-container -->
 
 </div><!-- .wrapper-body -->
+</div>
+<aside class="content_sidebar" ><div class="block block__flush-top" ><h2 class="h2" >About us</h2><p >
+                The CFPB is an independent federal agency built to protect consumers. We write 
+                and enforce rules that keep banks and other financial companies operating fairly. 
+                We also educate and empower consumers, helping them make more informed choices
+                to achieve their financial goals.
+            </p><h2 class="h5 header-slug block" ><span class="header-slug_inner" >HAVE A QUESTION? ¿PREGUNTAS?</span></h2><p >(855) 411-2372</p><h2 class="h5 header-slug block"  data-aura-class=""><span class="header-slug_inner" >LOG INTO YOUR ACCOUNT</span></h2><p >
+            Want to check the status of a complaint you already submitted?
+        </p><div class="form-group "  ><div class="login-element-space" ><label for="" ><span class="login-label" >
+                        Username
+                    </span></label><input class="response_input__long" maxlength="40" type="text" id="41:162;ausername" ></div><div ><label for="" ><span class="login-label" >
+                        Password
+                    </span></label><input class="response_input__long" maxlength="40" type="password" id="41:162;apassword" ></div></div><div class="login-element-space"><a href="login/ForgotPassword" target="_blank" >Forgot password?</a><button class="btn btn__super" type="submit" >
+                Log in
+                <span class="cf-icon cf-icon-update cf-icon__pulse u-hidden" ></span></button></div></div></aside>
 
+
+</div>
+</div>
 <footer class="o-footer" role="contentinfo">
     <div class="wrapper wrapper__match-content">
 

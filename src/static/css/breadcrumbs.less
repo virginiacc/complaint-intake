@@ -1,0 +1,36 @@
+.m-breadcrumbs {
+
+    padding-top: unit( @grid_gutter-width / 14px, em );
+    font-size: unit( 14px / @base-font-size-px, em );
+    overflow-x: auto;
+    white-space: nowrap;
+
+    .cf-icon-svg {
+        fill: @pacific;
+        margin-right: 0.25em;
+    }
+
+    .respond-to-max( @bp-sm-max, {
+        padding-top: unit( @grid_gutter-width / 2 / 14px, em );
+        padding-bottom: unit( @grid_gutter-width / 2 / 14px, em );
+    } );
+
+    &_item {
+        display: inline;
+
+        &:not(:last-child):after {
+            padding-left: 4px;
+            color: #101820;
+            content: ' / ';
+        }
+    }
+
+
+}
+
+// Hide on print.
+.respond-to-print( {
+    .breadcrumbs {
+        display: none;
+    }
+} );

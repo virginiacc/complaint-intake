@@ -8,3 +8,246 @@
 // Whenever building enhancements or changes to existing CF components, write them here
 // to work out the details before contributing them back to a Capital Framework component
 //
+
+@media only all and (min-width: 56.3125em) {
+	.content_wrapper:after {
+		background-color: @gray-5 !important;
+	}
+}
+
+.u-hidden {
+	display: none !important;
+}
+
+@media only all and (min-width: 56.3125em) {
+	.content__bleedbar {
+		max-width: 1140px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.content__flush-top {
+		padding-top: 0 !important;
+	}
+	.m-form-field__radio .a-label {
+	  padding: 10px !important;
+	}
+	.mob-only,
+	.mob-save-msg,
+	.mob-nav,
+	.mob-header{
+		display: none !important;
+	}
+}
+
+
+// Well styles borrowed from cfgov-refresh
+@well-bg:                       @gray-5;
+@well-border:                   @gray-40;
+// 8 columns plus gutters
+@well-max:                      ( ( @grid_wrapper-width - @grid_gutter-width ) / @grid_total-columns * 8 ) - @grid_gutter-width;
+
+.o-well {
+    box-sizing: border-box;
+
+    // 8 columns plus gutters
+    max-width: unit( @well-max / @base-font-size-px, em );
+    padding:
+        unit( @grid_gutter-width / @base-font-size-px, em )
+        unit( ( @grid_gutter-width / 2 ) / @base-font-size-px, em );
+    border: 1px solid @well-border;
+    background-color: @well-bg;
+
+    .respond-to-min( @bp-sm-min, {
+        padding-left: unit( @grid_gutter-width / @base-font-size-px, em );
+        padding-right: unit( @grid_gutter-width / @base-font-size-px, em );
+    } );
+}
+
+.o-well {
+    color: @black;
+}
+
+
+// Max-width styles borrowed from cfgov-refresh
+.content_main,
+.content_intro {
+    dd,
+    dt,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    p,
+    label {
+        max-width: 41.875rem;
+    }
+}
+
+// Form field styles borrowed from CF
+.m-form-field__checkbox .a-label, .m-form-field__radio .a-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 100%;
+  outline: none !important;
+}
+
+.m-form-field__checkbox .a-label:before, .m-form-field__radio .a-label:before {
+  display: inline-block;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  border: 1px solid #75787b;
+  min-width: 1.25em;
+  height: 1.25em;
+  width: 1.25em;
+  margin-right: 10px;
+  background-color: #fff;
+  content: '';
+  vertical-align: top;
+}
+
+.lt-ie9 .m-form-field__checkbox .a-label:before, .lt-ie9 .m-form-field__radio .a-label:before {
+  display: none !important;
+}
+
+.m-form-field__checkbox .a-label .a-label_text, .m-form-field__radio .a-label .a-label_text {
+  display: block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.m-form-field__checkbox .a-label:hover:before, .m-form-field__radio .a-label:hover:before {
+  border-color: #0072ce;
+}
+
+.m-form-field__checkbox .a-checkbox, .m-form-field__radio .a-checkbox, .m-form-field__checkbox .a-radio, .m-form-field__radio .a-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.lt-ie9 .m-form-field__checkbox .a-checkbox, .lt-ie9 .m-form-field__radio .a-checkbox, .lt-ie9 .m-form-field__checkbox .a-radio, .lt-ie9 .m-form-field__radio .a-radio {
+  height: 20px;
+  width: 20px;
+  border: 0;
+  float: left;
+  margin: 1em;
+  position: static;
+  width: auto;
+  clear: both;
+}
+
+.m-form-field__checkbox .a-checkbox:disabled + .a-label, .m-form-field__radio .a-checkbox:disabled + .a-label, .m-form-field__checkbox .a-radio:disabled + .a-label, .m-form-field__radio .a-radio:disabled + .a-label {
+  cursor: not-allowed;
+}
+
+.m-form-field__checkbox .a-checkbox:disabled + .a-label:before, .m-form-field__radio .a-checkbox:disabled + .a-label:before, .m-form-field__checkbox .a-radio:disabled + .a-label:before, .m-form-field__radio .a-radio:disabled + .a-label:before {
+  border-color: #75787b;
+  background: #f7f8f9;
+}
+
+.m-form-field__checkbox .a-label:before {
+  font-family: 'CFPB Minicons';
+  text-align: center;
+  line-height: 1.125em;
+}
+
+.m-form-field__checkbox .a-checkbox:focus + .a-label:before {
+  border-color: #0072ce;
+  outline: 1px solid #0072ce;
+}
+
+.m-form-field__checkbox .a-checkbox:checked + .a-label:before {
+  content: "\e100";
+}
+
+// Green well
+.o-well__green {
+	background-color: @green-20 ;
+	border: none;
+}
+
+// Confirmation screen dl styles
+.confirmation {
+	dt,
+	dd {
+		padding-left: 0 !important;
+	}
+	dt {
+    .h5();
+    margin-bottom: unit(7px / @base-font-size-px, em);
+  }
+
+  dd {
+    margin-bottom: unit(18px / @base-font-size-px, em);
+    margin-left: 0 !important;
+
+    & + dd {
+      margin-top: unit(-12px / @base-font-size-px, em);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Tracker screen dl overrides
+.tracker-step p, dl, ul {
+	font-family: 'AvenirNextLTW01-Regular',Arial,sans-serif;
+}
+
+.tracker-step dt,
+.tracker-step dd {
+	margin-bottom: 0;
+}
+
+.tracker-step dt {
+	font-family:'AvenirNextLTW01-Medium' !important;
+    font-weight: 500;
+}
+
+.tracker-step .btn {
+	text-transform: none;
+}
+
+// Adds checkmark
+.checked {
+    &:before {
+        .cf-icon();
+        content: @cf-icon-approved;
+        font-size: 1.25em;
+        padding-right: 5px;
+    }
+}
+
+// notification overrides
+.m-notification {
+	background-color: @gray-5;
+}
+
+.m-notification_content{
+	.h4 {
+		margin-bottom: 10px;
+	}
+	position: relative;
+	padding-left: 30px;
+
+  &:before {
+	.cf-icon();
+    content: @cf-icon-information;
+    font-size: 1.25em;
+    position: absolute;
+    left:0;
+  }
+}

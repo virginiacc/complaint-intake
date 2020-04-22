@@ -1,0 +1,212 @@
+// Tracker styles
+.tracker-horizontal {
+	position: relative;
+	display: inline-flex;
+	text-align: center;
+	margin-bottom: 45px;
+	margin-top: 20px;
+	&:after {
+		display:block;
+		position: absolute;
+		border-top:3px dashed @gray-20;
+		width: 100%;
+		content:'';
+		top: 40px;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+.tracker-horizontal_section {
+	.countdown-circle__horizontal {
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		top: 0;
+		border-style: solid;
+		border-color: @green;
+	}
+}
+
+.tracker-horizontal_section + .tracker-horizontal_section {
+	position: relative;
+	padding-left: 50px;
+	color: @gray-80;
+
+	.countdown-circle__horizontal {
+		border-style: dashed;
+		color: @gray-80;
+		border-color: @gray-20;
+	}
+}
+
+.tracker-horizontal_text {
+	padding-top: 10px;
+}
+
+
+.countdown-circle {
+    position: absolute;
+    z-index: 100;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px dashed @gray-20;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+    padding: 5px;
+    left: -40px;
+    top: -10px;
+
+    &_num {
+      font-family:'AvenirNextLTW01-Medium';
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 42px;
+      position: relative;
+      top: 3px;
+      display: block;
+    }
+
+    &_text {
+      font-family:'AvenirNextLTW01-Medium';
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 16px;
+      text-transform:uppercase;
+    }
+}
+
+
+.tracker-step {
+    margin-left: 30px;
+    position: relative;
+
+    &:before {
+        .cf-icon();
+        position: absolute;
+        font-size: 45px;
+        content: @cf-icon-approved-round;
+        left: -20px;
+        background-color: @white;
+        top: -10px;
+        display: none;
+    }
+
+    &_section {
+        padding-left: 60px;
+        padding-bottom: 30px;
+    }
+
+    &:last-of-type {
+        .tracker-step_section {
+            border-left-width: 0 !important;
+        }
+    }
+}
+
+.complaint__preview {
+	.tracker-step {
+        &__active {
+            .tracker-step_section {
+                border-left: 3px dashed @gray-20;
+            }
+            .tracker-step_section__active {
+                border-left: 3px solid @green;
+            }
+            &:before {
+                display: block;
+                color: @green;
+                content: @cf-icon-approved-round;
+            }
+            .countdown-circle {
+                display: block;
+                border: 3px solid @green;
+                &_num,
+                &_text {
+                    color: @black;
+                }
+            }
+        }
+        &__inactive {
+            .tracker-step_section {
+                border-left: 3px dashed @gray-20;
+            }
+            &:before {
+                display: none;
+            }
+        }
+        &__first {
+        	.countdown-circle {
+        		border: 3px solid @green;
+        	}
+        }
+    }
+}
+
+.complaint__in-progress {
+    .tracker-step {
+        &__done {
+            color: @gray-80;
+            .tracker-step_section {
+                border-left: 3px solid @green;
+            }
+            .countdown-circle {
+                display: none;
+                color: @gray-80;
+            }
+            &:before {
+                display: block;
+                color: @green;
+            }
+        }
+        &__active {
+            .tracker-step_section {
+                border-left: 3px dashed @gray-20;
+            }
+            .tracker-step_section__active {
+                border-left: 3px solid @green;
+            }
+            &:before {
+                display: block;
+                color: @green;
+            }
+            .countdown-circle {
+                display: block;
+                border: 3px solid @green;
+                &_num,
+                &_text {
+                    color: @black;
+                }
+            }
+        }
+        &__inactive {
+            color: @gray-80;
+
+            .tracker-step_section {
+                border-left: 3px dashed @gray-20;
+            }
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.complaint__completed {
+    .tracker-step {
+        color: @gray-80;
+        &:before {
+            display: block;
+            color: @gray-60;
+        }
+        &_section {
+            border-left: 3px solid @gray-60;
+        }     
+    }
+    .countdown-circle {
+        display: none;
+    }
+}

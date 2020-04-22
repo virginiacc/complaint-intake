@@ -82,21 +82,25 @@ function init() {
 
   if ( !window.env ) {
     setTimeout( function(){
-      $( '#product_options .radio_input' ).click( function(){
+      $( '#product_options .a-radio' ).click( function(){
         // save the product to local storage
         var prod = $( this ).attr( 'id' );
+        console.log(prod);
         webStorageProxy.setItem( 'product_selected', prod, localStorage );
         webStorageProxy.setItem( 'consent', 'false', localStorage );
       } );
     }, 1);
 
     setTimeout( function(){
-      $( '#subproduct_options .radio' ).click( function(){
+      $( '#subproduct_options .a-radio' ).click( function(){
+        console.log('clidked')
         // save the subproduct to local storage
         var subpro = $( this ).attr( 'id' );
+        console.log(subpro)
         var issuelist = $( this ).attr( 'data-issues' );
         webStorageProxy.setItem( 'issue_list', issuelist, localStorage );
         webStorageProxy.setItem( 'subproduct_selected', subpro, localStorage );
+
 
         /*
         if ( $( this ).attr('id') === 'payday-loan' ){
@@ -106,6 +110,8 @@ function init() {
         */
       } );
     }, 1);
+  } else {
+    console.log('nay')
   }
 }
 
