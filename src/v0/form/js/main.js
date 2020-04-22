@@ -254,7 +254,7 @@ YOUR INFORMATION PAGE
 //   if ( $( 'h1' ).width() > 500 ) {
 //     $( 'h1' ).css( 'font-size', '1.5em' );
 //   }
-// } );
+} );
 
   /**
    * modal functions
