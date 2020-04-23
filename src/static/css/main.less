@@ -69,10 +69,19 @@ body {
   height: 72px;
 }
 
-#mid-form-note .m-notification {
-  background-color: inherit;
+.mid-form-note .m-notification {
+  margin-bottom: 45px;
+  margin-top: 15px;
+
+  .m-notification_content:before {
+    top: 3px;
+  }
+}
+
+.mid-form-note__green .m-notification {
+  background-color: @green-20 !important;
   border: none;
-  padding: 0;
+  
   margin-bottom: 45px;
   margin-top: 15px;
 

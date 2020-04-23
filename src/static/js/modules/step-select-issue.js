@@ -13,11 +13,11 @@ function init() {
   $( '#credit_reporting_subsubissues' ).hide();
   $( '#zombie_subissues_sublabel' ).hide();
   $( '.resolution-options' ).hide();
-  $('#mid-form-note').hide();
+  $('.mid-form-note').hide();
 
   $( '#select_issue .a-radio' ).on( 'change', function() {
     $( '.resolution-options' ).slideDown();
-      $('#mid-form-note').slideDown();
+      $('.mid-form-note').slideDown();
 
     if ( $( '#select_issue .issue' ).is( ':checked' ) ) {
       var $el = $(this);
