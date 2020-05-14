@@ -19,22 +19,22 @@ switch ( path ) {
     stepWelcome.init();
     break;
   case 'select-product.html':
-    stepSelectProduct.init();
+    //stepSelectProduct.init();
     break;
   case 'select-issue.html':
-    stepSelectIssue.init();
+    //stepSelectIssue.init();
     break;
   case 'what-happened.html':
-    stepWhatHappened.init();
+    //stepWhatHappened.init();
     break;
   case 'company-information.html':
-    stepCompanyInformation.init();
+    //stepCompanyInformation.init();
     break;
   case 'your-information.html':
-    stepYourInformation.init();
+    //stepYourInformation.init();
     break;
   case 'review-and-submit.html':
-    stepReviewAndSubmit.init();
+    //stepReviewAndSubmit.init();
     break;
   case 'confirmation.html':
     stepConfirmation.init();

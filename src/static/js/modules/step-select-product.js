@@ -3,14 +3,14 @@
 var webStorageProxy = require( '../modules/util/web-storage-proxy' );
 
 function init() {
-
+  console.log('hi')
   // Show/hide products
-  $( '#select_subproduct' ).hide();
-  $( '.subproduct_sect' ).hide();
-  $( '.subproduct_label' ).hide();
-  $( '#payday_questions' ).hide();
-  $( '#vehicle_questions' ).hide();
-  $( '#mortgage_servicer_questions' ).hide();
+  // $( '#select_subproduct' ).not('.testing-path').hide();
+  // $( '.subproduct_sect' ).not('.testing-path').hide();
+  // $( '.subproduct_label' ).not('.testing-path').hide();
+  // $( '#payday_questions' ).hide();
+  // $( '#vehicle_questions' ).hide();
+  // $( '#mortgage_servicer_questions' ).hide();
 
   $( '.radio_input' ).on( 'change', function() {
 

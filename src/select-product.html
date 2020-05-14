@@ -36,6 +36,20 @@
     <script src="static/js/html5shiv-printshiv.min.js"></script>
     <script src="v0/form/js/vendor/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .subproduct_sect:not(.checking_products),
+      .subproduct_label:not(.product_checking),
+      #payday_questions,
+      #vehicle_questions,
+      #mortgage_servicer_questions {
+          display: none !important;
+      }
+
+    
+      .testing-path {
+          display: block;
+      }
+  </style>
 
 </head>
 <body class="prodselect cruxform">
@@ -222,7 +236,8 @@
                                         <input name="radio_product_options" 
                                                type="radio" 
                                                class="a-radio radio_input product product_checking" 
-                                               id="checking" />
+                                               checked
+                                               id="checking"\/>
                                         <label class="a-label" for="checking">
                                             <div class="a-label_text">Checking or savings account<small></small></div>
                                         </label>
@@ -311,7 +326,7 @@
 
               <h3 id="checking_label"
               for="select_subproduct"
-              class="last product subproduct_label product_checking label_same_as_header">
+              class="last product subproduct_label product_checking label_same_as_header testing-path">
               Which type of banking product?
               <!--             <div class='is-required'>Answer Required</div> -->
               </h3>
@@ -589,7 +604,7 @@
           </div>
       </div>
 
-      <div id="checking_products" class="subproduct_sect checking_products">
+      <div id="checking_products" class="subproduct_sect checking_products testing-path">
         <div class="content-l content-l__half-gutter-on-small" >
               <fieldset class="o-form_fieldset" >
                   <div class="content-l_col content-l_col-1-2" >
@@ -598,6 +613,7 @@
                                  type="radio" 
                                  class="a-radio radio_input_subpro" 
                                  id="checking-account" 
+                                 checked
                                  data-issues="checking_account"/>
                           <label class="a-label" for="checking-account">
                               <div class="a-label_text">Checking account <small>(debit card, ATM card, checks)</small></div>

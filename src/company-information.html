@@ -26,6 +26,22 @@
 
     <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
     <script src="v0/form/js/vendor/modernizr.custom.js"></script>
+    <style>
+        #company-type-1-intro-text,
+        #company-1-checkbox,
+        .company-1-checkbox,
+        #company1-not-boarded,
+        #company-type-2-option ,
+        .company-type-2,
+        #company-type-2,
+        fieldset.additional-company,
+        #company3-not-boarded,
+        #bankwell-company-options,
+        .company_verification_fieldset,
+        #fieldset_repository {
+            display: none;
+        }
+    </style>
 
     <!--
         Old IE polyfills for:
@@ -194,6 +210,7 @@ COMPANY-1
                     <input type="company1-name"
                            name="company1-name"
                            id="company1-name"
+                           value="Test Financial"
                            class="input-large company-name-input left">
                     <div id="forward-company1" class="forward-company-details">
                         <p>We will forward your complaint to the company and ask for a response.</p>
@@ -340,7 +357,7 @@ COMPANY-2
                         <div class='is-required'>Answer Required</div>
                     </label>
 
-                    <input type="company2-name" name="company2-name" id="company2-name" placeholder="" class="input-large left company-name-input">
+                    <input type="company2-name" name="company2-name" id="company2-name" placeholder="" class="input-large left company-name-input" value="Test Financial">
                     <p id="forward-company2" class="forward-company-details">We will forward your complaint to the company and ask for a response.</p>
                 </div>
                 <div class="span2
@@ -476,7 +493,7 @@ ADDITIONAL COMPANY
                     </label>
 
                     <label class="radio block last">
-                        <input type="radio" class='add-company-no' name="add-company" value="no">
+                        <input type="radio" class='add-company-no' name="add-company" value="no" checked>
                         No
                     </label>
                 </div>

@@ -26,7 +26,36 @@
 
     <!-- Custom modernizr for touch detection only, see the .js file for the build link -->
     <script src="v0/form/js/vendor/modernizr.custom.js"></script>
-
+    <style>
+        #issue_options_mortgage,
+        #issue_options_student_loan,
+        #issue_options_vehicle_loan,
+        #issue_options_vehicle_lease,
+        #issue_options_payday_loan,
+        #issue_options_pawn_loan,
+        #issue_options_title_loan,
+        #issue_options_intallment_loan,
+        #issue_options_personal_line_of_credit,
+        #issue_options_savings_account,
+        #issue_options_certificate_of_deposit,
+        #issue_options_credit_card,
+        #issue_options_prepaid_card,
+        #issue_options_credit_reporting,
+        #issue_options_debt_collection,
+        #issue_options_money_transfer,
+        #issue_options_virtual_currency,
+        #issue_options_check_cashing,
+        #issue_options_fx_exchange,
+        #issue_options_credit_repair,
+        #issue_options_money_order,
+        #issue_options_refund_anticipation,
+        #issue_options_traveler_cashier_check,
+        #debt_collection_subissues,
+        #credit_reporting_subissues,
+        .all-subissues:not(#checking_account_closing_account_subissues) {
+            display: none;
+        }
+    </style>
     <!--
         Old IE polyfills for:
         - HTML5 tags
@@ -172,7 +201,7 @@
 
 <div id="select_issue" class="cr-primary-container">
     <h1>What type of problem are you having?</h1>
-    <h3>Most of the <strong><span id="product-name-in-subhead">[no product selected]</span></strong> complaints we get are about one of the following topics. Select the one that best describes your complaint. You will have the chance to explain your complaint in detail in the next step.</h3>
+    <h3>Most of the <strong><span id="product-name-in-subhead">checking account</span></strong> complaints we get are about one of the following topics. Select the one that best describes your complaint. You will have the chance to explain your complaint in detail in the next step.</h3>
 
 
 
@@ -939,6 +968,7 @@ START ALL OF THE ISSUE LISTS
                 <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
                     <input name="radio_" 
                            type="radio" 
+                           checked
                            class="a-radio issue checking_account_closing_account" 
                            id="checking_account_closing_account" />
                     <label class="a-label" for="checking_account_closing_account">
@@ -2294,6 +2324,7 @@ END OF ZOMBIE CREDIT REPORTING TOPLEVEL
                 <div class="m-form-field m-form-field__lg-target m-form-field__radio" >
                     <input name="radio_checking_account_closing_account_subissues" 
                            type="radio" 
+                           checked
                            class="a-radio subissue " 
                            id="checking_funds_not_received" />
                     <label class="a-label" for="checking_funds_not_received">
@@ -3169,6 +3200,7 @@ Stop all of the sub-issue lists
                            type="radio" 
                            class="a-radio resolution_attempt" 
                            value="option1"
+                           checked
                            id="contacted-company" />
                     <label class="a-label" for="contacted-company">
                         <div class="a-label_text">
